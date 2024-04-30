@@ -1,0 +1,63 @@
+.queeslomo-container {
+    display: flex;
+    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(225, 234, 238) 90%);
+    position: relative;
+    border-radius: 5px;
+}
+
+.lomo-imagen {
+    margin-top: 2.5px;
+    margin-left: 2.5px;
+    margin-bottom: 2.5px;
+    width: 475px;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 0px rgb(220, 220, 220, 210);
+}
+
+.explanation {
+    width: 650px;
+    margin-left: -50px;
+}
+
+.lomo-title {
+    margin-left: 220px;
+    margin-top: 20px;
+    font-family: "Dancing Script";
+    font-size: 45px;;
+    text-shadow: 1px 1px 2px red;
+}
+
+.lomo-text {
+    margin-top: -20px;
+    margin-left: 100px;
+}
+
+.tricks {
+    opacity: 0;
+}
+
+.mapa-arg-container {
+    display: flex;
+    margin-left: 70px;
+}
+
+.san-juan {
+    font-weight: bold;
+}
+
+.mapa-arg {
+    margin-top: 30px;
+    margin-left: 0px;
+    width: 200px;
+    height: 250px;
+}
+
+.bandera {
+    display: flex;
+    position: absolute;
+    width: 100px;
+    margin-top: 200px;
+    margin-left: -40px;
+    transform: rotate(17deg)
+}

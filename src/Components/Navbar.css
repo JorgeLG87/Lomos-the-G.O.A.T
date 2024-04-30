@@ -1,0 +1,23 @@
+.navbar-container {
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    height: 125px;
+    color: white;
+    /* background: radial-gradient(circle at 10% 20%, rgb(90, 92, 106) 0%, rgb(32, 45, 58) 81.3%); */
+}
+
+
+.items-list {
+    display: flex;
+    gap: 50px;
+    justify-content: right;
+    margin-right: 135px;
+}
+
+
+.item {
+    display: inline-flex;
+    list-style-type: none;
+    
+}
