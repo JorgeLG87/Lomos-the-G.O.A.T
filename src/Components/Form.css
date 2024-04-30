@@ -17,9 +17,8 @@
 
 .order-form {
     margin-top: 150px;
-    margin-left: 300px;
+    margin-left: 330px;
     display: flex;
-    /* margin-right: 50%; */
     gap: 30px;
     text-align: center;
     color: white;
@@ -28,11 +27,9 @@
 
 .selection {
     display: inline-flex;
-    /* margin-top: 10px; */
     margin-top: 10px;
-    /* margin-right: 20px; */
-    height: 38px;
-    width: 175px;
+    height: 34px;
+    width: 143px;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
@@ -43,4 +40,106 @@
 .selection:hover {
     background-color: rgba(30, 131, 214, 0.2);
     color: white;
+}
+
+.lomo-container {
+    margin-left: -275px;
+    margin-top: 220px;
+}
+
+.beverage-container {
+    margin-top: 220px;
+    margin-left: -10px;
+    
+}
+
+.french-fries {
+    display: block;
+    /* position: absolute; */
+    margin-top: 305px;
+    margin-left: -270px;
+}
+
+.submit-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    height: 40px;
+    margin-top: 430px;
+    margin-left: 260px;
+    border-radius: 5px;
+}
+
+.submit-btn:hover {
+    cursor: pointer;
+    background-color: rgba(30, 214, 33, 1);
+    color: white;
+}
+
+.firstname-container {
+    margin-top: -120px;
+}
+
+.name-input {
+    margin-top: 10px;
+    height: 27px;
+    border-radius: 5px;
+}
+
+.lastname-container {
+    margin-top: -120px;
+    margin-left: 20px;
+}
+
+.lastname-input {
+    margin-top: 10px;
+    height: 27px;
+    border-radius: 5px;
+}
+
+.delivery-container {
+    margin-top: -35px;
+    margin-left: -375px;
+}
+
+.delivery-input {
+    margin-top: 10px;
+    height: 27px;
+    border-radius: 5px;
+    width: 335px;
+}
+
+.city-container {
+    margin-top: 50px;
+    margin-left: -375px;
+}
+
+.city-input {
+    margin-top: 10px;
+    height: 27px;
+    border-radius: 5px;
+}
+
+.state-container {
+    margin-top: 50px;
+}
+
+.state-input {
+    margin-top: 10px;
+    height: 27px;
+    border-radius: 5px;
+    margin-left: 17px;
+}
+
+.contact-container {
+    margin-top: 135px;
+    margin-left: -270px;
+}
+
+.contact-number {
+    margin-top: 10px;
+    height: 27px;
+    border-radius: 5px;
 }
