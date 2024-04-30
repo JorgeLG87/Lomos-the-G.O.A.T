@@ -12,6 +12,7 @@ export default function QueEsLomo() {
             <div className="mapa-arg-container">
             <img className="mapa-arg" src="src/assets/sanjuan.png"/>
             <img className="bandera" src="src/assets/bandera-argentina2.png"/>
+            <p>Up to Date</p>
             </div>
         </div>
     )
