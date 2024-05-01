@@ -5,9 +5,8 @@ import './App.css'
 import Form from "./Components/Form.jsx";
 import Navbar from "./Components/Navbar.jsx";
 import SocialMedia from "./Components/SocialMedia.jsx";
-// import QueEsLomo from "./Components/QueEsLomo.jsx";
 import Home from "./Components/Home.jsx";
-// import AboutUs from "./Components/AboutUs.jsx"
+
 
 function App() {
 
