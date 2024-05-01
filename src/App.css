@@ -1,36 +1,46 @@
 body {
   
-  background-image: url("src/assets/nyc-manhattan.jpg");
+  background-image: url("src/assets/brooklyn-bridge-black&white.jpg");
   background-size:contain;
   background-attachment: fixed;
   background-repeat: repeat;
   opacity: 1;
 }
 
-.entire-body {
+ /* .entire-body {
   width: 100%;
-}
+} */
 
 /* p {
   width: 100%;
   display: flex;
   margin-left: 50%;
-  /* align-items: center; */
-  /* justify-content: center; */
-  /* color: white;
-}  */
+  align-items: center; */
+  /* justify-content: center; */ 
+  /* color: white; */
+/* }  */
 
-#btn-toggleform {
+/* #btn-toggleform {
   margin-left: 44%;
   justify-content: center;
   height: 50px;
   width: 140px;
   border-radius: 7px;
   
-}
+} */
 
-#btn-toggleform:hover {
+/* #btn-toggleform:hover {
   cursor: pointer;
   background-color: rgba(30, 131, 214, 0.2);
   color: white;
-}
+} */
+
+/* .test {
+  height: 300px;
+  border: 1px solid black;
+} */
+
+/* .resena {
+  height: 250px;
+  border: 1px solid black;
+} */

@@ -1,13 +1,14 @@
-import "./SocialMedia.scss";
-// import "./SocialMedia.css";
+// import "./SocialMedia.scss";
+import "./SocialMedia.css";
 
 export default function SocialMedia() {
     return (
-        <div className="flex-center">
-            <i className="fa fa-twitter fa-4x icon-3d"></i>
-            <i className="fa fa-facebook fa-4x icon-3d"></i>
-            <i className="fa fa-instagram fa-4x icon-3d"></i>
-            <i className="fa fa-whatsapp fa-4x icon-3d"></i>
+        <div className="socialmedia-box">
+            <div className="socialmedia-container">
+            <img className="instagram" src="https://img.icons8.com/color/144/instagram-new--v1.png" alt="instagram-new--v1"/>
+            <img className="facebook" src="https://img.icons8.com/color/144/facebook-new.png" alt="facebook-new"/>
+            <img className="tiktok" src="https://img.icons8.com/color/144/tiktok--v1.png" alt="tiktok--v1"/>
+            </div>
         </div>
     )
 }

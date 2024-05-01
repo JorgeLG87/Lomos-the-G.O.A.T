@@ -5,7 +5,9 @@ import './App.css'
 import Form from "./Components/Form.jsx";
 import Navbar from "./Components/Navbar.jsx";
 import SocialMedia from "./Components/SocialMedia.jsx";
-import QueEsLomo from "./Components/QueEsLomo.jsx";
+// import QueEsLomo from "./Components/QueEsLomo.jsx";
+import Home from "./Components/Home.jsx";
+// import AboutUs from "./Components/AboutUs.jsx"
 
 function App() {
 
@@ -16,21 +18,15 @@ function App() {
   }
   return (
     <>
-    <Navbar/>
-    <QueEsLomo/>
-    <div className="entire-body">
-      <p>LOMOS THE G.O.A.T</p>
-      <button id="btn-toggleform" type="button" onClick={handleToggleForm}>Order Now</button>
-      <br/><br/>
-      {toggleForm ? <Form/> : null}
-
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-
-    </div>
-    <SocialMedia/>
+      <Router>
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/*" element={<Home/>}/>
+          <Route path="/order-now" element={<Form/>}/>
+        </Routes>
+      </Router>
+      <SocialMedia/>
     </>
   )
 }
