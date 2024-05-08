@@ -23,7 +23,7 @@ export default function Form() {
     return (
         <div className="form-container">
             <div className="menu-container">
-                <img className="menu" src="src/assets/menu.png"/>
+                <img className="menu" src="/menu.png"/>
             </div>
             <form className="order-form">
                 <label className="firstname-container">
