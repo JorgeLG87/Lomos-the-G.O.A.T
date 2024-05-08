@@ -1,0 +1,118 @@
+
+
+.combo-selection {
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    height: 34px;
+    width: 143px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    
+    
+}
+
+.combo-selection:hover {
+    background-color: rgba(30, 131, 214, 0.2);
+    color: white;
+}
+
+.combo-lomo-container {
+    position: absolute;
+    margin-top: 115px;
+    margin-left: 120px;
+}
+
+.combo-beverage-container {
+    display: block;
+    position: absolute;
+    margin-top: 220px;
+    margin-left: 15px;
+    
+}
+
+
+.combo-french-fries {
+    display: block;
+    position: absolute;
+    /* position: absolute; */
+    margin-top: 220px;
+    margin-left: 240px;
+}
+
+.combo-lomoquantity-container {
+    display: block;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 60px
+}
+
+.combo-lomo-quantity {
+    display: block;
+    height: 27px;
+    width: 50px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.combo-add {
+    display: flex;
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    background: url("src/assets/add-button.png");
+    background-size: contain;
+    border-radius: 7px;
+    margin-top: 310px;
+    margin-left: 180px;
+    border: none;
+}
+
+.combo-add:hover {
+    cursor: pointer;
+    transform: scale(1.20)
+}
+
+.combo-size {
+    margin-left: 220px;
+    margin-top: 10px;
+}
+
+.size {
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    margin-left: 0px;
+    height: 34px;
+    width: 143px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.added-items-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    position: absolute;
+    margin-left: -500px;
+    margin-top: 200px;
+}
+
+.added2-item-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    position: absolute;
+    margin-left: -300px;;
+    margin-top: 200px;
+}
+
+.quantity-error {
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    margin-top: 80px;
+    margin-left: 25px;
+    text-shadow: none;
+
+}

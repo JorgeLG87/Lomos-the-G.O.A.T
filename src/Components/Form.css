@@ -1,9 +1,12 @@
 .form-container {
     display: grid;
+    position: relative;
+
     margin-left: 12%;
-    margin-top: 10px;
+    margin-top: 50px;
     grid-template-columns: 250px 400px;
     width: 1000px;
+    min-height: 1100px;;
     border: 1px solid black;
     box-shadow: 1.7px 1.7px 1.7px 0px rgb(210, 210, 210, 210);
     border-radius: 20px;
@@ -26,40 +29,6 @@
     text-shadow: 1px 1px 2px red;
 }
 
-.selection {
-    display: inline-flex;
-    margin-top: 10px;
-    height: 34px;
-    width: 143px;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
-    
-    
-}
-
-.selection:hover {
-    background-color: rgba(30, 131, 214, 0.2);
-    color: white;
-}
-
-.lomo-container {
-    margin-left: -275px;
-    margin-top: 220px;
-}
-
-.beverage-container {
-    margin-top: 220px;
-    margin-left: -10px;
-    
-}
-
-.french-fries {
-    display: block;
-    /* position: absolute; */
-    margin-top: 305px;
-    margin-left: -270px;
-}
 
 .submit-btn {
     position: absolute;
@@ -68,8 +37,8 @@
     justify-content: center;
     width: 125px;
     height: 40px;
-    margin-top: 430px;
-    margin-left: 260px;
+    margin-top: 870px;
+    margin-left: 247px;
     border-radius: 5px;
 }
 
@@ -143,4 +112,63 @@
     margin-top: 10px;
     height: 27px;
     border-radius: 5px;
+}
+
+
+/* .add-cont {
+    background-image: url("src/assets/add-button.png");
+    background-size: cover;
+} */
+
+
+.combo-btn {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    margin-top: 350px;
+    margin-left: 70px;
+    width: 200px;
+    height: 40px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
+}
+
+.combo-btn:hover {
+    cursor:pointer;
+    background-color: rgba(30, 214, 33, 1);
+    color: white;
+}
+
+.combo-btn:active {
+    box-shadow: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  /* margin: 0; */
+}
+
+.type-container {
+    position: absolute;
+    display: flex;
+    margin-top: 450px;
+    
+    width: 400px;
+    height: 370px;
+    margin-left: -30px;
+    
+    border: 1px solid white;
+    border-radius: 7px;
+}
+
+.choosecombo-text {
+    display: block;
+    position: absolute;
+    margin-top: 250px;
+    margin-left: 10px;
+    font-family: "Dancing Script";
+    text-shadow: 1px 1px 2px red;
+    font-size: 50px;
 }

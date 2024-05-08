@@ -1,5 +1,5 @@
 .instagram, .facebook, .tiktok {
-    width: 60px;
+    width: 50px;
     transform: rotate(345deg);
     margin-left: 50px;
 }
@@ -15,5 +15,11 @@
 }
 
 .socialmedia-box {
+    display: flex;
+    align-items: center;
     margin-top: 100px;
+    height: 150px;
+    /* margin-bottom: 40px; */
+    background-color: black;
+    
 }

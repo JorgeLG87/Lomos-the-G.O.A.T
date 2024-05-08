@@ -1,6 +1,25 @@
 import "./Form.css"
+import { useState } from "react";
+
+import Combo from "./Combo.jsx";
+import NoCombo from "./NoCombo.jsx";
 
 export default function Form() {
+
+    const [ combo, setCombo] = useState(true);
+    const [ comboWord, setComboWord ] = useState("Combo")
+
+    const [lomo, setLomo] = useState("");
+
+    function handleCombo() {
+        setCombo(!combo);
+        if (combo === true) {
+            setComboWord("Combo")
+        } else {
+            setComboWord("No Combo")
+        }
+    }
+
     return (
         <div className="form-container">
             <div className="menu-container">
@@ -32,32 +51,11 @@ export default function Form() {
                     <input className="contact-number" type="number" required></input>
                 </label>
                 {/* <div className="ordermenu-container"> */}
-                <label className="lomo-container">
-                    Choose your type:
-                    <select className="selection">
-                        <option value="house-lomo">Lomo the G.O.A.T</option>
-                        <option value="plain">Plain</option>
-                    </select>
-                </label>
-                <br/><br/>
-                <label className="beverage-container">
-                    Beverage:
-                    <select className="selection">
-                        <option value="pepsi">Pepsi</option>
-                        <option value="coke">Coke</option>
-                        <option value="orange juice">Orange Juice</option>
-                    </select>
-                </label>
-                <label className="french-fries">
-                    French Fries:
-                    <select className="selection">
-                        <option value="none">------None------</option>
-                        <option value="small">Small</option>
-                        <option value="medium">Medium</option>
-                        <option value="large">Large</option>
-                    </select>
-                </label>
-                {/* </div> */}
+                <button className="combo-btn" onClick={handleCombo} type="button">{comboWord}</button>
+                <p className="choosecombo-text">Choose your combo..</p>
+                <div className="type-container">
+                {combo ? <Combo/> : <NoCombo/>}
+                </div>
                 <button className="submit-btn" type="submit">Place Order</button>
             </form>
         </div>

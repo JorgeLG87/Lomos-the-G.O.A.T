@@ -1,0 +1,87 @@
+.french-fries-nocombo {
+    /* display: flex; */
+    margin-left: -195px;
+    margin-top: 190px;
+}
+
+.selection {
+    display: block;
+    margin-top: 10px;
+    height: 34px;
+    width: 143px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    
+    
+}
+
+.selection:hover {
+    background-color: rgba(30, 131, 214, 0.2);
+    color: white;
+}
+
+.lomo-container {
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+
+
+
+.french-fries {
+    display: block;
+    /* position: absolute; */
+    margin-top: 305px;
+    margin-left: 20px;
+}
+
+.lomoquantity-container {
+    margin-top: 20px;
+    margin-left: 70px
+}
+
+.lomo-quantity {
+    display: block;
+    height: 27px;
+    width: 50px;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+.beverage-container {
+    margin-top: 100px;
+    margin-left: -275px;
+    
+}
+
+.bevquantity-container {
+    /* position: absolute; */
+    margin-top: 100px;
+    margin-left: 70px;
+}
+
+.bev-quantity {
+    display: block;
+    width: 50px;
+    margin-top: 10px;
+    height: 27px;
+}
+
+.add-nocombo {
+    display: block;
+    position: relative;
+    width: 45px;
+    height: 45px;
+    background: url("src/assets/add-button.png");
+    background-size: cover;
+    border-radius: 7px;
+    margin-top: 290px;
+    margin-left: -90px;
+    border: none;
+}
+
+.add-nocombo:hover {
+    cursor: pointer;
+    transform: scale(1.20)
+}
