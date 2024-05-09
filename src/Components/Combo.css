@@ -61,7 +61,7 @@
     position: absolute;
     width: 45px;
     height: 45px;
-    background: url("src/assets/add-button.png");
+    background: url("/add-button.png");
     background-size: contain;
     border-radius: 7px;
     margin-top: 310px;
