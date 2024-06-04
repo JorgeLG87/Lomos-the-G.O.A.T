@@ -16,7 +16,7 @@
         gap: 0px;
         grid-template-rows: repeat(3, 1fr);
         padding: 2.5px;
-        
+        padding-bottom: 20px;
     }
 }
 
