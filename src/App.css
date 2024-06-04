@@ -1,8 +1,17 @@
 body {
-  background-color: black;
-  background-image: url("/PHOTO-2024-04-24-08-35-52.jpg");
+  margin: 0px;
+  background-color: white;
+  /* background-image: url("/PHOTO-2024-04-24-08-35-52.jpg"); */
   background-size:contain;
   background-attachment: fixed;
   background-repeat: repeat;
   opacity: 1;
+}
+
+.logo {
+  display: flex;
+  position: absolute;
+  width: 120px;
+  margin-top: 5px;
+  margin-left: 20px;
 }

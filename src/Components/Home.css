@@ -1,44 +1,138 @@
+
+.aboutus-section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .entire-body {
+    display: grid;
+    margin-top: 150px;
+    margin-left: 8%;
+    grid-template-columns: repeat(3,1fr);
     width: 100%;
+    gap: 0px;
+    @media (width < 450px) {
+      grid-template-columns: none;
+      grid-template-rows: repeat(3, 1fr);
+    }
   }
 
-  .test {
+  .title-container {
     display: flex;
+    width: 300px;
     height: 300px;
-    border: 1px solid white;
+    border: 1px solid red;
     border-radius: 7px;
     margin-top: 50px;
-    color: white;
-    text-align: center;
-    /* justify-content: center; */
-    align-items: center;
-    font-size: x-large;
-    background-image: url("/AdobeStock_134115811_Preview.jpeg");
-  }
-
-  .resena {
-    display: flex;
-    height: 250px;
-    border: 1px solid white;
     color: white;
     text-align: center;
     justify-content: center;
     align-items: center;
     font-size: x-large;
-    margin-top: 15px;
+    background-image: url("/AdobeStock_134115811_Preview.jpeg");
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
+
+  .comments {
+    display: flex;
+    position: relative;
+    height: 250px;
+    width: 50%;
+    border: 1px solid red;
+    border-radius: 7px;
+    color: black;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+    margin-top: 150px;
+    margin-left: 10%;
+    
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
+
+.aboutus-container2 {
+  display: flex;
+  border: 1px solid red;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 7px;
+  width: 300px;
+  height: 300px;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  margin-right:0px;
+  background-image: url("/AdobeStock_134115811_Preview.jpeg");
+  background-size: cover;
+}
+
+
 
 .aboutus-title {
   font-family: "Dancing Script";
   text-shadow: 1px 1px 2px rgb(0, 162, 255);
   font-size: 45px;
-  margin-top: -165px;
-  margin-left: 170px;
+  margin-top: 0px;
+  margin-left: 0px;
 }
 
 .aboutus-text {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
   width: 850px;
   font-size: 16px;
-  margin-left: -600px;
-  margin-top: 30px;
+  font-style: italic;
+  margin-left: 15px;
+  margin-right: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.aboutus-images-arg {
+  border: 1px solid red;
+  height: 300px;
+  width: 300px;
+  margin-top: 50px;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.argentina-map {
+  display: flex;
+  width: 350px;
+  height: 350px;
+  margin-top: -50px;
+  margin-left: 30px;
+}
+
+.map-comments-container {
+  margin-top: -100px;
+  display: flex;
+}
+
+.socialmedia-text-container {
+  margin-top: 150px;
+}
+
+.socialmedia-text {
+  color: transparent;
+  margin-left: 45%;
+  margin-top: 70px;
+}
+
+.socialmedia-text2 {
+  font-size: 50px;
+  margin-left: 42%;
+  margin-top: -10px;
+}
+
+.span-text {
+  font-size: 50px;
+  background: linear-gradient(120deg, red, yellow);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
