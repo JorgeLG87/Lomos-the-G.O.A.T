@@ -17,8 +17,10 @@ export default function Navbar() {
 
     return (
         <nav className="navbar-container">
+            {/* <div className="menubar-and-items-container"> */}
             <img onClick={handleToggle} className="menubar" src="/menu3.png"/>
             { toggle ?  <MenuBar/> : null}
+            {/* </div> */}
             <ul className="items-list">
                 <div className="home-container">  
                     <Link to="/"><li className="item"><p>Home</p></li></Link>

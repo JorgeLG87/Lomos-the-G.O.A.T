@@ -1,21 +1,23 @@
 .menubar-container {
-    display: block;
-    /* position: absolute; */
+    /* display: block; */
+    position: absolute;
     text-align: center;
-    margin-top: -15px;
-    border: 1px solid red;
+    margin-top: 90px;
+    /* border: 1px solid yellow; */
     height: 228px;
     border-radius: 7px;
     z-index: 1;
-    /* width: 120px; */
+    width: 120px;
+    margin-left: 250px;
 }
 
 .menubar-items {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(250, 250, 84);
-    /* border: 1px solid red; */
+    background-color: black;
+    border: none;
+    border: 1px solid yellow;
     height: 33.3%;
     margin-top: 0px;
     margin-bottom: 0px;

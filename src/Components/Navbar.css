@@ -93,9 +93,9 @@
 
 .menubar {
     display: none;
-    position: relative;
+    /* position: relative; */
     @media (width < 450px) {
-        display: flex;
+        display: inline-flex;
         width: 70px;
         height: 70px;
         margin-right: 20px;
@@ -103,3 +103,10 @@
         cursor: pointer;
     }
 }
+
+/* .menubar-and-items-container {
+    @media (width < 450px) {
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+    }
+} */
