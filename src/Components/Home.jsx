@@ -7,6 +7,9 @@ import HomeSlidingImg from "./HomeSlidingImg.jsx";
 export default function Home({ slides }) {
     return (
         <>
+        <video className="video" autoPlay="true" loop="true"> 
+          <source src="public/publicidad-lomo.MP4" type="video/mp4"/>
+        </video>
         <QueEsLomo/>
         <div className="aboutus-section-container">
         <div className="entire-body">    
