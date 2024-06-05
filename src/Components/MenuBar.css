@@ -1,5 +1,6 @@
 .menubar-container {
     /* display: block; */
+    display: none;
     position: absolute;
     text-align: center;
     margin-top: 90px;
@@ -9,6 +10,9 @@
     z-index: 1;
     width: 120px;
     margin-left: 250px;
+    @media (width < 450px) {
+        display: block;
+    }
 }
 
 .menubar-items {

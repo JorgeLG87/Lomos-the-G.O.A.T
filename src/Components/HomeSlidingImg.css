@@ -1,0 +1,11 @@
+.slide {
+    width: 100%;
+    height: 100%;
+}
+
+.image02 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}

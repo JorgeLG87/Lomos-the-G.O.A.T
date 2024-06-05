@@ -11,9 +11,8 @@ import Home from "./Components/Home.jsx";
 
 function App() {
   const slides = [
-    { url: "/Buenos-Aires.jpg", title: "Buenos Aires",
-      url: "/lomito-argentino.jpeg", title: "Lomo",
-     }
+    { url: "/Buenos-Aires.jpg", title: "Buenos Aires"},
+    {  url: "/lomito-argentino.jpeg", title: "Lomo"}
   ]
 
   const [toggleForm, setToggleForm] = useState(false);
