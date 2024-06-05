@@ -8,6 +8,9 @@
     border-radius: 7px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
+    @media (width < 450px) {
+        display: grid;
+    }
 }
 
 
@@ -90,6 +93,7 @@
 
 .menubar {
     display: none;
+    position: relative;
     @media (width < 450px) {
         display: flex;
         width: 70px;

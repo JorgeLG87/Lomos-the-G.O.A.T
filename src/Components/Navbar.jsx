@@ -1,13 +1,24 @@
 import { Link } from "react-router-dom";
+import { useState } from "react";
 
 import "./Navbar.css";
+
+import MenuBar from "./MenuBar";
 
 
 
 export default function Navbar() {
+
+    const [ toggle, setToggle ] = useState(false);
+
+    function handleToggle() {
+        setToggle(!toggle);
+    }
+
     return (
         <nav className="navbar-container">
-            <img className="menubar" src="/menu3.png"/>
+            <img onClick={handleToggle} className="menubar" src="/menu3.png"/>
+            { toggle ?  <MenuBar/> : null}
             <ul className="items-list">
                 <div className="home-container">  
                     <Link to="/"><li className="item"><p>Home</p></li></Link>
