@@ -7,7 +7,7 @@ import "./Navbar.css";
 export default function Navbar() {
     return (
         <nav className="navbar-container">
-            {/* <img className="logo" src="/thegoat.JPG"/> */}
+            <img className="menubar" src="/menu3.png"/>
             <ul className="items-list">
                 <div className="home-container">  
                     <Link to="/"><li className="item"><p>Home</p></li></Link>

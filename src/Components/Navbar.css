@@ -87,3 +87,15 @@
     margin-top: 15px;
     text-align: center;
 }
+
+.menubar {
+    display: none;
+    @media (width < 450px) {
+        display: flex;
+        width: 70px;
+        height: 70px;
+        margin-right: 20px;
+        margin-top: 25px;
+        cursor: pointer;
+    }
+}
