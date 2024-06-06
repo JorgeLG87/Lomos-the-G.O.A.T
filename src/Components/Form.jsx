@@ -36,8 +36,6 @@ export default function Form() {
 
     document.body.removeChild(a);
     console.log("Email Body", content1)
-    // window.location = mailToLink;
-
    }
 
 

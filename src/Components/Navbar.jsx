@@ -9,15 +9,6 @@ import MenuBar from "./MenuBar";
 
 export default function Navbar({ toggle, handleToggle }) {
 
-    
-
-    function handle(e) {
-        console.log(e.target)
-    }
-
-    
-
-
     return (
         <nav className="navbar-container">
             {/* <div className="menubar-and-items-container"> */}

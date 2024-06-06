@@ -24,17 +24,8 @@ function App() {
   }
 
   function handleToggle(e) {
-    console.log(e.target);
-    // let rest = document.addEventListener('click', handle)
-    // console.log(e.target);
-    // console.log(rest);
     setToggle(!toggle);
-    // if (e.target !== document.getElementById("menubar")) {
-    //     console.log("true");
-    // } else {
-    //     console.log("false");
-    // }
-}
+  }
 
   function closeMenuBar() {
     if (toggle) {
