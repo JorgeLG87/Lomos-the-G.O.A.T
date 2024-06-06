@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
 import { Link } from "react-router-dom";
 
@@ -17,16 +17,38 @@ function App() {
 
   const [toggleForm, setToggleForm] = useState(false);
 
+  const [ toggle, setToggle ] = useState(false);
+
   function handleToggleForm(){
     setToggleForm(!toggleForm);
   }
+
+  function handleToggle(e) {
+    console.log(e.target);
+    // let rest = document.addEventListener('click', handle)
+    // console.log(e.target);
+    // console.log(rest);
+    setToggle(!toggle);
+    // if (e.target !== document.getElementById("menubar")) {
+    //     console.log("true");
+    // } else {
+    //     console.log("false");
+    // }
+}
+
+  function closeMenuBar() {
+    if (toggle) {
+      setToggle(false);
+    }
+  }
+
   return (
-    <>
+    <div onClick={closeMenuBar}>
       <Router>
         <Link to="/">
           <img className="logo" src="/thegoat.JPG"/>
         </Link>
-        <Navbar/>
+        <Navbar handleToggle={handleToggle} toggle={toggle}/>
         <Routes>
           <Route path="/" element={<Home slides={slides}/>}/>
           <Route path="/*" element={<Home/>}/>
@@ -34,7 +56,7 @@ function App() {
         </Routes>
       </Router>
       <SocialMedia/>
-    </>
+    </div>
   )
 }
 

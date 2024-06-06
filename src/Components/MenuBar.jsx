@@ -1,7 +1,23 @@
 import "./MenuBar.css";
 import { Link } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
 
 export default function MenuBar() {
+
+    
+
+    // useEffect(() => {
+    //     let handler = (e) => {
+    //         // if (menuRef.current.contains(e.target)) {
+    //         //     setToggle(false);
+    //         //     console.log(menuRef.current);
+    //         // }
+    //         console.log(menuRef.current)
+    //     };
+
+    //     document.addEventListener('mousedown', handler);
+    // });
+
     return (
         <div className="menubar-container">
             <Link to="/" style={{textDecoration:"none", color: "yellow"}}>
