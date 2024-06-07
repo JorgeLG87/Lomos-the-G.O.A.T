@@ -62,7 +62,7 @@ export default function Form() {
                 <button className="combo-btn" onClick={handleCombo} type="button">Combo</button>
                 <button className="combo-btn2" onClick={handleNotCombo} type="button">No Combo</button>
                 <div className="type-container">
-                {combo  ? <Combo lomo={lomo} setLomo={setLomo} quantity={quantity} setQuantity={setQuantity} dateStamp={dateStamp} setDateStamp={setDateStamp} secDateStamp={secDateStamp} setSecDateStamp={setSecDateStamp}/> : <NoCombo/>}
+                    {combo  ? <Combo lomo={lomo} setLomo={setLomo} quantity={quantity} setQuantity={setQuantity} dateStamp={dateStamp} setDateStamp={setDateStamp} secDateStamp={secDateStamp} setSecDateStamp={setSecDateStamp}/> : <NoCombo/>}
                 </div>
                 <hr/>
                 <button onClick={sendEmail} className="submit-btn" type="button">Place Order</button>

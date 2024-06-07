@@ -21,6 +21,10 @@
     text-align: center;
     cursor: pointer;
     border-color: red; 
+    @media (width <450px) {
+        width: 100%;
+        margin-left: 10%;
+    }
 }
 
 .combo-selection-bev:hover {
@@ -31,14 +35,19 @@
 
 .combo-selection-lomo {
     display: block;
-    position: relative;
+    /* position: relative; */
     margin-top: 10px;
     height: 34px;
     width: 410px;
     border-radius: 5px;
     text-align: center;
     cursor: pointer;
-    border-color: red;  
+    border-color: red;
+    @media (width < 450px) {
+        width: 80%;
+        margin-left: 12.5%;
+    }
+
 }
 
 .combo-selection-lomo:hover {
@@ -56,6 +65,9 @@
     position: absolute;
     margin-top: 100px;
     margin-left: 0px;
+    @media (width < 450px) {
+        width: 100%;
+    }
 }
 
 .combo-beverage-container {
