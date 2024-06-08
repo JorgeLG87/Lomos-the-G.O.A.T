@@ -18,7 +18,7 @@ export default function Home({ slides }) {
         </div>
         <div className="icon-container">
           <img className="face" src="/facebook.png"/>
-          <img className="location" src="public/location.png"/>
+          <img className="location" src="/location.png"/>
         </div>
         
         <QueEsLomo/>
