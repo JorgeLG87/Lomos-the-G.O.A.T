@@ -8,9 +8,19 @@ import HomeSlidingImg from "./HomeSlidingImg.jsx";
 export default function Home({ slides }) {
     return (
         <>
-        <video className="video" autoPlay={true} loop={true} playsInline> 
-          <source src="/publicidad-lomo.MP4" type="video/mp4"/>
-        </video>
+        <div className="marco-video-container">
+          {/* <img className="marco-video" src="/marco-video2.jpg"/> */}
+          <div className="video-container">
+            <video className="video" autoPlay={true} loop={true} playsInline>
+              <source src="/publicidad-lomo.MP4" type="video/mp4"/>
+            </video>
+          </div>
+        </div>
+        <div className="icon-container">
+          <img className="face" src="/facebook.png"/>
+          <img className="location" src="public/location.png"/>
+        </div>
+        
         <QueEsLomo/>
         <div className="aboutus-section-container">
         <div className="entire-body">    
