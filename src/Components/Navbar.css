@@ -31,7 +31,7 @@
 .item {
     display: inline-flex;
     list-style-type: none;
-    color: red;
+    color: rgb(200, 0, 0);
     font-size: 15px;
     margin-top: -11.5px;
     

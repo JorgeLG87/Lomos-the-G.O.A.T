@@ -34,7 +34,7 @@ function App() {
   }
 
   return (
-    <div onClick={closeMenuBar}>
+    <div className="dropdown" onClick={closeMenuBar}>
       <Router>
         <Link to="/">
           <img className="logo" src="/thegoat.JPG"/>
