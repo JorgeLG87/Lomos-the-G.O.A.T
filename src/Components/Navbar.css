@@ -93,6 +93,7 @@
 
 .menubar {
     display: none;
+    z-index: 100;
     /* position: relative; */
     @media (width < 450px) {
         display: inline-flex;
