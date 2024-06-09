@@ -9,7 +9,7 @@ export default function Home({ slides }) {
     return (
         <>
         <div className="marco-video-container">
-          {/* <img className="marco-video" src="/marco-video2.jpg"/> */}
+          <img className="marco-video" src="/Background-image.png"/>
           <div className="video-container">
             <video className="video" autoPlay={true} loop={true} playsInline>
               <source src="/publicidad-lomo.MP4" type="video/mp4"/>
@@ -42,7 +42,7 @@ export default function Home({ slides }) {
           <p className="socialmedia-text"><span className="span-text"># FOLLOW US</span></p><p className="socialmedia-text2">ON SOCIAL MEDIA</p>
         </div>
         <div className="map-comments-container">
-          <img className="argentina-map" src="/argentina-outline.png"/>
+          <img className="argentina-map" src="/Flag_map_of_Argentina.svg"/>
           <div className="comments">Google Reviews</div>
         </div>
         </>

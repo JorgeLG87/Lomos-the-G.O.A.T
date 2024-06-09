@@ -7,7 +7,7 @@
     /* border: 1px solid yellow; */
     height: 228px;
     border-radius: 7px;
-    z-index: 1;
+    z-index: 10;
     width: 120px;
     margin-left: 250px;
     @media (width < 450px) {
