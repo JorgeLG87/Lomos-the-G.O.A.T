@@ -12,7 +12,7 @@ export default function MenuBar() {
             <Link to="/order-now" style={{textDecoration:"none", color:"yellow"}}>
                 <p className="menubar-items">Order Now</p>
             </Link>
-            <Link to="/" style={{textDecoration:"none", color:"yellow"}}>
+            <Link to="/about-us" style={{textDecoration:"none", color:"yellow"}}>
                 <p className="menubar-items" style={{borderBottomLeftRadius:"7px", borderBottomRightRadius:"7px"}}>About Us</p>
             </Link>
         </div>
