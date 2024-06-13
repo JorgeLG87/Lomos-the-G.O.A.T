@@ -68,7 +68,7 @@ export default function NoCombo() {
                     <div className="small">
                         <p className="text">The G.O.A.T</p>
                         <div className="icons-lomo">
-                            <img className="icon-item-lomo" src="public/sandwich-medium.png"/>
+                            <img className="icon-item-lomo" src="/sandwich-medium.png"/>
                         </div>
                         <button onClick={() => cart.addOneToCart("7")} className="nocombo-add" type="button">Add To Cart</button>
                     </div>
@@ -76,7 +76,7 @@ export default function NoCombo() {
                     <div className="medium">
                         <p className="text">Plain</p>
                         <div className="icons-lomo">
-                            <img className="icon-item-lomo" src="public/sandwich-medium.png"/>
+                            <img className="icon-item-lomo" src="/sandwich-medium.png"/>
                         </div>
                         <button onClick={() => cart.addOneToCart("8")} className="nocombo-add" type="button">Add To Cart</button>
                     </div>
@@ -91,7 +91,7 @@ export default function NoCombo() {
                     <div className="small-fries">
                         <p className="text">Small</p>
                         <div className="icons-fries">          
-                            <img className="icon-item-fries" src="public/fries-medium.png"/>
+                            <img className="icon-item-fries" src="/fries-medium.png"/>
                         </div>
                         <button onClick={() => cart.addOneToCart("12")} className="nocombo-add" type="button">Add To Cart</button>
                     </div>
@@ -99,7 +99,7 @@ export default function NoCombo() {
                     <div className="medium-fries">
                         <p className="text">Medium</p>
                         <div className="icons-fries">
-                            <img className="icon-item-fries" src="public/fries-medium.png"/>
+                            <img className="icon-item-fries" src="/fries-medium.png"/>
                         </div>
                         <button onClick={() => cart.addOneToCart("13")} className="nocombo-add" type="button">Add To Cart</button>
                     </div>
@@ -107,7 +107,7 @@ export default function NoCombo() {
                     <div className="large-fries">
                         <p className="text">Large</p>
                         <div className="icons-fries">
-                            <img className="icon-item-fries" src="public/fries-medium.png"/>
+                            <img className="icon-item-fries" src="/fries-medium.png"/>
                         </div>
                         <button onClick={() => cart.addOneToCart("14")} className="nocombo-add" type="button">Add To Cart</button>
                     </div>
@@ -120,7 +120,7 @@ export default function NoCombo() {
                     <div className="small-fries">
                         <p className="text">Small</p>
                         <div className="icons-fries">          
-                            <img className="icon-item-soda" src="public/soda-medium.png"/>
+                            <img className="icon-item-soda" src="/soda-medium.png"/>
                         </div>
                         <button onClick={() => cart.addOneToCart("12")} className="nocombo-add" type="button">Add To Cart</button>
                     </div>
@@ -128,7 +128,7 @@ export default function NoCombo() {
                     <div className="medium-fries">
                         <p className="text">Medium</p>
                         <div className="icons-fries">
-                            <img className="icon-item-soda" src="public/soda-medium.png"/>
+                            <img className="icon-item-soda" src="/soda-medium.png"/>
                         </div>
                         <button onClick={() => cart.addOneToCart("13")} className="nocombo-add" type="button">Add To Cart</button>
                     </div>
@@ -136,7 +136,7 @@ export default function NoCombo() {
                     <div className="large-fries">
                         <p className="text">Large</p>
                         <div className="icons-fries">
-                            <img className="icon-item-soda" src="public/soda-medium.png"/>
+                            <img className="icon-item-soda" src="/soda-medium.png"/>
                         </div>
                         <button onClick={() => cart.addOneToCart("14")} className="nocombo-add" type="button">Add To Cart</button>
                     </div>
