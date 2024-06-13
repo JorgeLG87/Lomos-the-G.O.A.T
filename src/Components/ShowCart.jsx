@@ -1,0 +1,60 @@
+import "./ShowCart.css";
+import { Link } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+import { CartContext } from "../cartContext";
+import { getProductData } from "../storeProducts";
+
+export default function ShowCart() {
+
+    const cart = useContext(CartContext);
+    console.log(cart)
+
+    const [ improvedCart, setImprovedCart ] = useState([]);
+
+    function getItem(object) {
+        return object;
+    }
+    
+    function getTotalSum() {
+        const items = cart.items;
+        let total = 0;
+
+        if (items.length === 0) {
+            return 0;
+        }
+
+        for (let i = 0; i < items.length; i++) {
+            const data = getProductData(items[i].id);
+            const currItemPrice = data.price;
+            total += currItemPrice;
+        }
+        return total;
+    }
+
+    return (
+        <div className="showcart-page">
+            <div className="top-container">
+                <Link to="/order-now" style={{textDecoration:"none"}}>
+                    <button className="navigating-showcart" type="button">Go Back</button>
+                </Link>
+                <p className="showcart-main-title">Shopping Cart</p>
+                <button className="place-order-top" type="button">Place Order</button>
+            </div>
+            <div className="showcart-main-container">
+                {(cart.items).map((product, index) => {
+                    const data = getProductData(product.id);
+                    return (
+                        <div className="list-products">
+                            <p className="showcart-title">{data.title}</p>
+                            <p>Quantity: {product.quantity}</p>
+                            <p>Beverage: {product.beverage}</p>
+                            <p className="showcart-subtotal">Price: ${((data.price)*(product.quantity)).toFixed(2)}</p>
+                            <button className="delete-btn" onClick={() => cart.deleteFromCart(product.index)} type="button">Remove From Cart</button>
+                        </div>
+                    )
+                })}
+            </div>
+            <div className="total-price">Total: ${getTotalSum().toFixed(2)}</div>
+        </div>
+    )
+}

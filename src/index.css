@@ -1,4 +1,13 @@
-body {
+/* body {
     margin: 0px;
     padding: 0px;
+} */
+
+body {
+    /* display: flex; */
+    width: 100%;
+}
+
+html {
+    width: 100%;
 }

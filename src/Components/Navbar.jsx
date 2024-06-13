@@ -20,7 +20,7 @@ export default function Navbar({ toggle, handleToggle }) {
                     <Link to="/"><li className="item"><p>Home</p></li></Link>
                 </div>
                 <div className="aboutus-container">
-                    <li className="item"><p>About Us</p></li>
+                    <Link to="about-us"><li className="item"><p>About Us</p></li></Link>
                 </div>
                 <div className="ordernow-container">
                     <Link to="/order-now"><li className="item-ordernow"><p>Order Now</p></li></Link>

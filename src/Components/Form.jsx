@@ -1,10 +1,13 @@
 import "./Form.css"
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { Link } from "react-router-dom";
+import { CartContext} from "../cartContext.jsx";
 
 import Combo from "./Combo.jsx";
 import NoCombo from "./NoCombo.jsx";
 
-export default function Form() {
+
+export default function Form({ shoppingCart, setShoppingCart }) {
     const [ dateStamp, setDateStamp ] = useState(0)
     const [ secDateStamp, setSecDateStamp ] = useState(1); 
 
@@ -13,7 +16,13 @@ export default function Form() {
 
     const [lomo, setLomo] = useState([]);
     const [ quantity, setQuantity ] = useState([]);
+
+    const cart = useContext(CartContext);
+    console.log(cart.items);
     
+    const totalQuantity = (cart.items).reduce((accu, product) => accu + product.quantity,0)
+    console.log(totalQuantity);
+
 
     function handleCombo() {
         setCombo(true);
@@ -39,9 +48,19 @@ export default function Form() {
    }
 
 
+   function handleShoppingCart() {
+    let currentLomo = document.getElementById("added-lomos").innertext;
+    let currentSize
+   }
+
     return (
         <div className="form-container">
-            <p className="choosecombo-text">Choose your combo..</p>
+            <Link to="/showcart" style={{textDecoration:"none", width:"100%"}}>
+                <button className="cart-button" type="button">Cart has ({totalQuantity} items)</button>
+            </Link>
+            <div className="choosecombo-text-container">
+                <p className="title2"><span className="span-text">Choose your combo</span></p><p className="title-form">...</p>
+            </div>
             <div className="form-fields">
             <form className="order-form" action="https://formsubmit.co/jorge85_6@hotmail.com" method="POST">
                     <div className="personal-info">
@@ -61,12 +80,12 @@ export default function Form() {
 
                 <button className="combo-btn" onClick={handleCombo} type="button">Combo</button>
                 <button className="combo-btn2" onClick={handleNotCombo} type="button">No Combo</button>
-                <div className="type-container">
-                    {combo  ? <Combo lomo={lomo} setLomo={setLomo} quantity={quantity} setQuantity={setQuantity} dateStamp={dateStamp} setDateStamp={setDateStamp} secDateStamp={secDateStamp} setSecDateStamp={setSecDateStamp}/> : <NoCombo/>}
-                </div>
-                <hr/>
-                <button onClick={sendEmail} className="submit-btn" type="button">Place Order</button>
+                
+                {/* <button onClick={sendEmail} className="submit-btn" type="button">Place Order</button> */}
             </form>
+            </div>
+            <div className="type-container">
+                {combo  ? <Combo lomo={lomo} setLomo={setLomo} quantity={quantity} setQuantity={setQuantity} dateStamp={dateStamp} setDateStamp={setDateStamp} secDateStamp={secDateStamp} setSecDateStamp={setSecDateStamp}/> : <NoCombo/>}
             </div>
             
             <div id="added-lomos" className="added-items-container">             

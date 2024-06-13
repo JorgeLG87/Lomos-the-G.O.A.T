@@ -1,9 +1,14 @@
 import "./NoCombo.css";
+import { useContext } from "react";
+import { CartContext } from "../cartContext";
 
 export default function NoCombo() {
+
+    const cart = useContext(CartContext)
+
     return (
-        <>  
-            <label className="lomoquantity-container">
+        <div className="nocombo-mother-container">  
+            {/* <label className="lomoquantity-container">
                 <input className="lomo-quantity" type="number" placeholder="Quantity"/>
             </label>
             <label className="lomo-container">
@@ -53,7 +58,92 @@ export default function NoCombo() {
                     <option value="no">No</option>
                 </select>
             </label>
-            <button className="add-nocombo" type="button"></button>
-        </>
+            <button className="add-nocombo" type="button"></button> */}
+
+            <div className="nocombo-main-container">
+                <div className="nocombo-title-span-container">
+                    <p className="title2"><span className="span-text">Lomo</span></p><p className="title">Type</p>
+                </div>
+                <div className="nocombo-sub-container-lomo">
+                    <div className="small">
+                        <p className="text">The G.O.A.T</p>
+                        <div className="icons-lomo">
+                            <img className="icon-item-lomo" src="public/sandwich-medium.png"/>
+                        </div>
+                        <button onClick={() => cart.addOneToCart("7")} className="nocombo-add" type="button">Add To Cart</button>
+                    </div>
+
+                    <div className="medium">
+                        <p className="text">Plain</p>
+                        <div className="icons-lomo">
+                            <img className="icon-item-lomo" src="public/sandwich-medium.png"/>
+                        </div>
+                        <button onClick={() => cart.addOneToCart("8")} className="nocombo-add" type="button">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div className="nocombo-main-container">
+                <div className="nocombo-title-span-container">
+                    <p className="title2"><span className="span-text">French</span></p><p className="title">Fries</p>
+                </div>
+                <div className="nocombo-sub-container-fries">
+                    <div className="small-fries">
+                        <p className="text">Small</p>
+                        <div className="icons-fries">          
+                            <img className="icon-item-fries" src="public/fries-medium.png"/>
+                        </div>
+                        <button onClick={() => cart.addOneToCart("12")} className="nocombo-add" type="button">Add To Cart</button>
+                    </div>
+
+                    <div className="medium-fries">
+                        <p className="text">Medium</p>
+                        <div className="icons-fries">
+                            <img className="icon-item-fries" src="public/fries-medium.png"/>
+                        </div>
+                        <button onClick={() => cart.addOneToCart("13")} className="nocombo-add" type="button">Add To Cart</button>
+                    </div>
+
+                    <div className="large-fries">
+                        <p className="text">Large</p>
+                        <div className="icons-fries">
+                            <img className="icon-item-fries" src="public/fries-medium.png"/>
+                        </div>
+                        <button onClick={() => cart.addOneToCart("14")} className="nocombo-add" type="button">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div className="nocombo-main-container">
+                <p className="title">Beverage</p>
+                <div className="nocombo-sub-container-fries">
+                    <div className="small-fries">
+                        <p className="text">Small</p>
+                        <div className="icons-fries">          
+                            <img className="icon-item-soda" src="public/soda-medium.png"/>
+                        </div>
+                        <button onClick={() => cart.addOneToCart("12")} className="nocombo-add" type="button">Add To Cart</button>
+                    </div>
+
+                    <div className="medium-fries">
+                        <p className="text">Medium</p>
+                        <div className="icons-fries">
+                            <img className="icon-item-soda" src="public/soda-medium.png"/>
+                        </div>
+                        <button onClick={() => cart.addOneToCart("13")} className="nocombo-add" type="button">Add To Cart</button>
+                    </div>
+
+                    <div className="large-fries">
+                        <p className="text">Large</p>
+                        <div className="icons-fries">
+                            <img className="icon-item-soda" src="public/soda-medium.png"/>
+                        </div>
+                        <button onClick={() => cart.addOneToCart("14")} className="nocombo-add" type="button">Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
     )
 }

@@ -1,0 +1,110 @@
+/* .showcart-main-container {
+    width: 100%;
+    height: 100vh;
+} */
+
+.top-container {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+}
+
+.navigating-showcart {
+    margin-top: 20px;
+    border: 1px solid black;
+    width: fit-content;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: rgb(253, 230, 21);
+    color: rgb(200, 0, 0);
+}
+.navigating-showcart:hover {
+    cursor: pointer;
+}
+
+.showcart-main-title {
+    font-size: 30px;
+    @media (width < 450px) {
+        margin-top: 100px;
+        margin-bottom: 0px;
+    }
+}
+
+.place-order-top {
+    margin-right: 0%;
+    margin-top: 20px;
+    width: fit-content;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: lightgreen;
+    color: white;
+}
+.place-order-top:hover {
+    cursor: pointer;
+}
+
+.showcart-page {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    min-height: 1000px;
+    /* height: fit-content; */
+}
+
+.showcart-main-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 75px;
+    @media (width < 450px) {
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+.list-products {
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    width: 300px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin-top: 75px;
+    align-items: center;
+    text-align: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.showcart-title {
+    font-size: 30px;
+}
+
+.showcart-subtotal {
+    font-weight: bold;
+}
+
+.delete-btn {
+    height: 35px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 10px;
+    width: 50%;
+    background-color: rgb(200, 0, 0);
+    color: rgb(253, 230, 21);
+}
+
+.delete-btn:hover {
+    cursor: pointer;
+}
+
+.total-price {
+    margin-top: 50px;
+    font-size: 30px;
+}

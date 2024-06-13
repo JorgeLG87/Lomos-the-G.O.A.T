@@ -10,6 +10,7 @@
     border-bottom-right-radius: 0px;
     @media (width < 450px) {
         display: grid;
+        width: 100%;
     }
 }
 

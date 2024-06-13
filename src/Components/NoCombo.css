@@ -1,4 +1,4 @@
-.selection {
+/* .selection {
     display: block;
     height: 34px;
     width: 143px;
@@ -128,4 +128,89 @@
     height: 27px;
     width: 60px;
     margin-left: 0px;
+} */
+
+.title-span-container {
+    display: block;
+}
+
+
+.nocombo-mother-container {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px;
+    width: 100%;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+
+.nocombo-main-container {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height:fit-content;
+    padding: 0px;
+    padding-bottom: 30px;
+    padding-top: 0px;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+.nocombo-sub-container-lomo {
+     margin-top: 75px;
+     margin-left: 15%;
+     border-radius: 10px;
+     width: 70%;
+     height:fit-content;
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     gap: 40%;
+}
+
+.icon-item-lomo {
+    width: 80px;
+    height: 60px;
+}
+
+.icon-item-fries {
+    width: 80px;
+    height: 60px;
+}
+
+.icon-item-soda {
+    width: 80px;
+    height: 60px;
+}
+
+.nocombo-add {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(253, 230, 21);
+    color: rgb(200, 0, 0);
+}
+.nocombo-add:hover {
+    cursor: pointer;
+}
+
+.nocombo-sub-container-fries {
+    border-radius: 10px;
+    width: 100%;
+    height:fit-content;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15%;
+    margin-top: 75px;
+}
+
+.small-fries, .medium-fries, .large-fries {
+    width: 100%;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
 }
