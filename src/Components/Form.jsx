@@ -59,7 +59,7 @@ export default function Form({ shoppingCart, setShoppingCart }) {
                 <button className="cart-button" type="button">Cart has ({totalQuantity} items)</button>
             </Link>
             <div className="choosecombo-text-container">
-                <p className="title2"><span className="span-text">Choose your combo</span></p><p className="title-form">...</p>
+                <p className="title2"><span className="span-text">Choose your bite!</span></p><p className="title-form"></p>
             </div>
             <div className="form-fields">
             <form className="order-form" action="https://formsubmit.co/jorge85_6@hotmail.com" method="POST">

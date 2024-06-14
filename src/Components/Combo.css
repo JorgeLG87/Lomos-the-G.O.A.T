@@ -225,6 +225,7 @@
     margin-bottom: 0px;
     @media (width < 450px) {
         margin-left: 0%;
+        margin-top: 0px;
     }
 }
 

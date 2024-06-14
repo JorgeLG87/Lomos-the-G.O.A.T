@@ -15,6 +15,8 @@
     @media (width < 450px) {
       grid-template-columns: none;
       grid-template-rows: repeat(3, 1fr);
+      margin-left: 15%;
+      margin-right: 15%;
     }
   }
 
