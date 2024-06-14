@@ -259,6 +259,7 @@
     display: grid;
     grid-template-columns: repeat(3,1fr);
     margin-left: 10%;
+    width: 100%;
 }
 
 .icon-item {
@@ -277,6 +278,7 @@
     width: 100%;
     text-align: center;
     border-radius: 10px;
+    justify-content: center;
 }
 .beverage-type:hover {
     cursor: pointer;
