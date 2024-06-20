@@ -123,7 +123,7 @@
 }
 
 .map-comments-container {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   display: flex;
   @media (width < 450px) {
     display: grid;
