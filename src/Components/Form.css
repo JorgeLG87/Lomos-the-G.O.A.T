@@ -7,7 +7,7 @@
     margin-top: 100px;
     width: 100%;
     min-height: 3000px;;
-    box-shadow: rgb(210, 1, 1) 0px 1px 10px;
+    /* box-shadow: rgb(210, 1, 1) 0px 1px 10px; */
     border-radius: 20px;
     background-color: white;
     
@@ -16,6 +16,7 @@
         margin-top: 50px;
         margin-left: 0%;
         box-shadow: none;
+        min-height: 3600px;
     }
 }
 
@@ -27,6 +28,9 @@
     color: white;
     text-shadow: 1px 1px 2px red;
     width: 100%;
+    @media (width < 450px) {
+        margin-top: -80px;
+    }
 }
 
 
@@ -219,10 +223,11 @@ input::-webkit-inner-spin-button {
     position: relative;
     display: flex;
     margin-top: 40px;
-    justify-content: center;
+    /* justify-content: center; */
     width: 100%;
     height: 370px;
     border-radius: 7px;
+    
 }
 
 .choosecombo-text-container {

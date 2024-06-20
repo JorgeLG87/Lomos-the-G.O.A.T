@@ -1,4 +1,4 @@
-// import "./Form.css";
+
 import "./Combo.css";
 import { useState, useContext } from "react";
 import { CartContext } from "../cartContext";
@@ -9,6 +9,8 @@ import { CartContext } from "../cartContext";
 export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp, setDateStamp, setSecDateStamp, secDateStamp }) {
 
     const [error, setError] = useState(false);
+    const [ combo1, setCombo1 ] = useState(0);
+
 
     const cart = useContext(CartContext);
     
@@ -28,59 +30,35 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
         }
     }
 
+    function sameIdQuantity(id) {
+       let test= (cart.items).reduce((accu, item) => item.id === id, 0);
+       console.log(test,"sameIdQuantity");
+
+    }
+
+
     return (
         <div className="mother-container">
-                {/* <label className="combo-lomo-container">           
-                    <select id="combolomoselect" className="combo-selection-lomo">
-                        <option value="choose lomo">---Choose Lomo---</option>
-                        <option value="Lomo the G.O.A.T">Lomo the G.O.A.T</option>
-                        <option value="Plain">Plain</option>
-                    </select>
-                </label>
-
-                <label className="combo-lomoquantity-container">
-                    <input id="combolomo-quantity" className="combo-lomo-quantity" type="number" placeholder="Quantity" required/>
-                </label>
-
-                <label className="combo-size">
-                    <select id="combo-size" className="size">
-                        <option value="combo size">---Choose Size---</option>
-                        <option value="small">Small</option>
-                        <option value="medium">Medium</option>
-                        <option value="large">Large</option>
-                    </select>
-                </label>
-                
-                <br/><br/>
-                <label className="combo-beverage-container">
-                    <select className="combo-selection-bev">
-                        <option value="choose beverage">---Choose Beverage---</option>
-                        <option value="pepsi">Pepsi</option>
-                        <option value="coke">Coke</option>
-                        <option value="orange juice">Orange Juice</option>
-                    </select>
-                </label>
-               
-                <button onClick={handleAddItems} className="combo-add" type="button"></button>
-                {error ? <p className="quantity-error">Please enter a combo quantity</p> : null} */}
                 <div className="main-container">
-                <div className="title-span-container">
-                    <p className="title2"><span className="span-text">G.O.A.T</span></p><p className="title">Combo</p>
-                </div>
-                <div className="sub-container">
-                    <div className="small">
-                        <p className="text">Small</p>
-                        <div className="icons">
-                            <img className="icon-item" src="/sandwich.png"/>
-                            <img className="icon-item" src="/fries.png"/>
-                            <img className="icon-item" src="/soda.png"/>
-                        </div>
-                        <select id="bev-type1" className="beverage-type">
-                            <option value="choose-beverage">-----Choose Beverage-----</option>
-                            <option value="Coca Cola">Coca Cola</option>
-                            <option value="Pepsi">Pepsi</option>
-                            <option value="Sprite">Sprite</option>
-                        </select>
+                    <div className="title-span-container">
+                        <p className="title2"><span className="span-text">G.O.A.T</span></p><p className="title">Combo</p>
+                    </div>
+                    <div className="sub-container">
+                        <div className="small">
+                            <p className="text">Small</p>
+                            <div className="icons">
+                                <img className="icon-item" src="/sandwich.png"/>
+                                <img className="icon-item" src="/fries.png"/>
+                                <img className="icon-item" src="/soda.png"/>
+                            </div>
+                            <select id="bev-type1" className="beverage-type">
+                                <option value="choose-beverage">-----Choose Beverage-----</option>
+                                <option value="Coca Cola">Coca Cola</option>
+                                <option value="Pepsi">Pepsi</option>
+                                <option value="Sprite">Sprite</option>
+                            </select>
+                        
+                        {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="1").length}</p> : null}
                         <button onClick={() => cart.addOneToCart("1")} className="add" type="button">Add To Cart</button>
                     </div>
 
@@ -97,6 +75,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <option value="Pepsi">Pepsi</option>
                             <option value="Sprite">Sprite</option>
                         </select>
+                        {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="2").length}</p> : null}
                         <button onClick={() => cart.addOneToCart("2")} className="add" type="button">Add To Cart</button>
                     </div>
 
@@ -113,6 +92,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <option value="Pepsi">Pepsi</option>
                             <option value="Sprite">Sprite</option>
                         </select>
+                        {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="3").length}</p> : null}
                         <button onClick={() => cart.addOneToCart("3")} className="add" type="button">Add To Cart</button>
                     </div>
 
@@ -135,6 +115,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <option value="Pepsi">Pepsi</option>
                             <option value="Sprite">Sprite</option>
                         </select>
+                        {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="4").length}</p> : null}
                         <button onClick={() => cart.addOneToCart("4")} className="add" type="button">Add To Cart</button>
                     </div>
 
@@ -151,6 +132,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <option value="Pepsi">Pepsi</option>
                             <option value="Sprite">Sprite</option>
                         </select>
+                        {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="5").length}</p> : null}
                         <button onClick={() => cart.addOneToCart("5")} className="add" type="button">Add To Cart</button>
                     </div>
 
@@ -167,6 +149,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <option value="Pepsi">Pepsi</option>
                             <option value="Sprite">Sprite</option>
                         </select>
+                        {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="6").length}</p> : null}
                         <button onClick={() => cart.addOneToCart("6")} className="add" type="button">Add To Cart</button>
                     </div>
 
