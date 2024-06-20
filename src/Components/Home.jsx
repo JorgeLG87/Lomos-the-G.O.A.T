@@ -1,6 +1,8 @@
 import QueEsLomo from "./QueEsLomo.jsx";
 import "./Home.css";
 
+import { Link } from "react-router-dom";
+
 
 import HomeSlidingImg from "./HomeSlidingImg.jsx";
 
@@ -20,8 +22,10 @@ export default function Home({ slides }) {
           <img className="face" src="/facebook.png"/>
           <img className="location" src="/location.png"/>
         </div>
-        
         <QueEsLomo/>
+        <Link to="/order-now" style={{textDecoration:"none", width:"100%", marginTop:"80px"}}>
+          <button className="order-now-home">Order Now!</button>
+        </Link>
         <div className="aboutus-section-container">
         <div className="entire-body">    
           <div className="title-container">

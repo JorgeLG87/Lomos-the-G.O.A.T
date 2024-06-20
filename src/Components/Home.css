@@ -7,7 +7,7 @@
 
 .entire-body {
     display: grid;
-    margin-top: 150px;
+    margin-top: 50px;
     margin-left: 8%;
     grid-template-columns: repeat(3,1fr);
     width: 100%;
@@ -254,3 +254,27 @@
   }
 }
 
+
+.order-now-home {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 80px;
+  font-size: xx-large;
+  border: none;
+  background-color: rgb(253, 230, 21);
+  border-radius: 10px;
+  margin-top: 70px;
+  margin-left: 35%;
+  color: rgb(200, 0, 0);
+  @media (width < 450px) {
+    width: 70%;
+    margin-left: 15%;
+  }
+}
+
+.order-now-home:hover {
+  cursor: pointer;
+}
