@@ -51,15 +51,16 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                 <img className="icon-item" src="/fries.png"/>
                                 <img className="icon-item" src="/soda.png"/>
                             </div>
-                            <select id="bev-type1" className="beverage-type">
-                                <option value="choose-beverage">-----Choose Beverage-----</option>
+                            <select id="bev-type1" className="beverage-type" required>
+                                <option value="">-----Choose Beverage-----</option>
                                 <option value="Coca Cola">Coca Cola</option>
                                 <option value="Pepsi">Pepsi</option>
                                 <option value="Sprite">Sprite</option>
                             </select>
                         
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="1").length}</p> : null}
-                        <button onClick={() => cart.addOneToCart("1")} className="add" type="button">Add To Cart</button>
+                        <button onClick={() => {
+                           document.getElementById("bev-type1").value ? cart.addOneToCart("1") : <p className="bev-error">Choose beverage type</p>}} className="add" type="button">Add To Cart</button>
                     </div>
 
                     <div className="medium">

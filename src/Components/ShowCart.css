@@ -44,7 +44,7 @@
     border-radius: 10px;
     padding-left: 30px;
     padding-right: 30px;
-    background-color: lightgreen;
+    background-color: rgb(80, 200, 120);
     color: white;
 }
 .place-order-top:hover {

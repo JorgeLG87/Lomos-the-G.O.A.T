@@ -75,6 +75,7 @@ export default function NoCombo() {
                         <div className="icons-fries">          
                             <img className="icon-item-soda" src="/soda-medium.png"/>
                         </div>
+                        {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="9").length}</p> : null}
                         <button onClick={() => cart.addOneToCart("9")} className="nocombo-add" type="button">Add To Cart</button>
                     </div>
 
@@ -83,6 +84,7 @@ export default function NoCombo() {
                         <div className="icons-fries">
                             <img className="icon-item-soda" src="/soda-medium.png"/>
                         </div>
+                        {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="10").length}</p> : null}
                         <button onClick={() => cart.addOneToCart("10")} className="nocombo-add" type="button">Add To Cart</button>
                     </div>
 
@@ -91,6 +93,7 @@ export default function NoCombo() {
                         <div className="icons-fries">
                             <img className="icon-item-soda" src="/soda-medium.png"/>
                         </div>
+                        {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="11").length}</p> : null}
                         <button onClick={() => cart.addOneToCart("11")} className="nocombo-add" type="button">Add To Cart</button>
                     </div>
                 </div>
