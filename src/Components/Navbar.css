@@ -3,7 +3,7 @@
     display: inline-flex;
     width: 100%;
     justify-content: right;
-    height: 125px;
+    height: 185px;
     color: white;
     border-radius: 7px;
     border-bottom-left-radius: 0px;
@@ -18,6 +18,7 @@
 
 .items-list {
     display: flex;
+    flex-direction: row;
     position: relative;
     align-items:center;
     gap: 50px;
@@ -35,7 +36,7 @@
     list-style-type: none;
     color: #AF2007;
     font-size: 15px;
-    margin-top: -11.5px;
+    margin-top: 0px;
     
 }
 
@@ -45,7 +46,7 @@
     list-style-type: none;
     color: #E9D134;
     font-size: 15px;
-    margin-top: -11.5px;
+    margin-top: 0px;
 }
 
 
@@ -64,32 +65,39 @@
 
 .home-container {
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 15px;
     background-color: #E9D134;
-    height: 29px;
-    width: 90px;
-    margin-top: 15px;
+    height: 40px;
+    width: 140px;
+    margin-top: 0px;
     text-align: center;
 }
 
 
 .ordernow-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     border-radius: 15px;
     background-color: #AF2007;
-    height: 29px;
-    width: 110px;
-    margin-top: 15px;
+    height: 40px;
+    width: 140px;
     text-align: center;
 }
 
 .aboutus-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     border-radius: 15px;
     background-color: #E9D134;
-    height: 29px;
-    width: 90px;
-    margin-top: 15px;
+    height: 40px;
+    width: 140px;
     text-align: center;
 }
 

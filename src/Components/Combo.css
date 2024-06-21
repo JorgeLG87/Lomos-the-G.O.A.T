@@ -268,10 +268,12 @@
     grid-template-columns: repeat(3,1fr);
     margin-left: 10%;
     width: 100%;
+    margin-top: 40px;
 }
 
 .icon-item {
-    width: 30px;
+    width: 50px;
+    height: 40px;
 }
 
 .text {
@@ -325,5 +327,6 @@
   }
 
   .bev-error {
-    margin-top: 50%;
+    margin-top: 10%;
+    color:rgb(200, 0, 0);
   }

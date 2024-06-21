@@ -10,10 +10,19 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
 
     const [error, setError] = useState(false);
     const [ combo1, setCombo1 ] = useState(0);
+    const [ bevValid1, setBevValid1 ] = useState(false); 
+    const [ bevValid2, setBevValid2 ] = useState(false); 
+    const [ bevValid3, setBevValid3 ] = useState(false); 
+    const [ bevValid4, setBevValid4 ] = useState(false); 
+    const [ bevValid5, setBevValid5 ] = useState(false); 
+    const [ bevValid6, setBevValid6 ] = useState(false); 
 
 
     const cart = useContext(CartContext);
     
+
+   
+
     
     function handleAddItems(e) {
         e.preventDefault();
@@ -47,9 +56,9 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                         <div className="small">
                             <p className="text">Small</p>
                             <div className="icons">
-                                <img className="icon-item" src="/sandwich.png"/>
-                                <img className="icon-item" src="/fries.png"/>
-                                <img className="icon-item" src="/soda.png"/>
+                                <img className="icon-item" src="/sandwich-medium.png"/>
+                                <img className="icon-item" src="/fries-medium.png"/>
+                                <img className="icon-item" src="/soda-medium.png"/>
                             </div>
                             <select id="bev-type1" className="beverage-type" required>
                                 <option value="">-----Choose Beverage-----</option>
@@ -59,42 +68,53 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             </select>
                         
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="1").length}</p> : null}
+                        {bevValid1 ? <p className="bev-error">Please choose a beverage type</p> : null}
                         <button onClick={() => {
-                           document.getElementById("bev-type1").value ? cart.addOneToCart("1") : <p className="bev-error">Choose beverage type</p>}} className="add" type="button">Add To Cart</button>
+                           document.getElementById("bev-type1").value ? cart.addOneToCart("1") : setBevValid1(true);
+                           document.getElementById("bev-type1").value ? setBevValid1(false) : null
+                           }} className="add" type="button">Add To Cart</button>
                     </div>
 
                     <div className="medium">
                         <p className="text">Medium</p>
                         <div className="icons">
-                            <img className="icon-item" src="/sandwich.png"/>
-                            <img className="icon-item" src="/fries.png"/>
-                            <img className="icon-item" src="/soda.png"/>
+                            <img className="icon-item" src="/sandwich-medium.png"/>
+                            <img className="icon-item" src="/fries-medium.png"/>
+                            <img className="icon-item" src="/soda-medium.png"/>
                         </div>
                         <select id="bev-type2" className="beverage-type">
-                            <option value="choose-beverage">-----Choose Beverage-----</option>
+                            <option value="">-----Choose Beverage-----</option>
                             <option value="Coca Cola">Coca Cola</option>
                             <option value="Pepsi">Pepsi</option>
                             <option value="Sprite">Sprite</option>
                         </select>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="2").length}</p> : null}
-                        <button onClick={() => cart.addOneToCart("2")} className="add" type="button">Add To Cart</button>
+                        {bevValid2 ? <p className="bev-error">Please choose a beverage type</p> : null}
+                        <button onClick={() => {
+                            document.getElementById("bev-type2").value ? cart.addOneToCart("2") : setBevValid2(true);
+                            document.getElementById("bev-type2").value ? setBevValid2(false) : null
+                            }} className="add" type="button">Add To Cart</button>
                     </div>
 
                     <div className="large">
                         <p className="text">Large</p>
                         <div className="icons">
-                            <img className="icon-item" src="/sandwich.png"/>
-                            <img className="icon-item" src="/fries.png"/>
-                            <img className="icon-item" src="/soda.png"/>
+                            <img className="icon-item" src="/sandwich-medium.png"/>
+                            <img className="icon-item" src="/fries-medium.png"/>
+                            <img className="icon-item" src="/soda-medium.png"/>
                         </div>
                         <select id="bev-type3" className="beverage-type">
-                            <option value="choose-beverage">-----Choose Beverage-----</option>
+                            <option value="">-----Choose Beverage-----</option>
                             <option value="Coca Cola">Coca Cola</option>
                             <option value="Pepsi">Pepsi</option>
                             <option value="Sprite">Sprite</option>
                         </select>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="3").length}</p> : null}
-                        <button onClick={() => cart.addOneToCart("3")} className="add" type="button">Add To Cart</button>
+                        {bevValid3 ? <p className="bev-error">Please choose a beverage type</p> : null}
+                        <button onClick={() => {
+                            document.getElementById("bev-type3").value ? cart.addOneToCart("3") : setBevValid3(true);
+                            document.getElementById("bev-type3").value ? setBevValid3(false) : null
+                            }} className="add" type="button">Add To Cart</button>
                     </div>
 
                 </div>
@@ -106,52 +126,64 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                     <div className="small">
                         <p className="text">Small</p>
                         <div className="icons">
-                            <img className="icon-item" src="/sandwich.png"/>
-                            <img className="icon-item" src="/fries.png"/>
-                            <img className="icon-item" src="/soda.png"/>
+                            <img className="icon-item" src="/sandwich-medium.png"/>
+                            <img className="icon-item" src="/fries-medium.png"/>
+                            <img className="icon-item" src="/soda-medium.png"/>
                         </div>
                         <select id="bev-type4" className="beverage-type">
-                            <option value="choose-beverage">-----Choose Beverage-----</option>
+                            <option value="">-----Choose Beverage-----</option>
                             <option value="Coca Cola">Coca Cola</option>
                             <option value="Pepsi">Pepsi</option>
                             <option value="Sprite">Sprite</option>
                         </select>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="4").length}</p> : null}
-                        <button onClick={() => cart.addOneToCart("4")} className="add" type="button">Add To Cart</button>
+                        {bevValid4 ? <p className="bev-error">Please choose a beverage type</p> : null}
+                        <button onClick={() => {
+                            document.getElementById("bev-type4").value ? cart.addOneToCart("4") : setBevValid4(true);
+                            document.getElementById("bev-type4").value ? setBevValid4(false) : null
+                            }} className="add" type="button">Add To Cart</button>
                     </div>
 
                     <div className="medium">
                         <p className="text">Medium</p>
                         <div className="icons">
-                            <img className="icon-item" src="/sandwich.png"/>
-                            <img className="icon-item" src="/fries.png"/>
-                            <img className="icon-item" src="/soda.png"/>
+                            <img className="icon-item" src="/sandwich-medium.png"/>
+                            <img className="icon-item" src="/fries-medium.png"/>
+                            <img className="icon-item" src="/soda-medium.png"/>
                         </div>
                         <select id="bev-type5" className="beverage-type">
-                            <option value="choose-beverage">-----Choose Beverage-----</option>
+                            <option value="">-----Choose Beverage-----</option>
                             <option value="Coca Cola">Coca Cola</option>
                             <option value="Pepsi">Pepsi</option>
                             <option value="Sprite">Sprite</option>
                         </select>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="5").length}</p> : null}
-                        <button onClick={() => cart.addOneToCart("5")} className="add" type="button">Add To Cart</button>
+                        {bevValid5 ? <p className="bev-error">Please choose a beverage type</p> : null}
+                        <button onClick={() => {
+                            document.getElementById("bev-type5").value ? cart.addOneToCart("5") : setBevValid5(true);
+                            document.getElementById("bev-type5").value ? setBevValid5(false) : null
+                            }} className="add" type="button">Add To Cart</button>
                     </div>
 
                     <div className="large">
                         <p className="text">Large</p>
                         <div className="icons">
-                            <img className="icon-item" src="/sandwich.png"/>
-                            <img className="icon-item" src="/fries.png"/>
-                            <img className="icon-item" src="/soda.png"/>
+                            <img className="icon-item" src="/sandwich-medium.png"/>
+                            <img className="icon-item" src="/fries-medium.png"/>
+                            <img className="icon-item" src="/soda-medium.png"/>
                         </div>
                         <select id="bev-type6" className="beverage-type">
-                            <option value="choose-beverage">-----Choose Beverage-----</option>
+                            <option value="">-----Choose Beverage-----</option>
                             <option value="Coca Cola">Coca Cola</option>
                             <option value="Pepsi">Pepsi</option>
                             <option value="Sprite">Sprite</option>
                         </select>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="6").length}</p> : null}
-                        <button onClick={() => cart.addOneToCart("6")} className="add" type="button">Add To Cart</button>
+                        {bevValid6 ? <p className="bev-error">Please choose a beverage type</p> : null}
+                        <button onClick={() => {
+                            document.getElementById("bev-type6").value ? cart.addOneToCart("6") : setBevValid6(true);
+                            document.getElementById("bev-type6").value ? setBevValid6(false) : null
+                            }} className="add" type="button">Add To Cart</button>
                     </div>
 
                 </div>
