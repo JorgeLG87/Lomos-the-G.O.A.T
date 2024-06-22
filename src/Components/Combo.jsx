@@ -66,58 +66,56 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                 <option value="Pepsi">Pepsi</option>
                                 <option value="Sprite">Sprite</option>
                             </select>
-                        
-                        {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="1").length}</p> : null}
-                        {bevValid1 ? <p className="bev-error">Please choose a beverage type</p> : null}
-                        <button onClick={() => {
-                           document.getElementById("bev-type1").value ? cart.addOneToCart("1") : setBevValid1(true);
-                           document.getElementById("bev-type1").value ? setBevValid1(false) : null
-                           }} className="add" type="button">Add To Cart</button>
-                    </div>
-
-                    <div className="medium">
-                        <p className="text">Medium</p>
-                        <div className="icons">
-                            <img className="icon-item" src="/sandwich-medium.png"/>
-                            <img className="icon-item" src="/fries-medium.png"/>
-                            <img className="icon-item" src="/soda-medium.png"/>
+                            {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="1").length}</p> : null}
+                            {bevValid1 ? <p className="bev-error">Please choose a beverage type</p> : null}
+                            <button onClick={() => {
+                                document.getElementById("bev-type1").value ? cart.addOneToCart("1") : setBevValid1(true);
+                                document.getElementById("bev-type1").value ? setBevValid1(false) : null
+                                }} className="add" type="button">Add To Cart</button>
                         </div>
-                        <select id="bev-type2" className="beverage-type">
-                            <option value="">-----Choose Beverage-----</option>
-                            <option value="Coca Cola">Coca Cola</option>
-                            <option value="Pepsi">Pepsi</option>
-                            <option value="Sprite">Sprite</option>
-                        </select>
-                        {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="2").length}</p> : null}
-                        {bevValid2 ? <p className="bev-error">Please choose a beverage type</p> : null}
-                        <button onClick={() => {
-                            document.getElementById("bev-type2").value ? cart.addOneToCart("2") : setBevValid2(true);
-                            document.getElementById("bev-type2").value ? setBevValid2(false) : null
-                            }} className="add" type="button">Add To Cart</button>
-                    </div>
 
-                    <div className="large">
-                        <p className="text">Large</p>
-                        <div className="icons">
-                            <img className="icon-item" src="/sandwich-medium.png"/>
-                            <img className="icon-item" src="/fries-medium.png"/>
-                            <img className="icon-item" src="/soda-medium.png"/>
+                        <div className="medium">
+                            <p className="text">Medium</p>
+                            <div className="icons">
+                                <img className="icon-item" src="/sandwich-medium.png"/>
+                                <img className="icon-item" src="/fries-medium.png"/>
+                                <img className="icon-item" src="/soda-medium.png"/>
+                            </div>
+                            <select id="bev-type2" className="beverage-type">
+                                <option value="">-----Choose Beverage-----</option>
+                                <option value="Coca Cola">Coca Cola</option>
+                                <option value="Pepsi">Pepsi</option>
+                                <option value="Sprite">Sprite</option>
+                            </select>
+                            {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="2").length}</p> : null}
+                            {bevValid2 ? <p className="bev-error">Please choose a beverage type</p> : null}
+                            <button onClick={() => {
+                                document.getElementById("bev-type2").value ? cart.addOneToCart("2") : setBevValid2(true);
+                                document.getElementById("bev-type2").value ? setBevValid2(false) : null
+                                }} className="add" type="button">Add To Cart</button>
                         </div>
-                        <select id="bev-type3" className="beverage-type">
-                            <option value="">-----Choose Beverage-----</option>
-                            <option value="Coca Cola">Coca Cola</option>
-                            <option value="Pepsi">Pepsi</option>
-                            <option value="Sprite">Sprite</option>
-                        </select>
-                        {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="3").length}</p> : null}
-                        {bevValid3 ? <p className="bev-error">Please choose a beverage type</p> : null}
-                        <button onClick={() => {
-                            document.getElementById("bev-type3").value ? cart.addOneToCart("3") : setBevValid3(true);
-                            document.getElementById("bev-type3").value ? setBevValid3(false) : null
-                            }} className="add" type="button">Add To Cart</button>
-                    </div>
 
-                </div>
+                        <div className="large">
+                            <p className="text">Large</p>
+                            <div className="icons">
+                                <img className="icon-item" src="/sandwich-medium.png"/>
+                                <img className="icon-item" src="/fries-medium.png"/>
+                                <img className="icon-item" src="/soda-medium.png"/>
+                            </div>
+                            <select id="bev-type3" className="beverage-type">
+                                <option value="">-----Choose Beverage-----</option>
+                                <option value="Coca Cola">Coca Cola</option>
+                                <option value="Pepsi">Pepsi</option>
+                                <option value="Sprite">Sprite</option>
+                            </select>
+                            {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="3").length}</p> : null}
+                            {bevValid3 ? <p className="bev-error">Please choose a beverage type</p> : null}
+                            <button onClick={() => {
+                                document.getElementById("bev-type3").value ? cart.addOneToCart("3") : setBevValid3(true);
+                                document.getElementById("bev-type3").value ? setBevValid3(false) : null
+                                }} className="add" type="button">Add To Cart</button>
+                        </div>
+                    </div>
                 </div>
 
                 <div className="main-container2">

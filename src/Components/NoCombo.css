@@ -1,135 +1,3 @@
-/* .selection {
-    display: block;
-    height: 34px;
-    width: 143px;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
-    border-color: red;
-}
-
-.selection:hover {
-    cursor:pointer;
-    background-color: #fffad7;
-    color: red;
-}
-
-
-.lomo-container {
-    position: absolute;
-    margin-left: 66%;;
-    margin-top: 20px;
-}
-
-
-.french-fries-nocombo {
-    display: block;
-    position: absolute;
-    margin-top: 180px;
-    margin-left: 66%;
-}
-
-.lomoquantity-container {
-    position: absolute;
-    margin-top: 20px;
-    margin-left: 0px
-}
-
-.lomo-quantity {
-    display: block;
-    border: none;
-    border-bottom: 1px solid red;
-    height: 27px;
-    width: 60px;
-    margin-left: 0px;
-}
-
-.beverage-container {
-    position: absolute;
-    margin-top: 100px;
-    margin-left: 66%;
-    
-}
-
-.bevquantity-container {
-    position: absolute;
-    margin-top: 100px;
-    margin-left: 0px;
-}
-
-.bev-quantity {
-    display: block;
-    border: none;
-    border-bottom: 1px solid red;
-    height: 27px;
-    width: 60px;
-    margin-left: 0px;
-}
-
-.add-nocombo {
-    display: block;
-    position: absolute;
-    width: 45px;
-    height: 45px;
-    background: url("/add-button.png");
-    background-size: cover;
-    border-radius: 7px;
-    margin-top: 310px;
-    margin-left: 180px;
-    border: none;
-}
-
-.add-nocombo:hover {
-    cursor: pointer;
-    transform: scale(1.20)
-}
-
-.selectionsize {
-    display: block;
-    margin-top: 0px;
-    height: 34px;
-    width: 100px;
-    border-radius: 5px;
-    text-align: center;
-    cursor: pointer;
-    border-color: red;
-}
-
-.selectionsize:hover {
-    cursor:pointer;
-    background-color: #fffad7;
-    color: red;
-}
-
-.size-bevcontainer {
-    position: absolute;
-    width: 100%;
-    margin-top: 100px;
-    margin-left: 115px;
-}
-
-.size-frenchfriescontainer {
-    position: absolute;
-    width: 100%;
-    margin-top: 180px;
-    margin-left: 115px;
-}
-
-.frenchfriesquantity-container {
-    position: absolute;
-    margin-top: 180px;
-    margin-left: 0px
-}
-
-.frenchfries-quantity {
-    display: block;
-    border: none;
-    border-bottom: 1px solid red;
-    height: 27px;
-    width: 60px;
-    margin-left: 0px;
-} */
-
 .title-span-container {
     display: block;
 }
@@ -145,6 +13,7 @@
     @media (width < 450px) {
         padding-left: 0px;
         padding-right: 0px;
+        margin-top: 50px;
     }
 }
 
@@ -156,13 +25,15 @@
     height:fit-content;
     padding: 0px;
     padding-bottom: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
+    /* padding-left: 20px; */
+    /* padding-right: 20px; */
     padding-top: 0px;
     text-align: center;
     margin-top: 50px;
     @media (width < 450px) {
-        margin-top: 50px;;
+        margin-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
     }
 }
 
@@ -182,10 +53,10 @@
 }
 
 .nocombo-sub-container-lomo {
-     margin-top: 75px;
-     margin-left: 15%;
+     margin-top: 0px;
+     margin-left: 0%;
      border-radius: 10px;
-     width: 70%;
+     width: 80%;
      height:fit-content;
      display: grid;
      grid-template-columns: repeat(2, 1fr);
@@ -193,9 +64,9 @@
      @media (width < 450px) {
         grid-template-columns: none;
         grid-template-rows: repeat(2, 1fr);
-        gap: 20%;
-        margin-bottom: 70px;
-    
+        gap: 10%;
+        margin-bottom: 0px;
+        margin-left: 40px;
      }
 }
 
@@ -245,11 +116,16 @@
     @media (width < 450px) {
         grid-template-columns: none;
         grid-template-rows: repeat(3, 1fr);
-        margin-top: 100px;
-        width: 85%;
-        gap: 0%;
+        margin-top: 00px;
+        width: 92%;
+        margin-left: 40px;
     }
 }
+
+.nocombo-title-span-container2 {
+    margin-top: 100px
+}
+
 
 .small-fries, .medium-fries, .large-fries {
     width: 80%;

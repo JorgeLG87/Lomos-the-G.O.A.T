@@ -34,7 +34,7 @@ export default function NoCombo() {
             </div>
 
             <div className="nocombo-main-container">
-                <div className="nocombo-title-span-container">
+                <div className="nocombo-title-span-container2">
                     <p className="title2"><span className="span-text">French</span></p><p className="title">Fries</p>
                 </div>
                 <div className="nocombo-sub-container-fries">

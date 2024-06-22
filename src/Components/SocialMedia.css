@@ -22,7 +22,7 @@
     justify-content:center;
     /* margin-top: 100%; */
     margin-bottom: 0px;
-    height: 150px;
+    height: 200px;
     background-color: black;
     border-radius: 7px;
     @media (width < 450px) {
@@ -30,9 +30,8 @@
     }    
 }
 
-
-
 .company-text {
     color: #E9D134;
+    
     
 }
