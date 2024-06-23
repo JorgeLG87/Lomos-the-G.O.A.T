@@ -10,7 +10,8 @@
 }
 
 .socialmedia-container {
-    position: relative;
+    position: absolute;
+    margin-left: -50px;
 }
 
 .socialmedia-box {
@@ -30,8 +31,20 @@
     }    
 }
 
+.company-text-container {
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid white;
+    margin-top: 95px;
+    padding-bottom: 0px;
+
+}
+
 .company-text {
+    display: flex;
+    position: absolute;
     color: #E9D134;
+    margin-top: 190px;
     
     
 }
