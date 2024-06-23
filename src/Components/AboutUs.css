@@ -3,3 +3,30 @@
     text-align: center;
     margin-top: 70px;
 }
+
+.photos-container {
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    width: 250px;
+    height: 100px;
+}
+
+.photo1 {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.photo2 {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+.photo3 {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
