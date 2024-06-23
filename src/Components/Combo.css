@@ -144,6 +144,7 @@
     background: linear-gradient(120deg, red, yellow);
     -webkit-background-clip: text;
     background-clip: text;
+    font-family: "Roboto";
     @media (width < 450px) {
       font-size: 35px;
     }

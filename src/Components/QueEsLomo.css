@@ -49,11 +49,12 @@
 .lomo-title {
     margin-left: 0px;
     margin-top: 20px;
-    font-family: "Dancing Script";
+    font-family: "Roboto";
     font-size: 45px;;
-    text-shadow: 1px 1px 2px red;
+    /* text-shadow: 0.5px 0.5px 0.5px yellow; */
     @media (width < 450px) {
-        font-size: 35px;
+        font-size: 40px;
+        margin-top: -20px;
     }
 }
 
@@ -64,6 +65,7 @@
     @media (width < 450px) {
         display: inline-block;
         font-size: 15px;
+        margin-top: 0px;
     }
 }
 
@@ -96,4 +98,23 @@
     margin-top: 200px;
     margin-left: -180px;
     transform: rotate(17deg)
+}
+
+.container-lomito-text {
+    color: transparent;
+  /* margin-left: 45%; */
+  /* margin-top: 70px; */
+  @media (width < 450px) {
+    /* margin-left: 0%; */
+  }
+}
+
+.span-lomito-text {
+    font-size: 50px;
+    background: linear-gradient(120deg, rgb(200, 0, 0), rgb(253, 230, 21));
+    -webkit-background-clip: text;
+    background-clip: text;
+    @media (width < 450px) {
+      font-size: 50px;
+    }
 }

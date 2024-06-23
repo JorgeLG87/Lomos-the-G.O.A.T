@@ -157,6 +157,7 @@
     margin-left: 0%;
     width: 150px;
     font-size: 18px;
+    font-family: "Roboto";
     height: 50px;
     border: none;
     /* border: 1px solid black; */
@@ -179,6 +180,7 @@
     margin-left: 260px;
     width: 150px;
     font-size: 18px;
+    font-family: "Roboto";
     height: 50px;
     border: none;
     /* border: 1px solid black; */
@@ -342,6 +344,7 @@ hr {
     margin-top: 50px;
     margin-left: 80%;
     font-size: large;
+    font-family: "Roboto";
     @media (width < 450px) {
         width: 50%;
         margin-left: 25%;
