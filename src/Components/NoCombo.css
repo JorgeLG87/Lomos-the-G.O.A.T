@@ -8,8 +8,8 @@
     grid-template-rows: repeat(2, 1fr);
     gap: 0px;
     width: 100%;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 10%;
+    padding-right: 10%;
     @media (width < 450px) {
         padding-left: 0px;
         padding-right: 0px;
@@ -54,7 +54,7 @@
 
 .nocombo-sub-container-lomo {
      margin-top: 0px;
-     margin-left: 0%;
+     margin-left: 10%;
      border-radius: 10px;
      width: 80%;
      height:fit-content;
