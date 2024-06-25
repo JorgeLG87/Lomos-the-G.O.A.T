@@ -2,12 +2,32 @@ import "./Form.css"
 import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext} from "../cartContext.jsx";
+import { useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 import Combo from "./Combo.jsx";
 import NoCombo from "./NoCombo.jsx";
 
-
 export default function Form({ shoppingCart, setShoppingCart }) {
+
+    const form = useRef();
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_6i1ihfq', 'template_xr6vg3i', form.current, {
+                publicKey: '4l4HUKlF6lW_-n6UM',
+            })
+            .then(
+                () => {
+                    console.log("Success");
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+    };
+
     const [ dateStamp, setDateStamp ] = useState(0)
     const [ secDateStamp, setSecDateStamp ] = useState(1); 
 
@@ -32,7 +52,7 @@ export default function Form({ shoppingCart, setShoppingCart }) {
         setCombo(false)
     }
 
-   function sendEmail() {
+   function sendEmail2() {
     const content1 = document.getElementById("added-lomos").innerText;
     const content2 = document.getElementById("added-quantity").innerText;
     console.log(content1);
@@ -48,10 +68,10 @@ export default function Form({ shoppingCart, setShoppingCart }) {
    }
 
 
-   function handleShoppingCart() {
+    function handleShoppingCart() {
     let currentLomo = document.getElementById("added-lomos").innertext;
     let currentSize
-   }
+    }
 
     return (
         <div className="form-container">
@@ -59,10 +79,11 @@ export default function Form({ shoppingCart, setShoppingCart }) {
                 <button className="cart-button" type="button">Cart has ({totalQuantity} items)</button>
             </Link>
             <div className="choosecombo-text-container">
-                <p className="title2"><span className="span-text">Choose your bite!</span></p><p className="title-form"></p>
+                <p className="title2"><span className="span-text">Choose your</span></p><p className="title-form">bite!</p>
             </div>
             <div className="form-fields">
-            <form className="order-form" action="https://formsubmit.co/jorge85_6@hotmail.com" method="POST">
+            {/* action="https://formsubmit.co/jorge85_6@hotmail.com" method="POST" */}
+            <form className="order-form" ref={form} onSubmit={sendEmail}>
                     <div className="personal-info">
                         <input className="name-input" type="text" placeholder="First Name" name="First Name" required></input>
     
@@ -81,6 +102,7 @@ export default function Form({ shoppingCart, setShoppingCart }) {
                 <button className="combo-btn" onClick={handleCombo} type="button">Combo</button>
                 <button className="combo-btn2" onClick={handleNotCombo} type="button">No Combo</button>
                 
+                {/* <input type="Submit" value="Send"/> */}
                 {/* <button onClick={sendEmail} className="submit-btn" type="button">Place Order</button> */}
             </form>
             </div>

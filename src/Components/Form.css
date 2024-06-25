@@ -262,7 +262,8 @@ input::-webkit-inner-spin-button {
     /* margin-top: 0px; */
     @media (width < 450px) {
         font-size: 35px;
-        margin-top: 55px;
+        margin-top: 9px;
+        margin-left: 10px; 
     }
 }
 
