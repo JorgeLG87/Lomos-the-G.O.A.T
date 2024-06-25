@@ -134,6 +134,7 @@
 
 .socialmedia-text-container {
   margin-top: 150px;
+  font-family: "Montserrat";
   @media (width < 450px) {
     margin-top: 0px;
   }
@@ -160,6 +161,7 @@
 
 .span-text {
   font-size: 50px;
+  font-family: "Montserrat";
   background: linear-gradient(120deg, rgb(200, 0, 0), rgb(253, 230, 21));
   -webkit-background-clip: text;
   background-clip: text;
@@ -262,7 +264,7 @@
   align-items: center;
   width: 30%;
   height: 80px;
-  font-family: "Roboto";
+  font-family: "Montserrat";
   font-size: xx-large;
   border: none;
   background-color: rgb(253, 230, 21);
