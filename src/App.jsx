@@ -25,7 +25,8 @@ function App() {
   
   const slides = [
     { url: "/Buenos-Aires.jpg", title: "Buenos Aires"},
-    {  url: "/lomito-argentino.jpeg", title: "Lomo"}
+    {  url: "/Bariloche.jpeg", title: "Bariloche"},
+    { url: "/TeatrodelBicentenario.jpg", title: "Teatro del Bicentenario" }
   ]
 
   const [toggleForm, setToggleForm] = useState(false);
