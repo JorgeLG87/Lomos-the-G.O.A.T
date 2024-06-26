@@ -33,7 +33,35 @@ function CartProvider({ children }) {
         }
     }
 
-    
+
+    // SPECIAL INSTRUCTIONS
+    function getLettuceInstruction(id) {
+        if (id === "1" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6") {
+            const lettuce = document.getElementById(`lettuce${id}`).checked;
+            return lettuce;
+        } else return "";
+    }
+
+    function getTomatoeInstruction(id) {
+        if (id === "1" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6") {
+            const tomatoe = document.getElementById(`tomatoe${id}`).checked;
+            return tomatoe;
+        } else return "";
+    }
+
+    function getSaltInstruction(id) {
+        if (id === "1" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6") {
+            const salt = document.getElementById(`salt${id}`).checked;
+            return salt;
+        } else return "";
+    }
+
+    function getMayoInstruction(id) {
+        if (id === "1" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6") {
+            const mayo = document.getElementById(`mayo${id}`).checked;
+            return mayo;
+        } else return "";
+    }
 
     function getProductQuantity(id) {
         const quantity = cartProducts.find(product => product.id === id)?.quantity;
@@ -49,12 +77,23 @@ function CartProvider({ children }) {
 
         const beverageType= getProductBeverage(id);
         // console.log(beverageType);
+        const lettuce = getLettuceInstruction(id);
+
+        const tomatoe = getTomatoeInstruction(id);
+
+        const salt = getSaltInstruction(id);
+
+        const mayo = getMayoInstruction(id);
         
         setCartProducts([
             ...cartProducts, {
                 id: id,
                 quantity: 1,
                 beverage: beverageType,
+                lettuceInstruction: lettuce ? "No Lettuce" : "",
+                tomatoeInstruction: tomatoe ? "No Tomatoes" : "",
+                saltInstruction: salt ? "No Salt" : "",
+                mayoInstruction: mayo ? "No Mayo" : "",
                 index: Date.now()
             }
         ])

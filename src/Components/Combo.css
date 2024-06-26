@@ -39,7 +39,7 @@
     padding-bottom: 30px;
     padding-top: 0px;
     text-align: center;
-    margin-top: 250px;
+    margin-top: 300px;
 }
 
 
@@ -162,4 +162,17 @@
   .bev-error {
     margin-top: 10%;
     color:rgb(200, 0, 0);
+  }
+
+  .special-instructions {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .special-instructions div {
+    display: flex;
+    width: 100%;
+    margin-left: 10%;
+    gap: 10px;
+    margin-top: 10px;
   }
