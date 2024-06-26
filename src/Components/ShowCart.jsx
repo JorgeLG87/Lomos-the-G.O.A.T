@@ -37,7 +37,9 @@ export default function ShowCart() {
                 <Link to="/order-now" style={{textDecoration:"none"}}>
                     <button className="navigating-showcart" type="button">Go Back</button>
                 </Link>
-                <p className="showcart-main-title">Shopping Cart</p>
+                <div className="title-span-container2">
+                    <p className="title2"><span className="span-text">Shopping</span></p><p className="title">Cart</p>
+                </div>
                 <button className="place-order-top" type="button">Place Order</button>
             </div>
             <div className="showcart-main-container">

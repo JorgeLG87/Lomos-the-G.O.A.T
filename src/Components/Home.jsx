@@ -46,7 +46,7 @@ export default function Home({ slides }) {
           <p className="socialmedia-text"><span className="span-text"># FOLLOW US</span></p><p className="socialmedia-text2">ON SOCIAL MEDIA</p>
         </div>
         <div className="map-comments-container">
-          <img className="argentina-map" src="/Flag_map_of_Argentina.svg"/>
+          <img className="argentina-map" src="/mapa.png"/>
           <div className="comments">Google Reviews</div>
         </div>
         <div className="our-location">

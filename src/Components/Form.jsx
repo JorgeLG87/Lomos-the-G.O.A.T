@@ -100,7 +100,7 @@ export default function Form({ shoppingCart, setShoppingCart }) {
                     </div>
 
                 <button className="combo-btn" onClick={handleCombo} type="button">Combo</button>
-                <button className="combo-btn2" onClick={handleNotCombo} type="button">No Combo</button>
+                <button className="combo-btn2" onClick={handleNotCombo} type="button">Individual Items</button>
                 
                 {/* <input type="Submit" value="Send"/> */}
                 {/* <button onClick={sendEmail} className="submit-btn" type="button">Place Order</button> */}

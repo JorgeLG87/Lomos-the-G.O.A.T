@@ -113,13 +113,13 @@
 
 .argentina-map {
   display: flex;
-  width: 200px;
+  width: 400px;
   height: 400px;
   margin-top: -50px;
-  margin-left: 100px;
+  margin-left: 60px;
   @media (width < 450px) {
     margin-top: 20px;
-    width: 180px;
+    width: 300px;
     height: 275px;
   }
 }
