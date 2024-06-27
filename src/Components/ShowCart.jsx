@@ -52,7 +52,7 @@ export default function ShowCart() {
                             <p>Beverage: {product.beverage}</p>
                             <p style={{fontWeight:"bold"}}>Special Instructions:</p>
                             {product.lettuceInstruction ? <p>{product.lettuceInstruction}</p> : null}
-                            {product.tomatoesInstruction ? <p>{product.tomatoesInstruction}</p> : null}
+                            {product.tomatoeInstruction ? <p>{product.tomatoeInstruction}</p> : null}
                             {product.saltInstruction ? <p>{product.saltInstruction}</p> : null}
                             {product.mayoInstruction ? <p>{product.mayoInstruction}</p> : null}
                             <p className="showcart-subtotal">Price: ${((data.price)*(product.quantity)).toFixed(2)}</p>

@@ -18,6 +18,26 @@ export default function NoCombo() {
                         <div className="icons-lomo">
                             <img className="icon-item-lomo" src="/sandwich-medium.png"/>
                         </div>
+                        <br></br>
+                            <p>Special Instructions</p>
+                            <div className="special-instructions">
+                                <div>
+                                    <input type="radio" id="lettuce7" value="No Lettuce"/>
+                                    <label for="lettuce7">No Lettuce</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="tomatoe7" value="No Tomatoe"/>
+                                    <label for="tomatoe7">No Tomatoe</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="salt7" value="No Salt"/>
+                                    <label for="salt7">No Salt</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="mayo7" value="No Mayo"/>
+                                    <label for="mayo7">No Mayo</label>
+                                </div>
+                            </div>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="7").length}</p> : null}
                         <button onClick={() => cart.addOneToCart("7")} className="nocombo-add" type="button">Add To Cart</button>
                     </div>
@@ -27,6 +47,26 @@ export default function NoCombo() {
                         <div className="icons-lomo">
                             <img className="icon-item-lomo" src="/sandwich-medium.png"/>
                         </div>
+                        <br></br>
+                            <p>Special Instructions</p>
+                            <div className="special-instructions">
+                                <div>
+                                    <input type="radio" id="lettuce8" value="No Lettuce"/>
+                                    <label for="lettuce8">No Lettuce</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="tomatoe8" value="No Tomatoe"/>
+                                    <label for="tomatoe8">No Tomatoe</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="salt8" value="No Salt"/>
+                                    <label for="salt8">No Salt</label>
+                                </div>
+                                <div>
+                                    <input type="radio" id="mayo8" value="No Mayo"/>
+                                    <label for="mayo8">No Mayo</label>
+                                </div>
+                            </div>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="8").length}</p> : null}
                         <button onClick={() => cart.addOneToCart("8")} className="nocombo-add" type="button">Add To Cart</button>
                     </div>

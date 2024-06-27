@@ -36,28 +36,28 @@ function CartProvider({ children }) {
 
     // SPECIAL INSTRUCTIONS
     function getLettuceInstruction(id) {
-        if (id === "1" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6") {
+        if (id === "1" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6" || id === "7" || id === "8") {
             const lettuce = document.getElementById(`lettuce${id}`).checked;
             return lettuce;
         } else return "";
     }
 
     function getTomatoeInstruction(id) {
-        if (id === "1" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6") {
+        if (id === "1" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6" || id === "7" || id === "8") {
             const tomatoe = document.getElementById(`tomatoe${id}`).checked;
             return tomatoe;
         } else return "";
     }
 
     function getSaltInstruction(id) {
-        if (id === "1" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6") {
+        if (id === "1" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6" || id === "7" || id === "8") {
             const salt = document.getElementById(`salt${id}`).checked;
             return salt;
         } else return "";
     }
 
     function getMayoInstruction(id) {
-        if (id === "1" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6") {
+        if (id === "1" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6" || id === "7" || id === "8") {
             const mayo = document.getElementById(`mayo${id}`).checked;
             return mayo;
         } else return "";
@@ -89,7 +89,7 @@ function CartProvider({ children }) {
             ...cartProducts, {
                 id: id,
                 quantity: 1,
-                beverage: beverageType,
+                beverage: beverageType || "None",
                 lettuceInstruction: lettuce ? "No Lettuce" : "",
                 tomatoeInstruction: tomatoe ? "No Tomatoes" : "",
                 saltInstruction: salt ? "No Salt" : "",
