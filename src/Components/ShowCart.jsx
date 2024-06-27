@@ -50,7 +50,7 @@ export default function ShowCart() {
                             <p className="showcart-title">{data.title}</p>
                             <p style={{color:"gray"}}>Quantity: {product.quantity}</p>
                             <p>Beverage: {product.beverage}</p>
-                            <p>Special Instructions:</p>
+                            <p style={{fontWeight:"bold"}}>Special Instructions:</p>
                             {product.lettuceInstruction ? <p>{product.lettuceInstruction}</p> : null}
                             {product.tomatoesInstruction ? <p>{product.tomatoesInstruction}</p> : null}
                             {product.saltInstruction ? <p>{product.saltInstruction}</p> : null}

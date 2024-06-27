@@ -7,7 +7,6 @@
     margin-top: 100px;
     width: 100%;
     min-height: 3000px;;
-    /* box-shadow: rgb(210, 1, 1) 0px 1px 10px; */
     border-radius: 20px;
     background-color: white;
     
@@ -298,7 +297,7 @@ input::-webkit-inner-spin-button {
 
 .form-fields {
     position: relative;
-    margin-top: 75px;
+    margin-top: 0px;
     @media (width < 450px) {
         margin-top: 75px;
     }
@@ -322,11 +321,6 @@ input::-webkit-inner-spin-button {
     }
 }
 
-hr {
-    color: red;
-    margin-top: 425px;
-    margin-left: -20%;
-}
 
 .add-to-cart {
     height: 30px;
