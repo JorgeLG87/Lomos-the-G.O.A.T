@@ -10,6 +10,7 @@
     z-index: 100;
     width: 120px;
     margin-left: 250px;
+    
     @media (width < 450px) {
         display: block;
         height: 100vh;

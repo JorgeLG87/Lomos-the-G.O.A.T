@@ -50,6 +50,11 @@ export default function ShowCart() {
                             <p className="showcart-title">{data.title}</p>
                             <p style={{color:"gray"}}>Quantity: {product.quantity}</p>
                             <p>Beverage: {product.beverage}</p>
+                            <p>Special Instructions:</p>
+                            {product.lettuceInstruction ? <p>{product.lettuceInstruction}</p> : null}
+                            {product.tomatoesInstruction ? <p>{product.tomatoesInstruction}</p> : null}
+                            {product.saltInstruction ? <p>{product.saltInstruction}</p> : null}
+                            {product.mayoInstruction ? <p>{product.mayoInstruction}</p> : null}
                             <p className="showcart-subtotal">Price: ${((data.price)*(product.quantity)).toFixed(2)}</p>
                             <button className="delete-btn" onClick={() => cart.deleteFromCart(product.index)} type="button">Remove From Cart</button>
                         </div>
