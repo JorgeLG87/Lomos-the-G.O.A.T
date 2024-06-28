@@ -5,12 +5,12 @@
 
 .top-container {
     display: grid;
-    grid-template-columns: 25% 50% 25%;
+    grid-template-columns: 50% 50%;
 }
 
 .navigating-showcart {
     margin-top: 20px;
-    margin-left: -30px;
+    margin-left: 0px;
     border: 1px solid black;
     width: fit-content;
     height: 50px;
@@ -46,6 +46,7 @@
     height: 50px;
     border: none;
     border-radius: 10px;
+    margin-left: 60%;
     padding-left: 30px;
     padding-right: 30px;
     background-color: rgb(80, 200, 120);

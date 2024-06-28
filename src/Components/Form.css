@@ -57,8 +57,8 @@
 .name-input {
     display: flex;
     margin-top: 10px;
-    height: 27px;
-    width: 90px;
+    height: 40px;
+    width: 100%;
     border: 0;
     border-bottom: 1px solid black;
     
@@ -74,8 +74,8 @@
 .lastname-input {
     display: flex;
     margin-top: 10px;
-    height: 27px;
-    width: 90px;
+    height: 40px;
+    width: 100%;
     border: none;
     border-bottom: 1px solid black;
     @media (width < 450px) {
@@ -90,8 +90,8 @@
 .delivery-input {
     display: flex;
     margin-top: 10px;
-    height: 27px;
-    width: 200px;
+    height: 40px;
+    width: 100%;
     border: none;
     border-bottom: 1px solid black;
     @media (width < 450px) {
@@ -105,8 +105,8 @@
 
 .city-input {
     margin-top: 10px;
-    height: 27px;
-    width: 100px;
+    height: 40px;
+    width: 100%;
     border: none;
     border-bottom: 1px solid black;
     @media (width < 450px) {
@@ -120,8 +120,8 @@
 
 .state-input {
     margin-top: 10px;
-    height: 27px;
-    width: 100px;
+    height: 40px;
+    width: 100%;
     border: none;
     border-bottom: 1px solid black;
     @media (width < 450px) {
@@ -135,7 +135,8 @@
 
 .contact-number {
     margin-top: 10px;
-    height: 27px;
+    height: 40px;
+    width: 100%;
     border: none;
     border-bottom: 1px solid black;
     @media (width < 450px) {
@@ -177,7 +178,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 70px;
-    margin-left: 260px;
+    margin-left: 400px;
     width: 150px;
     font-size: 18px;
     font-family: "Montserrat";
@@ -218,10 +219,6 @@
 } */
 
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
 
 .type-container {
     position: relative;
@@ -339,8 +336,8 @@ input::-webkit-inner-spin-button {
     color: rgb(200, 0, 0);
     border-radius: 10px;
     padding: 20px;
-    margin-top: 50px;
-    margin-left: 80%;
+    margin-top: 0px;
+    margin-left: 70%;
     font-size: large;
     font-family: "Montserrat";
     @media (width < 450px) {
