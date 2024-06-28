@@ -54,6 +54,9 @@
     color: white;
     font-size: large;
     font-family: "Montserrat";
+    @media (width< 450px) {
+        margin-left: 50%;
+    }
 }
 .place-order-top:hover {
     cursor: pointer;
@@ -68,6 +71,10 @@
     padding-right: 10%;
     min-height: 1000px;
     /* height: fit-content; */
+    @media (width < 450px) {
+        padding-left: 5%;
+        /* padding-right: 0px; */
+    }
 }
 
 .showcart-main-container {
