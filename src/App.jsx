@@ -12,6 +12,7 @@ import SocialMedia from "./Components/SocialMedia.jsx";
 import Home from "./Components/Home.jsx";
 import CartProvider from './cartContext.jsx';
 import ShowCart from './Components/ShowCart.jsx';
+import AboutUsCarousel from './Components/AboutUsCarousel.jsx';
 
 // Import Store Products and Functions to obtain specific prices
 import { storeProducts, getPriceSmall, getPriceMedium, getPriceLarge, getProductData } from './storeProducts.jsx'; 
@@ -61,7 +62,7 @@ function App() {
           <Route path="/*" element={<Home/>}/>
           <Route path="/order-now" element={<Form shoppingCart={shoppingCart} setShoppingCart={setShoppingCart}/>}/>
           <Route path="/showcart" element={<ShowCart/>}/>
-          <Route path="/about-us" element={<AboutUs/>}/>
+          <Route path="/about-us" element={<AboutUs slides={slides} AboutUsCarousel={AboutUsCarousel}/>}/>
         </Routes>
         <footer>
           <SocialMedia/>
