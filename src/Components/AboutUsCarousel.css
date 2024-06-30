@@ -1,6 +1,5 @@
 .carousel-aboutus {
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     position: relative;
     width: 100%;
@@ -17,6 +16,10 @@
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    /* box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; */
+    @media (width < 450px) {
+        border-radius: 0px;
+    }
 }
 
 .left-arrow {
@@ -27,7 +30,7 @@
     left: 10px;
     /* background-color: white; */
     opacity: 1;
-    /* margin-top: 50%; */
+    margin-top: 60px;
 }
 
 .left-arrow:hover {
@@ -41,8 +44,20 @@
     height: 35px;
     right: 10px;
     opacity: 1;
+    margin-top: 60px;
 }
 
 .right-arrow:hover {
     cursor: pointer;
+}
+
+.carousel-slide1 {
+    width: 100%;
+    height: 100%;
+    /* size: cover; */
+    
+}
+
+.carousel-slide1:hover {
+
 }
