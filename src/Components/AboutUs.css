@@ -4,14 +4,22 @@
     margin-top: 70px;
 }
 
-.photos-container {
-    display: flex;
-    flex-direction: row;
-    width: 50%;
-    height: 210px;
-    margin-left: 5%;
+.container-body-aboutUs {
+    display: grid;
+    grid-template-columns: 50% 40%;
     margin-top: 100px;
-    gap: 10px;
+    gap: 50px;
+}
+
+.photos-container {
+    display: grid;
+    /* flex-direction: row; */
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+    height: 400px;
+    margin-left: 10%;
+    margin-top: 00px;
+    gap: 20px;
     @media (width < 450px) {
         width: 100%;
         height: 130px;
@@ -38,7 +46,8 @@
     width: 100%;
     height: 100%;
     border-radius: 100%;
-    z-index: 1;
+    z-index: 2;
+    margin-left: -25px;
 }
 
 .second-photo {
@@ -49,14 +58,24 @@
 
 .photo3 {
     /* border: 1px solid black; */
+    /* position: absolute; */
+    position: relative;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     border-radius: 100%;
-    z-index: 2;
+    margin-top: -100px;
+    margin-left: 130px;
+    z-index: 3;
 }
 
 .third-photo {
     width: 100%;
     height: 100%;
     border-radius: 100%;
+}
+
+.text-aboutUs-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
