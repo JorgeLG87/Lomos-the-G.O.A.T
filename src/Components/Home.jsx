@@ -26,7 +26,7 @@ export default function Home({ slides }) {
         <Link to="/order-now" style={{textDecoration:"none", width:"fit-content", marginTop:"80px"}}>
           <button className="order-now-home">Order Now!</button>
         </Link>
-        <div className="aboutus-section-container">
+        {/* <div className="aboutus-section-container"> */}
         <div className="entire-body">    
           <div className="title-container">
             <p className="aboutus-title">"A little taste of Argentina..."</p>
@@ -41,7 +41,7 @@ export default function Home({ slides }) {
             </p>
           </div>       
         </div>
-        </div>
+        {/* </div> */}
         <div className="socialmedia-text-container">
           <p className="socialmedia-text"><span className="span-text"># FOLLOW US</span></p><p className="socialmedia-text2">ON SOCIAL MEDIA</p>
         </div>

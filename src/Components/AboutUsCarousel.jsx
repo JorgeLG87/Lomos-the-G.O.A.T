@@ -11,7 +11,7 @@ export default function AboutUsCarousel({slides}) {
     useEffect(() => {
         setTimeout(()=>{
             slideRight()
-        },2000)
+        },2500)
     });
 
     function slideRight() {
@@ -33,7 +33,7 @@ export default function AboutUsCarousel({slides}) {
     return (
         <div className="carousel-aboutus">
             <BsArrowLeft className="left-arrow" onClick={slideLeft}/>
-            <div style={{boxShadow:"rgba(0, 0, 0, 0.56) 0px 22px 70px 4px",width:"100%", height:"100%", borderRadius:"10px"}}>
+            <div style={{boxShadow:"rgba(0, 0, 0, 0.35) 0px 5px 15px",width:"100%", height:"100%", borderRadius:"10px"}}>
                 <img className="carousel-slide1" src={slides[currSlide].url}/>
             </div>
             {/* {slides.map((slide, idx) => {
