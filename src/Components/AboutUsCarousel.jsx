@@ -33,7 +33,9 @@ export default function AboutUsCarousel({slides}) {
     return (
         <div className="carousel-aboutus">
             <BsArrowLeft className="left-arrow" onClick={slideLeft}/>
-            <img className="carousel-slide1" src={slides[currSlide].url}/>
+            <div style={{boxShadow:"rgba(0, 0, 0, 0.56) 0px 22px 70px 4px",width:"100%", height:"100%", borderRadius:"10px"}}>
+                <img className="carousel-slide1" src={slides[currSlide].url}/>
+            </div>
             {/* {slides.map((slide, idx) => {
                 return <img className="carousel-slide" src={slide.url} key={idx}/>
             })} */}
