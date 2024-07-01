@@ -8,11 +8,11 @@ export default function AboutUsCarousel({slides}) {
     const [ currSlide, setCurrSlide ] = useState(0);
     
 
-    // useEffect(() => {
-    //     setTimeout(()=>{
-    //         slideRight()
-    //     },4000)
-    // });
+    useEffect(() => {
+        setTimeout(()=>{
+            slideRight()
+        },2000)
+    });
 
     function slideRight() {
         if (currSlide === slides.length-1) {

@@ -31,6 +31,9 @@
     /* background-color: white; */
     opacity: 1;
     margin-top: 60px;
+    @media (width < 450px) {
+        margin-top: 10px;
+    }
 }
 
 .left-arrow:hover {
@@ -45,6 +48,9 @@
     right: 10px;
     opacity: 1;
     margin-top: 60px;
+    @media (width < 450px) {
+        margin-top: 10px;
+    }
 }
 
 .right-arrow:hover {
