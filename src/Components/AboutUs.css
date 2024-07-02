@@ -11,7 +11,7 @@
     gap: 50px;
     @media (width < 450px) {
         grid-template-columns: none;
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: 43% 11% 38%;
         margin-top: 0px;
         /* gap: 10px; */
     }
@@ -112,4 +112,13 @@
 
 .aboutus-page {
     margin-bottom: 50px;
+}
+
+.idea-container {
+    height: 100px;
+}
+
+.lightbulb {
+    width:100px;
+    transform: rotate(7deg);
 }
