@@ -108,7 +108,7 @@ export default function NoCombo() {
             </div>
 
             <div className="nocombo-main-container-bev">
-                <p className="title">Beverage</p>
+                <p className="title3">Beverage</p>
                 <div className="nocombo-sub-container-fries">
                     <div className="small-fries">
                         <p className="text">Small</p>

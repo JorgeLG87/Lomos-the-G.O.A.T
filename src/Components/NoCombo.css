@@ -11,6 +11,8 @@
     padding-left: 10%;
     padding-right: 10%;
     @media (width < 450px) {
+        /* position: relative; */
+        width: 90%;
         padding-left: 0px;
         padding-right: 0px;
         margin-top: 50px;
@@ -31,7 +33,11 @@
     text-align: center;
     margin-top: 0px;
     @media (width < 450px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-top: 0px;
+        /* margin-left: 10px; */
         padding-left: 0px;
         padding-right: 0px;
     }
@@ -48,7 +54,11 @@
     text-align: center;
     margin-top: 50px;
     @media (width < 450px) {
-        margin-top: 250px;;
+        /* position: absolute; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* margin-top: 250px;; */
     }
 }
 
@@ -116,17 +126,41 @@
     margin-left: 0%;
     padding-left: 0px;
     @media (width < 450px) {
-        grid-template-columns: none;
-        grid-template-rows: repeat(3, 1fr);
-        margin-top: 00px;
-        width: 92%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* grid-template-columns: none; */
+        /* grid-template-rows: repeat(3, 1fr); */
+        margin-top: 0px;
+        width: 100%;
         margin-left: 40px;
+        gap: 20%;
     }
 }
+
+.nocombo-title-span-container {
+    /* margin-top: 100px */
+    @media (width < 450px) {
+        /* display: flex; */
+        /* border: 1px solid black; */
+        width: 110%;
+        margin-left: 40px;
+        /* display: relative; */
+        /* position: absolute; */
+        margin-top: 0px;
+    }
+}
+
 
 .nocombo-title-span-container2 {
     /* margin-top: 100px */
     @media (width < 450px) {
+        /* display: flex; */
+        /* border: 1px solid black; */
+        width: 110%;
+        margin-left: 40px;
+        /* display: relative; */
+        /* position: absolute; */
         margin-top: 100px;
     }
 }
@@ -138,4 +172,20 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     padding: 10px;
     border-radius: 10px;
+}
+.medium-fries, .large-fries {
+    @media (width < 450px) {
+        margin-top: 25%;
+    }
+}
+
+.title3 {
+    /* border: 1px solid black; */
+    width: 100%;
+    margin-left: 40px;
+    color: black;
+    font-size: 35px;
+    margin-top: 0px;
+    font-family: "Montserrat";
+    
 }
