@@ -31,13 +31,31 @@ export default function ShowCart() {
         return total;
     }
 
+    const checkout = async () => {
+        await fetch("http://localhost:4000/checkout", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({items: cart.items})
+        }).then((response) => {
+            return response.json();
+        }).then((response) => {
+            if (response.url) {
+                window.location.assign(response.url);
+            }
+        }).catch((error) => {
+            console.log(error);
+        })
+    }
+
     return (
         <div className="showcart-page">
             <div className="top-container">
                 <Link to="/order-now" style={{textDecoration:"none", width:"fit-content"}}>
                     <button className="navigating-showcart" type="button">Go Back</button>
                 </Link>
-                <button className="place-order-top" type="button">Place Order</button>
+                <button className="place-order-top" type="button" onClick={checkout}>Place Order</button>
             </div>
             <div className="showcart-main-container">
                 {(cart.items).map((product, index) => {

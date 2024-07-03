@@ -113,7 +113,7 @@
 }
 
 .delete-btn {
-    height: 50px;
+    height: 60px;
     margin-bottom: 15px;
     border: none;
     border-radius: 10px;
@@ -122,6 +122,7 @@
     color: rgb(253, 230, 21);
     font-size: 20px;
     font-family: "Montserrat";
+    /* padding: 10px; */
 }
 
 .delete-btn:hover {

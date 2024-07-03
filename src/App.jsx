@@ -5,6 +5,10 @@ import { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
 import { Link } from "react-router-dom";
 
+// Import Pages
+import Success from "./Pages/Success.jsx";
+import Cancel from "./Pages/Cancel.jsx";
+
 import AboutUs from './Components/AboutUs.jsx';
 import Form from "./Components/Form.jsx";
 import Navbar from "./Components/Navbar.jsx";
@@ -63,6 +67,8 @@ function App() {
           <Route path="/order-now" element={<Form shoppingCart={shoppingCart} setShoppingCart={setShoppingCart}/>}/>
           <Route path="/showcart" element={<ShowCart/>}/>
           <Route path="/about-us" element={<AboutUs slides={slides} AboutUsCarousel={AboutUsCarousel}/>}/>
+          <Route path="/success" element={<Success/>}/>
+          <Route path="/cancel" element={<Cancel/>}/>
         </Routes>
         <footer>
           <SocialMedia/>

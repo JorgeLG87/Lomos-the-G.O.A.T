@@ -1,6 +1,6 @@
 const storeProducts = [
     {
-        id: "1",
+        id: "price_1PYFLk03vPVWwY4emohOmTTs",
         title: "The G.O.A.T Small Combo",
         price: 17
     },

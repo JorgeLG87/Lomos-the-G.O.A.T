@@ -62,6 +62,7 @@
     margin-top: -20px;
     margin-left: 00px;
     line-height: 19px;
+    font-family: "Montserrat";
     @media (width < 450px) {
         display: inline-block;
         font-size: 15px;

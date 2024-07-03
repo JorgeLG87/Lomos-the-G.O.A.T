@@ -86,10 +86,10 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                     <label for="mayo1">No Mayo</label>
                                 </div>
                             </div>
-                            {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="1").length}</p> : null}
+                            {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="price_1PYFLk03vPVWwY4emohOmTTs").length}</p> : null}
                             {bevValid1 ? <p className="bev-error">Please choose a beverage type</p> : null}
                             <button onClick={() => {
-                                document.getElementById("bev-type1").value ? cart.addOneToCart("1") : setBevValid1(true);
+                                document.getElementById("bev-type1").value ? cart.addOneToCart("price_1PYFLk03vPVWwY4emohOmTTs") : setBevValid1(true);
                                 document.getElementById("bev-type1").value ? setBevValid1(false) : null
                                 }} className="add" type="button">Add To Cart</button>
                         </div>
