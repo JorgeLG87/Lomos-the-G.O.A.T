@@ -11,6 +11,7 @@ import NoCombo from "./NoCombo.jsx";
 export default function Form({ shoppingCart, setShoppingCart }) {
 
     const form = useRef();
+    
     const sendEmail = (e) => {
         e.preventDefault();
 
