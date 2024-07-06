@@ -1,8 +1,11 @@
 
+
+
 .entire-home-container {
   position: relative;
   width: 99%;
   /* border: 1px solid black; */
+  background-image: url("watermark-background.jpg");
 }
 
 .aboutus-section-container {

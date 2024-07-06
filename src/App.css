@@ -1,12 +1,6 @@
-/* body {
-  width: 100%;
-  margin: 0px;
-  background-color: white;
-  background-size:contain;
-  background-attachment: fixed;
-  background-repeat: repeat;
-  opacity: 1;
-} */
+body {
+  background-image: url("../public/watermark-background.JPG");  
+}
 
 .logo {
   display: flex;
