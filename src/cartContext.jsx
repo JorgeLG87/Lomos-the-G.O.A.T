@@ -25,7 +25,7 @@ function CartProvider({ children }) {
 
 
     function getProductBeverage(id) {
-        if (id === "1" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6") {
+        if (id === "price_1PYFLk03vPVWwY4emohOmTTs" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6") {
             const beverageType = document.getElementById(`bev-type${id}`).value;
             return beverageType;
         } else {
@@ -36,28 +36,28 @@ function CartProvider({ children }) {
 
     // SPECIAL INSTRUCTIONS
     function getLettuceInstruction(id) {
-        if (id === "1" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6" || id === "7" || id === "8") {
+        if (id === "price_1PYFLk03vPVWwY4emohOmTTs" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6" || id === "7" || id === "8") {
             const lettuce = document.getElementById(`lettuce${id}`).checked;
             return lettuce;
         } else return "";
     }
 
     function getTomatoeInstruction(id) {
-        if (id === "1" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6" || id === "7" || id === "8") {
+        if (id === "price_1PYFLk03vPVWwY4emohOmTTs" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6" || id === "7" || id === "8") {
             const tomatoe = document.getElementById(`tomatoe${id}`).checked;
             return tomatoe;
         } else return "";
     }
 
     function getSaltInstruction(id) {
-        if (id === "1" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6" || id === "7" || id === "8") {
+        if (id === "price_1PYFLk03vPVWwY4emohOmTTs" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6" || id === "7" || id === "8") {
             const salt = document.getElementById(`salt${id}`).checked;
             return salt;
         } else return "";
     }
 
     function getMayoInstruction(id) {
-        if (id === "1" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6" || id === "7" || id === "8") {
+        if (id === "price_1PYFLk03vPVWwY4emohOmTTs" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6" || id === "7" || id === "8") {
             const mayo = document.getElementById(`mayo${id}`).checked;
             return mayo;
         } else return "";

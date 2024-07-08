@@ -60,7 +60,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                 <img className="icon-item" src="/fries-medium.png"/>
                                 <img className="icon-item" src="/soda-medium.png"/>
                             </div>
-                            <select id="bev-type1" className="beverage-type" required>
+                            <select id="bev-typeprice_1PYFLk03vPVWwY4emohOmTTs" className="beverage-type" required>
                                 <option value="">-----Choose Beverage-----</option>
                                 <option value="Coca Cola">Coca Cola</option>
                                 <option value="Pepsi">Pepsi</option>
@@ -70,27 +70,27 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <p>Special Instructions</p>
                             <div className="special-instructions">
                                 <div>
-                                    <input type="radio" id="lettuce1" value="No Lettuce"/>
+                                    <input type="radio" id="lettuceprice_1PYFLk03vPVWwY4emohOmTTs" value="No Lettuce"/>
                                     <label for="lettuce1">No Lettuce</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="tomatoe1" value="No Tomatoe"/>
+                                    <input type="radio" id="tomatoeprice_1PYFLk03vPVWwY4emohOmTTs" value="No Tomatoe"/>
                                     <label for="tomatoe1">No Tomatoe</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="salt1" value="No Salt"/>
+                                    <input type="radio" id="saltprice_1PYFLk03vPVWwY4emohOmTTs" value="No Salt"/>
                                     <label for="salt1">No Salt</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="mayo1" value="No Mayo"/>
+                                    <input type="radio" id="mayoprice_1PYFLk03vPVWwY4emohOmTTs" value="No Mayo"/>
                                     <label for="mayo1">No Mayo</label>
                                 </div>
                             </div>
                             {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="price_1PYFLk03vPVWwY4emohOmTTs").length}</p> : null}
                             {bevValid1 ? <p className="bev-error">Please choose a beverage type</p> : null}
                             <button onClick={() => {
-                                document.getElementById("bev-type1").value ? cart.addOneToCart("price_1PYFLk03vPVWwY4emohOmTTs") : setBevValid1(true);
-                                document.getElementById("bev-type1").value ? setBevValid1(false) : null
+                                document.getElementById("bev-typeprice_1PYFLk03vPVWwY4emohOmTTs").value ? cart.addOneToCart("price_1PYFLk03vPVWwY4emohOmTTs") : setBevValid1(true);
+                                document.getElementById("bev-typeprice_1PYFLk03vPVWwY4emohOmTTs").value ? setBevValid1(false) : null
                                 }} className="add" type="button">Add To Cart</button>
                         </div>
 
