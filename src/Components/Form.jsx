@@ -69,14 +69,14 @@ export default function Form({ shoppingCart, setShoppingCart }) {
    }
 
 
-    function handleShoppingCart() {
-    let currentLomo = document.getElementById("added-lomos").innertext;
-    let currentSize
-    }
+    // function handleShoppingCart() {
+    // let currentLomo = document.getElementById("added-lomos").innertext;
+    // let currentSize
+    // }
 
     return (
         <div className="form-container">
-            <Link to="/showcart" style={{textDecoration:"none", width:"100%"}}>
+            <Link to="/showcart" style={{textDecoration:"none", width:"100%", display: "contents"}}>
                 <button className="cart-button" type="button">Cart has ({totalQuantity} items)</button>
             </Link>
             <div className="choosecombo-text-container">

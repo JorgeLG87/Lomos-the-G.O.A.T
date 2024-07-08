@@ -23,9 +23,9 @@ export default function Home({ slides }) {
           <img className="location" src="/location.png"/>
         </div>
         <QueEsLomo/>
-        <Link to="/order-now" style={{textDecoration:"none", width:"fit-content", marginTop:"80px"}}>
-          <button className="order-now-home">Order Now!</button>
-        </Link>
+          <Link className="link" to="/order-now" style={{textDecoration:"none", marginTop:"80px", display:"contents"}}>
+            <button className="order-now-home">Order Now!</button>
+          </Link>
         <div className="aboutus-section-container">
           <div className="entire-body">    
             <div className="title-container">

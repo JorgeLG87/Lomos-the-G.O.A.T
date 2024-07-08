@@ -23,10 +23,14 @@
     margin-top: 0px;
     position: relative;
     display: block;
-    gap: 30px;
+    gap: 0px;
     color: white;
     text-shadow: 1px 1px 2px red;
     width: 100%;
+    background-color: white;
+    border: 1.5px solid rgb(230, 0 ,0);
+    border-radius: 7px;
+    padding: 10px;
     @media (width < 450px) {
         margin-top: -80px;
     }
@@ -155,7 +159,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 70px;
-    margin-left: 0%;
+    margin-left: 20px;
     width: 150px;
     font-size: 18px;
     font-family: "Montserrat";
@@ -173,6 +177,7 @@
     }
 }
 
+
 .combo-btn2 {
     display: flex;
     justify-content: center;
@@ -188,6 +193,7 @@
     background-color: rgb(253, 230, 21);
     color: rgb(200, 0, 0);
     border-radius: 7px;
+    /* right: 100px; */
     @media (width < 450px) {
         display: block;
         width: 60%;
@@ -198,27 +204,17 @@
 
 .combo-btn2:hover {
     cursor:pointer;
-    /* background-color: #fffad7; */
-    /* color: red; */
+    opacity: 0.85;
 }
-/* .combo-btn2:active {
-    background-color: #fffad7;
-} */
+
 
 
 
 
 .combo-btn:hover {
     cursor:pointer;
-    /* background-color: #E9D134; */
-    /* color: red; */
+    opacity: 0.85;
 }
-
-/* .combo-btn:active {
-    background-color: #E9D134;
-} */
-
-
 
 .type-container {
     position: relative;

@@ -6,6 +6,7 @@
     height: 185px;
     color: white;
     /* border-radius: 7px; */
+    /* border: 3px solid #E9D134; */
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     @media (width < 450px) {
@@ -37,8 +38,11 @@
     color: #AF2007;
     font-size: 15px;
     font-family: "Montserrat";
-    margin-top: 0px;
-    
+    margin-top: 0px;  
+}
+
+.item:hover {
+    opacity: 0.85;
 }
 
 
@@ -51,18 +55,9 @@
     margin-top: 0px;
 }
 
-
-/* .logo {
-    position: relative;
-    /* display: flex; */
-    /* margin-left: 0px; */
-    /* justify-content: center; */
-    /* border-radius: 100%; */
-    
-    /* opacity: 0.9; */
-    /* width: 100px; */
-    
-/* }  */
+.item-ordernow:hover {
+    opacity: 0.85;
+}
 
 
 .home-container {
@@ -78,6 +73,10 @@
     text-align: center;
 }
 
+.home-container:hover {
+    opacity: 0.85;
+}
+
 
 .ordernow-container {
     display: flex;
@@ -91,6 +90,10 @@
     text-align: center;
 }
 
+.ordernow-container:hover {
+    opacity: 0.85;
+}
+
 .aboutus-container {
     display: flex;
     justify-content: center;
@@ -101,6 +104,10 @@
     height: 40px;
     width: 140px;
     text-align: center;
+}
+
+.aboutus-container:hover {
+    opacity: 0.85;
 }
 
 .menubar {

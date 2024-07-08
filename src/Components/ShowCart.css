@@ -29,6 +29,7 @@
 }
 .navigating-showcart:hover {
     cursor: pointer;
+    opacity: 0.85;
 }
 
 .showcart-main-title {
@@ -60,6 +61,7 @@
 }
 .place-order-top:hover {
     cursor: pointer;
+    opacity: 0.85;
 }
 
 .showcart-page {

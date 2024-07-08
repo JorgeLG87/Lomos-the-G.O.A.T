@@ -52,7 +52,7 @@ export default function ShowCart() {
     return (
         <div className="showcart-page">
             <div className="top-container">
-                <Link to="/order-now" style={{textDecoration:"none", width:"fit-content"}}>
+                <Link to="/order-now" style={{textDecoration:"none", width:"fit-content", display:"contents"}}>
                     <button className="navigating-showcart" type="button">Go Back</button>
                 </Link>
                 <button className="place-order-top" type="button" onClick={checkout}>Place Order</button>
