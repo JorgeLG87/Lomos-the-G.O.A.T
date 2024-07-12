@@ -53,7 +53,7 @@
 
 .title {
     color: black;
-    font-size: 35px;
+    font-size: 40px;
     margin-top: 0px;
     font-family: "Montserrat";
 }
@@ -96,6 +96,10 @@
     padding: 10px;
     border-radius: 10px;
     background-color: white;
+    @media (width < 450px) {
+        border-radius: 0px;
+        border: none;
+    }
 }
 
 .icons {
@@ -154,7 +158,7 @@
     background: linear-gradient(120deg, red, yellow);
     -webkit-background-clip: text;
     background-clip: text;
-    font-family: "Roboto";
+    font-family: "Montserrat";
     @media (width < 450px) {
       font-size: 35px;
     }

@@ -36,6 +36,8 @@
         width: 92.5%;
         margin-top: -80px;
         margin-left: 0px;
+        border-radius: 0px;
+        border: none;
     }
 }
 

@@ -17,6 +17,8 @@
         grid-template-rows: repeat(3, 1fr);
         padding: 2.5px;
         padding-bottom: 20px;
+        border-radius: 0px;
+        border: none;
     }
 }
 
