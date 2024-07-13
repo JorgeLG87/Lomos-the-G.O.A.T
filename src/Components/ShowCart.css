@@ -75,7 +75,7 @@
     /* height: fit-content; */
     @media (width < 450px) {
         padding-left: 5%;
-        /* padding-right: 0px; */
+        padding-right: 5%;
     }
 }
 
@@ -90,7 +90,6 @@
 }
 
 .list-products {
-    /* border: 1px solid black; */
     border-radius: 10px;
     width: 300px;
     height: fit-content;
@@ -104,6 +103,8 @@
     background-color: white;
     @media (width < 450px) {
         width: 100%;
+        border-radius: 0px;
+        border: none;
     }
 }
 
