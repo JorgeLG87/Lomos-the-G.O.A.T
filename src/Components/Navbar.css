@@ -9,6 +9,7 @@
     /* border: 3px solid #E9D134; */
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
+    border: 3px solid #E9D134;
     @media (width < 450px) {
         display: grid;
         width: 101.5%;
@@ -118,7 +119,7 @@
         display: inline-flex;
         width: 70px;
         height: 70px;
-        margin-right: 20px;
+        margin-right: 40px;
         margin-top: 55px;
         cursor: pointer;
     }

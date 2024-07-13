@@ -2,8 +2,8 @@
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     width: 100%;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
     @media (width < 450px) {
         padding-left: 40px;
         padding-right: 40px;

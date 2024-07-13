@@ -38,6 +38,8 @@ export default function Form({ shoppingCart, setShoppingCart }) {
     const [lomo, setLomo] = useState([]);
     const [ quantity, setQuantity ] = useState([]);
 
+    const [ orderType, setOrderType ] = useState("");
+
     const cart = useContext(CartContext);
     console.log(cart.items);
     
@@ -68,23 +70,50 @@ export default function Form({ shoppingCart, setShoppingCart }) {
     console.log("Email Body", content1)
    }
 
-
-    // function handleShoppingCart() {
-    // let currentLomo = document.getElementById("added-lomos").innertext;
-    // let currentSize
-    // }
-
     return (
         <div className="form-container">
             <Link to="/showcart" style={{textDecoration:"none", width:"100%", display: "contents"}}>
                 <button className="cart-button" type="button">Cart has ({totalQuantity} items)</button>
             </Link>
+            <div className="ordertype-container">
+                <button className="pickup-order" type="button" onClick={() => setOrderType("pickup")}>Pick Up</button>
+                <button className="delivery-order" type="button" onClick={() => setOrderType("delivery")}>Delivery</button>
+            </div>
             <div className="choosecombo-text-container">
                 <p className="title2"><span className="span-text">Choose your</span></p><p className="title-form">bite!</p>
             </div>
             <div className="form-fields">
             {/* action="https://formsubmit.co/jorge85_6@hotmail.com" method="POST" */}
-            <form className="order-form" ref={form} onSubmit={sendEmail}>
+            {orderType === "delivery" ? <form className="order-form" ref={form} onSubmit={sendEmail}>
+                    <div className="personal-info">
+                        <input className="name-input" type="text" placeholder="First Name" name="First Name" required></input>
+    
+                        <input className="lastname-input" type="text" placeholder="Last Name" name="Last Name" required></input>
+
+                        <input className="contact-number" type="number" placeholder="Phone #" name="Phone Number" required></input>
+                    </div>
+                    <div className="delivery-info">
+                        <input className="delivery-input" placeholder="Delivery Address" name="Delivery Address" required></input>
+
+                        <input className="city-input" placeholder="City" name="City" required></input>
+
+                        <input className="state-input" placeholder="State" name="State" required></input>
+                    </div>
+
+                    <button className="combo-btn" onClick={handleCombo} type="button">Combo</button>
+                    <button className="combo-btn2" onClick={handleNotCombo} type="button">Individual Items</button>
+                </form> : <form className="order-form" ref={form} onSubmit={sendEmail}>
+                    <div className="personal-info">
+                        <input className="name-input" type="text" placeholder="First Name" name="First Name" required></input>
+    
+                        <input className="lastname-input" type="text" placeholder="Last Name" name="Last Name" required></input>
+
+                        <input className="contact-number" type="number" placeholder="Phone #" name="Phone Number" required></input>
+                    </div>
+                    <button className="combo-btn" onClick={handleCombo} type="button">Combo</button>
+                    <button className="combo-btn2" onClick={handleNotCombo} type="button">Individual Items</button>
+                </form>}
+            {/* <form className="order-form" ref={form} onSubmit={sendEmail}>
                     <div className="personal-info">
                         <input className="name-input" type="text" placeholder="First Name" name="First Name" required></input>
     
@@ -102,10 +131,7 @@ export default function Form({ shoppingCart, setShoppingCart }) {
 
                 <button className="combo-btn" onClick={handleCombo} type="button">Combo</button>
                 <button className="combo-btn2" onClick={handleNotCombo} type="button">Individual Items</button>
-                
-                {/* <input type="Submit" value="Send"/> */}
-                {/* <button onClick={sendEmail} className="submit-btn" type="button">Place Order</button> */}
-            </form>
+            </form> */}
             </div>
             <div className="type-container">
                 {combo  ? <Combo lomo={lomo} setLomo={setLomo} quantity={quantity} setQuantity={setQuantity} dateStamp={dateStamp} setDateStamp={setDateStamp} secDateStamp={secDateStamp} setSecDateStamp={setSecDateStamp}/> : <NoCombo/>}
