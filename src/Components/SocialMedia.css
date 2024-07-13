@@ -17,7 +17,7 @@
 .socialmedia-box {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
     position: relative;
     align-items: center;
     justify-content:center;

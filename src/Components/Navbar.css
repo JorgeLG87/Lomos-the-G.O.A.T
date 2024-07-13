@@ -12,7 +12,7 @@
     border: 3px solid #E9D134;
     @media (width < 450px) {
         display: grid;
-        width: 101.5%;
+        width: 100%;
         border-radius: 0px;
     }
 }
@@ -117,8 +117,8 @@
     /* position: relative; */
     @media (width < 450px) {
         display: inline-flex;
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
         margin-right: 40px;
         margin-top: 55px;
         cursor: pointer;
