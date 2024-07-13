@@ -82,7 +82,7 @@
     /* padding: 10px; */
     /* padding-top: 100px; */
     /* padding-bottom: 30px; */
-    gap: 10%;
+    gap: 7%;
     @media (width < 450px) {
         grid-template-columns: none;
         grid-template-rows: repeat(3, 1fr);

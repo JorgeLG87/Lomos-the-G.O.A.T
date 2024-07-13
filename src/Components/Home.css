@@ -27,7 +27,7 @@
     @media (width < 450px) {
       display: flex;
       flex-direction: column;
-      width: 100%;
+      width: 90%;
       padding-left: 0px;
       padding-right: 0px;
     }

@@ -29,6 +29,7 @@
     /* border-radius: 7px; */
     @media (width < 450px) {
         border-radius: 0px;
+        width: 99%;
     }    
 }
 
