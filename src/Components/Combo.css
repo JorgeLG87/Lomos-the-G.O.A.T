@@ -13,9 +13,7 @@
 
 
 .main-container {
-    /* display: flex; */
     position: relative;
-    /* border: 1px solid black; */
     border-radius: 10px;
     width: 100%;
     height:fit-content;
@@ -71,17 +69,12 @@
 }
 
 .sub-container {
-    /* border: 1px solid black; */
     position: relative;
     border-radius: 10px;
     width: 100%;
     height:fit-content;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* background-color: white; */
-    /* padding: 10px; */
-    /* padding-top: 100px; */
-    /* padding-bottom: 30px; */
     gap: 7%;
     @media (width < 450px) {
         grid-template-columns: none;

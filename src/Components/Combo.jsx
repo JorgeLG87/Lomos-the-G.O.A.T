@@ -91,6 +91,8 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <button onClick={() => {
                                 document.getElementById("bev-typeprice_1PYFLk03vPVWwY4emohOmTTs").value ? cart.addOneToCart("price_1PYFLk03vPVWwY4emohOmTTs") : setBevValid1(true);
                                 document.getElementById("bev-typeprice_1PYFLk03vPVWwY4emohOmTTs").value ? setBevValid1(false) : null
+                                // document.getElementById("bev-typeprice_1PYFLk03vPVWwY4emohOmTTs").;
+                                
                                 }} className="add" type="button">Add To Cart</button>
                         </div>
 

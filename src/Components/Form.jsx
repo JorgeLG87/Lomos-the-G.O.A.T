@@ -113,25 +113,6 @@ export default function Form({ shoppingCart, setShoppingCart }) {
                     <button className="combo-btn" onClick={handleCombo} type="button">Combo</button>
                     <button className="combo-btn2" onClick={handleNotCombo} type="button">Individual Items</button>
                 </form>}
-            {/* <form className="order-form" ref={form} onSubmit={sendEmail}>
-                    <div className="personal-info">
-                        <input className="name-input" type="text" placeholder="First Name" name="First Name" required></input>
-    
-                        <input className="lastname-input" type="text" placeholder="Last Name" name="Last Name" required></input>
-
-                        <input className="contact-number" type="number" placeholder="Phone #" name="Phone Number" required></input>
-                    </div>
-                    <div className="delivery-info">
-                        <input className="delivery-input" placeholder="Delivery Address" name="Delivery Address" required></input>
-
-                        <input className="city-input" placeholder="City" name="City" required></input>
-
-                        <input className="state-input" placeholder="State" name="State" required></input>
-                    </div>
-
-                <button className="combo-btn" onClick={handleCombo} type="button">Combo</button>
-                <button className="combo-btn2" onClick={handleNotCombo} type="button">Individual Items</button>
-            </form> */}
             </div>
             <div className="type-container">
                 {combo  ? <Combo lomo={lomo} setLomo={setLomo} quantity={quantity} setQuantity={setQuantity} dateStamp={dateStamp} setDateStamp={setDateStamp} secDateStamp={secDateStamp} setSecDateStamp={setSecDateStamp}/> : <NoCombo/>}
