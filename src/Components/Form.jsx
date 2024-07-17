@@ -11,7 +11,7 @@ import NoCombo from "./NoCombo.jsx";
 export default function Form({ shoppingCart, setShoppingCart }) {
 
     const form = useRef();
-    
+
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -28,7 +28,7 @@ export default function Form({ shoppingCart, setShoppingCart }) {
                 },
             );
     };
-
+    
     const [ dateStamp, setDateStamp ] = useState(0)
     const [ secDateStamp, setSecDateStamp ] = useState(1); 
 
@@ -83,7 +83,6 @@ export default function Form({ shoppingCart, setShoppingCart }) {
                 <p className="title2"><span className="span-text">Choose your</span></p><p className="title-form">bite!</p>
             </div>
             <div className="form-fields">
-            {/* action="https://formsubmit.co/jorge85_6@hotmail.com" method="POST" */}
             {orderType === "delivery" ? <form className="order-form" ref={form} onSubmit={sendEmail}>
                     <div className="personal-info">
                         <input className="name-input" type="text" placeholder="First Name" name="First Name" required></input>

@@ -47,6 +47,8 @@ export default function ShowCart() {
         }).catch((error) => {
             console.log(error);
         })
+
+        sendEmail();
     }
 
     return (

@@ -2,12 +2,42 @@ import QueEsLomo from "./QueEsLomo.jsx";
 import "./Home.css";
 
 import { Link } from "react-router-dom";
-
+import { useState, useEffect, useRef } from 'react';
 
 import HomeSlidingImg from "./HomeSlidingImg.jsx";
 
 
 export default function Home({ slides }) {
+
+    const IntersectionObserverComponent = () => {
+      // const [ isVisible, setIsVisible ] = useState(false);
+      const elementRef = useRef(null);
+
+      useEffect(() => {
+        const observer = new IntersectionObserver(([entry]) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+            // setIsVisible(true);
+          }
+        }, { threshold: 0.1 });
+
+        if (elementRef.current) {
+          observer.observe(elementRef.current);
+        }
+
+        return () => {
+          if (elementRef.current) {
+            observer.unobserve(elementRef.current);
+          }
+        };
+      }, []);
+
+      return elementRef;
+
+    };
+  
+
     return (
         <div className="entire-home-container">
         <div className="marco-video-container">
@@ -26,7 +56,7 @@ export default function Home({ slides }) {
           <Link className="link" to="/order-now" style={{textDecoration:"none", marginTop:"80px", display:"contents"}}>
             <button className="order-now-home">Order Now!</button>
           </Link>
-        <div className="aboutus-section-container">
+        <div className="aboutus-section-container" ref={IntersectionObserverComponent()}>
           <div className="entire-body">    
             <div className="title-container">
               <p className="aboutus-title">"A little taste of Argentina..."</p>

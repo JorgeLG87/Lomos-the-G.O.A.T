@@ -11,11 +11,19 @@
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
   @media (width < 450px) {
     padding-left: 0px;
     padding-right: 0px;
     width: 100%;
   }
+}
+
+.aboutus-section-container.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .entire-body {
@@ -325,3 +333,4 @@
   margin-top: 100px;
   width: 100%;
 }
+

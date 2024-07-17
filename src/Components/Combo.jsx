@@ -68,9 +68,9 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             </select>
                             <br></br>
                             <p>Special Instructions</p>
-                            <div className="special-instructions">
+                            <div id="special-instructions" className="special-instructions">
                                 <div>
-                                    <input type="radio" id="lettuceprice_1PYFLk03vPVWwY4emohOmTTs" value="No Lettuce"/>
+                                    <input type="radio" id="lettuceprice_1PYFLk03vPVWwY4emohOmTTs" value="No Lettuce" />
                                     <label for="lettuce1">No Lettuce</label>
                                 </div>
                                 <div>
@@ -92,6 +92,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                 document.getElementById("bev-typeprice_1PYFLk03vPVWwY4emohOmTTs").value ? cart.addOneToCart("price_1PYFLk03vPVWwY4emohOmTTs") : setBevValid1(true);
                                 document.getElementById("bev-typeprice_1PYFLk03vPVWwY4emohOmTTs").value ? setBevValid1(false) : null
                                 // document.getElementById("bev-typeprice_1PYFLk03vPVWwY4emohOmTTs").;
+                                // document.getElementById("lettuceprice_1PYFLk03vPVWwY4emohOmTTs");
                                 
                                 }} className="add" type="button">Add To Cart</button>
                         </div>
