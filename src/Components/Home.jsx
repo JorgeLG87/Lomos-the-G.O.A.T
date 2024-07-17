@@ -17,8 +17,10 @@ export default function Home({ slides }) {
         const observer = new IntersectionObserver(([entry]) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
+            // observer.unobserve(entry.target);
             // setIsVisible(true);
+          } else {
+            entry.target.classList.remove("is-visible");
           }
         }, { threshold: 0.1 });
 
