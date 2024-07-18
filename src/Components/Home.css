@@ -175,10 +175,19 @@
 .socialmedia-text-container {
   margin-top: 150px;
   font-family: "Montserrat";
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
   @media (width < 450px) {
     margin-top: 0px;
   }
 }
+
+.socialmedia-text-container.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 .socialmedia-text {
   color: transparent;

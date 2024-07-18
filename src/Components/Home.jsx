@@ -74,7 +74,7 @@ export default function Home({ slides }) {
             </div>       
           </div>
         </div>
-        <div className="socialmedia-text-container">
+        <div className="socialmedia-text-container" ref={IntersectionObserverComponent()}>
           <p className="socialmedia-text"><span className="span-text"># FOLLOW US</span></p><p className="socialmedia-text2">ON SOCIAL MEDIA</p>
         </div>
         <div className="map-comments-container">
