@@ -20,9 +20,16 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
 
     const cart = useContext(CartContext);
     
-
+    const [ click, setClick ] = useState(false)
+    const [ selectedValue, setSelectedValue ] = useState(null);
    
-
+    const handleRadioClicks = (value) => {
+        if (selectedValue === value) {
+            setSelectedValue(null);
+        } else {
+            setSelectedValue(value);
+        }
+    }
     
     function handleAddItems(e) {
         e.preventDefault();
@@ -71,6 +78,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <div id="special-instructions" className="special-instructions">
                                 <div>
                                     <input type="radio" id="lettuceprice_1PYFLk03vPVWwY4emohOmTTs" value="No Lettuce" />
+                                   
                                     <label for="lettuce1">No Lettuce</label>
                                 </div>
                                 <div>
