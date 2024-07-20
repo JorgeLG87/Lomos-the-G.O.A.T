@@ -35,6 +35,12 @@ function App() {
     { url: "/cataratas-Iguazu.jpg", title: "Cataratas del Iguazu"}
   ]
 
+  const aboutUsSlides = [
+    { url: "/team1.jpg", title:"Team hands"},
+    { url: "/team2.jpg", title: "Team posing for photo"},
+    { url: "/team3.webp", title: "Team in the kitchen"}
+  ]
+
   const [toggleForm, setToggleForm] = useState(false);
 
   const [ toggle, setToggle ] = useState(false);
@@ -66,7 +72,7 @@ function App() {
           <Route path="/*" element={<Home/>}/>
           <Route path="/order-now" element={<Form shoppingCart={shoppingCart} setShoppingCart={setShoppingCart}/>}/>
           <Route path="/showcart" element={<ShowCart/>}/>
-          <Route path="/about-us" element={<AboutUs slides={slides} AboutUsCarousel={AboutUsCarousel}/>}/>
+          <Route path="/about-us" element={<AboutUs slides={aboutUsSlides} AboutUsCarousel={AboutUsCarousel}/>}/>
           <Route path="/success" element={<Success/>}/>
           <Route path="/cancel" element={<Cancel/>}/>
         </Routes>
