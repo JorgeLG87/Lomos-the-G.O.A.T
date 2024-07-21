@@ -77,20 +77,20 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <p>Special Instructions</p>
                             <div id="special-instructions" className="special-instructions">
                                 <div>
-                                    <input type="radio" id="lettuceprice_1PYFLk03vPVWwY4emohOmTTs" value="No Lettuce" />
+                                    <input type="checkbox" id="lettuceprice_1PYFLk03vPVWwY4emohOmTTs" value="No Lettuce" />
                                    
                                     <label for="lettuce1">No Lettuce</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="tomatoeprice_1PYFLk03vPVWwY4emohOmTTs" value="No Tomatoe"/>
+                                    <input type="checkbox" id="tomatoeprice_1PYFLk03vPVWwY4emohOmTTs" value="No Tomatoe"/>
                                     <label for="tomatoe1">No Tomatoe</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="saltprice_1PYFLk03vPVWwY4emohOmTTs" value="No Salt"/>
+                                    <input type="checkbox" id="saltprice_1PYFLk03vPVWwY4emohOmTTs" value="No Salt"/>
                                     <label for="salt1">No Salt</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="mayoprice_1PYFLk03vPVWwY4emohOmTTs" value="No Mayo"/>
+                                    <input type="checkbox" id="mayoprice_1PYFLk03vPVWwY4emohOmTTs" value="No Mayo"/>
                                     <label for="mayo1">No Mayo</label>
                                 </div>
                             </div>
@@ -122,19 +122,19 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <p>Special Instructions</p>
                             <div className="special-instructions">
                                 <div>
-                                    <input type="radio" id="lettuce2" value="No Lettuce"/>
+                                    <input type="checkbox" id="lettuce2" value="No Lettuce"/>
                                     <label for="lettuce2">No Lettuce</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="tomatoe2" value="No Tomatoe"/>
+                                    <input type="checkbox" id="tomatoe2" value="No Tomatoe"/>
                                     <label for="tomatoe2">No Tomatoe</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="salt2" value="No Salt"/>
+                                    <input type="checkbox" id="salt2" value="No Salt"/>
                                     <label for="salt2">No Salt</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="mayo2" value="No Mayo"/>
+                                    <input type="checkbox" id="mayo2" value="No Mayo"/>
                                     <label for="mayo2">No Mayo</label>
                                 </div>
                             </div>
@@ -163,19 +163,19 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <p>Special Instructions</p>
                             <div className="special-instructions">
                                 <div>
-                                    <input type="radio" id="lettuce3" value="No Lettuce"/>
+                                    <input type="checkbox" id="lettuce3" value="No Lettuce"/>
                                     <label for="lettuce3">No Lettuce</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="tomatoe3" value="No Tomatoe"/>
+                                    <input type="checkbox" id="tomatoe3" value="No Tomatoe"/>
                                     <label for="tomatoe3">No Tomatoe</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="salt3" value="No Salt"/>
+                                    <input type="checkbox" id="salt3" value="No Salt"/>
                                     <label for="salt3">No Salt</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="mayo3" value="No Mayo"/>
+                                    <input type="checkbox" id="mayo3" value="No Mayo"/>
                                     <label for="mayo3">No Mayo</label>
                                 </div>
                             </div>
@@ -209,19 +209,19 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <p>Special Instructions</p>
                             <div className="special-instructions">
                                 <div>
-                                    <input type="radio" id="lettuce4" value="No Lettuce"/>
+                                    <input type="checkbox" id="lettuce4" value="No Lettuce"/>
                                     <label for="lettuce4">No Lettuce</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="tomatoe4" value="No Tomatoe"/>
+                                    <input type="checkbox" id="tomatoe4" value="No Tomatoe"/>
                                     <label for="tomatoe4">No Tomatoe</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="salt4" value="No Salt"/>
+                                    <input type="checkbox" id="salt4" value="No Salt"/>
                                     <label for="salt4">No Salt</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="mayo4" value="No Mayo"/>
+                                    <input type="checkbox" id="mayo4" value="No Mayo"/>
                                     <label for="mayo4">No Mayo</label>
                                 </div>
                             </div>
@@ -250,19 +250,19 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <p>Special Instructions</p>
                             <div className="special-instructions">
                                 <div>
-                                    <input type="radio" id="lettuce5" value="No Lettuce"/>
+                                    <input type="checkbox" id="lettuce5" value="No Lettuce"/>
                                     <label for="lettuce5">No Lettuce</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="tomatoe5" value="No Tomatoe"/>
+                                    <input type="checkbox" id="tomatoe5" value="No Tomatoe"/>
                                     <label for="tomatoe5">No Tomatoe</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="salt5" value="No Salt"/>
+                                    <input type="checkbox" id="salt5" value="No Salt"/>
                                     <label for="salt5">No Salt</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="mayo5" value="No Mayo"/>
+                                    <input type="checkbox" id="mayo5" value="No Mayo"/>
                                     <label for="mayo5">No Mayo</label>
                                 </div>
                             </div>
@@ -291,19 +291,19 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <p>Special Instructions</p>
                             <div className="special-instructions">
                                 <div>
-                                    <input type="radio" id="lettuce6" value="No Lettuce"/>
+                                    <input type="checkbox" id="lettuce6" value="No Lettuce"/>
                                     <label for="lettuce6">No Lettuce</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="tomatoe6" value="No Tomatoe"/>
+                                    <input type="checkbox" id="tomatoe6" value="No Tomatoe"/>
                                     <label for="tomatoe6">No Tomatoe</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="salt6" value="No Salt"/>
+                                    <input type="checkbox" id="salt6" value="No Salt"/>
                                     <label for="salt6">No Salt</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="mayo6" value="No Mayo"/>
+                                    <input type="checkbox" id="mayo6" value="No Mayo"/>
                                     <label for="mayo6">No Mayo</label>
                                 </div>
                             </div>
