@@ -1,4 +1,4 @@
-import "./Success.css";
+import "../CSS/Success.css";
 
 export default function Success() {
     return (

@@ -12,7 +12,7 @@ export default function Navbar({ toggle, handleToggle }) {
     return (
         <nav className="navbar-container">
             <img onClick={handleToggle} id="menubar" className="menubar" src="/more.svg"/>
-            { toggle ?  <MenuBar/> : null}
+            { toggle ?  <MenuBar toggle={toggle}/> : null}
             <ul className="items-list">
                 <div className="home-container">  
                     <Link to="/"><li className="item"><p>Home</p></li></Link>

@@ -2,10 +2,10 @@ import "./MenuBar.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 
-export default function MenuBar() {
+export default function MenuBar({toggle}) {
 
     return (
-        <div className="menubar-container">
+        <div className={`menubar-container ${toggle ? "open" : ""}`}>
             <Link to="/" style={{textDecoration:"none", color: "rgb(253, 230, 21)"}}>
                 <p className="menubar-items" style={{borderTopLeftRadius:"7px", borderTopRightRadius:"7px"}}>Home</p>
             </Link>

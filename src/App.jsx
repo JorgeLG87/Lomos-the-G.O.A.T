@@ -9,11 +9,11 @@ import { Link } from "react-router-dom";
 import Success from "./Pages/Success.jsx";
 import Cancel from "./Pages/Cancel.jsx";
 
-import AboutUs from './Components/AboutUs.jsx';
+import AboutUs from './Pages/AboutUs.jsx';
 import Form from "./Components/Form.jsx";
 import Navbar from "./Components/Navbar.jsx";
 import SocialMedia from "./Components/SocialMedia.jsx";
-import Home from "./Components/Home.jsx";
+import Home from "./Pages/Home.jsx";
 import CartProvider from './cartContext.jsx';
 import ShowCart from './Components/ShowCart.jsx';
 import AboutUsCarousel from './Components/AboutUsCarousel.jsx';
@@ -61,6 +61,7 @@ function App() {
 
   return (
     <div className="dropdown" onClick={closeMenuBar}>
+      <div className={`overlay ${ toggle ? "active" : ""}`}>
       <CartProvider>
       <Router>
         <Link to="/">
@@ -68,7 +69,7 @@ function App() {
         </Link>
         <Navbar handleToggle={handleToggle} toggle={toggle}/>
         <Routes>
-          <Route path="/" element={<Home slides={slides}/>}/>
+          <Route path="/" element={<Home slides={slides} toggle={toggle}/>}/>
           <Route path="/*" element={<Home/>}/>
           <Route path="/order-now" element={<Form shoppingCart={shoppingCart} setShoppingCart={setShoppingCart}/>}/>
           <Route path="/showcart" element={<ShowCart/>}/>
@@ -83,6 +84,7 @@ function App() {
       {/* <div className="mother-container-socialmedia"> */}
       {/* </div> */}
       </CartProvider>
+      </div>
     </div>
   )
 }

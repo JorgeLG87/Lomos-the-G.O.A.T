@@ -1,10 +1,10 @@
-import QueEsLomo from "./QueEsLomo.jsx";
-import "./Home.css";
+import QueEsLomo from "../Components/QueEsLomo.jsx";
+import "../CSS/Home.css";
 
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from 'react';
 
-import HomeSlidingImg from "./HomeSlidingImg.jsx";
+import HomeSlidingImg from "../Components/HomeSlidingImg.jsx";
 
 
 export default function Home({ slides }) {

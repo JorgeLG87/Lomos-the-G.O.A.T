@@ -1,4 +1,4 @@
-import "./AboutUs.css";
+import "../CSS/AboutUs.css";
 
 export default function AboutUs({ slides, AboutUsCarousel }) {
     return (
