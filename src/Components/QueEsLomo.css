@@ -107,7 +107,6 @@
 
 .container-lomito-text {
     color: transparent;
-    font-family: 'Coco Gothic';
   @media (width < 450px) {
     /* margin-left: 0%; */
   }
