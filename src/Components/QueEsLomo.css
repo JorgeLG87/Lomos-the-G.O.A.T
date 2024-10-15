@@ -107,9 +107,7 @@
 
 .container-lomito-text {
     color: transparent;
-    font-family: 'CocoGothic';
-  /* margin-left: 45%; */
-  /* margin-top: 70px; */
+    font-family: 'Coco Gothic';
   @media (width < 450px) {
     /* margin-left: 0%; */
   }
@@ -117,7 +115,7 @@
 
 .span-lomito-text {
     font-size: 50px;
-    font-family: "CocoGothic";
+    font-family: "Coco Gothic";
     background: linear-gradient(120deg, rgb(200, 0, 0), rgb(253, 230, 21));
     -webkit-background-clip: text;
     background-clip: text;
