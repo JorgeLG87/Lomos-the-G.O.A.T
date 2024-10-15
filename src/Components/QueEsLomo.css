@@ -115,7 +115,8 @@
 .span-lomito-text {
     font-size: 50px;
     font-family: "Montserrat";
-    background: linear-gradient(120deg, rgb(200, 0, 0), rgb(253, 230, 21));
+    /* background: linear-gradient(120deg, rgb(200, 0, 0), rgb(253, 230, 21)); */
+    color: #e3ca30
     -webkit-background-clip: text;
     background-clip: text;
     @media (width < 450px) {
