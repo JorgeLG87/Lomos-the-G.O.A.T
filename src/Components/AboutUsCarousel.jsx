@@ -15,7 +15,7 @@ export default function AboutUsCarousel({slides}) {
         setTimeout(()=>{
             slideRight()
         },2500)
-    });
+    },[currSlide, autoPlay, slideRight]);
 
     function slideRight() {
         if (currSlide === slides.length-1) {
@@ -35,11 +35,19 @@ export default function AboutUsCarousel({slides}) {
 
     return (
         <div className="carousel-aboutus">
-            <BsArrowLeft className="left-arrow" onClick={slideLeft}/>
+            {/* <BsArrowLeft className="left-arrow" onClick={() => {
+                setAutoPlay(false);
+                slideLeft()
+                setAutoPlay(true);
+                }}/> */}
             <div style={{boxShadow:"rgba(0, 0, 0, 0.35) 0px 5px 15px",width:"100%", height:"100%", borderRadius:"10px"}}>
                 <img className="carousel-slide1" src={slides[currSlide].url}/>
             </div>
-            <BsArrowRight className="right-arrow" onClick={slideRight}/>
+            {/* <BsArrowRight className="right-arrow" onClick={() => {
+                setAutoPlay(false);
+                slideRight()
+                setAutoPlay(true);
+                }}/> */}
         </div>
     )
 }

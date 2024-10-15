@@ -79,19 +79,19 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                 <div>
                                     <input type="checkbox" id="lettuceprice_1PYFLk03vPVWwY4emohOmTTs" value="No Lettuce" />
                                    
-                                    <label for="lettuce1">No Lettuce</label>
+                                    <label htmlFor="lettuce1">No Lettuce</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="tomatoeprice_1PYFLk03vPVWwY4emohOmTTs" value="No Tomatoe"/>
-                                    <label for="tomatoe1">No Tomatoe</label>
+                                    <label htmlFor="tomatoe1">No Tomatoe</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="saltprice_1PYFLk03vPVWwY4emohOmTTs" value="No Salt"/>
-                                    <label for="salt1">No Salt</label>
+                                    <label htmlFor="salt1">No Salt</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="mayoprice_1PYFLk03vPVWwY4emohOmTTs" value="No Mayo"/>
-                                    <label for="mayo1">No Mayo</label>
+                                    <label htmlFor="mayo1">No Mayo</label>
                                 </div>
                             </div>
                             {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="price_1PYFLk03vPVWwY4emohOmTTs").length}</p> : null}
@@ -123,19 +123,19 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <div className="special-instructions">
                                 <div>
                                     <input type="checkbox" id="lettuce2" value="No Lettuce"/>
-                                    <label for="lettuce2">No Lettuce</label>
+                                    <label htmlFor="lettuce2">No Lettuce</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="tomatoe2" value="No Tomatoe"/>
-                                    <label for="tomatoe2">No Tomatoe</label>
+                                    <label htmlFor="tomatoe2">No Tomatoe</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="salt2" value="No Salt"/>
-                                    <label for="salt2">No Salt</label>
+                                    <label htmlFor="salt2">No Salt</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="mayo2" value="No Mayo"/>
-                                    <label for="mayo2">No Mayo</label>
+                                    <label htmlFor="mayo2">No Mayo</label>
                                 </div>
                             </div>
                             {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="2").length}</p> : null}
@@ -164,19 +164,19 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <div className="special-instructions">
                                 <div>
                                     <input type="checkbox" id="lettuce3" value="No Lettuce"/>
-                                    <label for="lettuce3">No Lettuce</label>
+                                    <label htmlFor="lettuce3">No Lettuce</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="tomatoe3" value="No Tomatoe"/>
-                                    <label for="tomatoe3">No Tomatoe</label>
+                                    <label htmlFor="tomatoe3">No Tomatoe</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="salt3" value="No Salt"/>
-                                    <label for="salt3">No Salt</label>
+                                    <label htmlFor="salt3">No Salt</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="mayo3" value="No Mayo"/>
-                                    <label for="mayo3">No Mayo</label>
+                                    <label htmlFor="mayo3">No Mayo</label>
                                 </div>
                             </div>
                             {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="3").length}</p> : null}
@@ -210,19 +210,19 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <div className="special-instructions">
                                 <div>
                                     <input type="checkbox" id="lettuce4" value="No Lettuce"/>
-                                    <label for="lettuce4">No Lettuce</label>
+                                    <label htmlFor="lettuce4">No Lettuce</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="tomatoe4" value="No Tomatoe"/>
-                                    <label for="tomatoe4">No Tomatoe</label>
+                                    <label htmlFor="tomatoe4">No Tomatoe</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="salt4" value="No Salt"/>
-                                    <label for="salt4">No Salt</label>
+                                    <label htmlFor="salt4">No Salt</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="mayo4" value="No Mayo"/>
-                                    <label for="mayo4">No Mayo</label>
+                                    <label htmlFor="mayo4">No Mayo</label>
                                 </div>
                             </div>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="4").length}</p> : null}
@@ -251,19 +251,19 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <div className="special-instructions">
                                 <div>
                                     <input type="checkbox" id="lettuce5" value="No Lettuce"/>
-                                    <label for="lettuce5">No Lettuce</label>
+                                    <label htmlFor="lettuce5">No Lettuce</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="tomatoe5" value="No Tomatoe"/>
-                                    <label for="tomatoe5">No Tomatoe</label>
+                                    <label htmlFor="tomatoe5">No Tomatoe</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="salt5" value="No Salt"/>
-                                    <label for="salt5">No Salt</label>
+                                    <label htmlFor="salt5">No Salt</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="mayo5" value="No Mayo"/>
-                                    <label for="mayo5">No Mayo</label>
+                                    <label htmlFor="mayo5">No Mayo</label>
                                 </div>
                             </div>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="5").length}</p> : null}
@@ -292,19 +292,19 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <div className="special-instructions">
                                 <div>
                                     <input type="checkbox" id="lettuce6" value="No Lettuce"/>
-                                    <label for="lettuce6">No Lettuce</label>
+                                    <label htmlFor="lettuce6">No Lettuce</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="tomatoe6" value="No Tomatoe"/>
-                                    <label for="tomatoe6">No Tomatoe</label>
+                                    <label htmlFor="tomatoe6">No Tomatoe</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="salt6" value="No Salt"/>
-                                    <label for="salt6">No Salt</label>
+                                    <label htmlFor="salt6">No Salt</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="mayo6" value="No Mayo"/>
-                                    <label for="mayo6">No Mayo</label>
+                                    <label htmlFor="mayo6">No Mayo</label>
                                 </div>
                             </div>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="6").length}</p> : null}

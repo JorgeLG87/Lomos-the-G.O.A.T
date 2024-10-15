@@ -23,19 +23,19 @@ export default function NoCombo() {
                             <div className="special-instructions">
                                 <div>
                                     <input type="radio" id="lettuce7" value="No Lettuce"/>
-                                    <label for="lettuce7">No Lettuce</label>
+                                    <label htmlFor="lettuce7">No Lettuce</label>
                                 </div>
                                 <div>
                                     <input type="radio" id="tomatoe7" value="No Tomatoe"/>
-                                    <label for="tomatoe7">No Tomatoe</label>
+                                    <label htmlFor="tomatoe7">No Tomatoe</label>
                                 </div>
                                 <div>
                                     <input type="radio" id="salt7" value="No Salt"/>
-                                    <label for="salt7">No Salt</label>
+                                    <label htmlFor="salt7">No Salt</label>
                                 </div>
                                 <div>
                                     <input type="radio" id="mayo7" value="No Mayo"/>
-                                    <label for="mayo7">No Mayo</label>
+                                    <label htmlFor="mayo7">No Mayo</label>
                                 </div>
                             </div>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="7").length}</p> : null}
@@ -52,19 +52,19 @@ export default function NoCombo() {
                             <div className="special-instructions">
                                 <div>
                                     <input type="radio" id="lettuce8" value="No Lettuce"/>
-                                    <label for="lettuce8">No Lettuce</label>
+                                    <label htmlFor="lettuce8">No Lettuce</label>
                                 </div>
                                 <div>
                                     <input type="radio" id="tomatoe8" value="No Tomatoe"/>
-                                    <label for="tomatoe8">No Tomatoe</label>
+                                    <label htmlFor="tomatoe8">No Tomatoe</label>
                                 </div>
                                 <div>
                                     <input type="radio" id="salt8" value="No Salt"/>
-                                    <label for="salt8">No Salt</label>
+                                    <label htmlFor="salt8">No Salt</label>
                                 </div>
                                 <div>
                                     <input type="radio" id="mayo8" value="No Mayo"/>
-                                    <label for="mayo8">No Mayo</label>
+                                    <label htmlFor="mayo8">No Mayo</label>
                                 </div>
                             </div>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="8").length}</p> : null}
