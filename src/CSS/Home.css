@@ -181,6 +181,7 @@
   transition: opacity 2s ease-out, transform 2s ease-out;
   @media (width < 450px) {
     margin-top: 0px;
+    margin-left: 5%;
   }
 }
 
