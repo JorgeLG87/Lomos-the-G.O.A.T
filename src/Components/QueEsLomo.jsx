@@ -3,7 +3,7 @@ import "./QueEsLomo.css";
 export default function QueEsLomo() {
     return (
         <div className="queeslomo-container">
-            <img className="lomo-imagen" src="/lomito-argentino.jpeg"/>
+            <img className="lomo-imagen" src="/thegoat1.jpeg"/>
             <div className="explanation">
                 <p className="container-lomito-text"><span className="span-lomito-text">LOMITO?</span></p><p className="lomo-title">What is that!?</p>
                 <p className="lomo-text"><span className="tricks">-----</span>A lomito is a high quality argentinean steak sandwich. There are different styles of lomitos within Argentina, but we specialize in a unique one that is made in <span className="san-juan">San Juan</span>.</p>
