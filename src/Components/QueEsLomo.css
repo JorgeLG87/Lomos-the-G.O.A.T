@@ -54,7 +54,7 @@
     margin-top: 20px;
     font-family: "Barlow Semi Condensed";
     font-size: 45px;
-    font-weight: 300;
+    font-weight: 400;
     /* text-shadow: 0.5px 0.5px 0.5px yellow; */
     @media (width < 450px) {
         font-size: 40px;

@@ -94,7 +94,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                     <label htmlFor="mayo1">No Mayo</label>
                                 </div>
                             </div>
-                            {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="price_1PYFLk03vPVWwY4emohOmTTs").length}</p> : null}
+                            {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="price_1PYFLk03vPVWwY4emohOmTTs").length}</p> : null} //The id is from the product form Stripe
                             {bevValid1 ? <p className="bev-error">Please choose a beverage type</p> : null}
                             <button onClick={() => {
                                 document.getElementById("bev-typeprice_1PYFLk03vPVWwY4emohOmTTs").value ? cart.addOneToCart("price_1PYFLk03vPVWwY4emohOmTTs") : setBevValid1(true);
