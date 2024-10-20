@@ -66,10 +66,11 @@
     margin-top: -20px;
     margin-left: 00px;
     line-height: 19px;
-    font-family: "Montserrat";
+    font-family: "Barlow Semi Condensed";
+    font-weight: 300;
     @media (width < 450px) {
         display: inline-block;
-        font-size: 15px;
+        font-size: 18px;
         margin-top: 0px;
     }
 }
