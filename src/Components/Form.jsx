@@ -12,6 +12,8 @@ export default function Form({ shoppingCart, setShoppingCart }) {
 
     const form = useRef();
 
+    const [ selected, setSelected ] = useState("");
+
     const sendEmail = (e) => {
         e.preventDefault();
 
@@ -98,9 +100,7 @@ export default function Form({ shoppingCart, setShoppingCart }) {
 
                         <input className="state-input" placeholder="State" name="State" required></input>
                     </div>
-
-                    <button className="combo-btn" onClick={handleCombo} type="button">Combo</button>
-                    <button className="combo-btn2" onClick={handleNotCombo} type="button">Individual Items</button>
+                    <button className="submit-button-form" type="submit">Send</button>
                 </form> : <form className="order-form" ref={form} onSubmit={sendEmail}>
                     <div className="personal-info">
                         <input className="name-input" type="text" placeholder="First Name" name="First Name" required></input>
@@ -109,10 +109,26 @@ export default function Form({ shoppingCart, setShoppingCart }) {
 
                         <input className="contact-number" type="number" placeholder="Phone #" name="Phone Number" required></input>
                     </div>
-                    <button className="combo-btn" onClick={handleCombo} type="button">Combo</button>
-                    <button className="combo-btn2" onClick={handleNotCombo} type="button">Individual Items</button>
+                    <button className="submit-button-form" type="submit">Send</button>
                 </form>}
             </div>
+            
+            <div className="combo-btns-container">
+                <p className="combo-btn" onClick={() => {
+                    handleCombo();
+                    setSelected("underline1");
+                }} >Combo</p>
+                <p className="combo-btn2" onClick={() => {
+                    handleNotCombo();
+                    setSelected("underline2");
+                }} >Individual Items</p>
+            </div>
+
+            <div className="combo-btns-underline">
+                <div className={`underline ${selected === "underline1" ? "underline1" : ""}`}></div>
+                <div className={selected === "underline2" ? "underline2" : ""}></div>
+            </div>
+
             <div className="type-container">
                 {combo  ? <Combo lomo={lomo} setLomo={setLomo} quantity={quantity} setQuantity={setQuantity} dateStamp={dateStamp} setDateStamp={setDateStamp} secDateStamp={secDateStamp} setSecDateStamp={setSecDateStamp}/> : <NoCombo/>}
             </div>
