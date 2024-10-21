@@ -109,11 +109,21 @@
     height: 40px;
 }
 
+
+.option-text {
+    font-family: "Barlow semi condensed";
+}
+
 .text {
     text-align: center;
     color: black;
     text-shadow: none;
+    font-family: "Barlow semi condensed";
     font-size: x-large;
+}
+
+.checkbox-label {
+    font-family: "Barlow semi condensed";
 }
 
 .beverage-type {
@@ -161,6 +171,7 @@
   .quantity-text {
     margin-top: 40px;
     color: gray;
+    font-family: 'Barlow semi condensed';
   }
 
   .bev-error {

@@ -68,30 +68,30 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                 <img className="icon-item" src="/soda-medium.png"/>
                             </div>
                             <select id="bev-typeprice_1PYFLk03vPVWwY4emohOmTTs" className="beverage-type" required>
-                                <option value="">-----Choose Beverage-----</option>
-                                <option value="Coca Cola">Coca Cola</option>
-                                <option value="Pepsi">Pepsi</option>
-                                <option value="Sprite">Sprite</option>
+                                <option className="option-text" value="">-----Choose Beverage-----</option>
+                                <option className="option-text" value="Coca Cola">Coca Cola</option>
+                                <option className="option-text" value="Pepsi">Pepsi</option>
+                                <option className="option-text" value="Sprite">Sprite</option>
                             </select>
                             <br></br>
-                            <p>Special Instructions</p>
+                            <p style={{ fontFamily:"Barlow semi condensed" }}>Special Instructions</p>
                             <div id="special-instructions" className="special-instructions">
                                 <div>
                                     <input type="checkbox" id="lettuceprice_1PYFLk03vPVWwY4emohOmTTs" value="No Lettuce" />
                                    
-                                    <label htmlFor="lettuce1">No Lettuce</label>
+                                    <label className="checkbox-label" htmlFor="lettuce1">No Lettuce</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="tomatoeprice_1PYFLk03vPVWwY4emohOmTTs" value="No Tomatoe"/>
-                                    <label htmlFor="tomatoe1">No Tomatoe</label>
+                                    <label className="checkbox-label" htmlFor="tomatoe1">No Tomatoe</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="saltprice_1PYFLk03vPVWwY4emohOmTTs" value="No Salt"/>
-                                    <label htmlFor="salt1">No Salt</label>
+                                    <label className="checkbox-label" htmlFor="salt1">No Salt</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="mayoprice_1PYFLk03vPVWwY4emohOmTTs" value="No Mayo"/>
-                                    <label htmlFor="mayo1">No Mayo</label>
+                                    <label className="checkbox-label" htmlFor="mayo1">No Mayo</label>
                                 </div>
                             </div>
                             {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="price_1PYFLk03vPVWwY4emohOmTTs").length}</p> : null}
