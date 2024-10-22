@@ -3,6 +3,7 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext} from "../cartContext.jsx";
 import { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 
 import Combo from "./Combo.jsx";
@@ -11,6 +12,7 @@ import NoCombo from "./NoCombo.jsx";
 export default function Form({ shoppingCart, setShoppingCart }) {
 
     const form = useRef();
+    const navigate = useNavigate();
 
     const [ selected, setSelected ] = useState("");
 
@@ -75,9 +77,9 @@ export default function Form({ shoppingCart, setShoppingCart }) {
     return (
         <div className="form-container">
             <div style={{width: "100%", position: "relative"}}>
-            <Link to="/showcart" >
-                <img className="cart-icon" src="grocery-store.svg"/>
-            </Link>
+            
+                <img className="cart-icon" src="grocery-store.svg" onClick={() => navigate("/showcart")}/>
+           
                 <p className="cart-text" >({totalQuantity} items)</p>
                 <img src="/lomos-the-goat2.jpeg" className="form-image"/>
             </div>
