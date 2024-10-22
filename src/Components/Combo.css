@@ -149,6 +149,7 @@
     font-size: 18px;
     color: #AD2007;
     border: 2px solid #E9D134;
+    background-color: none;
 }
 .beverage-type:hover {
     cursor: pointer;
