@@ -63,9 +63,9 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                         <div className="small">
                             <p className="text">Small</p>
                             <div className="icons">
-                                <img className="icon-item" src="/sandwich-medium.png"/>
-                                <img className="icon-item" src="/fries-medium.png"/>
-                                <img className="icon-item" src="/soda-medium.png"/>
+                                <img className="icon-item" src="/sandwich1.svg"/>
+                                <img className="icon-item" src="/french-fries1.svg"/>
+                                <img className="icon-item" src="/cola1.svg"/>
                             </div>
                             <select id="bev-typeprice_1PYFLk03vPVWwY4emohOmTTs" className="beverage-type" required>
                                 <option className="option-text" value="">-----Choose Beverage-----</option>
@@ -108,9 +108,9 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                         <div className="medium">
                             <p className="text">Medium</p>
                             <div className="icons">
-                                <img className="icon-item" src="/sandwich-medium.png"/>
-                                <img className="icon-item" src="/fries-medium.png"/>
-                                <img className="icon-item" src="/soda-medium.png"/>
+                                <img className="icon-item" src="/sandwich1.svg"/>
+                                <img className="icon-item" src="/french-fries1.svg"/>
+                                <img className="icon-item" src="/cola1.svg"/>
                             </div>
                             <select id="bev-type2" className="beverage-type">
                                 <option value="">-----Choose Beverage-----</option>
@@ -149,9 +149,9 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                         <div className="large">
                             <p className="text">Large</p>
                             <div className="icons">
-                                <img className="icon-item" src="/sandwich-medium.png"/>
-                                <img className="icon-item" src="/fries-medium.png"/>
-                                <img className="icon-item" src="/soda-medium.png"/>
+                                <img className="icon-item" src="/sandwich1.svg"/>
+                                <img className="icon-item" src="/french-fries1.svg"/>
+                                <img className="icon-item" src="/cola1.svg"/>
                             </div>
                             <select id="bev-type3" className="beverage-type">
                                 <option value="">-----Choose Beverage-----</option>
@@ -195,9 +195,9 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                     <div className="small">
                         <p className="text">Small</p>
                         <div className="icons">
-                            <img className="icon-item" src="/sandwich-medium.png"/>
-                            <img className="icon-item" src="/fries-medium.png"/>
-                            <img className="icon-item" src="/soda-medium.png"/>
+                            <img className="icon-item" src="/sandwich1.svg"/>
+                            <img className="icon-item" src="/french-fries1.svg"/>
+                            <img className="icon-item" src="/cola1.svg"/>
                         </div>
                         <select id="bev-type4" className="beverage-type">
                             <option value="">-----Choose Beverage-----</option>
@@ -236,9 +236,9 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                     <div className="medium">
                         <p className="text">Medium</p>
                         <div className="icons">
-                            <img className="icon-item" src="/sandwich-medium.png"/>
-                            <img className="icon-item" src="/fries-medium.png"/>
-                            <img className="icon-item" src="/soda-medium.png"/>
+                            <img className="icon-item" src="/sandwich1.svg"/>
+                            <img className="icon-item" src="/french-fries1.svg"/>
+                            <img className="icon-item" src="/cola1.svg"/>
                         </div>
                         <select id="bev-type5" className="beverage-type">
                             <option value="">-----Choose Beverage-----</option>
@@ -277,9 +277,9 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                     <div className="large">
                         <p className="text">Large</p>
                         <div className="icons">
-                            <img className="icon-item" src="/sandwich-medium.png"/>
-                            <img className="icon-item" src="/fries-medium.png"/>
-                            <img className="icon-item" src="/soda-medium.png"/>
+                            <img className="icon-item" src="/sandwich1.svg"/>
+                            <img className="icon-item" src="/french-fries1.svg"/>
+                            <img className="icon-item" src="/cola1.svg"/>
                         </div>
                         <select id="bev-type6" className="beverage-type">
                             <option value="">-----Choose Beverage-----</option>
