@@ -119,23 +119,23 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                 <option value="Sprite">Sprite</option>
                             </select>
                             <br></br>
-                            <p>Special Instructions</p>
+                            <p style={{fontFamily: "Barlow semi condensed"}}>Special Instructions</p>
                             <div className="special-instructions">
                                 <div>
                                     <input type="checkbox" id="lettuce2" value="No Lettuce"/>
-                                    <label htmlFor="lettuce2">No Lettuce</label>
+                                    <label className="checkbox-label" htmlFor="lettuce2">No Lettuce</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="tomatoe2" value="No Tomatoe"/>
-                                    <label htmlFor="tomatoe2">No Tomatoe</label>
+                                    <label className="checkbox-label" htmlFor="tomatoe2">No Tomatoe</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="salt2" value="No Salt"/>
-                                    <label htmlFor="salt2">No Salt</label>
+                                    <label className="checkbox-label" htmlFor="salt2">No Salt</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="mayo2" value="No Mayo"/>
-                                    <label htmlFor="mayo2">No Mayo</label>
+                                    <label className="checkbox-label" htmlFor="mayo2">No Mayo</label>
                                 </div>
                             </div>
                             {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="2").length}</p> : null}
@@ -160,23 +160,23 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                 <option value="Sprite">Sprite</option>
                             </select>
                             <br></br>
-                            <p>Special Instructions</p>
+                            <p style={{fontFamily: "Barlow semi condensed"}}>Special Instructions</p>
                             <div className="special-instructions">
                                 <div>
                                     <input type="checkbox" id="lettuce3" value="No Lettuce"/>
-                                    <label htmlFor="lettuce3">No Lettuce</label>
+                                    <label className="checkbox-label" htmlFor="lettuce3">No Lettuce</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="tomatoe3" value="No Tomatoe"/>
-                                    <label htmlFor="tomatoe3">No Tomatoe</label>
+                                    <label className="checkbox-label" htmlFor="tomatoe3">No Tomatoe</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="salt3" value="No Salt"/>
-                                    <label htmlFor="salt3">No Salt</label>
+                                    <label className="checkbox-label" htmlFor="salt3">No Salt</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="mayo3" value="No Mayo"/>
-                                    <label htmlFor="mayo3">No Mayo</label>
+                                    <label className="checkbox-label" htmlFor="mayo3">No Mayo</label>
                                 </div>
                             </div>
                             {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="3").length}</p> : null}
@@ -206,23 +206,23 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <option value="Sprite">Sprite</option>
                         </select>
                         <br></br>
-                            <p>Special Instructions</p>
+                            <p style={{fontFamily: "Barlow semi condensed"}}>Special Instructions</p>
                             <div className="special-instructions">
                                 <div>
                                     <input type="checkbox" id="lettuce4" value="No Lettuce"/>
-                                    <label htmlFor="lettuce4">No Lettuce</label>
+                                    <label className="checkbox-label" htmlFor="lettuce4">No Lettuce</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="tomatoe4" value="No Tomatoe"/>
-                                    <label htmlFor="tomatoe4">No Tomatoe</label>
+                                    <label className="checkbox-label" htmlFor="tomatoe4">No Tomatoe</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="salt4" value="No Salt"/>
-                                    <label htmlFor="salt4">No Salt</label>
+                                    <label className="checkbox-label" htmlFor="salt4">No Salt</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="mayo4" value="No Mayo"/>
-                                    <label htmlFor="mayo4">No Mayo</label>
+                                    <label className="checkbox-label" htmlFor="mayo4">No Mayo</label>
                                 </div>
                             </div>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="4").length}</p> : null}
@@ -247,23 +247,23 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <option value="Sprite">Sprite</option>
                         </select>
                         <br></br>
-                            <p>Special Instructions</p>
+                            <p style={{fontFamily: "Barlow semi condensed"}}>Special Instructions</p>
                             <div className="special-instructions">
                                 <div>
                                     <input type="checkbox" id="lettuce5" value="No Lettuce"/>
-                                    <label htmlFor="lettuce5">No Lettuce</label>
+                                    <label className="checkbox-label" htmlFor="lettuce5">No Lettuce</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="tomatoe5" value="No Tomatoe"/>
-                                    <label htmlFor="tomatoe5">No Tomatoe</label>
+                                    <label className="checkbox-label" htmlFor="tomatoe5">No Tomatoe</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="salt5" value="No Salt"/>
-                                    <label htmlFor="salt5">No Salt</label>
+                                    <label className="checkbox-label" htmlFor="salt5">No Salt</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="mayo5" value="No Mayo"/>
-                                    <label htmlFor="mayo5">No Mayo</label>
+                                    <label className="checkbox-label" htmlFor="mayo5">No Mayo</label>
                                 </div>
                             </div>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="5").length}</p> : null}
@@ -288,23 +288,23 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <option value="Sprite">Sprite</option>
                         </select>
                         <br></br>
-                            <p>Special Instructions</p>
+                            <p style={{fontFamily: "Barlow semi condensed"}}>Special Instructions</p>
                             <div className="special-instructions">
                                 <div>
                                     <input type="checkbox" id="lettuce6" value="No Lettuce"/>
-                                    <label htmlFor="lettuce6">No Lettuce</label>
+                                    <label className="checkbox-label" htmlFor="lettuce6">No Lettuce</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="tomatoe6" value="No Tomatoe"/>
-                                    <label htmlFor="tomatoe6">No Tomatoe</label>
+                                    <label className="checkbox-label" htmlFor="tomatoe6">No Tomatoe</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="salt6" value="No Salt"/>
-                                    <label htmlFor="salt6">No Salt</label>
+                                    <label className="checkbox-label" htmlFor="salt6">No Salt</label>
                                 </div>
                                 <div>
                                     <input type="checkbox" id="mayo6" value="No Mayo"/>
-                                    <label htmlFor="mayo6">No Mayo</label>
+                                    <label className="checkbox-label" htmlFor="mayo6">No Mayo</label>
                                 </div>
                             </div>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="6").length}</p> : null}

@@ -19,23 +19,23 @@ export default function NoCombo() {
                             <img className="icon-item-lomo" src="/sandwich-medium.png"/>
                         </div>
                         <br></br>
-                            <p>Special Instructions</p>
+                            <p style={{fontFamily: "Barlow semi condensed"}}>Special Instructions</p>
                             <div className="special-instructions">
                                 <div>
-                                    <input type="radio" id="lettuce7" value="No Lettuce"/>
-                                    <label htmlFor="lettuce7">No Lettuce</label>
+                                    <input type="checkbox" id="lettuce7" value="No Lettuce"/>
+                                    <label className="checkbox-label" htmlFor="lettuce7">No Lettuce</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="tomatoe7" value="No Tomatoe"/>
-                                    <label htmlFor="tomatoe7">No Tomatoe</label>
+                                    <input type="checkbox" id="tomatoe7" value="No Tomatoe"/>
+                                    <label className="checkbox-label" htmlFor="tomatoe7">No Tomatoe</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="salt7" value="No Salt"/>
-                                    <label htmlFor="salt7">No Salt</label>
+                                    <input type="checkbox" id="salt7" value="No Salt"/>
+                                    <label className="checkbox-label" htmlFor="salt7">No Salt</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="mayo7" value="No Mayo"/>
-                                    <label htmlFor="mayo7">No Mayo</label>
+                                    <input type="checkbox" id="mayo7" value="No Mayo"/>
+                                    <label className="checkbox-label" htmlFor="mayo7">No Mayo</label>
                                 </div>
                             </div>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="7").length}</p> : null}
@@ -48,23 +48,23 @@ export default function NoCombo() {
                             <img className="icon-item-lomo" src="/sandwich-medium.png"/>
                         </div>
                         <br></br>
-                            <p>Special Instructions</p>
+                            <p style={{fontFamily: "Barlow semi condensed"}}>Special Instructions</p>
                             <div className="special-instructions">
                                 <div>
-                                    <input type="radio" id="lettuce8" value="No Lettuce"/>
-                                    <label htmlFor="lettuce8">No Lettuce</label>
+                                    <input type="checkbox" id="lettuce8" value="No Lettuce"/>
+                                    <label className="checkbox-label" htmlFor="lettuce8">No Lettuce</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="tomatoe8" value="No Tomatoe"/>
-                                    <label htmlFor="tomatoe8">No Tomatoe</label>
+                                    <input type="checkbox" id="tomatoe8" value="No Tomatoe"/>
+                                    <label className="checkbox-label" htmlFor="tomatoe8">No Tomatoe</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="salt8" value="No Salt"/>
-                                    <label htmlFor="salt8">No Salt</label>
+                                    <input type="checkbox" id="salt8" value="No Salt"/>
+                                    <label className="checkbox-label" htmlFor="salt8">No Salt</label>
                                 </div>
                                 <div>
-                                    <input type="radio" id="mayo8" value="No Mayo"/>
-                                    <label htmlFor="mayo8">No Mayo</label>
+                                    <input type="checkbox" id="mayo8" value="No Mayo"/>
+                                    <label className="checkbox-label" htmlFor="mayo8">No Mayo</label>
                                 </div>
                             </div>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="8").length}</p> : null}

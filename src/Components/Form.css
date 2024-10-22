@@ -46,11 +46,11 @@
     width: 30%;
     height: 35px;
     border: none;
-    background-color: rgb(253, 230, 21);
+    background-color: #E9D134;
     color: #AF2007;
     font-family: 'Montserrat';
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     border-radius: 10px;
     margin-left: 35%;
     margin-top: 50px;
@@ -385,7 +385,7 @@
     width: fit-content;
     height: 35px;
     border: none;
-    background-color: rgb(253, 230, 21);
+    background-color: #E9D134;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     color: rgb(200, 0, 0);
     border-radius: 10px;
@@ -393,6 +393,7 @@
     margin-top: 0px;
     font-size: large;
     font-family: "Montserrat";
+    font-weight: 500;
     @media (width < 450px) {
         margin-left: 0%;
     }
@@ -409,7 +410,7 @@
     width: fit-content;
     height: 35px;
     border: none;
-    background-color: rgb(253, 230, 21);
+    background-color: #E9D134;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     color: rgb(200, 0, 0);
     border-radius: 10px;
@@ -417,6 +418,7 @@
     margin-top: 0px;
     font-size: large;
     font-family: "Montserrat";
+    font-weight: 500;
     @media (width < 450px) {
         margin-left: 0%;
     }

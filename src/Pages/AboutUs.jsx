@@ -8,12 +8,11 @@ export default function AboutUs({ slides, AboutUsCarousel }) {
             <div className="container-body-aboutUs">
                 <AboutUsCarousel slides={slides}/>
                 <div className="idealogo-text-container">
-                    <div className="idea-container">
+                    {/* <div className="idea-container">
                         <img className="lightbulb" src="/lightbulb.svg" alt="Lightbulb icon"/>
-                    </div>
+                    </div> */}
                     <div className="text-aboutUs-container">
-                        <p style={{fontFamily:"Montserrat"}}>With one dream in mind, a group of friends from San Juan (Argentina) decided to team up and work together towards one goal in mind. After experiencing the variety of cuisines within USA, their mission was to bring a unique flavor to the US. 
-                        </p>
+                        <p style={{fontFamily:"Barlow semi condensed", fontSize: "20px"}}>It all began in</p>
                     </div>
                 </div>
             </div>
