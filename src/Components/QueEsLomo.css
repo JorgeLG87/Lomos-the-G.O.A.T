@@ -119,11 +119,18 @@
     font-size: 55px;
     font-family: "Montserrat";
     font-weight: 600;
+    font-stretch: ultra-expanded;
     /* background: linear-gradient(120deg, rgb(200, 0, 0), rgb(253, 230, 21)); */
     background: #E9D134;
     -webkit-background-clip: text;
     background-clip: text;
     @media (width < 450px) {
       font-size: 50px;
+      font-stretch: ultra-expanded;
     }
+}
+
+.form-image {
+    width: 100vW;
+    
 }

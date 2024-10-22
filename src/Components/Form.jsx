@@ -74,11 +74,12 @@ export default function Form({ shoppingCart, setShoppingCart }) {
 
     return (
         <div className="form-container">
-            <div style={{display: "flex", gap: "20px", marginLeft: "60%"}}>
-            <Link to="/showcart" style={{textDecoration:"none", width:"100%", display: "contents"}}>
-                <img className="cart-button" src="grocery-store.svg"/>
+            <div style={{width: "100%", position: "relative"}}>
+            <Link to="/showcart" >
+                <img className="cart-icon" src="grocery-store.svg"/>
             </Link>
-                <p style={{color: "#AF2007", fontFamily: "Barlow semi condensed", fontWeight: "500"}}>({totalQuantity} items)</p>
+                <p className="cart-text" >({totalQuantity} items)</p>
+                <img src="/lomos-the-goat2.jpeg" className="form-image"/>
             </div>
             <div className="ordertype-container">
                 <button className="pickup-order" type="button" onClick={() => setOrderType("pickup")}>Pick Up</button>
