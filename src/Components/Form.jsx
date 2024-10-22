@@ -76,7 +76,7 @@ export default function Form({ shoppingCart, setShoppingCart }) {
 
     return (
         <div className="form-container">
-            <div style={{width: "100%", position: "relative"}}>
+            <div style={{width: "100%", position: "relative", marginTop: "-1px"}}>
             
                 <img className="cart-icon" src="grocery-store.svg" onClick={() => navigate("/showcart")}/>
            
