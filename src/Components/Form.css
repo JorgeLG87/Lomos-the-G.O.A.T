@@ -383,7 +383,7 @@
     align-items: center;
     justify-content: center;
     width: fit-content;
-    height: 50px;
+    height: 35px;
     border: none;
     background-color: rgb(253, 230, 21);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -407,7 +407,7 @@
     align-items: center;
     justify-content: center;
     width: fit-content;
-    height: 50px;
+    height: 35px;
     border: none;
     background-color: rgb(253, 230, 21);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -427,26 +427,27 @@
 }
 
 .cart-button {
-    display: flex;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    height: 50px;
+    /* display: flex; */
+    /* position: relative; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* width: fit-content; */
+    /* height: 50px; */
     border: none;
-    background-color: rgb(253, 230, 21);
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* background-color: rgb(253, 230, 21); */
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
     color: rgb(200, 0, 0);
-    border-radius: 10px;
-    padding: 20px;
+    /* border-radius: 100%; */
+    /* padding: 20px; */
     margin-top: 0px;
     margin-left: 70%;
     font-size: large;
     font-family: "Montserrat";
     @media (width < 450px) {
-        width: 50%;
+        width: 30%;
         margin-left: 0%;
         margin-top: 0px;
+
     }
 }
 .cart-button:hover {
