@@ -77,7 +77,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <p style={{ fontFamily:"Barlow semi condensed" }}>Special Instructions</p>
                             <div id="special-instructions" className="special-instructions">
                                 <div>
-                                    <input type="checkbox" id="lettuceprice_1PYFLk03vPVWwY4emohOmTTs" value="No Lettuce" />
+                                    <input className="checkbox-input" type="checkbox" id="lettuceprice_1PYFLk03vPVWwY4emohOmTTs" value="No Lettuce" />
                                    
                                     <label className="checkbox-label" htmlFor="lettuce1">No Lettuce</label>
                                 </div>

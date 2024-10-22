@@ -121,14 +121,22 @@
 
 .text {
     text-align: center;
-    color: black;
+    color: #AD2007;
     text-shadow: none;
     font-family: "Barlow semi condensed";
     font-size: x-large;
 }
 
+.checkbox-input {
+    border: 1px solid #AD2007;
+    color: #AD2007;
+    /* border-color: #AD2007; */
+    outline-color: #AD2007;
+}
+
 .checkbox-label {
     font-family: "Barlow semi condensed";
+    color: #AD2007
 }
 
 .beverage-type {
@@ -139,6 +147,8 @@
     border-radius: 10px;
     justify-content: center;
     font-size: 18px;
+    color: #AD2007;
+    border: 2px solid #E9D134;
 }
 .beverage-type:hover {
     cursor: pointer;
