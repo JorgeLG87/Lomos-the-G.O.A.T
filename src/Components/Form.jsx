@@ -74,7 +74,7 @@ export default function Form({ shoppingCart, setShoppingCart }) {
 
     return (
         <div className="form-container">
-            <div style={{display: "flex", gap: "20px", marginLeft: "70%"}}>
+            <div style={{display: "flex", gap: "20px", marginLeft: "60%"}}>
             <Link to="/showcart" style={{textDecoration:"none", width:"100%", display: "contents"}}>
                 <img className="cart-button" src="grocery-store.svg"/>
             </Link>
