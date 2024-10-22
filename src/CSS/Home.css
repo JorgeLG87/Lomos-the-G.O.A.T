@@ -326,7 +326,8 @@
   font-family: "Montserrat";
   font-size: xx-large;
   border: none;
-  background-color: rgb(253, 230, 21);
+  /* background-color: rgb(253, 230, 21); */
+  background-color: #E9D134;
   border-radius: 10px;
   margin-top: 90px;
   margin-left: 35%;
