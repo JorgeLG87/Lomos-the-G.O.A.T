@@ -66,13 +66,13 @@ export default function ShowCart() {
                     return (
                         <div className="list-products">
                             <p className="showcart-title">{data.title}</p>
-                            <p style={{color:"gray"}}>Quantity: {product.quantity}</p>
-                            <p>Beverage: {product.beverage}</p>
-                            <p style={{fontWeight:"bold"}}>Special Instructions:</p>
-                            {product.lettuceInstruction ? <p>{product.lettuceInstruction}</p> : null}
-                            {product.tomatoeInstruction ? <p>{product.tomatoeInstruction}</p> : null}
-                            {product.saltInstruction ? <p>{product.saltInstruction}</p> : null}
-                            {product.mayoInstruction ? <p>{product.mayoInstruction}</p> : null}
+                            <p style={{color:"gray", fontFamily:"Barlow semi condensed"}}>Quantity: {product.quantity}</p>
+                            <p style={{fontFamily:"Barlow semi condensed"}}>Beverage: {product.beverage}</p>
+                            <p style={{fontWeight:"bold", fontFamily: "Barlow semi condensed"}}>Special Instructions:</p>
+                            {product.lettuceInstruction ? <p className="cart-titles">{product.lettuceInstruction}</p> : null}
+                            {product.tomatoeInstruction ? <p className="cart-titles">{product.tomatoeInstruction}</p> : null}
+                            {product.saltInstruction ? <p className="cart-titles">{product.saltInstruction}</p> : null}
+                            {product.mayoInstruction ? <p className="cart-titles">{product.mayoInstruction}</p> : null}
                             <p className="showcart-subtotal">Price: ${((data.price)*(product.quantity)).toFixed(2)}</p>
                             <button className="delete-btn" onClick={() => cart.deleteFromCart(product.index)} type="button">Remove From Cart</button>
                         </div>
