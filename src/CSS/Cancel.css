@@ -1,3 +1,18 @@
 .cancelpage-container {
     height: 100vh;
 }
+
+.cancel-text {
+    font-family: "Barlow semi condensed";
+    font-size: 22px;
+}
+
+.cancel-text-link {
+    color: #a4a4a4;
+    font-size: 22px;
+
+}
+.cancel-text-link:hover {
+    color: blue;
+    cursor: pointer;
+}

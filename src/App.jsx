@@ -30,9 +30,9 @@ function App() {
   
   const slides = [
     { url: "/Buenos-Aires.jpg", title: "Buenos Aires"},
-    {  url: "/Bariloche.jpeg", title: "Bariloche"},
+    {  url: "/lomos-the-goat3.jpeg", title: "Lomito"},
     { url: "/TeatrodelBicentenario.jpg", title: "Teatro del Bicentenario" },
-    { url: "/cataratas-Iguazu.jpg", title: "Cataratas del Iguazu"}
+    { url: "/lomos-the-goat4.jpeg", title: "Lomito"}
   ]
 
   const aboutUsSlides = [

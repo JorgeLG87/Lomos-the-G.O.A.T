@@ -8,7 +8,7 @@ export default function ShowCart() {
 
     const cart = useContext(CartContext);
     console.log(cart)
-
+    
     const [ improvedCart, setImprovedCart ] = useState([]);
 
     function getItem(object) {
@@ -48,7 +48,7 @@ export default function ShowCart() {
             console.log(error);
         })
 
-        sendEmail();
+        // sendEmail();
     }
 
     return (
@@ -59,6 +59,7 @@ export default function ShowCart() {
                 </Link>
                 <button className="place-order-top" type="button" onClick={checkout}>Place Order</button>
             </div>
+            <div className="total-price">Total: ${getTotalSum().toFixed(2)}</div>
             <div className="showcart-main-container">
                 {(cart.items).map((product, index) => {
                     const data = getProductData(product.id);
@@ -78,7 +79,6 @@ export default function ShowCart() {
                     )
                 })}
             </div>
-            <div className="total-price">Total: ${getTotalSum().toFixed(2)}</div>
         </div>
     )
 }

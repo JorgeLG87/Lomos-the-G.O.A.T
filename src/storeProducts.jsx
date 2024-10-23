@@ -2,42 +2,42 @@ const storeProducts = [
     {
         id: "price_1PYFLk03vPVWwY4emohOmTTs",
         title: "The G.O.A.T Small Combo",
-        price: 17
+        price: 11.99
     },
     {
         id: "2",
         title: "The G.O.A.T Medium Combo",
-        price: 18.50
+        price: 11.99
     },
     {
         id: "3",
         title: "The G.O.A.T Large Combo",
-        price: 20
+        price: 11.99
     },
     {
         id: "4",
         title: "Plain Small Combo",
-        price: 16
+        price: 9.99
     },
     {
         id: "5",
         title: "Plain Medium Combo",
-        price: 17
+        price: 9.99
     },
     {
         id: "6",
         title: "Plain Large Combo",
-        price: 18
+        price: 9.99
     },
     {
         id: "7",
         title: "The G.O.A.T",
-        price: 15
+        price: 11.49
     },
     {
         id: "8",
         title: "Plain",
-        price: 14
+        price: 9.49
     },
     {
         id: "9",
@@ -47,27 +47,27 @@ const storeProducts = [
     {
         id: "10",
         title: "Medium Soda",
-        price: 2.50
+        price: 1.50
     },
     {
         id: "11",
         title: "Large Soda",
-        price: 4.5
+        price: 1.50
     },
     {
         id: "12",
         title: "Small Fries",
-        price: 2
+        price: 2.99
     },
     {
         id: "13",
         title: "Medium Fries",
-        price: 3
+        price: 2.99
     },
     {
         id: "14",
         title: "Large Fries",
-        price: 4
+        price: 2.99
     }
 ]
 

@@ -20,11 +20,12 @@
     border-radius: 10px;
     padding-left: 30px;
     padding-right: 30px;
-    background-color: rgb(253, 230, 21);
+    background-color: #E9D134;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    color: rgb(200, 0, 0);
+    color: #AF2007;
     font-size: large;
     font-family: "Montserrat";
+    font-weight: 500;
     @media (width < 450px) {
         
     }
@@ -57,6 +58,7 @@
     color: white;
     font-size: large;
     font-family: "Montserrat";
+    font-weight: 500;
     @media (width< 450px) {
         margin-left: 30%;
     }
@@ -93,7 +95,7 @@
 
 .list-products {
     border-radius: 10px;
-    width: 300px;
+    width: 100%;;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -104,14 +106,17 @@
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     background-color: white;
     @media (width < 450px) {
-        width: 100%;
-        border-radius: 0px;
+        width: 80%;
+        border-radius: 5px;
         border: none;
+        margin-left: 10%;
     }
 }
 
 .showcart-title {
     font-size: 30px;
+    font-family: "Barlow semi condensed";
+    color: #AF2007;
 }
 
 .showcart-subtotal {
@@ -124,8 +129,8 @@
     border: none;
     border-radius: 10px;
     width: 60%;
-    background-color: rgb(200, 0, 0);
-    color: rgb(253, 230, 21);
+    background-color: #AF2007;
+    color: white;
     font-size: 20px;
     font-family: "Montserrat";
     /* padding: 10px; */
