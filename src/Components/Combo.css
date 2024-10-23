@@ -128,10 +128,22 @@
 }
 
 .checkbox-input {
-    border: 1px solid #AD2007;
-    color: #AD2007;
+    /* border: 1px solid #AD2007; */
+    border: none;
+    /* color: #AD2007; */
     /* border-color: #AD2007; */
-    outline-color: #AD2007;
+    /* outline-color: #AD2007; */
+    outline: 1px solid #AD2007;
+}
+
+input[type=checkbox] {
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	-o-appearance:none;
+	outline: 1px solid #AD2007;
+	content: none;
+    width: 11px;
+    border-radius: 2px;
 }
 
 .checkbox-label {
