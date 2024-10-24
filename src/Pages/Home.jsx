@@ -12,6 +12,7 @@ export default function Home({ slides }) {
     const IntersectionObserverComponent = () => {
       // const [ isVisible, setIsVisible ] = useState(false);
       const elementRef = useRef(null);
+  
 
       useEffect(() => {
         const observer = new IntersectionObserver(([entry]) => {
