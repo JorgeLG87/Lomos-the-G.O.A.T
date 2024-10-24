@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 import Success from "./Pages/Success.jsx";
 import Cancel from "./Pages/Cancel.jsx";
 
+//COMPONENTS
 import AboutUs from './Pages/AboutUs.jsx';
 import Form from "./Components/Form.jsx";
 import Navbar from "./Components/Navbar.jsx";
@@ -17,6 +18,7 @@ import Home from "./Pages/Home.jsx";
 import CartProvider from './cartContext.jsx';
 import ShowCart from './Components/ShowCart.jsx';
 import AboutUsCarousel from './Components/AboutUsCarousel.jsx';
+import AboutUsMUICarousel from './Components/AboutUsMUICarousel.jsx';
 
 // Import Store Products and Functions to obtain specific prices
 import { storeProducts, getPriceSmall, getPriceMedium, getPriceLarge, getProductData } from './storeProducts.jsx'; 
