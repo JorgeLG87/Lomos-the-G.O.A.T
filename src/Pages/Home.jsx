@@ -122,9 +122,9 @@ export default function Home({ slides }) {
             {translateY: "-1000px"}
           ],
           opacity: 0,
-          duration: 2000,
-          easing: "easeOutExpo",
-          display: "none",
+          // duration: 2000,
+          // easing: "easeOutExpo",
+          // display: "none",
           // delay: 1000,
         })
       }
@@ -151,9 +151,9 @@ export default function Home({ slides }) {
             {translateY: "-1000px"}
           ],
           opacity: 0,
-          duration: 2000,
-          easing: "easeOutExpo",
-          display: "none",
+          // duration: 2000,
+          // easing: "easeOutExpo",
+          // display: "none",
           // delay: 1000,
         })
       }
