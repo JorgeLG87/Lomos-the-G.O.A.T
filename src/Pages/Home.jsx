@@ -78,6 +78,87 @@ export default function Home({ slides }) {
       }
     },[followUsIsVisible])
 
+    useEffect(() => {
+      if (followUsIsVisible) {
+        anime({
+          targets: ".instagram2",
+          keyframes: [
+            // {translateX: "0px"},
+            {translateY: "150px"}
+          ],
+          opacity: 1,
+          duration: 1000,
+          easing: "easeInExpo",
+        })
+      } else {
+        anime({
+          targets: ".instagram2",
+          keyframes: [
+            {translateY: "-1000px"}
+          ],
+          opacity: 0,
+        })
+      }
+    }, [followUsIsVisible]);
+
+    useEffect(() => {
+      if (followUsIsVisible) {
+        anime({
+          targets: ".facebook2",
+          keyframes: [
+            // {translateX: "0px"},
+            {translateY: "50px"}
+          ],
+          opacity: 1,
+          duration: 1000,
+          easing: "easeInExpo",
+          // delay: 1500
+        })
+      } else {
+        anime({
+          targets: ".facebook2",
+          keyframes: [
+            // {translateX: "500px"},
+            {translateY: "-1000px"}
+          ],
+          opacity: 0,
+          duration: 2000,
+          easing: "easeOutExpo",
+          display: "none",
+          // delay: 1000,
+        })
+      }
+    }, [followUsIsVisible])
+
+    useEffect(() => {
+      if (followUsIsVisible) {
+        anime({
+          targets: ".tiktok2",
+          keyframes: [
+            // {translateX: "0px"},
+            {translateY: "-50px"}
+          ],
+          opacity: 1,
+          duration: 1000,
+          easing: "easeInExpo",
+          // delay: 1500
+        })
+      } else {
+        anime({
+          targets: ".tiktok2",
+          keyframes: [
+            // {translateX: "500px"},
+            {translateY: "-1000px"}
+          ],
+          opacity: 0,
+          duration: 2000,
+          easing: "easeOutExpo",
+          display: "none",
+          // delay: 1000,
+        })
+      }
+    }, [followUsIsVisible])
+
     return (
         <div className="entire-home-container">
         <div className="marco-video-container">
@@ -114,6 +195,9 @@ export default function Home({ slides }) {
         </div>
         <div className="socialmedia-text-container" ref={textFollowUs}>
           <p className="socialmedia-text"><span className="span-text"># FOLLOW US</span></p><p className="socialmedia-text2">ON SOCIAL MEDIA</p>
+          <a href="https://www.instagram.com/lomostheg.o.a.t/"><img className="instagram2" src="/instagram.svg" alt="instagram-new--v1" /></a>
+          <a href="https://www.facebook.com/people/Lomos-The-G-o-a-t/61559046853292/"><img className="facebook2" src="/facebook.svg" alt="facebook-new"/></a>
+          <a href="https://www.tiktok.com/@lomostheg.o.a.t?lang=en"><img className="tiktok2" src="tik-tok.svg" alt="tiktok--v1"/></a>
         </div>
         <div className="map-comments-container">
           <img className="argentina-map" src="/mapa.png"/>
