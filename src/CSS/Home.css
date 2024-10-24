@@ -359,6 +359,10 @@
   /* transform: rotate(345deg); */
   margin-left: 75%;
 }
+/* .instagram2:hover {
+  cursor: pointer;
+  scale: 1.2;
+} */
 
 .facebook2 {
     position: absolute;
@@ -366,9 +370,17 @@
     /* transform: rotate(345deg); */
     margin-left: 75%;
 }
+/* .facebook2:hover {
+  cursor: pointer;
+  scale: 1.2;
+} */
 
 .tiktok2 {
   position: absolute;
   width: 40px;
   margin-left: 75%;
 }
+/* .tiktok2:hover {
+  cursor: pointer;
+  scale: 1.2;
+} */

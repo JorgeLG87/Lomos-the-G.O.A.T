@@ -188,7 +188,7 @@ export default function Home({ slides }) {
             </div>
             <div className="aboutus-container2">
               <p className="aboutus-text">
-              "We're just a team of entrepreneurs from San Juan (Argentina) excited in bringing one of the most popular sandwiches of Argentina to the USA." 
+              "Our mission is to bring to the US a little piece of Argentina with every single bite. Because we believe that when it comes to flavors, barriers don't exist." 
               </p>
             </div>       
           </div>
