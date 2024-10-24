@@ -6,26 +6,14 @@ export default function QueEsLomo() {
 
     const mapSanJuan = useRef();
     const [ mapIsVisible, setMapIsVisible ] = useState(false);
-    const [ myElementIsVisible, setMyElementIsVisible ] = useState();
 
     useEffect(() => {
       const observer = new IntersectionObserver((entries) => {
         const entry = entries[0];
         setMapIsVisible(entry.isIntersecting);
-        console.log("Entry", entry);
       })
       observer.observe(mapSanJuan.current);
-      
-    //   if (IntersectionObserverEntry.isIntersecting) {
-    //     setMapIsVisible(true);
-    //   } else {
-    //     setMapIsVisible(false);
-    //   }
     }, []);
-
-    useEffect(() => {
-        console.log("Map is visible: ", mapIsVisible);
-    }, [mapIsVisible])
 
     useEffect(() => {
         if (mapIsVisible) {

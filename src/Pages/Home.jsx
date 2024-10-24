@@ -1,5 +1,6 @@
 import QueEsLomo from "../Components/QueEsLomo.jsx";
 import "../CSS/Home.css";
+import anime from "animejs";
 
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from 'react';
@@ -8,6 +9,17 @@ import HomeSlidingImg from "../Components/HomeSlidingImg.jsx";
 
 
 export default function Home({ slides }) {
+
+    const textFollowUs = useRef();
+    const [ followUsIsVisible, setFollowUsIsVisible ] = useState(false);
+
+    useEffect(() => {
+      const observer = new IntersectionObserver((entries) => {
+        const entry = entries[0];
+        setFollowUsIsVisible(entry.isIntersecting);
+      });
+      observer.observe(textFollowUs.current);
+    },[]);
 
     const IntersectionObserverComponent = () => {
       // const [ isVisible, setIsVisible ] = useState(false);
@@ -39,7 +51,32 @@ export default function Home({ slides }) {
       return elementRef;
 
     };
-  
+
+    useEffect(() => {
+      if (followUsIsVisible) {
+        anime({
+          targets: ".socialmedia-text-container",
+          keyframes: [
+            {translateX: "0px"}
+          ],
+          opacity: 1,
+          duration: 1000,
+          easing: "easeOutExpo",
+          // delay: 1000,
+        });
+      } else {
+        anime({
+          targets: ".socialmedia-text-container",
+          keyframes: [
+            {translateX: "-100px"}
+          ],
+          opacity: 0,
+          duration: 1000,
+          easing: "easeOutExpo",
+          // delay: 1000,
+        });
+      }
+    },[followUsIsVisible])
 
     return (
         <div className="entire-home-container">
@@ -75,7 +112,7 @@ export default function Home({ slides }) {
             </div>       
           </div>
         </div>
-        <div className="socialmedia-text-container" ref={IntersectionObserverComponent()}>
+        <div className="socialmedia-text-container" ref={textFollowUs}>
           <p className="socialmedia-text"><span className="span-text"># FOLLOW US</span></p><p className="socialmedia-text2">ON SOCIAL MEDIA</p>
         </div>
         <div className="map-comments-container">
