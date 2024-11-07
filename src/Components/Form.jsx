@@ -76,7 +76,7 @@ export default function Form({ shoppingCart, setShoppingCart }) {
 
     return (
         <div className="form-container">
-            <div className="top-container">
+            <div className="top-container2">
             </div>
                 <img className="cart-icon" src="grocery-store.svg" onClick={() => navigate("/showcart")}/>
                 <p className="cart-text" >({totalQuantity} items)</p>

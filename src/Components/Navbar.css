@@ -10,7 +10,7 @@
     border: 3px solid #E9D134;
     @media (width < 450px) {
         display: grid;
-        width: 98.5%;
+        width: 100%;
         border-radius: 0px;
     }
 }

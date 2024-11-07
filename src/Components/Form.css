@@ -6,7 +6,8 @@
     padding: 0px;
     margin-top: 100px;
     width: 100%;
-    min-height: 3000px;;
+    min-height: 3000px;
+    /* overflow: hidden; */
     border-radius: 20px;
     /* background-color: white; */
     background-image: url("watermark-background.jpg");
@@ -473,23 +474,26 @@
     margin-top: -99px;
 }
 
-.top-container {
+.top-container2 {
 
-    width: 100%;
+    width: 102%;
     height: 500px;
     position: relative;
     margin-top: -100px; 
     background-image: url('/food-menu.png');
     background-size: contain;
     background-position: center;
+    overflow: hidden;
 
     @media (width < 450px) {
-        width: 100%;
+        width: 102.7%;
         height: 700px;
-        position: relative;
-        margin-top: -100px; 
+        /* position: relative; */
+        /* margin-top: -100px;  */
         background-image: url('/food-menu.png');
-        background-size: contain;
+        background-size:cover;
         background-position: center;
+        overflow: hidden;
+        align-content: center;
     }
 }
