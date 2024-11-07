@@ -60,7 +60,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                         <p className="title2"><span className="span-text">G.O.A.T</span></p><p className="title">Combo</p>
                     </div>
                     <div className="sub-container">
-                        <div className="small">
+                        {/* <div className="small">
                             <p className="text">Small</p>
                             <div className="icons">
                                 <img className="icon-item" src="/sandwich1.svg"/>
@@ -144,10 +144,10 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                 document.getElementById("bev-type2").value ? cart.addOneToCart("2") : setBevValid2(true);
                                 document.getElementById("bev-type2").value ? setBevValid2(false) : null
                                 }} className="add" type="button">Add To Cart</button>
-                        </div>
+                        </div> */}
 
                         <div className="large">
-                            <p className="text">Large</p>
+                            <p className="text">Includes</p>
                             <div className="icons">
                                 <img className="icon-item" src="/sandwich1.svg"/>
                                 <img className="icon-item" src="/french-fries1.svg"/>
@@ -158,6 +158,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                 <option value="Coca Cola">Coca Cola</option>
                                 <option value="Pepsi">Pepsi</option>
                                 <option value="Sprite">Sprite</option>
+                                <option value="Fanta">Fanta</option>
                             </select>
                             <br></br>
                             <p style={{fontFamily: "Barlow semi condensed"}}>Special Instructions</p>
@@ -178,6 +179,14 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                     <input type="checkbox" id="mayo3" value="No Mayo"/>
                                     <label className="checkbox-label" htmlFor="mayo3">No Mayo</label>
                                 </div>
+                                <div>
+                                    <input type="checkbox" id="ketchup3" value="No Ketchup"/>
+                                    <label className="checkbox-label" htmlFor="ketchup3">No Ketchup</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="mustard3" value="No Mustard"/>
+                                    <label className="checkbox-label" htmlFor="mustard3">No Mustard</label>
+                                </div>
                             </div>
                             {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="3").length}</p> : null}
                             {bevValid3 ? <p className="bev-error">Please choose a beverage type</p> : null}
@@ -190,10 +199,10 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                 </div>
 
                 <div className="main-container2">
-                <p className="title2"><span className="span-text">Plain</span></p><p className="title">Combo</p>
+                <p className="title2"><span className="span-text">Classic</span></p><p className="title">Combo</p>
                 <div className="sub-container">
                     <div className="small">
-                        <p className="text">Small</p>
+                        <p className="text">Includes</p>
                         <div className="icons">
                             <img className="icon-item" src="/sandwich1.svg"/>
                             <img className="icon-item" src="/french-fries1.svg"/>
@@ -204,6 +213,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <option value="Coca Cola">Coca Cola</option>
                             <option value="Pepsi">Pepsi</option>
                             <option value="Sprite">Sprite</option>
+                            <option value="Fanta">Fanta</option>
                         </select>
                         <br></br>
                             <p style={{fontFamily: "Barlow semi condensed"}}>Special Instructions</p>
@@ -224,6 +234,14 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                     <input type="checkbox" id="mayo4" value="No Mayo"/>
                                     <label className="checkbox-label" htmlFor="mayo4">No Mayo</label>
                                 </div>
+                                <div>
+                                    <input type="checkbox" id="ketchup4" value="No Ketchup"/>
+                                    <label className="checkbox-label" htmlFor="ketchup4">No Ketchup</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="mustard4" value="No Mustard"/>
+                                    <label className="checkbox-label" htmlFor="mustard4">No Mustard</label>
+                                </div>
                             </div>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="4").length}</p> : null}
                         {bevValid4 ? <p className="bev-error">Please choose a beverage type</p> : null}
@@ -233,7 +251,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             }} className="add" type="button">Add To Cart</button>
                     </div>
 
-                    <div className="medium">
+                    {/* <div className="medium">
                         <p className="text">Medium</p>
                         <div className="icons">
                             <img className="icon-item" src="/sandwich1.svg"/>
@@ -313,7 +331,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             document.getElementById("bev-type6").value ? cart.addOneToCart("6") : setBevValid6(true);
                             document.getElementById("bev-type6").value ? setBevValid6(false) : null
                             }} className="add" type="button">Add To Cart</button>
-                    </div>
+                    </div> */}
 
                 </div>
                 </div>
