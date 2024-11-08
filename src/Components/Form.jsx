@@ -78,8 +78,9 @@ export default function Form({ shoppingCart, setShoppingCart }) {
         <div className="form-container">
             <div className="top-container2">
             </div>
-                <img className="cart-icon" src="grocery-store.svg" onClick={() => navigate("/showcart")}/>
-                <p className="cart-text" >({totalQuantity} items)</p>
+            <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
+            <img className="cart-icon" src="grocery-store.svg" onClick={() => navigate("/showcart")}/>
+            <p className="cart-text" >({totalQuantity} items)</p>
             <div className="ordertype-container">
                 <button className="pickup-order" type="button" onClick={() => setOrderType("pickup")}>Pick Up</button>
                 <button className="delivery-order" type="button" onClick={() => setOrderType("delivery")}>Delivery</button>

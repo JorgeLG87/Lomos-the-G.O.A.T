@@ -497,3 +497,12 @@
         align-content: center;
     }
 }
+
+.side-border {
+    position: absolute;
+    width: 50%;
+    height: 1000px;
+    margin-top: 450px;
+    margin-left: -90%;
+    z-index: -1;
+}

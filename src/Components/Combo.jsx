@@ -147,6 +147,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                         </div> */}
 
                         <div className="large">
+                            
                             <p className="text">Includes</p>
                             <div className="icons">
                                 <img className="icon-item" src="/sandwich1.svg"/>
