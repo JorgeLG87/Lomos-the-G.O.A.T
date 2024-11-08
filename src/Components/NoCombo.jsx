@@ -37,13 +37,21 @@ export default function NoCombo() {
                                     <input type="checkbox" id="mayo7" value="No Mayo"/>
                                     <label className="checkbox-label" htmlFor="mayo7">No Mayo</label>
                                 </div>
+                                <div>
+                                    <input type="checkbox" id="ketchup7" value="No Ketchup"/>
+                                    <label className="checkbox-label" htmlFor="ketchup7">No Ketchup</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="mustard7" value="No Mustard"/>
+                                    <label className="checkbox-label" htmlFor="mustard7">No Mustard</label>
+                                </div>
                             </div>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="7").length}</p> : null}
                         <button onClick={() => cart.addOneToCart("7")} className="nocombo-add" type="button">Add To Cart</button>
                     </div>
 
                     <div className="medium">
-                        <p className="text">Plain</p>
+                        <p className="text">Classic</p>
                         <div className="icons-lomo">
                             <img className="icon-item-lomo" src="/sandwich-medium.png"/>
                         </div>
@@ -66,6 +74,14 @@ export default function NoCombo() {
                                     <input type="checkbox" id="mayo8" value="No Mayo"/>
                                     <label className="checkbox-label" htmlFor="mayo8">No Mayo</label>
                                 </div>
+                                <div>
+                                    <input type="checkbox" id="ketchup8" value="No Ketchup"/>
+                                    <label className="checkbox-label" htmlFor="ketchup8">No Ketchup</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="mustard8" value="No Mustard"/>
+                                    <label className="checkbox-label" htmlFor="mustard8">No Mustard</label>
+                                </div>
                             </div>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="8").length}</p> : null}
                         <button onClick={() => cart.addOneToCart("8")} className="nocombo-add" type="button">Add To Cart</button>
@@ -78,17 +94,17 @@ export default function NoCombo() {
                     <p className="title2"><span className="span-text">French</span></p><p className="title">Fries</p>
                 </div>
                 <div className="nocombo-sub-container-fries">
-                    <div className="small-fries">
+                    {/* <div className="small-fries">
                         <p className="text">Small</p>
                         <div className="icons-fries">          
                             <img className="icon-item-fries" src="/fries-medium.png"/>
                         </div>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="12").length}</p> : null}
                         <button onClick={() => cart.addOneToCart("12")} className="nocombo-add" type="button">Add To Cart</button>
-                    </div>
+                    </div> */}
 
                     <div className="medium-fries">
-                        <p className="text">Medium</p>
+                        <p className="text">Medium (for 2)</p>
                         <div className="icons-fries">
                             <img className="icon-item-fries" src="/fries-medium.png"/>
                         </div>
@@ -97,7 +113,7 @@ export default function NoCombo() {
                     </div>
 
                     <div className="large-fries">
-                        <p className="text">Large</p>
+                        <p className="text">Large (for 4)</p>
                         <div className="icons-fries">
                             <img className="icon-item-fries" src="/fries-medium.png"/>
                         </div>
@@ -119,23 +135,23 @@ export default function NoCombo() {
                         <button onClick={() => cart.addOneToCart("9")} className="nocombo-add" type="button">Add To Cart</button>
                     </div>
 
-                    <div className="medium-fries">
+                    {/* <div className="medium-fries">
                         <p className="text">Medium</p>
                         <div className="icons-fries">
                             <img className="icon-item-soda" src="/soda-medium.png"/>
                         </div>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="10").length}</p> : null}
                         <button onClick={() => cart.addOneToCart("10")} className="nocombo-add" type="button">Add To Cart</button>
-                    </div>
+                    </div> */}
 
-                    <div className="large-fries">
+                    {/* <div className="large-fries">
                         <p className="text">Large</p>
                         <div className="icons-fries">
                             <img className="icon-item-soda" src="/soda-medium.png"/>
                         </div>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="11").length}</p> : null}
                         <button onClick={() => cart.addOneToCart("11")} className="nocombo-add" type="button">Add To Cart</button>
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

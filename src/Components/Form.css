@@ -8,16 +8,16 @@
     width: 100%;
     min-height: 3000px;
     /* overflow: hidden; */
-    border-radius: 20px;
+    /* border-radius: 20px; */
     /* background-color: white; */
-    background-image: url("watermark-background.jpg");
+    /* background-image: url("watermark-background.jpg"); */
     @media (width < 450px) {
         width: 100%;
         /* margin-top: 50px; */
         margin-left: 0%;
         box-shadow: none;
-        min-height: 5000px;
-        border-radius: 5px;
+        min-height: 5500px;
+        /* border-radius: 5px; */
     }
 }
 
@@ -273,9 +273,9 @@
     /* margin-top: 40px; */
     /* justify-content: center; */
     width: 100%;
+    margin-right: 0%;
     height: 370px;
     border-radius: 7px;
-    
 }
 
 .choosecombo-text-container {

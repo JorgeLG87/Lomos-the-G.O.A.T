@@ -12,7 +12,7 @@
     padding-right: 10%;
     @media (width < 450px) {
         /* position: relative; */
-        width: 90%;
+        width: 100%;
         padding-left: 0px;
         padding-right: 0px;
         margin-top: 50px;
@@ -40,6 +40,7 @@
         /* margin-left: 10px; */
         padding-left: 0px;
         padding-right: 0px;
+        /* border: 1px solid black; */
     }
 }
 
@@ -64,7 +65,7 @@
 
 .nocombo-sub-container-lomo {
      margin-top: 0px;
-     margin-left: 10%;
+     /* margin-left: 10%; */
      border-radius: 10px;
      width: 80%;
      height:fit-content;
@@ -76,7 +77,7 @@
         grid-template-rows: repeat(2, 1fr);
         gap: 10%;
         margin-bottom: 0px;
-        margin-left: 40px;
+        /* margin-left: 10%; */
      }
 }
 
@@ -135,7 +136,7 @@
         /* grid-template-rows: repeat(3, 1fr); */
         margin-top: 0px;
         width: 100%;
-        margin-left: 40px;
+        /* margin-left: 40px; */
         gap: 20%;
     }
 }
@@ -145,8 +146,8 @@
     @media (width < 450px) {
         /* display: flex; */
         /* border: 1px solid black; */
-        width: 110%;
-        margin-left: 40px;
+        width: 100%;
+        /* margin-left: 40px; */
         /* display: relative; */
         /* position: absolute; */
         margin-top: 0px;
@@ -159,8 +160,8 @@
     @media (width < 450px) {
         /* display: flex; */
         /* border: 1px solid black; */
-        width: 110%;
-        margin-left: 40px;
+        width: 100%;
+        /* margin-left: 40px; */
         /* display: relative; */
         /* position: absolute; */
         margin-top: 100px;
@@ -180,10 +181,15 @@
         border: none;
     }
 }
-.medium-fries, .large-fries {
+.large-fries {
     @media (width < 450px) {
         margin-top: 25%;
     }
+}
+
+.title2 {
+    /* border: 1px solid black; */
+    width: 100%;
 }
 
 .title3 {

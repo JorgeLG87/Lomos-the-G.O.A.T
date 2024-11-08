@@ -79,7 +79,7 @@ function App() {
           <Route path="/success" element={<Success/>}/>
           <Route path="/cancel" element={<Cancel/>}/>
         </Routes>
-        <footer>
+        <footer style={{bottom:"0px"}}>
           <SocialMedia/>
         </footer>
       </Router>
