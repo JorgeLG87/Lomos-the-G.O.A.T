@@ -4,10 +4,11 @@
     flex-direction: column;
     align-items: center;
     padding: 0px;
-    margin-top: 100px;
+    margin-top: 0px;
     width: 100%;
     min-height: 3000px;
-    /* overflow: hidden; */
+
+    overflow: hidden;
     /* border-radius: 20px; */
     /* background-color: white; */
     /* background-image: url("watermark-background.jpg"); */
@@ -16,7 +17,8 @@
         /* margin-top: 50px; */
         margin-left: 0%;
         box-shadow: none;
-        min-height: 5500px;
+        /* max-height: 120%; */
+        min-height: 4200px;
         /* border-radius: 5px; */
     }
 }
@@ -479,7 +481,7 @@
     width: 102%;
     height: 500px;
     position: relative;
-    margin-top: -100px; 
+    margin-top: -00px; 
     background-image: url('/food-menu.png');
     background-size: contain;
     background-position: center;
@@ -498,11 +500,35 @@
     }
 }
 
-.side-border {
+.sideborder-container {
     position: absolute;
-    width: 50%;
-    height: 1000px;
-    margin-top: 450px;
-    margin-left: -90%;
+    display: flex;
+    flex-direction: column;
+    margin-left: -100%;
     z-index: -1;
+}
+
+.side-border {
+    /* position: absolute; */
+    width: 100%;
+    height: 400px;
+    margin-top: 0px;
+    opacity: 0.7;
+    /* margin-left: -90%; */
+    /* z-index: 1; */
+}
+
+.sideborder-right-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: -50px;
+    z-index: -1;
+}
+
+.side-border-right {
+    width: 100%;
+    height: 400px;
+    margin-top: 0px;
+    opacity: 0.7;
 }

@@ -78,7 +78,24 @@ export default function Form({ shoppingCart, setShoppingCart }) {
         <div className="form-container">
             <div className="top-container2">
             </div>
-            <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
+            <div className="sideborder-container">
+                <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
+                <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
+                <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
+                <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
+                <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
+                <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
+                <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
+            </div>
+            <div className="sideborder-right-container">
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+            </div>
             <img className="cart-icon" src="grocery-store.svg" onClick={() => navigate("/showcart")}/>
             <p className="cart-text" >({totalQuantity} items)</p>
             <div className="ordertype-container">

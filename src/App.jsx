@@ -79,14 +79,17 @@ function App() {
           <Route path="/success" element={<Success/>}/>
           <Route path="/cancel" element={<Cancel/>}/>
         </Routes>
-        <footer style={{bottom:"0px"}}>
+        {/* <footer style={{bottom:"0px", position:"relative"}}>
           <SocialMedia/>
-        </footer>
+        </footer> */}
       </Router>
       {/* <div className="mother-container-socialmedia"> */}
       {/* </div> */}
       </CartProvider>
       </div>
+      {/* <footer style={{bottom:"0px", position:"absolute"}}> */}
+          <SocialMedia/>
+      {/* </footer> */}
     </div>
   )
 }
