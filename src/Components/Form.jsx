@@ -87,15 +87,7 @@ export default function Form({ shoppingCart, setShoppingCart }) {
                 <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
                 <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
             </div>
-            <div className="sideborder-right-container">
-                <img src="/sideborder-right.svg" className="side-border-right"/>
-                <img src="/sideborder-right.svg" className="side-border-right"/>
-                <img src="/sideborder-right.svg" className="side-border-right"/>
-                <img src="/sideborder-right.svg" className="side-border-right"/>
-                <img src="/sideborder-right.svg" className="side-border-right"/>
-                <img src="/sideborder-right.svg" className="side-border-right"/>
-                <img src="/sideborder-right.svg" className="side-border-right"/>
-            </div>
+       
             <img className="cart-icon" src="grocery-store.svg" onClick={() => navigate("/showcart")}/>
             <p className="cart-text" >({totalQuantity} items)</p>
             <div className="ordertype-container">
@@ -161,7 +153,15 @@ export default function Form({ shoppingCart, setShoppingCart }) {
                 {quantity.map(elem => <p name="Quantity">{elem}</p>)}
             </div>
             
-            
+            <div className="sideborder-right-container">
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+            </div>
         </div>
     )
 }
