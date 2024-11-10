@@ -156,3 +156,11 @@
     color: #AF2007;
     margin-top: -10px;
 }
+
+.sideborder-container2 {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        margin-left: -12%;
+        z-index: -1;
+}

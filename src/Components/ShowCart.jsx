@@ -53,6 +53,19 @@ export default function ShowCart() {
 
     return (
         <div className="showcart-page">
+            <div className="sideborder-container2">
+                <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
+                <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
+                <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
+                <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
+                <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
+                <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
+                <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
+                <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
+                <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
+                <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
+                <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
+            </div>
             <div className="top-container">
                 <Link to="/order-now" style={{textDecoration:"none", width:"fit-content", display:"contents"}}>
                     <button className="navigating-showcart" type="button">Go Back</button>
