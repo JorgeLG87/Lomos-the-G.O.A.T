@@ -86,9 +86,9 @@ function App() {
       {/* <div className="mother-container-socialmedia"> */}
       {/* </div> */}
       </CartProvider>
+      <SocialMedia/>
       </div>
       {/* <footer style={{bottom:"0px", position:"absolute"}}> */}
-          <SocialMedia/>
       {/* </footer> */}
     </div>
   )

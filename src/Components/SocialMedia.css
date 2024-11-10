@@ -18,11 +18,12 @@
     display: flex;
     flex-direction: column;
     width: 100vw;
-    position: relative;
+    position: absolute;
     align-items: center;
     justify-content:center;
     /* margin-top: 100%; */
     padding-bottom: 20px;
+    /* bottom: 0; */
     height: 200px;
     background-color: black;
     border: 3px solid #E9D134;
@@ -30,6 +31,8 @@
     @media (width < 450px) {
         border-radius: 0px;
         width: 98.5%;
+        /* bottom: -225px; */
+        margin-top: 0%;
     }    
 }
 

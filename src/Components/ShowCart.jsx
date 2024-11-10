@@ -92,6 +92,21 @@ export default function ShowCart() {
                     )
                 })}
             </div>
+            
+            <div className="sideborder-right-container2">
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+                <img src="/sideborder-right.svg" className="side-border-right"/>
+            </div>
+
         </div>
     )
 }
