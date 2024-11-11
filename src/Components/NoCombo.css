@@ -73,8 +73,12 @@
      grid-template-columns: repeat(2, 1fr);
      gap: 20%;
      @media (width < 450px) {
-        grid-template-columns: none;
-        grid-template-rows: repeat(2, 1fr);
+        display: flex;
+        flex-direction: column;
+        /* grid-template-columns: none; */
+        /* grid-template-rows: repeat(2, 1fr); */
+        align-items: center;
+        justify-content: center;
         gap: 10%;
         margin-bottom: 0px;
         /* margin-left: 10%; */
@@ -138,6 +142,7 @@
         width: 100%;
         /* margin-left: 40px; */
         gap: 20%;
+        border: 1px solid black;
     }
 }
 
