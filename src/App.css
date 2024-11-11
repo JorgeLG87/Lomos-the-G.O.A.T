@@ -11,7 +11,7 @@ body {
 html {
   width: 100vw;
   height: 100%;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .logo {
@@ -31,7 +31,7 @@ html {
   width: 100vw;
   /* border: 2px solid black; */
   /* border-right: 2px solid black; */
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   /* overflow: hidden; */
 }
 
@@ -60,6 +60,6 @@ html {
 .overlay {
   position: relative;
   width: 100vw;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   /* border: 3px solid green; */
 }
