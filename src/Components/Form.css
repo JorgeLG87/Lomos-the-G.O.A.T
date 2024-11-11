@@ -7,19 +7,12 @@
     margin-top: 0px;
     width: 100%;
     min-height: 3000px;
-    /* border: 1px solid black; */
     overflow: hidden;
-    /* border-radius: 20px; */
-    /* background-color: white; */
-    /* background-image: url("watermark-background.jpg"); */
     @media (width < 450px) {
         width: 100%;
-        /* margin-top: 50px; */
         margin-left: 0%;
         box-shadow: none;
-        /* max-height: 120%; */
         min-height: 4200px;
-        /* border-radius: 5px; */
     }
 }
 
@@ -32,10 +25,8 @@
     text-shadow: 1px 1px 2px red;
     width: 100%;
     background-color: white;
-    /* border: 1px solid black; */
     border-radius: 7px;
     padding: 15px;
-    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; */
     @media (width < 450px) {
         width: 92.5%;
         margin-top: -80px;
@@ -89,7 +80,6 @@
     border: transparent;
     background: transparent;
     border-bottom: 1px solid black;
-    /* outline: none; */
     @media (width < 450px) {
         width: 90px;
     }
@@ -197,17 +187,11 @@
     font-weight: 100px;
     height: 50px;
     border: none;
-    /* border: 1px solid black; */
-    /* background-color: rgb(253, 230, 21); */
     color: rgb(200, 0, 0);
-    /* border-radius: 7px; */
     @media (width < 450px) {
-        /* display: block; */
-        /* position: relative; */
         width: 60%;
         margin-bottom: 0px;
         font-weight: 500;
-        /* margin-left: 20%; */
     }
 }
 
@@ -216,24 +200,16 @@
     justify-content: center;
     align-items: center;
     margin-top: 70px;
-    /* margin-left: 400px; */
     width: 150px;;
     font-size: 18px;
     font-family: "Montserrat";
     height: 50px;
     border: none;
-    /* border: 1px solid black; */
-    /* background-color: rgb(253, 230, 21); */
     color: rgb(200, 0, 0);
-    /* border-radius: 7px; */
-    /* right: 100px; */
     @media (width < 450px) {
-        /* display: block; */
         width: 60%;
         margin-bottom: 0px;
         font-weight: 500;
-        /* margin-top: 50px; */
-        /* margin-left: 20%; */
     }
 }
 
@@ -275,9 +251,6 @@
 .type-container {
     position: relative;
     display: flex;
-    /* flex-direction: row; */
-    /* margin-top: 40px; */
-    /* justify-content: center; */
     width: 100%;
     margin-right: 0%;
     height: 370px;
@@ -297,8 +270,6 @@
     position: relative;
     margin-top: 35px;
     margin-left: 10px;
-    /* font-family: "Dancing Script"; */
-    /* text-shadow: 1px 1px 2px red; */
     font-size: 50px;
     font-family: "Montserrat";
     @media (width < 450px) {
@@ -437,16 +408,13 @@
 }
 
 .cart-icon {
-    /* position: absolute; */
     width: 3%;
     z-index: 4;
-    /* margin-left: 50%; */
     bottom: 40px;
     @media (width < 450px) {
         width: 9%;
         bottom: 40px;
         margin-top: 20px;
-        /* margin-left: 45.5%; */
     }
 }
 .cart-icon:hover {
@@ -455,20 +423,16 @@
 }
 
 .cart-text {
-    /* margin-left: 50%; */
     color: white;
     font-family: "Barlow semi condensed";
     font-weight: 500;
-    /* position: absolute; */
     z-index: 4;
     bottom: 0px;
     @media (width < 450px) {
         color: black;
         font-family: "Barlow semi condensed";
         font-weight: 500;
-        /* position: absolute; */
         z-index: 4;
-        /* margin-left: 44.5%; */
         bottom: 0px;
     }
 }
@@ -495,13 +459,8 @@
     @media (width < 450px) {
         width: 102.7%;
         height: 650px;
-        /* position: relative; */
-        /* margin-top: -100px;  */
         background-image: url('/food-menu.png');
         background-size:cover;
-        /* background-position: center; */
-        /* overflow: hidden; */
-        /* align-content: center; */
     }
 }
 
@@ -514,13 +473,10 @@
 }
 
 .side-border {
-    /* position: absolute; */
     width: 100%;
     height: 400px;
     margin-top: 0px;
     opacity: 0.7;
-    /* margin-left: -90%; */
-    /* z-index: 1; */
 }
 
 .sideborder-right-container {
@@ -528,16 +484,11 @@
     display: flex;
     flex-direction: column;
     margin-left: 100%;
-    /*margin-right: 100%; */
     z-index: -1;
-    /* border: 1px solid black; */
-    /* margin-top: 1000px; */
     margin-top: -12px;
 }
 
 .side-border-right {
-    /* position: absolute; */
-    /* width: 100%; */
     height: 400px;
     margin-top: 0px;
     opacity: 0.7;
