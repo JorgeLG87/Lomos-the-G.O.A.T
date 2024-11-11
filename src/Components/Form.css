@@ -487,20 +487,21 @@
     position: relative;
     margin-top: -00px; 
     background-image: url('/food-menu.png');
-    background-size: contain;
+    background-size:cover;
     background-position: center;
     overflow: hidden;
+    padding: 1px;
 
     @media (width < 450px) {
         width: 102.7%;
-        height: 700px;
+        height: 650px;
         /* position: relative; */
         /* margin-top: -100px;  */
         background-image: url('/food-menu.png');
         background-size:cover;
-        background-position: center;
-        overflow: hidden;
-        align-content: center;
+        /* background-position: center; */
+        /* overflow: hidden; */
+        /* align-content: center; */
     }
 }
 
