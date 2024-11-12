@@ -12,7 +12,9 @@
         width: 100%;
         margin-left: 0%;
         box-shadow: none;
-        min-height: 4200px;
+        min-height: 4000px;
+        /* height: 4200px; */
+        max-height: 5000px;
     }
 }
 

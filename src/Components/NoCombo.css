@@ -12,7 +12,9 @@
     padding-right: 10%;
     @media (width < 450px) {
         /* position: relative; */
+        position: absolute;
         width: 100%;
+        height: 100vh;
         padding-left: 0px;
         padding-right: 0px;
         margin-top: 50px;
@@ -25,6 +27,7 @@
     border-radius: 10px;
     width: 100%;
     height:fit-content;
+    /* border: 1px solid black; */
     padding: 0px;
     padding-bottom: 30px;
     /* padding-left: 20px; */
@@ -40,12 +43,13 @@
         /* margin-left: 10px; */
         padding-left: 0px;
         padding-right: 0px;
+        /* gap: 50%; */
         /* border: 1px solid black; */
     }
 }
 
 .nocombo-main-container-bev {
-    position: relative;
+    /* position: relative; */
     border-radius: 10px;
     width: 100%;
     height:fit-content;
@@ -53,7 +57,7 @@
     padding-bottom: 30px;
     padding-top: 0px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 0px;
     @media (width < 450px) {
         /* position: absolute; */
         display: flex;
@@ -61,6 +65,22 @@
         align-items: center;
         /* margin-top: 250px;; */
     }
+}
+
+.nocombo-sub-container-bev {
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: center;
+}
+
+.small-bev {
+    width: 80%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 10px;
+    /* margin-left: 10%; */
+    background-color: white;
+    border-radius: 5px;
 }
 
 .nocombo-sub-container-lomo {
@@ -122,10 +142,11 @@
 }
 
 .nocombo-sub-container-fries {
+    /* position: absolute; */
     border-radius: 10px;
     /* position: relative; */
     width: 100%;
-    height:fit-content;
+    height: fit-content;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10%;
@@ -136,13 +157,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* grid-template-columns: none; */
-        /* grid-template-rows: repeat(3, 1fr); */
         margin-top: 0px;
         width: 100%;
-        /* margin-left: 40px; */
         gap: 20%;
-        border: 1px solid black;
     }
 }
 
@@ -169,7 +186,7 @@
         /* margin-left: 40px; */
         /* display: relative; */
         /* position: absolute; */
-        margin-top: 100px;
+        margin-top: 0px;
     }
 }
 
@@ -182,13 +199,14 @@
     border-radius: 10px;
     background-color: white ;
     @media (width < 450px) {
-        border-radius: 0px;
+        /* position: absolute; */
+        border-radius: 5px;
         border: none;
     }
 }
 .large-fries {
     @media (width < 450px) {
-        margin-top: 25%;
+        margin-top: 30px;
     }
 }
 
@@ -206,4 +224,19 @@
     margin-top: 0px;
     font-family: "Montserrat";
     
+}
+
+.small2, .medium2, .large2 {
+    /* border: 1px solid black; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    @media (width < 450px) {
+        border-radius: 5px;
+        /* border: 1px solid black; */
+        width: 100%;
+        margin-top: 30px;
+        /* background-color: transparent; */
+    }
 }

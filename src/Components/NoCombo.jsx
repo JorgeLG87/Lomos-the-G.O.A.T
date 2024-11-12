@@ -13,7 +13,7 @@ export default function NoCombo() {
                     <p className="title2"><span className="span-text">Lomo</span></p><p className="title">Type</p>
                 </div>
                 <div className="nocombo-sub-container-lomo">
-                    <div className="small">
+                    <div className="small2">
                         <p className="text">The G.O.A.T</p>
                         <div className="icons-lomo">
                             <img className="icon-item-lomo" src="/sandwich1.svg"/>
@@ -50,7 +50,7 @@ export default function NoCombo() {
                         <button onClick={() => cart.addOneToCart("7")} className="nocombo-add" type="button">Add To Cart</button>
                     </div>
 
-                    <div className="medium">
+                    <div className="medium2">
                         <p className="text">Classic</p>
                         <div className="icons-lomo">
                             <img className="icon-item-lomo" src="/sandwich1.svg"/>
@@ -125,8 +125,8 @@ export default function NoCombo() {
 
             <div className="nocombo-main-container-bev">
                 <p className="title2"><span className="span-text">Beverage</span></p><p className="title">Types</p>
-                <div className="nocombo-sub-container-fries">
-                    <div className="small-fries">
+                <div className="nocombo-sub-container-bev">
+                    <div className="small-bev">
                         <p className="text">Small</p>
                         <div className="icons-fries">          
                             <img className="icon-item-soda" src="/cola1.svg"/>
