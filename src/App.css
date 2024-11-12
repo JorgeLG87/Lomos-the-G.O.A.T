@@ -21,6 +21,7 @@ html {
   margin-top: 5px;
   margin-left: 20px;
   @media (width < 450px) {
+    /* position: absolute; */
     width: 135px;
     margin-top: 25px;
   }

@@ -1,5 +1,6 @@
 .navbar-container {
     background-color: black;
+    /* position: absolute; */
     display: inline-flex;
     width: 100%;
     justify-content: right;
@@ -112,7 +113,7 @@
 .menubar {
     display: none;
     z-index: 100;
-    /* position: relative; */
+    position: relative;
     @media (width < 450px) {
         display: inline-flex;
         width: 60px;
