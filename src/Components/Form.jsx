@@ -98,9 +98,9 @@ export default function Form({ shoppingCart, setShoppingCart }) {
                 <button className="pickup-order" type="button" onClick={() => setOrderType("pickup")}>Pick Up</button>
                 <button className="delivery-order" type="button" onClick={() => setOrderType("delivery")}>Delivery</button>
             </div>
-            <div className="choosecombo-text-container">
-                <p className="title2"><span className="span-text">Choose your</span></p><p className="title-form">bite!</p>
-            </div>
+            {/* <div className="choosecombo-text-container">
+                <p className="title2"><span className="span-text-form">Choose your</span></p><p className="title-form">bite!</p>
+            </div> */}
             <div className="form-fields">
             {orderType === "delivery" ? <form className="order-form" ref={form} onSubmit={sendEmail}>
                     <div className="personal-info">
@@ -130,6 +130,10 @@ export default function Form({ shoppingCart, setShoppingCart }) {
                 </form>}
             </div>
             
+            <div className="choosecombo-text-container">
+                <p className="title2"><span className="span-text-form">Choose your</span></p><p className="title-form">bite!</p>
+            </div>
+
             <div className="combo-btns-container">
                 <p className="combo-btn" onClick={() => {
                     handleCombo();

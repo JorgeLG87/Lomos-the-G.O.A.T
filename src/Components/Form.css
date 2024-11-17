@@ -13,7 +13,6 @@
         margin-left: 0%;
         box-shadow: none;
         min-height: 4000px;
-        /* height: 4200px; */
         max-height: 5000px;
     }
 }
@@ -31,7 +30,7 @@
     padding: 15px;
     @media (width < 450px) {
         width: 92.5%;
-        margin-top: -80px;
+        margin-top: -40px;
         margin-left: 0px;
         border-radius: 5px;
         border: none;
@@ -115,6 +114,7 @@
     width: 100%;
     border: none;
     border-bottom: 1px solid black;
+    background: transparent;
     @media (width < 450px) {
         width: 160px;
     }
@@ -130,6 +130,7 @@
     width: 100%;
     border: none;
     border-bottom: 1px solid black;
+    background: transparent;
     @media (width < 450px) {
         width: 75px;
     }
@@ -145,6 +146,7 @@
     width: 100%;
     border: none;
     border-bottom: 1px solid black;
+    background: transparent;
     @media (width < 450px) {
         width: 75px;
     }
@@ -181,7 +183,7 @@
     /* position: absolute; */
     justify-content: center;
     align-items: center;
-    margin-top: 70px;
+    margin-top: 0px;
     /* margin-left: 20px; */
     width: 150px;
     font-size: 18px;
@@ -201,7 +203,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 70px;
+    margin-top: 0px;
     width: 150px;;
     font-size: 18px;
     font-family: "Montserrat";
@@ -413,6 +415,7 @@
     width: 3%;
     z-index: 4;
     bottom: 40px;
+    margin-top: 30px;
     @media (width < 450px) {
         width: 9%;
         bottom: 40px;
@@ -425,7 +428,7 @@
 }
 
 .cart-text {
-    color: white;
+    color: black;
     font-family: "Barlow semi condensed";
     font-weight: 500;
     z-index: 4;
@@ -449,11 +452,11 @@
 .top-container2 {
 
     width: 102%;
-    height: 500px;
+    height: 1000px;
     position: relative;
     margin-top: -00px; 
     background-image: url('/food-menu.png');
-    background-size:cover;
+    background-size:contain;
     background-position: center;
     overflow: hidden;
     padding: 1px;
@@ -495,3 +498,15 @@
     margin-top: 0px;
     opacity: 0.7;
 }
+
+.span-text-form {
+    font-size: 50px;
+    font-weight: 600;
+    background: #E9D134;
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-family: "Montserrat";
+    @media (width < 450px) {
+      font-size: 35px;
+    }
+  }
