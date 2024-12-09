@@ -9,7 +9,11 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: "https://lomosthegoat.netlify.app",
+    methods: ["GET", "POST"],
+    credentials: true,
+}));
 
 app.use(express.static(path.join(__dirname, "build")));
 
