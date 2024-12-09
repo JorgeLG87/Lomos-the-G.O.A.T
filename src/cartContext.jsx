@@ -25,7 +25,7 @@ function CartProvider({ children }) {
 
 
     function getProductBeverage(id) {
-        if (id === "price_1PYFLk03vPVWwY4emohOmTTs" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6") {
+        if (id === "price_1PYFLk03vPVWwY4emohOmTTs" || id === "price_1QAWMLAspxlK0TBs40YVjWnR" || id === "3" || id === "4" || id === "5" || id === "6") {
             const beverageType = document.getElementById(`bev-type${id}`).value;
             return beverageType;
         } else {
@@ -36,30 +36,44 @@ function CartProvider({ children }) {
 
     // SPECIAL INSTRUCTIONS
     function getLettuceInstruction(id) {
-        if (id === "price_1PYFLk03vPVWwY4emohOmTTs" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6" || id === "7" || id === "8") {
+        if (id === "price_1PYFLk03vPVWwY4emohOmTTs" || id === "price_1QAWMLAspxlK0TBs40YVjWnR" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
             const lettuce = document.getElementById(`lettuce${id}`).checked;
             return lettuce;
         } else return "";
     }
 
     function getTomatoeInstruction(id) {
-        if (id === "price_1PYFLk03vPVWwY4emohOmTTs" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6" || id === "7" || id === "8") {
+        if (id === "price_1PYFLk03vPVWwY4emohOmTTs" || id === "price_1QAWMLAspxlK0TBs40YVjWnR" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
             const tomatoe = document.getElementById(`tomatoe${id}`).checked;
             return tomatoe;
         } else return "";
     }
 
     function getSaltInstruction(id) {
-        if (id === "price_1PYFLk03vPVWwY4emohOmTTs" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6" || id === "7" || id === "8") {
+        if (id === "price_1PYFLk03vPVWwY4emohOmTTs" || id === "price_1QAWMLAspxlK0TBs40YVjWnR" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
             const salt = document.getElementById(`salt${id}`).checked;
             return salt;
         } else return "";
     }
 
     function getMayoInstruction(id) {
-        if (id === "price_1PYFLk03vPVWwY4emohOmTTs" || id === "2" || id === "3" || id === "4" || id === "5" || id === "6" || id === "7" || id === "8") {
+        if (id === "price_1PYFLk03vPVWwY4emohOmTTs" || id === "price_1QAWMLAspxlK0TBs40YVjWnR" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
             const mayo = document.getElementById(`mayo${id}`).checked;
             return mayo;
+        } else return "";
+    }
+
+    function getKetchupInstruction(id) {
+        if (id === "price_1PYFLk03vPVWwY4emohOmTTs" || id === "price_1QAWMLAspxlK0TBs40YVjWnR" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
+            const ketchup = document.getElementById(`ketchu${id}`).checked;
+            return ketchup;
+        } else return "";
+    }
+
+    function getMustardInstruction(id) {
+        if (id === "price_1PYFLk03vPVWwY4emohOmTTs" || id === "price_1QAWMLAspxlK0TBs40YVjWnR" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
+            const mustard = document.getElementById(`mustard${id}`).checked;
+            return mustard;
         } else return "";
     }
 
@@ -76,7 +90,7 @@ function CartProvider({ children }) {
         const quantity = getProductQuantity(id);
 
         const beverageType= getProductBeverage(id);
-        // console.log(beverageType);
+        
         const lettuce = getLettuceInstruction(id);
 
         const tomatoe = getTomatoeInstruction(id);
@@ -84,6 +98,10 @@ function CartProvider({ children }) {
         const salt = getSaltInstruction(id);
 
         const mayo = getMayoInstruction(id);
+
+        const ketchup = getKetchupInstruction(id);
+
+        const mustard = getMustardInstruction(id);
         
         setCartProducts([
             ...cartProducts, {
@@ -94,38 +112,11 @@ function CartProvider({ children }) {
                 tomatoeInstruction: tomatoe ? "No Tomatoes" : "",
                 saltInstruction: salt ? "No Salt" : "",
                 mayoInstruction: mayo ? "No Mayo" : "",
+                ketchupInstruction: ketchup ? "No Ketchup" : "",
+                mustardInstruction: mustard ? "No Mustard" : "",
                 index: Date.now()
             }
         ])
-        // if (quantity === 0) {
-        //     setCartProducts([
-        //         ...cartProducts, {
-        //             id: id,
-        //             quantity: 1,
-        //             beverage: beverageType
-        //         }
-        //     ])
-        // } else {
-        //     const sameIdAndBev = cartProducts.map(product => product.id === id && product.beverage === beverageType);
-        //     if (sameIdAndBev[0] === true) {
-        //         const item = getCartItemById(id);
-        //         setCartProducts([...cartProducts, {
-        //             id: id,
-        //             quantity: item.quantity + 1,
-        //             beverage: beverageType
-        //         }])
-        //         console.log(item, "Line 67");
-        //      } else {
-        //         setCartProducts([
-        //             ...cartProducts, {
-        //                 id: id,
-        //                 quantity: 1,
-        //                 beverage: beverageType
-        //             }
-        //         ])
-        //      }
-        // }
-        // cartProducts.map(product => product.id === id ? console.log(product.quantity) : null);
     }
 
     function removeOneFromCart(id) {
