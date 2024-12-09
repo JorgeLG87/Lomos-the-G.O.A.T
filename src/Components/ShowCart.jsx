@@ -32,7 +32,7 @@ export default function ShowCart() {
     }
 
     const checkout = async () => {
-        await fetch("http://localhost:4000/checkout", {
+        await fetch("https://lomos-the-g-o-a-t.onrender.com/checkout", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
