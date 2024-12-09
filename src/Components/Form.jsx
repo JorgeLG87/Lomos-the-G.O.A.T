@@ -1,5 +1,5 @@
 import "./Form.css"
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CartContext} from "../cartContext.jsx";
 import { useRef } from "react";
@@ -16,13 +16,27 @@ export default function Form({ shoppingCart, setShoppingCart }) {
 
     const [ selected, setSelected ] = useState("");
 
+    //CREATE A RANDOM NUMBER TO ASSIGN TO THE FORM. AND USE THAT NUMBER TO BE SENT WHEN THE CUSTOMER PAYS THE ORDER.
+    const [ randomNumber, setRandomNumber ] = useState(null);
+
+    const generateRandomFunction = () => {
+        const min = 1; //Minimum value (inclusive)
+        const max = 1000; //Maximum value (inclusive)
+
+        const newRadomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+        setRandomNumber(newRadomNumber);
+    }
+
+    useEffect(() => {
+        generateRandomFunction();
+    }, [])
+
+
     const sendEmail = (e) => {
         e.preventDefault();
 
         emailjs
-            .sendForm('service_6i1ihfq', 'template_xr6vg3i', form.current, {
-                publicKey: '4l4HUKlF6lW_-n6UM',
-            })
+            .sendForm('service_6i1ihfq', 'template_xr6vg3i', form.current, '4l4HUKlF6lW_-n6UM')
             .then(
                 () => {
                     console.log("Success");
@@ -117,6 +131,7 @@ export default function Form({ shoppingCart, setShoppingCart }) {
 
                         <input className="state-input" placeholder="State" name="State" required></input>
                     </div>
+                    <input className="random-number" value={randomNumber} placeholder={randomNumber} name="Random Number" hidden></input>
                     <button className="submit-button-form" type="submit">Send</button>
                 </form> : <form className="order-form" ref={form} onSubmit={sendEmail}>
                     <div className="personal-info">
@@ -125,6 +140,7 @@ export default function Form({ shoppingCart, setShoppingCart }) {
                         <input className="lastname-input" type="text" placeholder="Last Name" name="Last Name" required></input>
 
                         <input className="contact-number" type="number" placeholder="Phone #" name="Phone Number" required></input>
+                        <input className="random-number" value={randomNumber} placeholder={randomNumber} name="Random Number" hidden></input>
                     </div>
                     <button className="submit-button-form" type="submit">Send</button>
                 </form>}

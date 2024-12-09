@@ -38,6 +38,7 @@ export default function AboutUsMUICarousel() {
         overflow: 'auto',
         width: "100%",
         height: "300px",
+        justifyContent: 'center',
         padding: 0,
         scrollSnapType: 'x mandatory',
         '& > *': {
