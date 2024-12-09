@@ -2,6 +2,7 @@
 // The G.O.A.T Small Combo --> price_1PYFLk03vPVWwY4emohOmTTs
 
 const express = require("express");
+const path = require("path");
 require("dotenv").config();
 var cors = require("cors");
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
@@ -10,7 +11,7 @@ const app = express();
 
 app.use(cors());
 
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, "build")));
 
 app.use(express.json());
 
@@ -40,6 +41,8 @@ app.post("/checkout", async (req, res) => {
     }))
 })
 
-app.listen(4000, () => {
-    console.log("Listening on Port 4000")
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
+    console.log(`Listening on Port ${PORT}`);
 })
