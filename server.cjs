@@ -1,10 +1,10 @@
 // pk_test_51PYFEG03vPVWwY4eJs5YvcEZi3W04wRaNejh28GIbKDqZqnhWNBv8Y3j8LwDuDluOm6MYHqY8PQyOiPT7BlngjbR00gGJyNhIe
 // The G.O.A.T Small Combo --> price_1PYFLk03vPVWwY4emohOmTTs
 
-
 const express = require("express");
+require("dotenv").config();
 var cors = require("cors");
-const stripe = require("stripe")("sk_test_51PYFEG03vPVWwY4ewx4cfovmwPG0ECdfpeT9TkBNIi9ecFvuoos3aRvZWayrzlJgmLUvjbztaFU0zO7u4O0aV3Y0009B32BDTC")
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 
 const app = express();
 
