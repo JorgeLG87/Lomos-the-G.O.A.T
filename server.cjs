@@ -4,14 +4,14 @@
 const express = require("express");
 const path = require("path");
 require("dotenv").config();
-var cors = require("cors");
+const cors = require("cors");
 const stripe = require("stripe")(process.env.VITE_STRIPE_SECRET_KEY)
 
 const app = express();
 
 app.use(cors({
     origin: "https://lomosthegoat.netlify.app",
-    methods: ["GET", "POST"],
+    // methods: ["GET", "POST"],
     credentials: true,
 }));
 
