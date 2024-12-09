@@ -5,15 +5,14 @@ const express = require("express");
 const path = require("path");
 require("dotenv").config();
 const cors = require("cors");
-const stripe = require("stripe")("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")
-
-console.log(process.env.VITE_STRIPE_SECRET_KEY);
+const stripe = require("stripe")(process.env.VITE_STRIPE_SECRET_KEY)
 
 const app = express();
 
 app.use(cors({
     origin: "https://lomosthegoat.netlify.app",
-    // methods: ["GET", "POST"],
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
 }));
 
