@@ -1,6 +1,3 @@
-// pk_test_51PYFEG03vPVWwY4eJs5YvcEZi3W04wRaNejh28GIbKDqZqnhWNBv8Y3j8LwDuDluOm6MYHqY8PQyOiPT7BlngjbR00gGJyNhIe
-// The G.O.A.T Small Combo --> price_1PYFLk03vPVWwY4emohOmTTs
-
 const express = require("express");
 const path = require("path");
 require("dotenv").config();
