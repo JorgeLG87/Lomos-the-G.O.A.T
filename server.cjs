@@ -40,8 +40,8 @@ app.post("/checkout", async (req, res) => {
     const session = await stripe.checkout.sessions.create({
         line_items: lineItems,
         mode: 'payment',
-        success_url: 'https://lomos-the-g-o-a-t.onrender.com/success',
-        cancel_url: 'https://lomos-the-g-o-a-t.onrender.com/cancel'
+        success_url: 'https://lomosthegoat.netlify.app/success',
+        cancel_url: 'https://lomosthegoat.netlify.app/cancel'
     })
 
     res.send(JSON.stringify({
