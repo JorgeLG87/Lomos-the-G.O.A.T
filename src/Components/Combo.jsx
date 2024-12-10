@@ -69,7 +69,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                 <img className="icon-item" src="/french-fries1.svg"/>
                                 <img className="icon-item" src="/cola1.svg"/>
                             </div>
-                            <select id="bev-price_1QBDqDAspxlK0TBsmuFK3fGa" className="beverage-type">
+                            <select id="bev-typeprice_1QBDqDAspxlK0TBsmuFK3fGa" className="beverage-type">
                                 <option value="">-----Choose Beverage-----</option>
                                 <option value="Coca Cola">Coca Cola</option>
                                 <option value="Pepsi">Pepsi</option>
