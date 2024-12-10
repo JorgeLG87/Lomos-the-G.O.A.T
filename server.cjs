@@ -2,7 +2,7 @@ const express = require("express");
 const path = require("path");
 require("dotenv").config();
 const cors = require("cors");
-const stripe = require("stripe")(process.env.VITE_STRIPE_KEY)
+const stripe = require("stripe")(process.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
 const app = express();
 
@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, "build")));
 app.use(express.json());
 
 app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Origin");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
  })
