@@ -72,6 +72,7 @@
     width: 100%;
     align-content: center;
     justify-content: center;
+    /* margin-left: 20%; */
 }
 
 .small-bev {
@@ -193,7 +194,7 @@
 
 .small-fries, .medium-fries, .large-fries {
     width: 80%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     padding: 10px;
     border-radius: 10px;
@@ -212,7 +213,7 @@
 
 .title2 {
     /* border: 1px solid black; */
-    width: 100%;
+    /* width: 100%; */
 }
 
 .title3 {
@@ -232,6 +233,8 @@
     padding: 10px;
     border-radius: 10px;
     background-color: white;
+    margin-left: 20%;
+    width: 100%;
     @media (width < 450px) {
         border-radius: 5px;
         /* border: 1px solid black; */

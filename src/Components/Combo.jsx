@@ -60,9 +60,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                         <p className="title2"><span className="span-text">G.O.A.T</span></p><p className="title">Combo</p>
                     </div>
                     <div className="sub-container">
-  
                         <div className="large">
-                            
                             <p className="text">Includes</p>
                             <div className="icons">
                                 <img className="icon-item" src="/sandwich1.svg"/>
