@@ -8,11 +8,15 @@
     grid-template-columns: 50% 50%;
     padding-left: 5%;
     padding-right: 5%;
+    margin-left: -10%;
+    @media (width < 450px) {
+        margin-left: 0%;
+    }
 }
 
 .navigating-showcart {
     margin-top: 20px;
-    margin-left: 0px;
+    /* margin-left: 0px; */
     border: 1px solid black;
     width: fit-content;
     height: 35px;
@@ -154,8 +158,15 @@
 
 .total-price {
     margin-top: 50px;
+    margin-left: -20%;
     font-size: 30px;
     font-family: "Barlow semi condensed";
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    @media (width < 450px) {
+        margin-left: 0%;
+    }
 }
 
 .title-span-container2 {

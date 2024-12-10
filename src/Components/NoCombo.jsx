@@ -127,7 +127,7 @@ export default function NoCombo() {
                 <p className="title2"><span className="span-text">Beverage</span></p><p className="title">Types</p>
                 <div className="nocombo-sub-container-bev">
                     <div className="small-bev">
-                        <p className="text">Small</p>
+                        <p className="text">12 fl. Oz</p>
                         <div className="icons-fries">          
                             <img className="icon-item-soda" src="/cola1.svg"/>
                         </div>
@@ -135,23 +135,6 @@ export default function NoCombo() {
                         <button onClick={() => cart.addOneToCart("price_1QU9yiAspxlK0TBsWGwULncs")} className="nocombo-add" type="button">Add To Cart</button>
                     </div>
 
-                    {/* <div className="medium-fries">
-                        <p className="text">Medium</p>
-                        <div className="icons-fries">
-                            <img className="icon-item-soda" src="/soda-medium.png"/>
-                        </div>
-                        {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="10").length}</p> : null}
-                        <button onClick={() => cart.addOneToCart("10")} className="nocombo-add" type="button">Add To Cart</button>
-                    </div> */}
-
-                    {/* <div className="large-fries">
-                        <p className="text">Large</p>
-                        <div className="icons-fries">
-                            <img className="icon-item-soda" src="/soda-medium.png"/>
-                        </div>
-                        {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="11").length}</p> : null}
-                        <button onClick={() => cart.addOneToCart("11")} className="nocombo-add" type="button">Add To Cart</button>
-                    </div> */}
                 </div>
             </div>
 

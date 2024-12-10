@@ -11,7 +11,6 @@
     padding-left: 10%;
     padding-right: 10%;
     @media (width < 450px) {
-        /* position: relative; */
         position: absolute;
         width: 100%;
         height: 100vh;
@@ -27,11 +26,8 @@
     border-radius: 10px;
     width: 100%;
     height:fit-content;
-    /* border: 1px solid black; */
     padding: 0px;
     padding-bottom: 30px;
-    /* padding-left: 20px; */
-    /* padding-right: 20px; */
     padding-top: 0px;
     text-align: center;
     margin-top: 0px;
@@ -40,16 +36,13 @@
         flex-direction: column;
         align-items: center;
         margin-top: 0px;
-        /* margin-left: 10px; */
         padding-left: 0px;
         padding-right: 0px;
-        /* gap: 50%; */
-        /* border: 1px solid black; */
+        margin-left: 0%;
     }
 }
 
 .nocombo-main-container-bev {
-    /* position: relative; */
     border-radius: 10px;
     width: 100%;
     height:fit-content;
@@ -58,35 +51,36 @@
     padding-top: 0px;
     text-align: center;
     margin-top: 0px;
+    
     @media (width < 450px) {
-        /* position: absolute; */
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* margin-top: 250px;; */
     }
 }
 
 .nocombo-sub-container-bev {
     display: flex;
-    width: 100%;
+    width: 32%;
+    margin-left: 33%;
     align-content: center;
     justify-content: center;
-    /* margin-left: 20%; */
+    @media (width < 450px) {
+        width: 100%;
+        margin-left: 0%;
+    }
 }
 
 .small-bev {
     width: 80%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     padding: 10px;
-    /* margin-left: 10%; */
     background-color: white;
     border-radius: 5px;
 }
 
 .nocombo-sub-container-lomo {
      margin-top: 0px;
-     /* margin-left: 10%; */
      border-radius: 10px;
      width: 80%;
      height:fit-content;
@@ -96,13 +90,10 @@
      @media (width < 450px) {
         display: flex;
         flex-direction: column;
-        /* grid-template-columns: none; */
-        /* grid-template-rows: repeat(2, 1fr); */
         align-items: center;
         justify-content: center;
         gap: 10%;
         margin-bottom: 0px;
-        /* margin-left: 10%; */
      }
 }
 
@@ -131,7 +122,6 @@
     height: 50px;
     border-radius: 10px;
     border: none;
-    /* background-color: rgb(253, 230, 21); */
     background-color: #E9D134;
     color: rgb(200, 0, 0);
     font-size: 20px;
@@ -143,9 +133,7 @@
 }
 
 .nocombo-sub-container-fries {
-    /* position: absolute; */
     border-radius: 10px;
-    /* position: relative; */
     width: 100%;
     height: fit-content;
     display: grid;
@@ -165,59 +153,47 @@
 }
 
 .nocombo-title-span-container {
-    /* margin-top: 100px */
     @media (width < 450px) {
-        /* display: flex; */
-        /* border: 1px solid black; */
         width: 100%;
-        /* margin-left: 40px; */
-        /* display: relative; */
-        /* position: absolute; */
         margin-top: 0px;
     }
 }
 
 
 .nocombo-title-span-container2 {
-    /* margin-top: 100px */
     @media (width < 450px) {
-        /* display: flex; */
-        /* border: 1px solid black; */
         width: 100%;
-        /* margin-left: 40px; */
-        /* display: relative; */
-        /* position: absolute; */
         margin-top: 0px;
     }
 }
 
 
 .small-fries, .medium-fries, .large-fries {
-    width: 80%;
-    /* border: 1px solid black; */
+    width: 100%;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    margin-left: 60%;
     padding: 10px;
     border-radius: 10px;
     background-color: white ;
     @media (width < 450px) {
-        /* position: absolute; */
+        width: 80%;
+        margin-left: 0%;
         border-radius: 5px;
         border: none;
     }
 }
 .large-fries {
+    /* margin-left: 0%; */
+    width: 100%;
     @media (width < 450px) {
+        width: 80%;
         margin-top: 30px;
+        margin-left: 0%;
     }
 }
 
-.title2 {
-    /* border: 1px solid black; */
-    /* width: 100%; */
-}
 
 .title3 {
-    /* border: 1px solid black; */
     width: 100%;
     margin-left: 40px;
     color: black;
@@ -228,7 +204,6 @@
 }
 
 .small2, .medium2, .large2 {
-    /* border: 1px solid black; */
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     padding: 10px;
     border-radius: 10px;
@@ -237,9 +212,8 @@
     width: 100%;
     @media (width < 450px) {
         border-radius: 5px;
-        /* border: 1px solid black; */
         width: 100%;
         margin-top: 30px;
-        /* background-color: transparent; */
+        margin-left: 0%;
     }
 }
