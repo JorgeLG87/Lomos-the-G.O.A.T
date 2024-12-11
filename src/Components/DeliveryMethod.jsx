@@ -52,7 +52,7 @@ export default function DeliveryMethod() {
 
    useEffect(() => {
         if (completeAddress) {
-            fetch(`https://lomos-the-g-o-a-t.onrender.com/api-get-distance?${completeAddress}`, {
+            fetch(`https://lomos-the-g-o-a-t.onrender.com/api-get-distance?address=${completeAddress}`, {
                 method: "GET",
                 headers: {
                     "Content-Type" : "application/json",
