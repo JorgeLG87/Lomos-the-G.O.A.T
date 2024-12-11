@@ -33,7 +33,7 @@ app.get("/api-get-distance", async (req, res) => {
     }
 
     try {
-        const fetchResponse = await fetch(`https://maps.googleapis.com/maps/api/distancematrix/json?destinations=${completeAddress}&origins=89 MacArthur Ave., Garfield, NJ&units=imperial&key=${API_KEY}`)
+        const fetchResponse = await fetch(`https://maps.googleapis.com/maps/api/distancematrix/json?destinations=${completeAddress}&origins=89 MacArthur Ave., Garfield, NJ&units=imperial&key=AIzaSyCDzw3NWH9ac727pxK2VD6k4XCcBK-rCh8`)
         
         if (!fetchResponse.ok) {
             throw new Error(`Google API error: ${fetchResponse.status}`);
