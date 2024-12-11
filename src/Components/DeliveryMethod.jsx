@@ -51,10 +51,17 @@ export default function DeliveryMethod() {
    }
 
    useEffect(() => {
-        fetch("https://lomos-the-g-o-a-t.onrender.com/api-get-distance")
-        .then(res => res.json())
-        .then(response => setDistance(response))
-        .catch(error => console.log(error));
+        if (completeAddress) {
+            fetch(`https://lomos-the-g-o-a-t.onrender.com/api-get-distance?${completeAddress}`, {
+                method: "GET",
+                headers: {
+                    "Content-Type" : "application/json",
+                },
+            })
+            .then(res => res.json())
+            .then(response => setDistance(response))
+            .catch(error => console.log(error));
+        }
    }, [completeAddress])
 
     useEffect(() => {

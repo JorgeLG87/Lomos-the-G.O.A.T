@@ -24,7 +24,28 @@ app.use(function (req, res, next) {
  })
 
 app.get("/api-get-distance", async (req, res) => {
-    res.json({message: "Succesfull"});
+    const { completeAddress } = req.query;
+    
+    if (!completeAddress) {
+        return req.status(400).json({error: "Complete address is required"})
+    }
+
+    try {
+        const fetchResponse = await fetch(`https://maps.googleapis.com/maps/api/distancematrix/json?destinations=${completeAddress}&origins=89 MacArthur Ave., Garfield, NJ&units=imperial&key=${process.env.VITE_GOOGLE_API_KEY}`)
+        
+        if (!fetchResponse.ok) {
+            throw new Error(`Google API error: ${fetchResponse.status}`);
+        }
+        const distance = await fetchResponse.json();
+        res.send(distance);
+    } catch (error) {
+        console.error("Error fetching distance: ", error)
+        res.status(500).json({
+            status: "error",
+            message: "Failed to fetch distance",
+            error: error.message,
+        });
+    }
 })
 
 app.post("/checkout", async (req, res) => {
