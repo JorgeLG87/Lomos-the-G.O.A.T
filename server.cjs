@@ -7,7 +7,7 @@ const stripe = require("stripe")(process.env.VITE_STRIPE_KEY);
 const app = express();
 
 app.use(cors({
-    origin: "https://lomosthegoat.netlify.app",
+    origin: ["https://lomosthegoat.netlify.app", "http://localhost:5173"],
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true,
@@ -22,6 +22,10 @@ app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
  })
+
+app.get("/api-get-distance", async (req, res) => {
+    res.send("Route created");
+})
 
 app.post("/checkout", async (req, res) => {
 

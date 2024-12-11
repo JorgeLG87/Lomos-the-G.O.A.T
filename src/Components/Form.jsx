@@ -11,41 +11,41 @@ import NoCombo from "./NoCombo.jsx";
 
 export default function Form({ shoppingCart, setShoppingCart }) {
 
-    const form = useRef();
+    // const form = useRef();
     const navigate = useNavigate();
 
     const [ selected, setSelected ] = useState("");
 
     //CREATE A RANDOM NUMBER TO ASSIGN TO THE FORM. AND USE THAT NUMBER TO BE SENT WHEN THE CUSTOMER PAYS THE ORDER.
-    const [ randomNumber, setRandomNumber ] = useState(null);
+    // const [ randomNumber, setRandomNumber ] = useState(null);
 
-    const generateRandomFunction = () => {
-        const min = 1; //Minimum value (inclusive)
-        const max = 1000; //Maximum value (inclusive)
+    // const generateRandomFunction = () => {
+    //     const min = 1; //Minimum value (inclusive)
+    //     const max = 1000; //Maximum value (inclusive)
 
-        const newRadomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-        setRandomNumber(newRadomNumber);
-    }
+    //     const newRadomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+    //     setRandomNumber(newRadomNumber);
+    // }
 
-    useEffect(() => {
-        generateRandomFunction();
-    }, [])
+    // useEffect(() => {
+    //     generateRandomFunction();
+    // }, [])
 
 
-    const sendEmail = (e) => {
-        e.preventDefault();
+    // const sendEmail = (e) => {
+    //     e.preventDefault();
 
-        emailjs
-            .sendForm('service_6i1ihfq', 'template_xr6vg3i', form.current, '4l4HUKlF6lW_-n6UM')
-            .then(
-                () => {
-                    console.log("Success");
-                },
-                (error) => {
-                    console.log('FAILED...', error.text);
-                },
-            );
-    };
+    //     emailjs
+    //         .sendForm('service_6i1ihfq', 'template_xr6vg3i', form.current, '4l4HUKlF6lW_-n6UM')
+    //         .then(
+    //             () => {
+    //                 console.log("Success");
+    //             },
+    //             (error) => {
+    //                 console.log('FAILED...', error.text);
+    //             },
+    //         );
+    // };
     
     const [ dateStamp, setDateStamp ] = useState(0)
     const [ secDateStamp, setSecDateStamp ] = useState(1); 
@@ -56,7 +56,7 @@ export default function Form({ shoppingCart, setShoppingCart }) {
     const [lomo, setLomo] = useState([]);
     const [ quantity, setQuantity ] = useState([]);
 
-    const [ orderType, setOrderType ] = useState("");
+    // const [ orderType, setOrderType ] = useState("");
 
     const cart = useContext(CartContext);
     console.log(cart.items);

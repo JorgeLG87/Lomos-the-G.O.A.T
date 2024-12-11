@@ -6,6 +6,15 @@ export default function DeliveryMethod() {
 
     const form = useRef();
     const [ orderType, setOrderType ] = useState("");
+    const [ deliveryAddress, setDeliveryAddress ] = useState("");
+    const [ city, setCity ] = useState("");
+    const [ state, setState ] = useState("");
+    const [ completeAddress, setCompleteAddress ] = useState("");
+    const [ originAddress, setOriginAddress ] = useState("89 MacArthur Ave., Garfield, NJ"); 
+    const [ distance, setDistance ] = useState(null);
+
+    //API KEY
+    const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -37,6 +46,32 @@ export default function DeliveryMethod() {
         generateRandomFunction();
     }, [])
 
+   function handleCompleteAddress() {
+        setCompleteAddress(`${deliveryAddress}, ${city}, NJ`);
+   }
+
+   useEffect(() => {
+        fetch("https://lomos-the-g-o-a-t.onrender.com/api-get-distance")
+        .then(res => res.json())
+        .then(response => setDistance(response))
+        .catch(error => console.log(error));
+   }, [completeAddress])
+
+    useEffect(() => {
+        console.log(deliveryAddress);
+    }, [deliveryAddress]);
+
+    useEffect(() => {
+        console.log(city);
+    }, [city])
+
+    useEffect(() => {
+        console.log(completeAddress);
+    }, [completeAddress]);
+
+    useEffect(() => {
+        console.log(distance);
+    }, [distance]);
 
     return (
         <div style={{display: "flex", flexDirection:"column", alignContent: "center", justifyContent: "center", textAlign: "center"}}>
@@ -44,9 +79,6 @@ export default function DeliveryMethod() {
                 <button className="pickup-order" type="button" onClick={() => setOrderType("pickup")}>Pick Up</button>
                 <button className="delivery-order" type="button" onClick={() => setOrderType("delivery")}>Delivery</button>
             </div>
-            {/* <div className="choosecombo-text-container">
-                <p className="title2"><span className="span-text-form">Choose your</span></p><p className="title-form">bite!</p>
-            </div> */}
             <div className="form-fields">
             {orderType === "delivery" ? <form className="order-form" ref={form} onSubmit={sendEmail}>
                     <p className="delivery-charge-text">There is a delivery fee. To check how much extra will the charge be, please type in your complete address.</p>
@@ -58,14 +90,14 @@ export default function DeliveryMethod() {
                         <input className="contact-number" type="number" placeholder="Phone #" name="Phone Number" required></input>
                     </div>
                     <div className="delivery-info">
-                        <input className="delivery-input" placeholder="Delivery Address" name="Delivery Address" required></input>
+                        <input className="delivery-input" placeholder="Delivery Address" name="Delivery Address" value={deliveryAddress} onChange={(e) => setDeliveryAddress(e.target.value)} required></input>
 
-                        <input className="city-input" placeholder="City" name="City" required></input>
+                        <input className="city-input" placeholder="City" name="City" value={city} onChange={(e) => setCity(e.target.value)} required></input>
 
                         <input className="state-input" placeholder="State" name="State" defaultValue="New Jersey" disabled></input>
                     </div>
                     <input className="random-number" value={randomNumber} placeholder={randomNumber} name="Random Number" hidden></input>
-                    <button className="submit-button-form" type="submit">Send</button>
+                    <button className="submit-button-form" type="button" onClick={handleCompleteAddress}>Ok</button>
                 </form> : <form className="order-form" ref={form} onSubmit={sendEmail}>
                     <div className="personal-info">
                         <input className="name-input" type="text" placeholder="First Name" name="First Name" required></input>
@@ -75,7 +107,7 @@ export default function DeliveryMethod() {
                         <input className="contact-number" type="number" placeholder="Phone #" name="Phone Number" required></input>
                         <input className="random-number" value={randomNumber} placeholder={randomNumber} name="Random Number" hidden></input>
                     </div>
-                    <button className="submit-button-form" type="submit">Send</button>
+                    <button className="submit-button-form" type="submit">Ok</button>
                 </form>}
             </div>
         </div>
