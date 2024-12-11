@@ -27,7 +27,7 @@ app.get("/api-get-distance", async (req, res) => {
     const { completeAddress } = req.query;
     
     if (!completeAddress) {
-        return req.status(400).json({error: "Complete address is required"})
+        return res.status(400).json({error: "Complete address is required"})
     }
 
     try {
