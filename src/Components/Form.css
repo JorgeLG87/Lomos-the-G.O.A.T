@@ -40,7 +40,7 @@
 
 .submit-button-form {
     width: 30%;
-    height: 35px;
+    height: 40px;
     border: none;
     background-color: #E9D134;
     color: #AF2007;
@@ -50,6 +50,9 @@
     border-radius: 10px;
     margin-left: 35%;
     margin-top: 50px;
+}
+.submit-button-form:hover {
+    cursor: pointer;
 }
 
 .submit-btn {

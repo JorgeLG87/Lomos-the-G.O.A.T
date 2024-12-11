@@ -170,8 +170,8 @@ export default function Home({ slides }) {
           </div>
         </div>
         <div className="icon-container">
-          <img className="face" src="/facebook.png"/>
-          <img className="location" src="/location.png"/>
+          {/* <img className="face" src="/facebook.png"/> */}
+          {/* <img className="location" src="/location.png"/> */}
         </div>
         <QueEsLomo/>
           <Link className="link" to="/order-now" style={{textDecoration:"none", marginTop:"80px", display:"contents"}}>

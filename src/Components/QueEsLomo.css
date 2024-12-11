@@ -54,7 +54,7 @@
 
 .lomo-title {
     margin-left: 0px;
-    margin-top: 20px;
+    margin-top: 0px;
     font-family: "Barlow Semi Condensed";
     font-size: 45px;
     font-weight: 400;
@@ -66,9 +66,10 @@
 }
 
 .lomo-text {
-    margin-top: -20px;
+    margin-top: -15px;
     margin-left: 00px;
     line-height: 19px;
+    font-size: 20px;
     font-family: "Barlow Semi Condensed";
     font-weight: 300;
     @media (width < 450px) {
@@ -121,7 +122,8 @@
     font-size: 55px;
     font-family: "Montserrat";
     font-weight: 600;
-    font-stretch: ultra-expanded;
+    /* font-stretch: ultra-expanded; */
+   
     /* background: linear-gradient(120deg, rgb(200, 0, 0), rgb(253, 230, 21)); */
     background: #E9D134;
     -webkit-background-clip: text;
