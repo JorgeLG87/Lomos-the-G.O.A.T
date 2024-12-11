@@ -24,7 +24,7 @@ app.use(function (req, res, next) {
  })
 
 app.get("/api-get-distance", async (req, res) => {
-    res.send("Route created");
+    res.json({message: "Succesfull"});
 })
 
 app.post("/checkout", async (req, res) => {
