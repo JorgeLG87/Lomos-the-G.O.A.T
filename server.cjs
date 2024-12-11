@@ -3,6 +3,7 @@ const path = require("path");
 require("dotenv").config();
 const cors = require("cors");
 const stripe = require("stripe")(process.env.VITE_STRIPE_KEY);
+const API_KEY = process.env.VITE_GOOGLE_API_KEY;
 
 const app = express();
 
@@ -32,7 +33,7 @@ app.get("/api-get-distance", async (req, res) => {
     }
 
     try {
-        const fetchResponse = await fetch(`https://maps.googleapis.com/maps/api/distancematrix/json?destinations=${completeAddress}&origins=89 MacArthur Ave., Garfield, NJ&units=imperial&key=${process.env.VITE_GOOGLE_API_KEY}`)
+        const fetchResponse = await fetch(`https://maps.googleapis.com/maps/api/distancematrix/json?destinations=${completeAddress}&origins=89 MacArthur Ave., Garfield, NJ&units=imperial&key=${API_KEY}`)
         
         if (!fetchResponse.ok) {
             throw new Error(`Google API error: ${fetchResponse.status}`);
