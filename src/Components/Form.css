@@ -48,7 +48,7 @@
     font-size: 16px;
     font-weight: 500;
     border-radius: 10px;
-    margin-left: 35%;
+    margin-left: 0%;
     margin-top: 50px;
 }
 .submit-button-form:hover {
@@ -336,6 +336,7 @@
 
 .personal-info {
     display: flex;
+    justify-content: center;
     gap: 40px;
     width: 100%;
     @media (width < 450px) {
@@ -347,6 +348,7 @@
 .delivery-info {
     display: flex;
     margin-top: 30px;
+    justify-content: center;
     @media (width < 450px) {
         /* margin-left: 10%; */
     }
@@ -360,6 +362,7 @@
 .ordertype-container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 100px;
     margin-top: 50px;
     @media (width < 450px) {
@@ -515,4 +518,38 @@
     @media (width < 450px) {
       font-size: 35px;
     }
+  }
+
+  .delivery-charge-text {
+    text-shadow: none;
+    color: #AF2007;
+    font-size: 17px;
+    font-family: 'Barlow semi condensed';
+  }
+
+  .checkout-btn {
+    color: black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 500px;
+    width: 20%;
+    /* margin-top: 30px; */
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #E9D134;
+    color: rgb(200, 0, 0);
+    font-size: 20px;
+    font-family: "Montserrat";
+    font-weight: 500;
+    @media (width < 450px) {
+        margin-top: 1200px;
+        width: 30%;
+    }
+  }
+
+  .checkout-btn:hover {
+    cursor: pointer;
   }

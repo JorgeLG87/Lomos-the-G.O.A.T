@@ -108,15 +108,16 @@ export default function Form({ shoppingCart, setShoppingCart }) {
        
             <img className="cart-icon" src="grocery-store.svg" onClick={() => navigate("/showcart")}/>
             <p className="cart-text" >({totalQuantity} items)</p>
-            <div className="ordertype-container">
+            {/* <div className="ordertype-container">
                 <button className="pickup-order" type="button" onClick={() => setOrderType("pickup")}>Pick Up</button>
                 <button className="delivery-order" type="button" onClick={() => setOrderType("delivery")}>Delivery</button>
-            </div>
+            </div> */}
             {/* <div className="choosecombo-text-container">
                 <p className="title2"><span className="span-text-form">Choose your</span></p><p className="title-form">bite!</p>
             </div> */}
-            <div className="form-fields">
+            {/* <div className="form-fields">
             {orderType === "delivery" ? <form className="order-form" ref={form} onSubmit={sendEmail}>
+                    <p className="delivery-charge-text">There is a delivery fee. To check how much extra will the charge be, please type in your complete address.</p>
                     <div className="personal-info">
                         <input className="name-input" type="text" placeholder="First Name" name="First Name" required></input>
     
@@ -129,7 +130,7 @@ export default function Form({ shoppingCart, setShoppingCart }) {
 
                         <input className="city-input" placeholder="City" name="City" required></input>
 
-                        <input className="state-input" placeholder="State" name="State" required></input>
+                        <input className="state-input" placeholder="State" name="State" defaultValue="New Jersey" disabled></input>
                     </div>
                     <input className="random-number" value={randomNumber} placeholder={randomNumber} name="Random Number" hidden></input>
                     <button className="submit-button-form" type="submit">Send</button>
@@ -144,7 +145,7 @@ export default function Form({ shoppingCart, setShoppingCart }) {
                     </div>
                     <button className="submit-button-form" type="submit">Send</button>
                 </form>}
-            </div>
+            </div> */}
             
             <div className="choosecombo-text-container">
                 <p className="title2"><span className="span-text-form">Choose your</span></p><p className="title-form">bite!</p>
@@ -176,6 +177,8 @@ export default function Form({ shoppingCart, setShoppingCart }) {
             <div id="added-quantity" className="added2-item-container">
                 {quantity.map(elem => <p name="Quantity">{elem}</p>)}
             </div>
+
+            <button className="checkout-btn" type="button" onClick={() => navigate("/showcart")}>Checkout</button>
             
             <div className="sideborder-right-container">
                 <img src="/sideborder-right.svg" className="side-border-right"/>

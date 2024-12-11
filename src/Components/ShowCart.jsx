@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../cartContext";
 import { getProductData } from "../storeProducts";
+import DeliveryMethod from "./DeliveryMethod";
 
 export default function ShowCart() {
 
@@ -51,6 +52,10 @@ export default function ShowCart() {
         // sendEmail();
     }
 
+    //CHECK HOW MANY ITEMS ARE IN THE CART
+    const totalQuantity = (cart.items).reduce((accu, product) => accu + product.quantity,0)
+    console.log(totalQuantity);
+
     return (
         <div className="showcart-page">
             <div className="sideborder-container2">
@@ -94,6 +99,8 @@ export default function ShowCart() {
                     )
                 })}
             </div>
+            
+            {totalQuantity > 0 ?  <DeliveryMethod/> : null}
             
             <div className="sideborder-right-container2">
                 <img src="/sideborder-right.svg" className="side-border-right"/>

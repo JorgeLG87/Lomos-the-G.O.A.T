@@ -84,24 +84,18 @@
     padding-left: 5%;
     padding-right: 0%;
     overflow: hidden;
-    /* min-height: 100vh; */
-    /* overflow-x: hidden; */
-    /* height: fit-content; */
     @media (width < 450px) {
         padding-left: 0%;
         padding-right: 0%;
-        /* position: relative; */
-        /* height: max-content; */
-        /* overflow-y: scroll; */
-        /* overflow-x: none; */
-        /* border: 3px solid green; */
     }
 }
 
 .showcart-main-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    /* grid-template-columns: repeat(3, 1fr); */
+    flex-direction: column;
     margin-bottom: 75px;
+    height: fit-content;
     @media (width < 450px) {
         grid-template-columns: none;
         grid-template-rows: repeat(3, 1fr);

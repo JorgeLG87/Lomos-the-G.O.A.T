@@ -1,0 +1,83 @@
+//THE CSS THAT THIS COMPONENT IS CURRENTLY USING IS FROM THE FORM.CSS. HAVE TO CREATE ITS OWN CSS FILE.
+
+import { useState, useRef, useEffect } from "react";
+
+export default function DeliveryMethod() {
+
+    const form = useRef();
+    const [ orderType, setOrderType ] = useState("");
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_6i1ihfq', 'template_xr6vg3i', form.current, '4l4HUKlF6lW_-n6UM')
+            .then(
+                () => {
+                    console.log("Success");
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+    };
+
+    //CREATE A RANDOM NUMBER TO ASSIGN TO THE FORM. AND USE THAT NUMBER TO BE SENT WHEN THE CUSTOMER PAYS THE ORDER.
+    const [ randomNumber, setRandomNumber ] = useState(null);
+
+    const generateRandomFunction = () => {
+        const min = 1; //Minimum value (inclusive)
+        const max = 1000; //Maximum value (inclusive)
+    
+        const newRadomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+        setRandomNumber(newRadomNumber);
+    }
+    
+    useEffect(() => {
+        generateRandomFunction();
+    }, [])
+
+
+    return (
+        <div style={{display: "flex", flexDirection:"column", alignContent: "center", justifyContent: "center", textAlign: "center"}}>
+            <div className="ordertype-container">
+                <button className="pickup-order" type="button" onClick={() => setOrderType("pickup")}>Pick Up</button>
+                <button className="delivery-order" type="button" onClick={() => setOrderType("delivery")}>Delivery</button>
+            </div>
+            {/* <div className="choosecombo-text-container">
+                <p className="title2"><span className="span-text-form">Choose your</span></p><p className="title-form">bite!</p>
+            </div> */}
+            <div className="form-fields">
+            {orderType === "delivery" ? <form className="order-form" ref={form} onSubmit={sendEmail}>
+                    <p className="delivery-charge-text">There is a delivery fee. To check how much extra will the charge be, please type in your complete address.</p>
+                    <div className="personal-info">
+                        <input className="name-input" type="text" placeholder="First Name" name="First Name" required></input>
+    
+                        <input className="lastname-input" type="text" placeholder="Last Name" name="Last Name" required></input>
+
+                        <input className="contact-number" type="number" placeholder="Phone #" name="Phone Number" required></input>
+                    </div>
+                    <div className="delivery-info">
+                        <input className="delivery-input" placeholder="Delivery Address" name="Delivery Address" required></input>
+
+                        <input className="city-input" placeholder="City" name="City" required></input>
+
+                        <input className="state-input" placeholder="State" name="State" defaultValue="New Jersey" disabled></input>
+                    </div>
+                    <input className="random-number" value={randomNumber} placeholder={randomNumber} name="Random Number" hidden></input>
+                    <button className="submit-button-form" type="submit">Send</button>
+                </form> : <form className="order-form" ref={form} onSubmit={sendEmail}>
+                    <div className="personal-info">
+                        <input className="name-input" type="text" placeholder="First Name" name="First Name" required></input>
+    
+                        <input className="lastname-input" type="text" placeholder="Last Name" name="Last Name" required></input>
+
+                        <input className="contact-number" type="number" placeholder="Phone #" name="Phone Number" required></input>
+                        <input className="random-number" value={randomNumber} placeholder={randomNumber} name="Random Number" hidden></input>
+                    </div>
+                    <button className="submit-button-form" type="submit">Send</button>
+                </form>}
+            </div>
+        </div>
+    )
+}
