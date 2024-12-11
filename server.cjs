@@ -24,7 +24,7 @@ app.use(function (req, res, next) {
  })
 
 app.get("/api-get-distance", async (req, res) => {
-    const { completeAddress } = req.query.address;
+    const completeAddress = req.query.address;
     console.log(completeAddress);
 
     if (!completeAddress) {
