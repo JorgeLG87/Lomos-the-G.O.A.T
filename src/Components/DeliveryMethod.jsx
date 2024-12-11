@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 
-export default function DeliveryMethod() {
+export default function DeliveryMethod({ subTotal }) {
 
     const form = useRef();
     const [ orderType, setOrderType ] = useState("");
@@ -12,6 +12,7 @@ export default function DeliveryMethod() {
     const [ completeAddress, setCompleteAddress ] = useState("");
     const [ originAddress, setOriginAddress ] = useState("89 MacArthur Ave., Garfield, NJ"); 
     const [ distance, setDistance ] = useState(null);
+    const [ deliveryCharge, setDeliveryCharge ] = useState(0);
 
     //API KEY
     const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
@@ -52,17 +53,17 @@ export default function DeliveryMethod() {
 
    useEffect(() => {
         if (completeAddress) {
-            fetch(`https://lomos-the-g-o-a-t.onrender.com/api-get-distance?address=${completeAddress}`, {
-                method: "GET",
-                headers: {
-                    "Content-Type" : "application/json",
-                },
-            })
+            fetch(`https://lomos-the-g-o-a-t.onrender.com/api-get-distance?address=${completeAddress}`)
             .then(res => res.json())
-            .then(response => setDistance(response))
+            .then(response => setDistance(response.rows[0].elements[0].distance.text.split(" ")[0]))
             .catch(error => console.log(error));
         }
    }, [completeAddress])
+
+   useEffect(() => {
+        console.log(distance);
+        setDeliveryCharge(Number(distance)*1.5)
+   }, [distance])
 
     useEffect(() => {
         console.log(deliveryAddress);
@@ -77,8 +78,8 @@ export default function DeliveryMethod() {
     }, [completeAddress]);
 
     useEffect(() => {
-        console.log(distance);
-    }, [distance]);
+        console.log(deliveryCharge, "Frontend");
+    }, [deliveryCharge]);
 
     return (
         <div style={{display: "flex", flexDirection:"column", alignContent: "center", justifyContent: "center", textAlign: "center"}}>
@@ -117,6 +118,9 @@ export default function DeliveryMethod() {
                     <button className="submit-button-form" type="submit">Ok</button>
                 </form>}
             </div>
+            <p>Sub-Total: ${subTotal}</p>
+            {deliveryCharge > 0 ? <p>Delivery Charge: ${deliveryCharge}</p> : <p>Delivery Charge: $0</p>}
+            <p>Total: ${(subTotal+Number(deliveryCharge))}</p>
         </div>
     )
 }

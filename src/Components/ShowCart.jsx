@@ -100,7 +100,7 @@ export default function ShowCart() {
                 })}
             </div>
             
-            {totalQuantity > 0 ?  <DeliveryMethod/> : null}
+            {totalQuantity > 0 ?  <DeliveryMethod subTotal={getTotalSum().toFixed(2)}/> : null}
             
             <div className="sideborder-right-container2">
                 <img src="/sideborder-right.svg" className="side-border-right"/>
