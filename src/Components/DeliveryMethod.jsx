@@ -103,7 +103,7 @@ export default function DeliveryMethod({ subTotal, totalQuantity }) {
     }, [deliveryCharge]);
 
     return (
-        <div style={{display: "flex", flexDirection:"column", alignContent: "center", justifyContent: "center", textAlign: "center"}}>
+        <div className="orderform-container">
             <div className="ordertype-container">
                 <button className="pickup-order" type="button" onClick={() => setOrderType("pickup")}>Pick Up</button>
                 <button className="delivery-order" type="button" onClick={() => setOrderType("delivery")}>Delivery</button>

@@ -77,8 +77,8 @@ export default function ShowCart() {
                 </Link>
                 <button className="place-order-top" type="button" onClick={checkout}>Place Order</button>
             </div>
-            <div className="total-price">Total: ${getTotalSum().toFixed(2)}</div>
-            <div className="showcart-main-container">
+            <div className="total-price">Sub-Total: ${getTotalSum().toFixed(2)}</div>
+            <div className="showcart-main-container2">
                 {(cart.items).map((product, index) => {
                     const data = getProductData(product.id);
                     return (

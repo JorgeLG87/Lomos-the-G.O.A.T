@@ -1,7 +1,16 @@
-/* .showcart-main-container {
+.showcart-main-container2 {
+    /* border: 1px solid black; */
     width: 100%;
-    height: 100vh;
-} */
+    height: fit-content;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 0.3fr);
+    /* padding: 0; */
+    @media(width < 450px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 .top-container {
     display: grid;
@@ -19,7 +28,7 @@
     /* margin-left: 0px; */
     border: 1px solid black;
     width: fit-content;
-    height: 35px;
+    height: 50px;
     border: none;
     border-radius: 10px;
     padding-left: 30px;
@@ -27,7 +36,7 @@
     background-color: #E9D134;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     color: #AF2007;
-    font-size: 12px;
+    font-size: 18px;
     font-family: "Montserrat";
     font-weight: 500;
     @media (width < 450px) {
@@ -51,7 +60,7 @@
     margin-right: 0%;
     margin-top: 20px;
     width: fit-content;
-    height: 35px;
+    height: 50px;
     border: none;
     border-radius: 10px;
     margin-left: 60%;
@@ -60,7 +69,7 @@
     background-color: rgb(80, 200, 120);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     color: white;
-    font-size: 12px;
+    font-size: 18px;
     font-family: "Montserrat";
     font-weight: 500;
     opacity: 1;
@@ -79,9 +88,9 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
+    /* border: 1px solid red; */
     text-align: center;
-    padding-left: 5%;
+    padding-left: 0%;
     padding-right: 0%;
     overflow: hidden;
     @media (width < 450px) {
@@ -103,15 +112,16 @@
 }
 
 .list-products {
+    /* position: relative; */
     border-radius: 10px;
-    width: 70%;;
+    width: 100%;
     height: fit-content;
     display: flex;
     flex-direction: column;
     margin-top: 75px;
     align-items: center;
     text-align: center;
-    /* border: 0.5px solid black; */
+    /* border: 1px solid red; */
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     background-color: white;
     @media (width < 450px) {
@@ -152,7 +162,7 @@
 
 .total-price {
     margin-top: 50px;
-    margin-left: -20%;
+    margin-left: 0%;
     font-size: 30px;
     font-family: "Barlow semi condensed";
     display: flex;

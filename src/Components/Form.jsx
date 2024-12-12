@@ -15,6 +15,7 @@ export default function Form({ shoppingCart, setShoppingCart }) {
     const navigate = useNavigate();
 
     const [ selected, setSelected ] = useState("");
+    const [ screenHight, setScreenHight ] = useState("");
 
     //CREATE A RANDOM NUMBER TO ASSIGN TO THE FORM. AND USE THAT NUMBER TO BE SENT WHEN THE CUSTOMER PAYS THE ORDER.
     // const [ randomNumber, setRandomNumber ] = useState(null);
@@ -89,7 +90,7 @@ export default function Form({ shoppingCart, setShoppingCart }) {
    }
 
     return (
-        <div className="form-container">
+        <div className="form-container" >
             <div className="top-container2">
             </div>
             <div className="sideborder-container">
@@ -107,58 +108,20 @@ export default function Form({ shoppingCart, setShoppingCart }) {
             </div>
        
             <img className="cart-icon" src="grocery-store.svg" onClick={() => navigate("/showcart")}/>
-            <p className="cart-text" >({totalQuantity} items)</p>
-            {/* <div className="ordertype-container">
-                <button className="pickup-order" type="button" onClick={() => setOrderType("pickup")}>Pick Up</button>
-                <button className="delivery-order" type="button" onClick={() => setOrderType("delivery")}>Delivery</button>
-            </div> */}
-            {/* <div className="choosecombo-text-container">
-                <p className="title2"><span className="span-text-form">Choose your</span></p><p className="title-form">bite!</p>
-            </div> */}
-            {/* <div className="form-fields">
-            {orderType === "delivery" ? <form className="order-form" ref={form} onSubmit={sendEmail}>
-                    <p className="delivery-charge-text">There is a delivery fee. To check how much extra will the charge be, please type in your complete address.</p>
-                    <div className="personal-info">
-                        <input className="name-input" type="text" placeholder="First Name" name="First Name" required></input>
-    
-                        <input className="lastname-input" type="text" placeholder="Last Name" name="Last Name" required></input>
-
-                        <input className="contact-number" type="number" placeholder="Phone #" name="Phone Number" required></input>
-                    </div>
-                    <div className="delivery-info">
-                        <input className="delivery-input" placeholder="Delivery Address" name="Delivery Address" required></input>
-
-                        <input className="city-input" placeholder="City" name="City" required></input>
-
-                        <input className="state-input" placeholder="State" name="State" defaultValue="New Jersey" disabled></input>
-                    </div>
-                    <input className="random-number" value={randomNumber} placeholder={randomNumber} name="Random Number" hidden></input>
-                    <button className="submit-button-form" type="submit">Send</button>
-                </form> : <form className="order-form" ref={form} onSubmit={sendEmail}>
-                    <div className="personal-info">
-                        <input className="name-input" type="text" placeholder="First Name" name="First Name" required></input>
-    
-                        <input className="lastname-input" type="text" placeholder="Last Name" name="Last Name" required></input>
-
-                        <input className="contact-number" type="number" placeholder="Phone #" name="Phone Number" required></input>
-                        <input className="random-number" value={randomNumber} placeholder={randomNumber} name="Random Number" hidden></input>
-                    </div>
-                    <button className="submit-button-form" type="submit">Send</button>
-                </form>}
-            </div> */}
-            
+            <p className="cart-text" >({totalQuantity} items)</p>          
             <div className="choosecombo-text-container">
                 <p className="title2"><span className="span-text-form">Choose your</span></p><p className="title-form">bite!</p>
             </div>
-
             <div className="combo-btns-container">
                 <p className="combo-btn" onClick={() => {
                     handleCombo();
                     setSelected("underline1");
+                    setScreenHight("combo");
                 }} >Combo</p>
                 <p className="combo-btn2" onClick={() => {
                     handleNotCombo();
                     setSelected("underline2");
+                    setScreenHight("individual items")
                 }} >Individual Items</p>
             </div>
 
@@ -178,7 +141,7 @@ export default function Form({ shoppingCart, setShoppingCart }) {
                 {quantity.map(elem => <p name="Quantity">{elem}</p>)}
             </div>
 
-            <button className="checkout-btn" type="button" onClick={() => navigate("/showcart")}>Checkout</button>
+            {/* <button className="checkout-btn" type="button" onClick={() => navigate("/showcart")}>Checkout</button> */}
             
             <div className="sideborder-right-container">
                 <img src="/sideborder-right.svg" className="side-border-right"/>

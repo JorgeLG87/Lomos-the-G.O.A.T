@@ -6,14 +6,13 @@
     padding: 0px;
     margin-top: 0px;
     width: 100%;
-    min-height: 3700px;
+    height: fit-content;
     overflow: hidden;
     @media (width < 450px) {
         width: 100%;
         margin-left: 0%;
         box-shadow: none;
-        min-height: 4000px;
-        max-height: 5000px;
+        height: fit-content;
     }
 }
 
@@ -22,7 +21,6 @@
     position: relative;
     display: block;
     gap: 0px;
-    /* color: white; */
     text-shadow: 1px 1px 2px red;
     width: 100%;
     background-color: transparent;
@@ -263,7 +261,6 @@
     display: flex;
     width: 100%;
     margin-right: 0%;
-    height: 370px;
     border-radius: 7px;
 }
 
@@ -527,29 +524,17 @@
     font-family: 'Barlow semi condensed';
   }
 
-  .checkout-btn {
-    color: black;
-    position: relative;
+  .orderform-container {
     display: flex;
+    flex-direction: column;
+    align-content: center;
     justify-content: center;
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
     align-items: center;
-    margin-top: 500px;
-    width: 20%;
-    /* margin-top: 30px; */
-    height: 50px;
-    border-radius: 10px;
-    border: none;
-    background-color: #E9D134;
-    color: rgb(200, 0, 0);
-    font-size: 20px;
-    font-family: "Montserrat";
-    font-weight: 500;
-    @media (width < 450px) {
-        margin-top: 1200px;
-        width: 30%;
+    @media  (width < 450px) {
+        width: 100%;
+        margin-left: 0%;
     }
-  }
-
-  .checkout-btn:hover {
-    cursor: pointer;
   }

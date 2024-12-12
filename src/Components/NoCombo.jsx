@@ -1,9 +1,11 @@
 import "./NoCombo.css";
 import { useContext } from "react";
 import { CartContext } from "../cartContext";
+import { useNavigate } from "react-router-dom";
 
 export default function NoCombo() {
 
+    const navigate = useNavigate();
     const cart = useContext(CartContext)
 
     return (
@@ -94,15 +96,7 @@ export default function NoCombo() {
                     <p className="title2"><span className="span-text">French</span></p><p className="title">Fries</p>
                 </div>
                 <div className="nocombo-sub-container-fries">
-                    {/* <div className="small-fries">
-                        <p className="text">Small</p>
-                        <div className="icons-fries">          
-                            <img className="icon-item-fries" src="/fries-medium.png"/>
-                        </div>
-                        {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="12").length}</p> : null}
-                        <button onClick={() => cart.addOneToCart("12")} className="nocombo-add" type="button">Add To Cart</button>
-                    </div> */}
-
+    
                     <div className="medium-fries">
                         <p className="text">Medium (for 2)</p>
                         <div className="icons-fries">
@@ -138,7 +132,7 @@ export default function NoCombo() {
                 </div>
             </div>
 
-
+            <button className="checkout-btn-nocombo" type="button" onClick={() => navigate("/showcart")}>Checkout</button>
         </div>
     )
 }

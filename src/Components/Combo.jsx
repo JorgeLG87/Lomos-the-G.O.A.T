@@ -2,7 +2,7 @@
 import "./Combo.css";
 import { useState, useContext } from "react";
 import { CartContext } from "../cartContext";
-
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -16,7 +16,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
     const [ bevValid4, setBevValid4 ] = useState(false); 
     const [ bevValid5, setBevValid5 ] = useState(false); 
     const [ bevValid6, setBevValid6 ] = useState(false); 
-
+    const navigate = useNavigate();
 
     const cart = useContext(CartContext);
     
@@ -167,7 +167,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                 </div>
                 </div>
 
-                
+                <button className="checkout-btn" type="button" onClick={() => navigate("/showcart")}>Checkout</button>
         </div>
     )
 }
