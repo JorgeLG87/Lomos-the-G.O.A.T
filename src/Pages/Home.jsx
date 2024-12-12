@@ -14,6 +14,10 @@ export default function Home({ slides }) {
     const [ followUsIsVisible, setFollowUsIsVisible ] = useState(false);
 
     useEffect(() => {
+      localStorage.clear();
+    },[]);
+
+    useEffect(() => {
       const observer = new IntersectionObserver((entries) => {
         const entry = entries[0];
         setFollowUsIsVisible(entry.isIntersecting);
