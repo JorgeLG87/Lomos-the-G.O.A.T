@@ -6,10 +6,16 @@ import { getProductData } from "../storeProducts";
 import DeliveryMethod from "./DeliveryMethod";
 
 export default function ShowCart() {
-
+    const [ orderType, setOrderType ] = useState("pickup");
     const cart = useContext(CartContext);
     console.log(cart)
     
+    //USING LOCALSTORAGE TO GET THE DELIVERY CHARGE
+    const [ street, setStreet ] = useState(localStorage.getItem("deliveryAddress") || "");
+    const [ city, setCity ] = useState(localStorage.getItem("city") || "");
+    const [ state, setState ] = useState("");
+    const [ deliveryCharge2, setDeliveryCharge2 ] = useState(Number(localStorage.getItem("deliveryCharge")) || 0);
+
     const [ improvedCart, setImprovedCart ] = useState([]);
 
     function getItem(object) {
@@ -56,6 +62,24 @@ export default function ShowCart() {
     const totalQuantity = (cart.items).reduce((accu, product) => accu + product.quantity,0)
     console.log(totalQuantity);
 
+
+    //FOR TESTING PURPOSES
+    useEffect(() => {
+        console.log(orderType, "ShowCart.jsx")
+    }, [orderType]);
+
+    useEffect(() => {
+        console.log(street, "ShowCart.jsx")
+    }, [street]);
+
+    useEffect(() => {
+        console.log(city, "ShowCart.jsx")
+    }, [city]);
+
+    useEffect(() => {
+        console.log(deliveryCharge2, "ShowCart.jsx")
+    }, [deliveryCharge2]);
+
     return (
         <div className="showcart-page">
             <div className="sideborder-container2">
@@ -100,7 +124,7 @@ export default function ShowCart() {
                 })}
             </div>
             
-            {totalQuantity > 0 ?  <DeliveryMethod subTotal={getTotalSum().toFixed(2)} totalQuantity={totalQuantity}/> : null}
+            {totalQuantity > 0 ?  <DeliveryMethod subTotal={getTotalSum().toFixed(2)} totalQuantity={totalQuantity} orderType={orderType} setOrderType={setOrderType}/> : null}
             
             <div className="sideborder-right-container2">
                 <img src="/sideborder-right.svg" className="side-border-right"/>

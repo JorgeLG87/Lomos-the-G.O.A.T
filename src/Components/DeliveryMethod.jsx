@@ -2,17 +2,16 @@
 
 import { useState, useRef, useEffect } from "react";
 
-export default function DeliveryMethod({ subTotal, totalQuantity }) {
+export default function DeliveryMethod({ subTotal, totalQuantity, orderType, setOrderType }) {
 
     const form = useRef();
-    const [ orderType, setOrderType ] = useState("");
-    const [ deliveryAddress, setDeliveryAddress ] = useState("");
-    const [ city, setCity ] = useState("");
+    const [ deliveryAddress, setDeliveryAddress ] = useState(localStorage.getItem("deliveryAddress") || "");
+    const [ city, setCity ] = useState(localStorage.getItem("city") || "");
     const [ state, setState ] = useState("");
     const [ completeAddress, setCompleteAddress ] = useState("");
     const [ originAddress, setOriginAddress ] = useState("89 MacArthur Ave., Garfield, NJ"); 
     const [ distance, setDistance ] = useState(null);
-    const [ deliveryCharge, setDeliveryCharge ] = useState(0);
+    const [ deliveryCharge, setDeliveryCharge ] = useState(Number(localStorage.getItem("deliveryCharge")) || 0);
 
     //API KEY
     const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
@@ -61,11 +60,15 @@ export default function DeliveryMethod({ subTotal, totalQuantity }) {
    }, [completeAddress])
 
    function handleLocalStorage(e) {
-        const savedDeliveryAddress = localStorage.getItem("deliveryAddress");
-        const savedCity = localStorage.getItem("city");
         localStorage.setItem("deliveryAddress", deliveryAddress);
         localStorage.setItem("city", city);
+        localStorage.setItem("deliveryCharge", deliveryCharge);
    }
+
+   useEffect(() => {
+        handleLocalStorage();
+   }, [deliveryAddress, city, deliveryCharge]);
+   
 
    useEffect(() => {
         console.log(distance);
@@ -76,11 +79,15 @@ export default function DeliveryMethod({ subTotal, totalQuantity }) {
    useEffect(() => {
     const savedDeliveryAddress = localStorage.getItem("deliveryAddress");
     const savedCity = localStorage.getItem("city");
+    const savedDeliveryCharge = localStorage.getItem("deliveryCharge");
     if (savedDeliveryAddress) {
         setDeliveryAddress(savedDeliveryAddress);
     }
     if (savedCity) {
         setCity(savedCity);
+    }
+    if (savedDeliveryCharge) {
+        setDeliveryCharge(savedDeliveryCharge);
     }
    }, []) 
 
