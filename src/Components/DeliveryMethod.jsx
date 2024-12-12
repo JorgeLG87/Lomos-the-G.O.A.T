@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 
-export default function DeliveryMethod({ subTotal }) {
+export default function DeliveryMethod({ subTotal, totalQuantity }) {
 
     const form = useRef();
     const [ orderType, setOrderType ] = useState("");
@@ -60,11 +60,32 @@ export default function DeliveryMethod({ subTotal }) {
         }
    }, [completeAddress])
 
+   function handleLocalStorage(e) {
+        const savedDeliveryAddress = localStorage.getItem("deliveryAddress");
+        const savedCity = localStorage.getItem("city");
+        localStorage.setItem("deliveryAddress", deliveryAddress);
+        localStorage.setItem("city", city);
+   }
+
    useEffect(() => {
         console.log(distance);
         setDeliveryCharge(Number(distance)*1.5)
    }, [distance])
 
+
+   useEffect(() => {
+    const savedDeliveryAddress = localStorage.getItem("deliveryAddress");
+    const savedCity = localStorage.getItem("city");
+    if (savedDeliveryAddress) {
+        setDeliveryAddress(savedDeliveryAddress);
+    }
+    if (savedCity) {
+        setCity(savedCity);
+    }
+   }, []) 
+
+
+   //CONSOLE LOGGING FOR TEST PURPOSES
     useEffect(() => {
         console.log(deliveryAddress);
     }, [deliveryAddress]);
@@ -105,7 +126,10 @@ export default function DeliveryMethod({ subTotal }) {
                         <input className="state-input" placeholder="State" name="State" defaultValue="New Jersey" disabled></input>
                     </div>
                     <input className="random-number" value={randomNumber} placeholder={randomNumber} name="Random Number" hidden></input>
-                    <button className="submit-button-form" type="button" onClick={handleCompleteAddress}>Ok</button>
+                    <button className="submit-button-form" type="button" onClick={() => {
+                        handleCompleteAddress();
+                        handleLocalStorage();
+                        }}>Ok</button>
                 </form> : <form className="order-form" ref={form} onSubmit={sendEmail}>
                     <div className="personal-info">
                         <input className="name-input" type="text" placeholder="First Name" name="First Name" required></input>
@@ -115,12 +139,12 @@ export default function DeliveryMethod({ subTotal }) {
                         <input className="contact-number" type="number" placeholder="Phone #" name="Phone Number" required></input>
                         <input className="random-number" value={randomNumber} placeholder={randomNumber} name="Random Number" hidden></input>
                     </div>
-                    <button className="submit-button-form" type="submit">Ok</button>
+                    <button className="submit-button-form" type="submit" onClick={handleLocalStorage}>Ok</button>
                 </form>}
             </div>
-            <p>Sub-Total: ${subTotal}</p>
-            {deliveryCharge > 0 ? <p>Delivery Charge: ${deliveryCharge}</p> : <p>Delivery Charge: $0</p>}
-            <p>Total: ${(subTotal+Number(deliveryCharge))}</p>
+            <p className="subtotal">Sub-Total: ${subTotal}</p>
+            {deliveryCharge > 0 ? <p className="delivery-charge">Delivery Charge: ${deliveryCharge}</p> : <p className="delivery-charge">Delivery Charge: $0</p>}
+            <p className="total">Total: ${(subTotal+Number(deliveryCharge))}</p>
         </div>
     )
 }
