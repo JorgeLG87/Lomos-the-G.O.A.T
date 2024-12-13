@@ -70,6 +70,16 @@ app.post("/checkout", async (req, res) => {
         })
     });
 
+    //ADDING THE DELIVERY COST TO THE LINE ITEMS
+    lineItems.push({
+        price_data: {
+            currency: "usd",
+            product_data: { name: "Delivery Charge"},
+            unit_amount: deliveryCharge,
+        },
+        quantity: 1,
+    });
+
     const shippingRate = await stripe.shippingRates.create({
         display_name: "Delivery",
         type: "fixed_amount",
@@ -77,44 +87,42 @@ app.post("/checkout", async (req, res) => {
             amount: deliveryCharge,
             currency: "usd"
         },
-        // delivery_estimate: {
-        //     minimum: {
-        //         unit: "business_day",
-        //         value: 5
-        //     },
-        //     maximum: {
-        //         unit: "business_day",
-        //         value: 7
-        //     }
-        // },
     });
 
     const session = await stripe.checkout.sessions.create({
-        shipping_address_collection: {
-            allowed_countries: ["US"]
-        },
-        shipping_options: [
-            {
-                shipping_rate_data: {
-                    type: "fixed_amount",
-                    fixed_amount: {
-                        amount: deliveryCharge,
-                        currency: "usd"
-                    },
-                    display_name: "Delivery",
-                    // delivery_estimate: {
-                    //     minimum: {
-                    //         unit: "business_day",
-                    //         value: 5
-                    //     },
-                    //     maximum: {
-                    //         unit: "business_day",
-                    //         value: 7
-                    //     }
-                    // }
-                }
+        shipping_address_collection: null,
+        // shipping_options: [
+        //     {
+        //         shipping_rate_data: {
+        //             type: "fixed_amount",
+        //             fixed_amount: {
+        //                 amount: deliveryCharge,
+        //                 currency: "usd"
+        //             },
+        //             display_name: "Delivery",
+        //             delivery_estimate: {
+        //                 minimum: {
+        //                     unit: "business_day",
+        //                     value: 5
+        //                 },
+        //                 maximum: {
+        //                     unit: "business_day",
+        //                     value: 7
+        //                 }
+        //             }
+        //         }
+        //     }
+        // ],
+        shipping_details: {
+            name: "Test Client",
+            address: {
+                line1: street,
+                city: city,
+                state: state,
+                postal_code: "07026",
+                country: "United States"
             }
-        ],
+        },
         line_items: lineItems,
         mode: 'payment',
         success_url: 'https://lomosthegoat.netlify.app/success',
