@@ -59,10 +59,7 @@ app.post("/checkout", async (req, res) => {
     let lineItems = [];
 
     const deliveryCharge = req.body.deliveryCharge;
-    const street = req.body.street;
-    const city = req.body.city;
-    const state = req.body.state;
-
+    
     items.forEach((item) => {
         lineItems.push({
             price: item.id,
@@ -72,7 +69,13 @@ app.post("/checkout", async (req, res) => {
 
     //ADDING THE DELIVERY COST TO THE LINE ITEMS
     lineItems.push({
-        price: deliveryCharge,
+        price_data: {
+            currency: "usd",
+            product_data: {
+                name: "Delivery Charge",
+            },
+            unit_amount: deliveryCharge,
+        },
         quantity: 1,
     });
 
@@ -86,7 +89,7 @@ app.post("/checkout", async (req, res) => {
     });
 
     const session = await stripe.checkout.sessions.create({
-        shipping_address_collection: null,
+        // shipping_address_collection: null,
         // shipping_options: [
         //     {
         //         shipping_rate_data: {
