@@ -1,9 +1,11 @@
 //THE CSS THAT THIS COMPONENT IS CURRENTLY USING IS FROM THE FORM.CSS. HAVE TO CREATE ITS OWN CSS FILE.
 
 import { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function DeliveryMethod({ subTotal, totalQuantity, orderType, setOrderType, deliveryCharge, setDeliveryCharge }) {
 
+    const navigate = useNavigate();
     const form = useRef();
     const [ deliveryAddress, setDeliveryAddress ] = useState(localStorage.getItem("deliveryAddress") || "");
     const [ city, setCity ] = useState(localStorage.getItem("city") || "");
@@ -75,20 +77,20 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
    }, [distance])
 
 
-   useEffect(() => {
-    const savedDeliveryAddress = localStorage.getItem("deliveryAddress");
-    const savedCity = localStorage.getItem("city");
-    const savedDeliveryCharge = localStorage.getItem("deliveryCharge");
-    if (savedDeliveryAddress) {
-        setDeliveryAddress(savedDeliveryAddress);
-    }
-    if (savedCity) {
-        setCity(savedCity);
-    }
-    if (savedDeliveryCharge) {
-        setDeliveryCharge(savedDeliveryCharge);
-    }
-   }, []) 
+//    useEffect(() => {
+//     const savedDeliveryAddress = localStorage.getItem("deliveryAddress");
+//     const savedCity = localStorage.getItem("city");
+//     const savedDeliveryCharge = localStorage.getItem("deliveryCharge");
+//     if (savedDeliveryAddress) {
+//         setDeliveryAddress(savedDeliveryAddress);
+//     }
+//     if (savedCity) {
+//         setCity(savedCity);
+//     }
+//     if (savedDeliveryCharge) {
+//         setDeliveryCharge(savedDeliveryCharge);
+//     }
+//    }, []) 
 
 
    //CONSOLE LOGGING FOR TEST PURPOSES
@@ -121,6 +123,7 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
                     <button className="submit-button-form" type="button" onClick={() => {
                         handleCompleteAddress();
                         handleLocalStorage();
+                        navigate("/showcart")
                         }}>Ok</button>
                 </form> : <form className="order-form" ref={form} onSubmit={sendEmail}>
                     <div className="personal-info">

@@ -27,7 +27,7 @@ export default function ShowCart() {
         setCity(localStorage.getItem("city"));
     }, [])
     useEffect(()=> {
-        setDeliveryCharge(Number(localStorage.getItem("deliveryCharge"))*100);
+        setDeliveryCharge(Math.ceil(Number(localStorage.getItem("deliveryCharge"))*100));
     }, []);
 
 
@@ -90,13 +90,13 @@ export default function ShowCart() {
     //     console.log(street, "Street ShowCart.jsx")
     // }, [street]);
 
-    // useEffect(() => {
-    //     console.log(city, "City ShowCart.jsx")
-    // }, [city]);
+    useEffect(() => {
+        console.log(city, "City ShowCart.jsx")
+    }, [city]);
 
-    // useEffect(() => {
-    //     console.log(deliveryCharge, "Delivery charge ShowCart.jsx")
-    // }, [deliveryCharge]);
+    useEffect(() => {
+        console.log(deliveryCharge, "Delivery charge ShowCart.jsx")
+    }, [deliveryCharge]);
 
     return (
         <div className="showcart-page">
