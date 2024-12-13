@@ -2,6 +2,7 @@ const express = require("express");
 const path = require("path");
 require("dotenv").config();
 const cors = require("cors");
+const { type } = require("os");
 const stripe = require("stripe")(process.env.VITE_STRIPE_KEY);
 const API_KEY = process.env.VITE_GOOGLE_API_KEY;
 
@@ -64,6 +65,25 @@ app.post("/checkout", async (req, res) => {
             price: item.id,
             quantity: 1
         })
+    });
+
+    const shippingRate = await stripe.shippingRates.create({
+        display_name: "Delivery",
+        type: "fixed_amount",
+        fixed_amount: {
+            amount: deliveryCharge,
+            currency: "usd"
+        },
+        delivery_estimate: {
+            minimum: {
+                unit: "business_day",
+                value: 5
+            },
+            maximum: {
+                unit: "business_day",
+                value: 7
+            }
+        },
     });
 
     const session = await stripe.checkout.sessions.create({
