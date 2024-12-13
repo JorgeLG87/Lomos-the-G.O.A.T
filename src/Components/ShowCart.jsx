@@ -66,9 +66,9 @@ export default function ShowCart() {
                 },
                 body: JSON.stringify({
                     items: cart.items,
-                    street: street,
-                    city: city,
-                    state: "New Jersey",
+                    // street: street,
+                    // city: city,
+                    // state: "New Jersey",
                     deliveryCharge: deliveryChargeCents,
                 })
             }).then((response) => {
