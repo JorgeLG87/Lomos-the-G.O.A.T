@@ -63,7 +63,7 @@ export default function ShowCart() {
                     street: street,
                     city: city,
                     state: "New Jersey",
-                    deliveryCharge: 2000,
+                    deliveryCharge: 19.65,
                 })
             }).then((response) => {
                 return response.json();
