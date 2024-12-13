@@ -89,44 +89,22 @@ app.post("/checkout", async (req, res) => {
     });
 
     const session = await stripe.checkout.sessions.create({
-        // shipping_address_collection: null,
-        // shipping_options: [
-        //     {
-        //         shipping_rate_data: {
-        //             type: "fixed_amount",
-        //             fixed_amount: {
-        //                 amount: deliveryCharge,
-        //                 currency: "usd"
-        //             },
-        //             display_name: "Delivery",
-        //             delivery_estimate: {
-        //                 minimum: {
-        //                     unit: "business_day",
-        //                     value: 5
-        //                 },
-        //                 maximum: {
-        //                     unit: "business_day",
-        //                     value: 7
-        //                 }
-        //             }
-        //         }
-        //     }
-        // ],
-        // shipping_details: {
-        //     name: "Test Client",
-        //     address: {
-        //         line1: street,
-        //         city: city,
-        //         state: state,
-        //         postal_code: "07026",
-        //         country: "United States"
-        //     }
-        // },
         line_items: lineItems,
         mode: 'payment',
         success_url: 'https://lomosthegoat.netlify.app/success',
         cancel_url: 'https://lomosthegoat.netlify.app/cancel',
         customer_creation: "always",
+        custom_fields: [
+            {
+                key: "name",
+                label: {
+                    type: "custom",
+                    custom: "Your full name",
+                },
+                type: "text",
+                optional: false,
+            },
+        ],
     })
 
     res.send(JSON.stringify({
