@@ -88,14 +88,6 @@ export default function ShowCart() {
 
 
     //FOR TESTING PURPOSES
-    // useEffect(() => {
-    //     console.log(orderType, "Order type ShowCart.jsx")
-    // }, [orderType]);
-
-    // useEffect(() => {
-    //     console.log(street, "Street ShowCart.jsx")
-    // }, [street]);
-
     useEffect(() => {
         console.log(city, "City ShowCart.jsx")
     }, [city]);
