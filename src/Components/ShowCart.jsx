@@ -39,23 +39,47 @@ export default function ShowCart() {
     }
 
     const checkout = async () => {
-        await fetch("https://lomos-the-g-o-a-t.onrender.com/checkout", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({items: cart.items})
-        }).then((response) => {
-            return response.json();
-        }).then((response) => {
-            if (response.url) {
-                window.location.assign(response.url);
-            }
-        }).catch((error) => {
-            console.log(error);
-        })
-
-        // sendEmail();
+        if (orderType === "delivery") {
+            await fetch("https://lomos-the-g-o-a-t.onrender.com/checkout", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    items: cart.items,
+                    street: street,
+                    city: city,
+                    state: "New Jersey",
+                    deliveryCharge: deliveryCharge2,
+                })
+            }).then((response) => {
+                return response.json();
+            }).then((response) => {
+                if (response.url) {
+                    window.location.assign(response.url);
+                }
+            }).catch((error) => {
+                console.log(error);
+            })
+        } else if (orderType === "pickup") {
+            await fetch("https://lomos-the-g-o-a-t.onrender.com/checkout", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    items: cart.items,
+                })
+            }).then((response) => {
+                return response.json();
+            }).then((response) => {
+                if (response.url) {
+                    window.location.assign(response.url);
+                }
+            }).catch((error) => {
+                console.log(error);
+            })
+        }
     }
 
     //CHECK HOW MANY ITEMS ARE IN THE CART
@@ -99,7 +123,9 @@ export default function ShowCart() {
                 <Link to="/order-now" style={{textDecoration:"none", width:"fit-content", display:"contents"}}>
                     <button className="navigating-showcart" type="button">Go Back</button>
                 </Link>
-                <button className="place-order-top" type="button" onClick={checkout}>Place Order</button>
+                <button className="place-order-top" type="button" onClick={() => {
+                    checkout();
+                    }}>Place Order</button>
             </div>
             <div className="total-price">Sub-Total: ${getTotalSum().toFixed(2)}</div>
             <div className="showcart-main-container2">
