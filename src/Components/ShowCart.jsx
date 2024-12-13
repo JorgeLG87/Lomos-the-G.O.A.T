@@ -58,7 +58,7 @@ export default function ShowCart() {
     }
 
     const checkout = async () => {
-            
+        if (orderType === "delivery") {
             await fetch("https://lomos-the-g-o-a-t.onrender.com/checkout", {
                 method: "POST",
                 headers: {
@@ -80,6 +80,26 @@ export default function ShowCart() {
             }).catch((error) => {
                 console.log(error);
             })
+        } else if (orderType === "pickup") {
+            await fetch("https://lomos-the-g-o-a-t.onrender.com/checkout", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    items: cart.items,
+                    deliveryCharge: 0,
+                })
+            }).then((response) => {
+                return response.json();
+            }).then((response) => {
+                if (response.url) {
+                    window.location.assign(response.url);
+                }
+            }).catch((error) => {
+                console.log(error);
+            })
+        }
     }
 
     //CHECK HOW MANY ITEMS ARE IN THE CART
@@ -88,6 +108,10 @@ export default function ShowCart() {
 
 
     //FOR TESTING PURPOSES
+    useEffect(() => {
+        console.log(orderType, "Order type ShowCart.jsx")
+    }, [orderType]);
+
     useEffect(() => {
         console.log(city, "City ShowCart.jsx")
     }, [city]);
