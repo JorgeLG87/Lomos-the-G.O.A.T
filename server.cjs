@@ -113,16 +113,16 @@ app.post("/checkout", async (req, res) => {
         //         }
         //     }
         // ],
-        shipping_details: {
-            name: "Test Client",
-            address: {
-                line1: street,
-                city: city,
-                state: state,
-                postal_code: "07026",
-                country: "United States"
-            }
-        },
+        // shipping_details: {
+        //     name: "Test Client",
+        //     address: {
+        //         line1: street,
+        //         city: city,
+        //         state: state,
+        //         postal_code: "07026",
+        //         country: "United States"
+        //     }
+        // },
         line_items: lineItems,
         mode: 'payment',
         success_url: 'https://lomosthegoat.netlify.app/success',
