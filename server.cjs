@@ -67,18 +67,18 @@ app.post("/checkout", async (req, res) => {
     });
 
     const session = await stripe.checkout.sessions.create({
-        shippingOptions: [
-            {
-                shipping_rate_data: {
-                    type: "fixed_amount",
-                    fixed_amount: {
-                        amount: deliveryCharge,
-                        currency: "usd"
-                    },
-                    display_name: "Delivery",
-                }
-            }
-        ],
+        // shippingOptions: [
+        //     {
+        //         shipping_rate_data: {
+        //             type: "fixed_amount",
+        //             fixed_amount: {
+        //                 amount: deliveryCharge,
+        //                 currency: "usd"
+        //             },
+        //             display_name: "Delivery",
+        //         }
+        //     }
+        // ],
         line_items: lineItems,
         mode: 'payment',
         success_url: 'https://lomosthegoat.netlify.app/success',
