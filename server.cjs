@@ -59,6 +59,9 @@ app.post("/checkout", async (req, res) => {
     let lineItems = [];
 
     const deliveryCharge = req.body.deliveryCharge;
+    const street = req.body.street;
+    const city = req.body.city;
+    const state = req.body.state;
 
     items.forEach((item) => {
         lineItems.push({
