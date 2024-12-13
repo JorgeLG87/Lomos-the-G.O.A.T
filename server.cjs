@@ -72,11 +72,7 @@ app.post("/checkout", async (req, res) => {
 
     //ADDING THE DELIVERY COST TO THE LINE ITEMS
     lineItems.push({
-        price_data: {
-            currency: "usd",
-            product_data: { name: "Delivery Charge"},
-            unit_amount: deliveryCharge,
-        },
+        price: deliveryCharge,
         quantity: 1,
     });
 
