@@ -15,6 +15,7 @@ export default function ShowCart() {
     const [ city, setCity ] = useState("");
     const [ state, setState ] = useState("");
     const [ deliveryCharge, setDeliveryCharge ] = useState(0);
+    const [ deliveryChargeCents, setDeliveryChargeCents ] = useState(0);
 
     const [ improvedCart, setImprovedCart ] = useState([]);
 
@@ -27,8 +28,13 @@ export default function ShowCart() {
         setCity(localStorage.getItem("city"));
     }, [])
     useEffect(()=> {
-        setDeliveryCharge(Math.ceil(Number(localStorage.getItem("deliveryCharge"))*100));
+        setDeliveryCharge(localStorage.getItem("deliveryCharge"));
     }, []);
+
+    useEffect(() => {
+        setDeliveryChargeCents(Math.ceil(deliveryCharge*100));
+    }, [deliveryCharge]);
+    
 
 
     function getItem(object) {
@@ -52,7 +58,7 @@ export default function ShowCart() {
     }
 
     const checkout = async () => {
-
+            
             await fetch("https://lomos-the-g-o-a-t.onrender.com/checkout", {
                 method: "POST",
                 headers: {
@@ -63,7 +69,7 @@ export default function ShowCart() {
                     street: street,
                     city: city,
                     state: "New Jersey",
-                    deliveryCharge: deliveryCharge,
+                    deliveryCharge: deliveryChargeCents,
                 })
             }).then((response) => {
                 return response.json();
@@ -95,8 +101,8 @@ export default function ShowCart() {
     }, [city]);
 
     useEffect(() => {
-        console.log(deliveryCharge, "Delivery charge ShowCart.jsx")
-    }, [deliveryCharge]);
+        console.log(deliveryChargeCents, "Delivery charge ShowCart.jsx")
+    }, [deliveryChargeCents]);
 
     return (
         <div className="showcart-page">
