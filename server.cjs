@@ -70,7 +70,7 @@ app.post("/checkout", async (req, res) => {
         shipping_address_collection: {
             allowed_countries: ["US"]
         },
-        shippingOptions: [
+        shipping_options: [
             {
                 shipping_rate_data: {
                     type: "fixed_amount",
@@ -79,6 +79,16 @@ app.post("/checkout", async (req, res) => {
                         currency: "usd"
                     },
                     display_name: "Delivery",
+                    delivery_estimate: {
+                        minimum: {
+                            unit: "business_day",
+                            value: 5
+                        },
+                        maximum: {
+                            unit: "business_day",
+                            value: 7
+                        }
+                    }
                 }
             }
         ],
