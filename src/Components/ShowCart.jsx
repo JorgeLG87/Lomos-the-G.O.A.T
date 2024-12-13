@@ -27,7 +27,7 @@ export default function ShowCart() {
         setCity(localStorage.getItem("city"));
     }, [])
     useEffect(()=> {
-        setDeliveryCharge(localStorage.getItem("deliveryCharge"));
+        setDeliveryCharge(Number(localStorage.getItem("deliveryCharge"))*100);
     }, []);
 
 
@@ -63,7 +63,7 @@ export default function ShowCart() {
                     street: street,
                     city: city,
                     state: "New Jersey",
-                    deliveryCharge: 19.65,
+                    deliveryCharge: deliveryCharge,
                 })
             }).then((response) => {
                 return response.json();
