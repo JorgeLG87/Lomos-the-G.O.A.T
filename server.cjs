@@ -74,16 +74,16 @@ app.post("/checkout", async (req, res) => {
             amount: deliveryCharge,
             currency: "usd"
         },
-        delivery_estimate: {
-            minimum: {
-                unit: "business_day",
-                value: 5
-            },
-            maximum: {
-                unit: "business_day",
-                value: 7
-            }
-        },
+        // delivery_estimate: {
+        //     minimum: {
+        //         unit: "business_day",
+        //         value: 5
+        //     },
+        //     maximum: {
+        //         unit: "business_day",
+        //         value: 7
+        //     }
+        // },
     });
 
     const session = await stripe.checkout.sessions.create({
@@ -99,16 +99,16 @@ app.post("/checkout", async (req, res) => {
                         currency: "usd"
                     },
                     display_name: "Delivery",
-                    delivery_estimate: {
-                        minimum: {
-                            unit: "business_day",
-                            value: 5
-                        },
-                        maximum: {
-                            unit: "business_day",
-                            value: 7
-                        }
-                    }
+                    // delivery_estimate: {
+                    //     minimum: {
+                    //         unit: "business_day",
+                    //         value: 5
+                    //     },
+                    //     maximum: {
+                    //         unit: "business_day",
+                    //         value: 7
+                    //     }
+                    // }
                 }
             }
         ],
