@@ -11,12 +11,25 @@ export default function ShowCart() {
     console.log(cart)
     
     //USING LOCALSTORAGE TO GET THE DELIVERY CHARGE
-    const [ street, setStreet ] = useState(localStorage.getItem("deliveryAddress") || "");
-    const [ city, setCity ] = useState(localStorage.getItem("city") || "");
+    const [ street, setStreet ] = useState("");
+    const [ city, setCity ] = useState("");
     const [ state, setState ] = useState("");
-    const [ deliveryCharge, setDeliveryCharge ] = useState(Number(localStorage.getItem("deliveryCharge")) || 0);
+    const [ deliveryCharge, setDeliveryCharge ] = useState(0);
 
     const [ improvedCart, setImprovedCart ] = useState([]);
+
+
+    //RETRIEVING DATA FROM LOCALSTORAGE
+    useEffect(() => {
+        setStreet(localStorage.getItem("street"));
+    }, [])
+    useEffect(() => {
+        setCity(localStorage.getItem("city"));
+    }, [])
+    useEffect(()=> {
+        setDeliveryCharge(localStorage.getItem("deliveryCharge"));
+    }, []);
+
 
     function getItem(object) {
         return object;
@@ -50,7 +63,7 @@ export default function ShowCart() {
                     street: street,
                     city: city,
                     state: "New Jersey",
-                    deliveryCharge: 20,
+                    deliveryCharge: 2000,
                 })
             }).then((response) => {
                 return response.json();
@@ -69,21 +82,21 @@ export default function ShowCart() {
 
 
     //FOR TESTING PURPOSES
-    useEffect(() => {
-        console.log(orderType, "ShowCart.jsx")
-    }, [orderType]);
+    // useEffect(() => {
+    //     console.log(orderType, "Order type ShowCart.jsx")
+    // }, [orderType]);
 
-    useEffect(() => {
-        console.log(street, "ShowCart.jsx")
-    }, [street]);
+    // useEffect(() => {
+    //     console.log(street, "Street ShowCart.jsx")
+    // }, [street]);
 
-    useEffect(() => {
-        console.log(city, "ShowCart.jsx")
-    }, [city]);
+    // useEffect(() => {
+    //     console.log(city, "City ShowCart.jsx")
+    // }, [city]);
 
-    useEffect(() => {
-        console.log(deliveryCharge, "ShowCart.jsx")
-    }, [deliveryCharge]);
+    // useEffect(() => {
+    //     console.log(deliveryCharge, "Delivery charge ShowCart.jsx")
+    // }, [deliveryCharge]);
 
     return (
         <div className="showcart-page">
