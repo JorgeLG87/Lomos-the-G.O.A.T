@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 
-export default function DeliveryMethod({ subTotal, totalQuantity, orderType, setOrderType }) {
+export default function DeliveryMethod({ subTotal, totalQuantity, orderType, setOrderType, deliveryCharge, setDeliveryCharge }) {
 
     const form = useRef();
     const [ deliveryAddress, setDeliveryAddress ] = useState(localStorage.getItem("deliveryAddress") || "");
@@ -11,8 +11,7 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
     const [ completeAddress, setCompleteAddress ] = useState("");
     const [ originAddress, setOriginAddress ] = useState("89 MacArthur Ave., Garfield, NJ"); 
     const [ distance, setDistance ] = useState(null);
-    const [ deliveryCharge, setDeliveryCharge ] = useState(Number(localStorage.getItem("deliveryCharge")) || 0);
-
+    
     //API KEY
     const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 
@@ -93,21 +92,7 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
 
 
    //CONSOLE LOGGING FOR TEST PURPOSES
-    useEffect(() => {
-        console.log(deliveryAddress);
-    }, [deliveryAddress]);
-
-    useEffect(() => {
-        console.log(city);
-    }, [city])
-
-    useEffect(() => {
-        console.log(completeAddress);
-    }, [completeAddress]);
-
-    useEffect(() => {
-        console.log(deliveryCharge, "Frontend");
-    }, [deliveryCharge]);
+   
 
     return (
         <div className="orderform-container">

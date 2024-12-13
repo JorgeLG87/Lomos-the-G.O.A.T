@@ -14,7 +14,7 @@ export default function ShowCart() {
     const [ street, setStreet ] = useState(localStorage.getItem("deliveryAddress") || "");
     const [ city, setCity ] = useState(localStorage.getItem("city") || "");
     const [ state, setState ] = useState("");
-    const [ deliveryCharge2, setDeliveryCharge2 ] = useState(Number(localStorage.getItem("deliveryCharge")) || 0);
+    const [ deliveryCharge, setDeliveryCharge ] = useState(Number(localStorage.getItem("deliveryCharge")) || 0);
 
     const [ improvedCart, setImprovedCart ] = useState([]);
 
@@ -39,7 +39,7 @@ export default function ShowCart() {
     }
 
     const checkout = async () => {
-        
+
             await fetch("https://lomos-the-g-o-a-t.onrender.com/checkout", {
                 method: "POST",
                 headers: {
@@ -50,7 +50,7 @@ export default function ShowCart() {
                     street: street,
                     city: city,
                     state: "New Jersey",
-                    deliveryCharge: deliveryCharge2,
+                    deliveryCharge: deliveryCharge,
                 })
             }).then((response) => {
                 return response.json();
@@ -61,26 +61,6 @@ export default function ShowCart() {
             }).catch((error) => {
                 console.log(error);
             })
-        
-        // } else if (orderType === "pickup") {
-        //     await fetch("https://lomos-the-g-o-a-t.onrender.com/checkout", {
-        //         method: "POST",
-        //         headers: {
-        //             "Content-Type": "application/json"
-        //         },
-        //         body: JSON.stringify({
-        //             items: cart.items,
-        //         })
-        //     }).then((response) => {
-        //         return response.json();
-        //     }).then((response) => {
-        //         if (response.url) {
-        //             window.location.assign(response.url);
-        //         }
-        //     }).catch((error) => {
-        //         console.log(error);
-        //     })
-        // }
     }
 
     //CHECK HOW MANY ITEMS ARE IN THE CART
@@ -102,8 +82,8 @@ export default function ShowCart() {
     }, [city]);
 
     useEffect(() => {
-        console.log(deliveryCharge2, "ShowCart.jsx")
-    }, [deliveryCharge2]);
+        console.log(deliveryCharge, "ShowCart.jsx")
+    }, [deliveryCharge]);
 
     return (
         <div className="showcart-page">
@@ -151,7 +131,7 @@ export default function ShowCart() {
                 })}
             </div>
             
-            {totalQuantity > 0 ?  <DeliveryMethod subTotal={getTotalSum().toFixed(2)} totalQuantity={totalQuantity} orderType={orderType} setOrderType={setOrderType}/> : null}
+            {totalQuantity > 0 ?  <DeliveryMethod subTotal={getTotalSum().toFixed(2)} totalQuantity={totalQuantity} orderType={orderType} setOrderType={setOrderType} deliveryCharge={deliveryCharge} setDeliveryCharge={setDeliveryCharge}/> : null}
             
             <div className="sideborder-right-container2">
                 <img src="/sideborder-right.svg" className="side-border-right"/>

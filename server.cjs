@@ -53,7 +53,7 @@ app.get("/api-get-distance", async (req, res) => {
 
 app.post("/checkout", async (req, res) => {
 
-    console.log(req.body);
+    console.log(req.body, "Request Body");
 
     const items = req.body.items;
     let lineItems = [];
