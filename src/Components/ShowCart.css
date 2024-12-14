@@ -3,12 +3,14 @@
     width: 100%;
     height: fit-content;
     display: grid;
+    padding-left: 5%;
     gap: 20px;
     grid-template-columns: repeat(3, 0.3fr);
     /* padding: 0; */
     @media(width < 450px) {
         display: flex;
         flex-direction: column;
+        margin-left: 0%;
     }
 }
 
