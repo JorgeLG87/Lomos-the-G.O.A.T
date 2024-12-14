@@ -21,9 +21,9 @@ export default function AboutUs({ slides, AboutUsCarousel }) {
                 <div className="rectangle-dividor"></div>
                 <div className="rectangle-dividor2"></div>
                 <div className="rectangle-dividor3"></div>
-                <div>
+                <div style={{paddingRight: "2%"}}>
                     <p className="rectangle-title">Our Story</p>
-                    <p className="rectangle-text">It all began with the simple idea of bringing our popular lomito sandwich to a completely new audience.  </p>
+                    <p className="rectangle-text">It all began with the simple idea of bringing our popular lomito sandwich to a completely new audience. We knew it was going to be a challenge, but our strong desire overcame every obstacle.  </p>
                 </div>
             </div>
         </div>

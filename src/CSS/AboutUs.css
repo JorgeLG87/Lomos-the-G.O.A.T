@@ -148,7 +148,7 @@
     width: 100%;
     padding-left: 7%;
     @media (width < 450px) {
-        padding-left: 3.5%;
+        padding-left: 1.5%;
     }
 }
 
@@ -156,7 +156,7 @@
     width: 5px;
     height: 300px;
     background-color: #AD2007;
-    
+    /* margin-left: 0px; */
     @media (width < 450px) {
         height: 250px;
     }
