@@ -10,7 +10,7 @@ export default function AboutUs({ slides, AboutUsCarousel }) {
                     <AboutUsMUICarousel/>
                     <div className="idealogo-text-container">
                         <div className="text-aboutUs-container">
-                            <p style={{fontFamily:"Barlow semi condensed", fontSize: "19px"}}>At Lomos the G.O.A.T we focus on quality and customer satisfaction. We firmly believe that food has the power 
+                            <p style={{fontFamily:"Barlow semi condensed", fontSize: "18px"}}>At Lomos the G.O.A.T we focus on quality and customer satisfaction. We firmly believe that food has the power 
                             to unite cultures and bring people together. We are commited to providing our customers with the best possible experience in every single bite.
                             </p>
                         </div>
