@@ -25,6 +25,28 @@ app.use(function (req, res, next) {
     next();
  })
 
+app.get("/verify-payment", async (req, res) => {
+    const sessionId  = req.query.session_id;
+
+    if (!sessionId) {
+        return res.status(400).json({ error: "Session ID is required" });
+    }
+
+    try {
+        //RETRIEVE THE SESSION OBJECT USING THE SESSION ID
+        const session = await stripe.checkout.sessions.retrieve(sessionId);
+        //CHECK IF THE SESSION IS COMPLETED
+        if (session.payment_status === "paid") {
+            return res.status(200).json({ success: true });
+        } else {
+            return res.status(400).json({success: false, error: "Payment not completed"});
+        }
+    } catch {
+        return res.status(500).json({success: false, error: "Failed to retrieve payment session"})
+    }
+}) 
+
+
 app.get("/api-get-distance", async (req, res) => {
     const completeAddress = req.query.address;
     console.log(completeAddress);
@@ -91,7 +113,7 @@ app.post("/checkout", async (req, res) => {
     const session = await stripe.checkout.sessions.create({
         line_items: lineItems,
         mode: 'payment',
-        success_url: 'https://lomosthegoat.netlify.app/success',
+        success_url: 'https://lomosthegoat.netlify.app/success?session_id={CHECKOUT_SESSION_ID}',
         cancel_url: 'https://lomosthegoat.netlify.app/cancel',
         customer_creation: "always",
         // custom_fields: [

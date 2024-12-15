@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "../CSS/Success.css";
 import emailjs from "@emailjs/browser";
 
 export default function Success() {
+    const navigate = useNavigate();
     const [ name, setName ] = useState("");
     const [ firstName, setFirstName ] = useState("");
     const [ lastName, setLastName ] = useState("");
@@ -12,6 +14,15 @@ export default function Success() {
     const [ orderType, setOrderType ] = useState("");
     const [ clientReady, setClientReady ] = useState(false);
     const [ client, setClient ] = useState({});
+
+    //VERIFY THAT WE HAVE A SESSION ID IN THE URL ELSE REDIRECT TO HOME PAGE
+    useEffect(() => {
+        const sessionId = new URLSearchParams(window.location.search).get("session_id");
+        if (!sessionId) {
+            navigate("/");
+        }
+    }, [navigate])
+
 
     useEffect(() => {
         setFirstName(localStorage.getItem("firstName"));
