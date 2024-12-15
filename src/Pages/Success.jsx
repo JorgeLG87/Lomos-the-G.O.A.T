@@ -12,6 +12,7 @@ export default function Success() {
     const [ city, setCity ] = useState("");
     const [ phone, setPhone ] = useState("");
     const [ orderType, setOrderType ] = useState("");
+    const [ paymentVerified, setPaymentVerified ] = useState(false);
     const [ clientReady, setClientReady ] = useState(false);
     const [ client, setClient ] = useState({});
 
@@ -21,6 +22,18 @@ export default function Success() {
         if (!sessionId) {
             navigate("/");
         }
+
+        //VERIFY PAYMENT STATUS
+        fetch(`https://lomosthegoat.onrender.com/verify-payment?session_id=${sessionId}`)
+        .then(res => res.json())
+        .then(response => {
+            if (response.success) {
+                setPaymentReady(true);
+            } else {
+                navigate("/");
+            }
+        })
+
     }, [navigate])
 
 
@@ -58,7 +71,7 @@ export default function Success() {
     
     useEffect(() => {
         console.log(client.name, "Client Name");
-        if (clientReady) {
+        if (clientReady && paymentVerified) {
             emailjs.send('service_6i1ihfq', 'template_kza2k47', {
                 name: client.name,
                 phone: client.phone,
