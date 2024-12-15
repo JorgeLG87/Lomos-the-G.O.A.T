@@ -9,6 +9,7 @@ export default function Success() {
     const [ address, setAddress ] = useState("");
     const [ city, setCity ] = useState("");
     const [ phone, setPhone ] = useState("");
+    const [ orderType, setOrderType ] = useState("");
     const [ client, setClient ] = useState({});
 
     useEffect(() => {
@@ -17,6 +18,7 @@ export default function Success() {
         setAddress(localStorage.getItem("deliveryAddress"));
         setCity(localStorage.getItem("city"));
         setPhone(localStorage.getItem("phone"));
+        setOrderType(localStorage.getItem("orderType"));
     }, []);
 
 
@@ -40,6 +42,7 @@ export default function Success() {
     }, [client]);
     
     useEffect(() => {
+        console.log(client.name, "Client Name");
         if (client.name !== "") {
             emailjs.send('service_6i1ihfq', 'template_kza2k47', {
                 name: client.name,

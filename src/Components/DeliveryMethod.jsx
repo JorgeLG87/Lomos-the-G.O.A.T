@@ -89,6 +89,9 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
         setDeliveryCharge(Number(distance)*1.5)
    }, [distance])
 
+   useEffect(() => {
+    localStorage.setItem("orderType", orderType);
+   }, [orderType]);
 
 //    useEffect(() => {
 //     const savedDeliveryAddress = localStorage.getItem("deliveryAddress");
