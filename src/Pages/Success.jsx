@@ -7,12 +7,15 @@ export default function Success() {
     const [ lastName, setLastName ] = useState("");
     const [ address, setAddress ] = useState("");
     const [ city, setCity ] = useState("");
+    const [ phone, setPhone ] = useState("");
+    const [ client, setClient ] = useState({});
 
     useEffect(() => {
         setFirstName(localStorage.getItem("firstName"));
         setLastName(localStorage.getItem("lastName"));
         setAddress(localStorage.getItem("deliveryAddress"));
         setCity(localStorage.getItem("city"));
+        setPhone(localStorage.getItem("phone"));
     }, []);
 
 
@@ -20,11 +23,20 @@ export default function Success() {
         setName(firstName + " " + lastName);
     }, [firstName, lastName]);
 
+    //CREATE THE CLIENT OBJECT USING LOCALSTORAGE DATA
+    useEffect(() => {
+        setClient({
+            name: name,
+            address: address,
+            city: city,
+            phone: phone,
+        })
+    }, [ name, address, city, phone ]);
 
     //TESTING PURPOSES ONLY
     useEffect(() => {
-        console.log(name, "Name in success page");
-    }, [name]);
+        console.log(client, "Client object");
+    }, [client]);
     
 
     return (
