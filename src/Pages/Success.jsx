@@ -3,18 +3,29 @@ import "../CSS/Success.css";
 
 export default function Success() {
     const [ name, setName ] = useState("");
+    const [ firstName, setFirstName ] = useState("");
+    const [ lastName, setLastName ] = useState("");
     const [ address, setAddress ] = useState("");
     const [ city, setCity ] = useState("");
 
-
     useEffect(() => {
-        setName(localStorage.getItem("name"));
+        setFirstName(localStorage.getItem("firstName"));
+        setLastName(localStorage.getItem("lastName"));
         setAddress(localStorage.getItem("deliveryAddress"));
         setCity(localStorage.getItem("city"));
     }, []);
 
-    console.log(name, "Name in success page");
-    console.log(address, "Address in success page");
+
+    useEffect(() => {
+        setName(firstName + " " + lastName);
+    }, []);
+
+
+    //TESTING PURPOSES ONLY
+    useEffect(() => {
+        console.log(name, "Name in success page");
+    }, [name]);
+    
 
     return (
         <div className="successpage-container">

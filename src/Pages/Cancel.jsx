@@ -1,9 +1,14 @@
 import "../CSS/Cancel.css";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 export default function Cancel() {
 
     const navigate = useNavigate();
+
+    useEffect(() => {
+        localStorage.clear();
+      },[]);
 
     return (
         <div className="cancelpage-container">
