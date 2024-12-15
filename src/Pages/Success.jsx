@@ -32,7 +32,7 @@ export default function Success() {
             city: city,
             phone: phone,
         })
-    }, []);
+    }, [name, address, city, phone]);
 
     //TESTING PURPOSES ONLY
     useEffect(() => {
@@ -56,7 +56,7 @@ export default function Success() {
                 },
             );
         }
-    }, [])
+    }, [client.name]);
 
 
     return (
