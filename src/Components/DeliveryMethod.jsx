@@ -52,19 +52,25 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
     }, [])
 
    function handleCompleteAddress() {
+        const address = `${deliveryAddress}, ${city}, NJ`;
         setCompleteAddress(`${deliveryAddress}, ${city}, NJ`);
-   }
 
-   useEffect(() => {
-        if (completeAddress) {
-            fetch(`https://lomos-the-g-o-a-t.onrender.com/api-get-distance?address=${completeAddress}`)
+        fetch(`https://lomos-the-g-o-a-t.onrender.com/api-get-distance?address=${address}`)
             .then(res => res.json())
             .then(response => setDistance(response.rows[0].elements[0].distance.text.split(" ")[0]))
             .catch(error => console.log(error));
-        }
-   }, [completeAddress])
+   }
 
-   function handleLocalStorage(e) {
+//    useEffect(() => {
+//         if (completeAddress) {
+//             fetch(`https://lomos-the-g-o-a-t.onrender.com/api-get-distance?address=${completeAddress}`)
+//             .then(res => res.json())
+//             .then(response => setDistance(response.rows[0].elements[0].distance.text.split(" ")[0]))
+//             .catch(error => console.log(error));
+//         }
+//    }, [completeAddress])
+
+   function handleLocalStorage() {
         localStorage.setItem("deliveryAddress", deliveryAddress);
         localStorage.setItem("city", city);
         localStorage.setItem("deliveryCharge", deliveryCharge);
@@ -127,7 +133,7 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
                         <input className="state-input" placeholder="State" name="State" defaultValue="New Jersey" disabled></input>
                     </div>
                     <input className="random-number" value={randomNumber} placeholder={randomNumber} name="Random Number" hidden></input>
-                    <button className="submit-button-form" type="button" onClick={() => {
+                    <button className="submit-button-form" type="button" onClick={(e) => {
                         handleCompleteAddress();
                         handleLocalStorage();
                         // navigate("/showcart")
