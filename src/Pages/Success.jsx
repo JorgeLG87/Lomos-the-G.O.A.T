@@ -41,7 +41,12 @@ export default function Success() {
     
     useEffect(() => {
         if (client.name !== "") {
-            emailjs.send('service_6i1ihfq', 'template_kza2k47', client, '4l4HUKlF6lW_-n6UM')
+            emailjs.send('service_6i1ihfq', 'template_kza2k47', {
+                name: client.name,
+                phone: client.phone,
+                address: client.address,
+                city: client.city,
+            }, '4l4HUKlF6lW_-n6UM')
             .then(
                 () => {
                     console.log("Success");
