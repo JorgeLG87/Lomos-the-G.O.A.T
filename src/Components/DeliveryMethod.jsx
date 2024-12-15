@@ -8,6 +8,9 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
 
     const navigate = useNavigate();
     const form = useRef();
+    const [ firstName, setFirstName ] = useState("");
+    const [ lastName, setLastName ] = useState("");
+    const [ phone, setPhone ] =  useState("");
     const [ deliveryAddress, setDeliveryAddress ] = useState(localStorage.getItem("deliveryAddress") || "");
     const [ city, setCity ] = useState(localStorage.getItem("city") || "");
     const [ state, setState ] = useState("");
@@ -65,6 +68,9 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
         localStorage.setItem("deliveryAddress", deliveryAddress);
         localStorage.setItem("city", city);
         localStorage.setItem("deliveryCharge", deliveryCharge);
+        localStorage.setItem("firstName", firstName);
+        localStorage.setItem("lastName", lastName);
+        localStorage.setItem("phone", phone);
    }
 
    useEffect(() => {
@@ -107,11 +113,11 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
             {orderType === "delivery" ? <form className="order-form" ref={form} onSubmit={sendEmail}>
                     <p className="delivery-charge-text">There is a delivery fee. To check how much extra will the charge be, please type in your complete address.</p>
                     <div className="personal-info">
-                        <input className="name-input" type="text" placeholder="First Name" name="First Name" required></input>
+                        <input className="name-input" type="text" placeholder="First Name" name="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} required></input>
     
-                        <input className="lastname-input" type="text" placeholder="Last Name" name="Last Name" required></input>
+                        <input className="lastname-input" type="text" placeholder="Last Name" name="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)} required></input>
 
-                        <input className="contact-number" type="number" placeholder="Phone #" name="Phone Number" required></input>
+                        <input className="contact-number" type="number" placeholder="Phone #" name="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} required></input>
                     </div>
                     <div className="delivery-info">
                         <input className="delivery-input" placeholder="Delivery Address" name="Delivery Address" value={deliveryAddress} onChange={(e) => setDeliveryAddress(e.target.value)} required></input>
@@ -128,11 +134,11 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
                         }}>Ok</button>
                 </form> : <form className="order-form" ref={form} onSubmit={sendEmail}>
                     <div className="personal-info">
-                        <input className="name-input" type="text" placeholder="First Name" name="First Name" required></input>
+                        <input className="name-input" type="text" placeholder="First Name" name="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} required></input>
     
-                        <input className="lastname-input" type="text" placeholder="Last Name" name="Last Name" required></input>
+                        <input className="lastname-input" type="text" placeholder="Last Name" name="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)} required></input>
 
-                        <input className="contact-number" type="number" placeholder="Phone #" name="Phone Number" required></input>
+                        <input className="contact-number" type="number" placeholder="Phone #" name="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} required></input>
                         <input className="random-number" value={randomNumber} placeholder={randomNumber} name="Random Number" hidden></input>
                     </div>
                     <button className="submit-button-form" type="submit" onClick={handleLocalStorage}>Ok</button>

@@ -10,7 +10,11 @@ export default function ShowCart() {
     const cart = useContext(CartContext);
     console.log(cart)
     
-    //USING LOCALSTORAGE TO GET THE DELIVERY CHARGE
+    //USING LOCALSTORAGE TO GET THE DELIVERY CHARGE, ADDRESS AND NAME
+    const [ firstName, setfirstName ] = useState("");
+    const [ lastName, setlastName ] = useState("");
+    const [ fullName, setFullName ] = useState("");
+    const [ phone, setPhone ] = useState("");
     const [ street, setStreet ] = useState("");
     const [ city, setCity ] = useState("");
     const [ state, setState ] = useState("");
@@ -21,6 +25,18 @@ export default function ShowCart() {
 
 
     //RETRIEVING DATA FROM LOCALSTORAGE
+    useEffect(() => {
+        setfirstName(localStorage.getItem("firstName"));
+    }, [])
+    
+    useEffect(() => {
+        setlastName(localStorage.getItem("lastName"));
+    }, [])
+    
+    useEffect(() => {
+        setPhone(localStorage.getItem("phone"));
+    }, [])
+    
     useEffect(() => {
         setStreet(localStorage.getItem("street"));
     }, [])
@@ -34,8 +50,12 @@ export default function ShowCart() {
     useEffect(() => {
         setDeliveryChargeCents(Math.ceil(deliveryCharge*100));
     }, [deliveryCharge]);
-    
 
+    useEffect(() => {
+        setFullName(firstName + " " + lastName);
+    }, [firstName, lastName]);
+
+    //---------------------------------------------------------------------------------------------------------------------
 
     function getItem(object) {
         return object;
