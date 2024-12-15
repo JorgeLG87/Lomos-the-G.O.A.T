@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import emailjs from "@emailjs/browser";
 
 export default function DeliveryMethod({ subTotal, totalQuantity, orderType, setOrderType, deliveryCharge, setDeliveryCharge }) {
 
@@ -120,7 +121,7 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
                         <input className="state-input" placeholder="State" name="State" defaultValue="New Jersey" disabled></input>
                     </div>
                     <input className="random-number" value={randomNumber} placeholder={randomNumber} name="Random Number" hidden></input>
-                    <button className="submit-button-form" type="button" onClick={() => {
+                    <button className="submit-button-form" type="submit" onClick={() => {
                         handleCompleteAddress();
                         handleLocalStorage();
                         navigate("/showcart")
