@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "../CSS/Success.css";
+import emailjs from "@emailjs/browser";
 
 export default function Success() {
     const [ name, setName ] = useState("");
@@ -38,6 +39,20 @@ export default function Success() {
         console.log(client, "Client object");
     }, [client]);
     
+    useEffect(() => {
+        if (client.name !== "") {
+            emailjs.send('service_6i1ihfq', 'template_xr6vg3i', client, '4l4HUKlF6lW_-n6UM')
+            .then(
+                () => {
+                    console.log("Success");
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+        }
+    }, [client.name])
+
 
     return (
         <div className="successpage-container">
