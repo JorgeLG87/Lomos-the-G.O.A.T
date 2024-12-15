@@ -124,7 +124,7 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
                     <button className="submit-button-form" type="submit" onClick={() => {
                         handleCompleteAddress();
                         handleLocalStorage();
-                        navigate("/showcart")
+                        // navigate("/showcart")
                         }}>Ok</button>
                 </form> : <form className="order-form" ref={form} onSubmit={sendEmail}>
                     <div className="personal-info">
