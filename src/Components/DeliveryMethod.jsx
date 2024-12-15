@@ -127,7 +127,7 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
                         <input className="state-input" placeholder="State" name="State" defaultValue="New Jersey" disabled></input>
                     </div>
                     <input className="random-number" value={randomNumber} placeholder={randomNumber} name="Random Number" hidden></input>
-                    <button className="submit-button-form" type="submit" onClick={() => {
+                    <button className="submit-button-form" type="button" onClick={() => {
                         handleCompleteAddress();
                         handleLocalStorage();
                         // navigate("/showcart")
@@ -141,7 +141,7 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
                         <input className="contact-number" type="number" placeholder="Phone #" name="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} required></input>
                         <input className="random-number" value={randomNumber} placeholder={randomNumber} name="Random Number" hidden></input>
                     </div>
-                    <button className="submit-button-form" type="submit" onClick={handleLocalStorage}>Ok</button>
+                    <button className="submit-button-form" type="button" onClick={handleLocalStorage}>Ok</button>
                 </form>}
             </div>
             <p className="subtotal">Sub-Total: ${subTotal}</p>
