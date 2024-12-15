@@ -18,7 +18,7 @@ export default function Success() {
 
     useEffect(() => {
         setName(firstName + " " + lastName);
-    }, []);
+    }, [firstName, lastName]);
 
 
     //TESTING PURPOSES ONLY
