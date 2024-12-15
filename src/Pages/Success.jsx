@@ -27,12 +27,12 @@ export default function Success() {
     //CREATE THE CLIENT OBJECT USING LOCALSTORAGE DATA
     useEffect(() => {
         setClient({
-            name: name,
+            name: firstName + " " + lastName,
             address: address,
             city: city,
             phone: phone,
         })
-    }, [ name, address, city, phone ]);
+    }, []);
 
     //TESTING PURPOSES ONLY
     useEffect(() => {
@@ -56,7 +56,7 @@ export default function Success() {
                 },
             );
         }
-    }, [client.name])
+    }, [])
 
 
     return (
