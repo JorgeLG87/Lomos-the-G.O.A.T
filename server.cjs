@@ -94,17 +94,17 @@ app.post("/checkout", async (req, res) => {
         success_url: 'https://lomosthegoat.netlify.app/success',
         cancel_url: 'https://lomosthegoat.netlify.app/cancel',
         customer_creation: "always",
-        custom_fields: [
-            {
-                key: "name",
-                label: {
-                    type: "custom",
-                    custom: "Full Name",
-                },
-                type: "text",
-                optional: false,
-            },
-        ],
+        // custom_fields: [
+        //     {
+        //         key: "name",
+        //         label: {
+        //             type: "custom",
+        //             custom: "Full Name",
+        //         },
+        //         type: "text",
+        //         optional: false,
+        //     },
+        // ],
     })
 
     res.send(JSON.stringify({
