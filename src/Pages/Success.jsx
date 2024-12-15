@@ -10,6 +10,7 @@ export default function Success() {
     const [ city, setCity ] = useState("");
     const [ phone, setPhone ] = useState("");
     const [ orderType, setOrderType ] = useState("");
+    const [ clientReady, setClientReady ] = useState(false);
     const [ client, setClient ] = useState({});
 
     useEffect(() => {
@@ -28,13 +29,16 @@ export default function Success() {
 
     //CREATE THE CLIENT OBJECT USING LOCALSTORAGE DATA
     useEffect(() => {
-        setClient({
-            name: firstName + " " + lastName,
-            address: address,
-            city: city,
-            phone: phone,
-        })
-    }, [name, address, city, phone]);
+        if (firstName &&  lastName && address && city && phone) {
+            setClient({
+                name: firstName + " " + lastName,
+                address: address,
+                city: city,
+                phone: phone,
+            });
+        };
+        setClientReady(true);
+    }, [firstName, lastName, address, city, phone]);
 
     //TESTING PURPOSES ONLY
     useEffect(() => {
@@ -43,7 +47,7 @@ export default function Success() {
     
     useEffect(() => {
         console.log(client.name, "Client Name");
-        if (client.name !== " " && client.address !== " " && client.city !== " " && client.phone !== " ") {
+        if (clientReady) {
             emailjs.send('service_6i1ihfq', 'template_kza2k47', {
                 name: client.name,
                 phone: client.phone,
