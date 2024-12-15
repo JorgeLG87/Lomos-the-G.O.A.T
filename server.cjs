@@ -98,8 +98,8 @@ app.post("/checkout", async (req, res) => {
             {
                 key: "name",
                 label: {
-                    // type: "custom",
-                    custom: "Jorge Godoy",
+                    type: "custom",
+                    custom: "Full Name",
                 },
                 type: "text",
                 optional: false,
