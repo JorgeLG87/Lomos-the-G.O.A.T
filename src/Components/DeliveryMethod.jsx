@@ -137,9 +137,9 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
                     </div>
                     <input className="random-number" value={randomNumber} placeholder={randomNumber} name="Random Number" hidden></input>
                     <button className="submit-button-form" type="button" onClick={(e) => {
+                        navigate("/showcart")
                         handleCompleteAddress();
                         handleLocalStorage();
-                        // navigate("/showcart")
                         }}>Ok</button>
                 </form> : <form className="order-form" ref={form} onSubmit={sendEmail}>
                     <div className="personal-info">

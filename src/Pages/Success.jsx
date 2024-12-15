@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "../CSS/Success.css";
 import emailjs from "@emailjs/browser";
+import { CartContext } from "../cartContext";
 
 export default function Success() {
     const navigate = useNavigate();
+    const cart = useContext(CartContext);
     const [ name, setName ] = useState("");
     const [ firstName, setFirstName ] = useState("");
     const [ lastName, setLastName ] = useState("");
@@ -17,24 +19,24 @@ export default function Success() {
     const [ client, setClient ] = useState({});
 
     //VERIFY THAT WE HAVE A SESSION ID IN THE URL ELSE REDIRECT TO HOME PAGE
-    useEffect(() => {
-        const sessionId = new URLSearchParams(window.location.search).get("session_id");
-        if (!sessionId) {
-            navigate("/");
-        }
-
+    // useEffect(() => {
+        // const sessionId = new URLSearchParams(window.location.search).get("session_id");
+        // if (!sessionId) {
+        //     navigate("/");
+        // }
+    
         //VERIFY PAYMENT STATUS
-        fetch(`https://lomosthegoat.onrender.com/verify-payment?session_id=${sessionId}`)
-        .then(res => res.json())
-        .then(response => {
-            if (response.success) {
-                setPaymentReady(true);
-            } else {
-                navigate("/");
-            }
-        })
-
-    }, [navigate])
+        // fetch(`https://lomosthegoat.onrender.com/verify-payment?session_id=${sessionId}`)
+    
+        // .then(res => res.json())
+        // .then(response => {
+        //     if (response.success) {
+        //         setPaymentVerified(true);
+        //     } else {
+        //         navigate("/");
+        //     }
+        // })
+    // }, [navigate])
 
 
     useEffect(() => {
@@ -71,7 +73,7 @@ export default function Success() {
     
     useEffect(() => {
         console.log(client.name, "Client Name");
-        if (clientReady && paymentVerified) {
+        if (clientReady) {
             emailjs.send('service_6i1ihfq', 'template_kza2k47', {
                 name: client.name,
                 phone: client.phone,
@@ -89,6 +91,10 @@ export default function Success() {
             );
         }
     }, [client.name]);
+
+    useEffect(() => {
+        console.log(cart, "Cart");
+    }, [ cart ]);
 
 
     return (

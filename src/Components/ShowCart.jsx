@@ -8,7 +8,7 @@ import DeliveryMethod from "./DeliveryMethod";
 export default function ShowCart() {
     const [ orderType, setOrderType ] = useState("pickup");
     const cart = useContext(CartContext);
-    console.log(cart)
+    console.log(cart, "Cart in showcart page")   
     
     //USING LOCALSTORAGE TO GET THE DELIVERY CHARGE, ADDRESS AND NAME
     const [ firstName, setfirstName ] = useState("");
