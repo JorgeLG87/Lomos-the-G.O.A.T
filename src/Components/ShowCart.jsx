@@ -140,6 +140,7 @@ export default function ShowCart() {
             setIsOpen(true);
         } else {
             setIsOpen(false);
+            checkout();
         }
     }
 
@@ -184,13 +185,7 @@ export default function ShowCart() {
                 <Link to="/order-now" style={{textDecoration:"none", width:"fit-content", display:"contents"}}>
                     <button className="navigating-showcart" type="button">Go Back</button>
                 </Link>
-                <button className="place-order-top" type="button" onClick={() => {
-                    console.log("Order Placed")
-                    handleErrorModal();
-                    if (!isOpen) {
-                        checkout();
-                    }}
-                }>Place Order</button>
+                <button className="place-order-top" type="button" onClick={() => handleErrorModal()}>Place Order</button>
             </div>
             
             <div className="total-price">Sub-Total: ${getTotalSum().toFixed(2)}</div>
