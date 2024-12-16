@@ -38,6 +38,11 @@ const storeProducts = [
 
 // Functions to get specific prices
 
+function getProductName(id) {
+    let productName = storeProducts.find((product) => product.id === id).title;
+    return productName;
+}
+
 function getProductData(id) {
     let productData = storeProducts.find((product) => product.id === id)
     return productData;
@@ -58,4 +63,4 @@ function getPriceLarge(id) {
     return productPrice;
 }
 
-export {storeProducts, getPriceSmall, getPriceMedium, getPriceLarge, getProductData};
+export {storeProducts, getPriceSmall, getPriceMedium, getPriceLarge, getProductData, getProductName};

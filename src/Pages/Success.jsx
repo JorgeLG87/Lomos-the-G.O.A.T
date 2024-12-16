@@ -18,25 +18,28 @@ export default function Success() {
     const [ clientReady, setClientReady ] = useState(false);
     const [ client, setClient ] = useState({});
 
+    //MAP THE CART ITEMS TO AN ARRAY OF OBJECTS
+    const cartItems = cart.items.map((item) => `- ${item.name} (Quantity: ${item.quantity}) Special Instructions: Beverage: ${item.beverage}, Ketchup: ${item.ketchupInstruction}, Lettuce: ${item.lettuceInstruction}, Tomatoe: ${item.tomatoeInstruction}, Mayo: ${item.mayoInstruction}, Mustard: ${item.mustardInstruction}, Salt: ${item.saltInstruction}`).join("\n");
+
     //VERIFY THAT WE HAVE A SESSION ID IN THE URL ELSE REDIRECT TO HOME PAGE
-    // useEffect(() => {
-        // const sessionId = new URLSearchParams(window.location.search).get("session_id");
-        // if (!sessionId) {
-        //     navigate("/");
-        // }
+    useEffect(() => {
+        const sessionId = new URLSearchParams(window.location.search).get("session_id");
+        if (!sessionId) {
+            navigate("/");
+        }
     
-        //VERIFY PAYMENT STATUS
-        // fetch(`https://lomosthegoat.onrender.com/verify-payment?session_id=${sessionId}`)
+        // VERIFY PAYMENT STATUS
+        fetch(`https://lomosthegoat.onrender.com/verify-payment?session_id=${sessionId}`)
     
-        // .then(res => res.json())
-        // .then(response => {
-        //     if (response.success) {
-        //         setPaymentVerified(true);
-        //     } else {
-        //         navigate("/");
-        //     }
-        // })
-    // }, [navigate])
+        .then(res => res.json())
+        .then(response => {
+            if (response.success) {
+                setPaymentVerified(true);
+            } else {
+                navigate("/");
+            }
+        })
+    }, [navigate])
 
 
     useEffect(() => {
@@ -66,20 +69,18 @@ export default function Success() {
         setClientReady(true);
     }, [firstName, lastName, address, city, phone]);
 
-    //TESTING PURPOSES ONLY
-    useEffect(() => {
-        console.log(client, "Client object");
-    }, [client]);
+  
     
     useEffect(() => {
         console.log(client.name, "Client Name");
-        if (clientReady) {
+        if (clientReady && paymentVerified) {
             emailjs.send('service_6i1ihfq', 'template_kza2k47', {
                 name: client.name,
                 phone: client.phone,
                 address: client.address,
                 city: client.city,
                 orderType: orderType,
+                cartItems: cartItems,
             }, '4l4HUKlF6lW_-n6UM')
             .then(
                 () => {
@@ -92,10 +93,16 @@ export default function Success() {
         }
     }, [client.name]);
 
+    //TESTING PURPOSES
     useEffect(() => {
         console.log(cart, "Cart");
     }, [ cart ]);
 
+    useEffect(() => {
+        console.log(cartItems, "Cart Items");
+    }, [cartItems]);
+
+   
 
     return (
         <div className="successpage-container">

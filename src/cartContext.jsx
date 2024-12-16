@@ -1,7 +1,5 @@
 import { createContext, useState } from "react";
-import { storeProducts } from "./storeProducts";
-
-import { getProductData } from "./storeProducts";
+import { storeProducts, getProductData, getProductName } from "./storeProducts";
 
 export const CartContext = createContext({
     items: [],
@@ -85,8 +83,15 @@ function CartProvider({ children }) {
         } else return quantity;
     }
 
+    function getProductName(id) {
+        const productName = storeProducts.find(product => product.id === id).title;
+        return productName;
+    }
+
 
     function addOneToCart(id) {
+        const name = getProductName(id);
+
         const quantity = getProductQuantity(id);
 
         const beverageType= getProductBeverage(id);
@@ -106,6 +111,7 @@ function CartProvider({ children }) {
         setCartProducts([
             ...cartProducts, {
                 id: id,
+                name: name,
                 quantity: 1,
                 beverage: beverageType || "None",
                 lettuceInstruction: lettuce ? "No Lettuce" : "",
