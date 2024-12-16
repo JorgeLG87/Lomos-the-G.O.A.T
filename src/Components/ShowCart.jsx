@@ -187,8 +187,10 @@ export default function ShowCart() {
                 <button className="place-order-top" type="button" onClick={() => {
                     console.log("Order Placed")
                     handleErrorModal();
-                    }
-                    }>Place Order</button>
+                    if (!isOpen) {
+                        checkout();
+                    }}
+                }>Place Order</button>
             </div>
             
             <div className="total-price">Sub-Total: ${getTotalSum().toFixed(2)}</div>
