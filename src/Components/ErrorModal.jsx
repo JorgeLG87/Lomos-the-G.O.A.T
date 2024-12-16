@@ -6,7 +6,8 @@ export default function ErrorModal({ setIsOpen }) {
 
     return (
         <div className="modal-main-container-open">
-            <p>Please enter required information to continue</p>
+            <p className="modal-text-title">Ooopsss..</p>
+            <p className="modal-text">Please enter required information to continue</p>
             <button className="modal-btn" type="button" onClick={() => setIsOpen(false)}>Ok</button>
         </div>
     )
