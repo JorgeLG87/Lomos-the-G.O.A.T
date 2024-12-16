@@ -20,6 +20,7 @@ import ShowCart from './Components/ShowCart.jsx';
 import AboutUsCarousel from './Components/AboutUsCarousel.jsx';
 import AboutUsMUICarousel from './Components/AboutUsMUICarousel.jsx';
 import DeliveryMethod from './Components/DeliveryMethod.jsx';
+import ErrorModal from './Components/ErrorModal.jsx';
 
 // Import Store Products and Functions to obtain specific prices
 import { storeProducts, getPriceSmall, getPriceMedium, getPriceLarge, getProductData } from './storeProducts.jsx'; 

@@ -4,16 +4,17 @@ import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 
-export default function DeliveryMethod({ subTotal, totalQuantity, orderType, setOrderType, deliveryCharge, setDeliveryCharge }) {
+export default function DeliveryMethod({subTotal, totalQuantity, orderType, setOrderType, deliveryCharge, setDeliveryCharge, firstName, setFirstName, lastName, setLastName, phone, setPhone, street, setStreet, city, setCity}) {
 
     const navigate = useNavigate();
     const form = useRef();
-    const [ firstName, setFirstName ] = useState("");
-    const [ lastName, setLastName ] = useState("");
-    const [ phone, setPhone ] =  useState("");
-    const [ deliveryAddress, setDeliveryAddress ] = useState(localStorage.getItem("deliveryAddress") || "");
-    const [ city, setCity ] = useState(localStorage.getItem("city") || "");
-    const [ state, setState ] = useState("");
+    const [ addressField, setAddressField ] = useState(true);
+    // const [ firstName, setFirstName ] = useState("");
+    // const [ lastName, setLastName ] = useState("");
+    // const [ phone, setPhone ] =  useState("");
+    // const [ deliveryAddress, setDeliveryAddress ] = useState(localStorage.getItem("deliveryAddress") || "");
+    // const [ city, setCity ] = useState(localStorage.getItem("city") || "");
+    // const [ state, setState ] = useState("");
     const [ completeAddress, setCompleteAddress ] = useState("");
     const [ originAddress, setOriginAddress ] = useState("89 MacArthur Ave., Garfield, NJ"); 
     const [ distance, setDistance ] = useState(null);
@@ -52,8 +53,8 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
     }, [])
 
    function handleCompleteAddress() {
-        const address = `${deliveryAddress}, ${city}, NJ`;
-        setCompleteAddress(`${deliveryAddress}, ${city}, NJ`);
+        const address = `${street}, ${city}, NJ`;
+        setCompleteAddress(`${street}, ${city}, NJ`);
 
         fetch(`https://lomos-the-g-o-a-t.onrender.com/api-get-distance?address=${address}`)
             .then(res => res.json())
@@ -71,7 +72,7 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
 //    }, [completeAddress])
 
    function handleLocalStorage() {
-        localStorage.setItem("deliveryAddress", deliveryAddress);
+        localStorage.setItem("deliveryAddress", street);
         localStorage.setItem("city", city);
         localStorage.setItem("deliveryCharge", deliveryCharge);
         localStorage.setItem("firstName", firstName);
@@ -81,7 +82,7 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
 
    useEffect(() => {
         handleLocalStorage();
-   }, [deliveryAddress, city, deliveryCharge]);
+   }, [street, city, deliveryCharge]);
    
 
    useEffect(() => {
@@ -93,20 +94,14 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
     localStorage.setItem("orderType", orderType);
    }, [orderType]);
 
-//    useEffect(() => {
-//     const savedDeliveryAddress = localStorage.getItem("deliveryAddress");
-//     const savedCity = localStorage.getItem("city");
-//     const savedDeliveryCharge = localStorage.getItem("deliveryCharge");
-//     if (savedDeliveryAddress) {
-//         setDeliveryAddress(savedDeliveryAddress);
-//     }
-//     if (savedCity) {
-//         setCity(savedCity);
-//     }
-//     if (savedDeliveryCharge) {
-//         setDeliveryCharge(savedDeliveryCharge);
-//     }
-//    }, []) 
+   //CHANGE STATE FOR ERROR MESSAGE IF NO ADDRESS IS ENTERED
+   function handleAddressField() {
+    if (street !== "" && city !== "") {
+        setAddressField(true);
+    } else {
+        setAddressField(false);
+    }
+   }
 
 
    //CONSOLE LOGGING FOR TEST PURPOSES
@@ -129,15 +124,16 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
                         <input className="contact-number" type="number" placeholder="Phone #" name="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} required></input>
                     </div>
                     <div className="delivery-info">
-                        <input className="delivery-input" placeholder="Delivery Address" name="Delivery Address" value={deliveryAddress} onChange={(e) => setDeliveryAddress(e.target.value)} required></input>
+                        <input className="delivery-input" placeholder="Delivery Address" name="Delivery Address" value={street} onChange={(e) => setStreet(e.target.value)} required></input>
 
                         <input className="city-input" placeholder="City" name="City" value={city} onChange={(e) => setCity(e.target.value)} required></input>
 
                         <input className="state-input" placeholder="State" name="State" defaultValue="New Jersey" disabled></input>
                     </div>
+                    {addressField ? null : <p className="address-error">Please enter a valid address.</p>}
                     <input className="random-number" value={randomNumber} placeholder={randomNumber} name="Random Number" hidden></input>
-                    <button className="submit-button-form" type="button" onClick={(e) => {
-                        // navigate("/success")
+                    <button style={{marginTop : addressField === false ? "30px" : "50px"}} className="submit-button-form" type="button" onClick={(e) => {
+                        handleAddressField()
                         handleCompleteAddress();
                         handleLocalStorage();
                         }}>Ok</button>
@@ -150,7 +146,7 @@ export default function DeliveryMethod({ subTotal, totalQuantity, orderType, set
                         <input className="contact-number" type="number" placeholder="Phone #" name="Phone Number" value={phone} onChange={(e) => setPhone(e.target.value)} required></input>
                         <input className="random-number" value={randomNumber} placeholder={randomNumber} name="Random Number" hidden></input>
                     </div>
-                    <button className="submit-button-form" type="button" onClick={handleLocalStorage}>Ok</button>
+                    <button style={{marginTop: "50px"}} className="submit-button-form" type="button" onClick={handleLocalStorage}>Ok</button>
                 </form>}
             </div>
             <p className="subtotal">Sub-Total: ${subTotal}</p>

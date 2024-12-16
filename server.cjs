@@ -116,17 +116,6 @@ app.post("/checkout", async (req, res) => {
         success_url: 'https://lomosthegoat.netlify.app/success?session_id={CHECKOUT_SESSION_ID}',
         cancel_url: 'https://lomosthegoat.netlify.app/cancel',
         customer_creation: "always",
-        // custom_fields: [
-        //     {
-        //         key: "name",
-        //         label: {
-        //             type: "custom",
-        //             custom: "Full Name",
-        //         },
-        //         type: "text",
-        //         optional: false,
-        //     },
-        // ],
     })
 
     res.send(JSON.stringify({

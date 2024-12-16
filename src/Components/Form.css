@@ -47,7 +47,7 @@
     font-weight: 500;
     border-radius: 10px;
     margin-left: 0%;
-    margin-top: 50px;
+    /* margin-top: 50px; */
 }
 .submit-button-form:hover {
     cursor: pointer;
@@ -537,4 +537,11 @@
         width: 100%;
         margin-left: 0%;
     }
+  }
+
+  .address-error {
+    font-family: "Barlow semi condensed";
+    text-shadow: none;
+    margin-top: 10px;
+    margin-bottom: 0px;
   }

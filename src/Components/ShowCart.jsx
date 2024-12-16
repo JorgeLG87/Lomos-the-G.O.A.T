@@ -4,20 +4,25 @@ import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../cartContext";
 import { getProductData } from "../storeProducts";
 import DeliveryMethod from "./DeliveryMethod";
+import ErrorModal from "./ErrorModal";
 
 export default function ShowCart() {
+    //STATE TO CONTROL ERROR MODAL
+    const [ isOpen, setIsOpen ] = useState(false);
+
+    //STATE TO CONTROL DELIVERY METHOD
     const [ orderType, setOrderType ] = useState("pickup");
     const cart = useContext(CartContext);
     console.log(cart, "Cart in showcart page")   
     
     //USING LOCALSTORAGE TO GET THE DELIVERY CHARGE, ADDRESS AND NAME
-    const [ firstName, setfirstName ] = useState("");
-    const [ lastName, setlastName ] = useState("");
+    const [ firstName, setFirstName ] = useState("");
+    const [ lastName, setLastName ] = useState("");
     const [ fullName, setFullName ] = useState("");
     const [ phone, setPhone ] = useState("");
     const [ street, setStreet ] = useState("");
     const [ city, setCity ] = useState("");
-    const [ state, setState ] = useState("");
+    const [ state, setState ] = useState("New Jersey");
     const [ deliveryCharge, setDeliveryCharge ] = useState(0);
     const [ deliveryChargeCents, setDeliveryChargeCents ] = useState(0);
 
@@ -25,24 +30,24 @@ export default function ShowCart() {
 
 
     //RETRIEVING DATA FROM LOCALSTORAGE
-    useEffect(() => {
-        setfirstName(localStorage.getItem("firstName"));
-    }, [])
+    // useEffect(() => {
+    //     setFirstName(localStorage.getItem("firstName"));
+    // }, [])
     
-    useEffect(() => {
-        setlastName(localStorage.getItem("lastName"));
-    }, [])
+    // useEffect(() => {
+    //     setLastName(localStorage.getItem("lastName"));
+    // }, [])
     
-    useEffect(() => {
-        setPhone(localStorage.getItem("phone"));
-    }, [])
+    // useEffect(() => {
+    //     setPhone(localStorage.getItem("phone"));
+    // }, [])
     
-    useEffect(() => {
-        setStreet(localStorage.getItem("street"));
-    }, [])
-    useEffect(() => {
-        setCity(localStorage.getItem("city"));
-    }, [])
+    // useEffect(() => {
+    //     setStreet(localStorage.getItem("deliveryAddress"));
+    // }, [])
+    // useEffect(() => {
+    //     setCity(localStorage.getItem("city"));
+    // }, [])
     useEffect(()=> {
         setDeliveryCharge(localStorage.getItem("deliveryCharge"));
     }, []);
@@ -127,7 +132,22 @@ export default function ShowCart() {
     console.log(totalQuantity);
 
 
+    //HANDLE ERROR MODAL
+    function handleErrorModal() {
+        if ((firstName === "" || lastName === "" || phone === "") && orderType === "pickup") {
+            setIsOpen(true);
+        } else if ((firstName === "" || lastName === "" || phone === "" || street === "" || city === "" || state === "") && orderType === "delivery") {
+            setIsOpen(true);
+        } else {
+            setIsOpen(false);
+        }
+    }
+
     //FOR TESTING PURPOSES
+    useEffect(() => {
+        console.log(firstName, "First name ShowCart.jsx")
+    }, [firstName])
+
     useEffect(() => {
         console.log(orderType, "Order type ShowCart.jsx")
     }, [orderType]);
@@ -140,8 +160,13 @@ export default function ShowCart() {
         console.log(deliveryChargeCents, "Delivery charge ShowCart.jsx")
     }, [deliveryChargeCents]);
 
+    useEffect(() => {
+        console.log(isOpen, "IsOpen ShowCart.jsx")
+    }, [isOpen])
+
     return (
         <div className="showcart-page">
+            {isOpen ? <ErrorModal setIsOpen={setIsOpen}/> : null}
             <div className="sideborder-container2">
                 <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
                 <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>
@@ -160,9 +185,12 @@ export default function ShowCart() {
                     <button className="navigating-showcart" type="button">Go Back</button>
                 </Link>
                 <button className="place-order-top" type="button" onClick={() => {
-                    checkout();
-                    }}>Place Order</button>
+                    console.log("Order Placed")
+                    handleErrorModal();
+                    }
+                    }>Place Order</button>
             </div>
+            
             <div className="total-price">Sub-Total: ${getTotalSum().toFixed(2)}</div>
             <div className="showcart-main-container2">
                 {(cart.items).map((product, index) => {
@@ -186,7 +214,7 @@ export default function ShowCart() {
                 })}
             </div>
             
-            {totalQuantity > 0 ?  <DeliveryMethod subTotal={getTotalSum().toFixed(2)} totalQuantity={totalQuantity} orderType={orderType} setOrderType={setOrderType} deliveryCharge={deliveryCharge} setDeliveryCharge={setDeliveryCharge}/> : null}
+            {totalQuantity > 0 ?  <DeliveryMethod subTotal={getTotalSum().toFixed(2)} totalQuantity={totalQuantity} orderType={orderType} setOrderType={setOrderType} deliveryCharge={deliveryCharge} setDeliveryCharge={setDeliveryCharge} firstName={firstName} setFirstName={setFirstName} lastName={lastName} setLastName={setLastName} phone={phone} setPhone={setPhone} street={street} setStreet={setStreet} city={city} setCity={setCity}/> : null}
             
             <div className="sideborder-right-container2">
                 <img src="/sideborder-right.svg" className="side-border-right"/>
