@@ -30,7 +30,6 @@ export default function Success() {
     
         // VERIFY PAYMENT STATUS
         fetch(`https://lomosthegoat.onrender.com/verify-payment?session_id=${sessionId}`)
-    
         .then(res => res.json())
         .then(response => {
             if (response.success) {
