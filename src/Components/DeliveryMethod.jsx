@@ -151,7 +151,7 @@ export default function DeliveryMethod({subTotal, totalQuantity, orderType, setO
                 </form>}
             </div>
             <p className="subtotal">Sub-Total: ${subTotal}</p>
-            {deliveryCharge > 0 && orderType === "delivery" ? <p className="delivery-charge">Delivery Charge: ${deliveryCharge}</p> : <p className="delivery-charge">Delivery Charge: $0</p>}
+            { orderType === "delivery" ? <p className="delivery-charge">Delivery Charge: ${deliveryCharge}</p> : null}
             {orderType === "pickup" ? <p className="total">Total: ${Number(subTotal)}</p> : <p className="total">Total: ${(Number(subTotal)+Number(deliveryCharge)).toFixed(2)}</p>}
         </div>
     )
