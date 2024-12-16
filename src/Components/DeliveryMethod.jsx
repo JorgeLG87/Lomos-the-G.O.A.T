@@ -113,9 +113,10 @@ export default function DeliveryMethod({subTotal, totalQuantity, orderType, setO
                 <button className="pickup-order" type="button" onClick={() => setOrderType("pickup")}>Pick Up</button>
                 <button className="delivery-order" type="button" onClick={() => setOrderType("delivery")}>Delivery</button>
             </div>
+            <p className="customer-info">Customer's Information: </p>
             <div className="form-fields">
             {orderType === "delivery" ? <form className="order-form" ref={form} onSubmit={sendEmail}>
-                    <p className="delivery-charge-text">There is a delivery fee. To check how much extra will the charge be, please type in your complete address.</p>
+                    <p className="delivery-charge-text">We are only delivering inside New Jersey. There is a delivery fee, please type in your complete address to check cost.</p>
                     <div className="personal-info">
                         <input className="name-input" type="text" placeholder="First Name" name="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} required></input>
     
