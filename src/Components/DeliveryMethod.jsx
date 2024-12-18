@@ -54,7 +54,7 @@ export default function DeliveryMethod({subTotal, totalQuantity, orderType, setO
         if (addressField === true ) {
             fetch(`https://lomos-the-g-o-a-t.onrender.com/api-get-distance?address=${address}`)
                 .then(res => res.json())
-                .then(response => setDistance(response.rows[0].elements[0].distance.text.split(" ")[0]))
+                .then(response => setDistance(Number(response.rows[0].elements[0].distance.text.split(" ")[0])))
                 .catch(error => console.log(error));
         }
    }
@@ -89,13 +89,13 @@ export default function DeliveryMethod({subTotal, totalQuantity, orderType, setO
    }, [orderType]);
 
    //CHANGE STATE FOR ERROR MESSAGE IF NO ADDRESS IS ENTERED
-   function handleAddressField() {
-    if (street !== "" && city !== "") {
-        setAddressField(true);
-    } else {
-        setAddressField(false);
-    }
-   }
+//    function handleAddressField() {
+//     if (street !== "" && city !== "") {
+//         setAddressField(true);
+//     } else {
+//         setAddressField(false);
+//     }
+//    }
 
 
    //CONSOLE LOGGING FOR TEST PURPOSES
@@ -128,7 +128,7 @@ export default function DeliveryMethod({subTotal, totalQuantity, orderType, setO
                     {addressField ? null : <p className="address-error">Please enter a valid address.</p>}
                     <input className="random-number" value={randomNumber} placeholder={randomNumber} name="Random Number" hidden></input>
                     <button style={{marginTop : addressField === false ? "30px" : "50px"}} className="submit-button-form" type="button" onClick={(e) => {
-                        handleAddressField()
+                        // handleAddressField()
                         handleCompleteAddress();
                         handleLocalStorage();
                         }}>Ok</button>
