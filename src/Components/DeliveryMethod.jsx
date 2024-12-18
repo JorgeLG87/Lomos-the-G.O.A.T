@@ -71,6 +71,8 @@ export default function DeliveryMethod({subTotal, totalQuantity, orderType, setO
    useEffect(() => {
         if (street !== "" && city !== "") {
             setAddressField(true);
+        } else {
+            setAddressField(false);
         }
    }, [street, city])
 
