@@ -69,6 +69,12 @@ export default function DeliveryMethod({subTotal, totalQuantity, orderType, setO
    }
 
    useEffect(() => {
+        if (street !== "" && city !== "") {
+            setAddressField(true);
+        }
+   }, [street, city])
+
+   useEffect(() => {
         handleLocalStorage();
    }, [street, city, deliveryCharge]);
    
