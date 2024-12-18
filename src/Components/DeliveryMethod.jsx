@@ -9,12 +9,6 @@ export default function DeliveryMethod({subTotal, totalQuantity, orderType, setO
     const navigate = useNavigate();
     const form = useRef();
     const [ addressField, setAddressField ] = useState(true);
-    // const [ firstName, setFirstName ] = useState("");
-    // const [ lastName, setLastName ] = useState("");
-    // const [ phone, setPhone ] =  useState("");
-    // const [ deliveryAddress, setDeliveryAddress ] = useState(localStorage.getItem("deliveryAddress") || "");
-    // const [ city, setCity ] = useState(localStorage.getItem("city") || "");
-    // const [ state, setState ] = useState("");
     const [ completeAddress, setCompleteAddress ] = useState("");
     const [ originAddress, setOriginAddress ] = useState("89 MacArthur Ave., Garfield, NJ"); 
     const [ distance, setDistance ] = useState(0);
@@ -56,20 +50,14 @@ export default function DeliveryMethod({subTotal, totalQuantity, orderType, setO
         const address = `${street}, ${city}, NJ`;
         setCompleteAddress(`${street}, ${city}, NJ`);
 
-        fetch(`https://lomos-the-g-o-a-t.onrender.com/api-get-distance?address=${address}`)
-            .then(res => res.json())
-            .then(response => setDistance(response.rows[0].elements[0].distance.text.split(" ")[0]))
-            .catch(error => console.log(error));
+        //FETCH IF ADDRESSFIELD IS TRUE
+        if (addressField === true ) {
+            fetch(`https://lomos-the-g-o-a-t.onrender.com/api-get-distance?address=${address}`)
+                .then(res => res.json())
+                .then(response => setDistance(response.rows[0].elements[0].distance.text.split(" ")[0]))
+                .catch(error => console.log(error));
+        }
    }
-
-//    useEffect(() => {
-//         if (completeAddress) {
-//             fetch(`https://lomos-the-g-o-a-t.onrender.com/api-get-distance?address=${completeAddress}`)
-//             .then(res => res.json())
-//             .then(response => setDistance(response.rows[0].elements[0].distance.text.split(" ")[0]))
-//             .catch(error => console.log(error));
-//         }
-//    }, [completeAddress])
 
    function handleLocalStorage() {
         localStorage.setItem("deliveryAddress", street);
