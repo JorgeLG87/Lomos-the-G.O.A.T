@@ -17,7 +17,7 @@ export default function DeliveryMethod({subTotal, totalQuantity, orderType, setO
     // const [ state, setState ] = useState("");
     const [ completeAddress, setCompleteAddress ] = useState("");
     const [ originAddress, setOriginAddress ] = useState("89 MacArthur Ave., Garfield, NJ"); 
-    const [ distance, setDistance ] = useState(null);
+    const [ distance, setDistance ] = useState(0);
     
     //API KEY
     const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
