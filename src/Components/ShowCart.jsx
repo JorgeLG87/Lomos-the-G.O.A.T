@@ -138,6 +138,8 @@ export default function ShowCart() {
             setIsOpen(true);
         } else if ((firstName === "" || lastName === "" || phone === "" || street === "" || city === "" || state === "") && orderType === "delivery") {
             setIsOpen(true);
+        } else if (cart.items.length === 0) {
+            setIsOpen(true);
         } else {
             setIsOpen(false);
             checkout();
