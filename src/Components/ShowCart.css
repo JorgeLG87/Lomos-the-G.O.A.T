@@ -116,7 +116,7 @@
 
 .list-products {
     /* position: relative; */
-    border-radius: 10px;
+    border-radius: 17px;
     width: 100%;
     height: fit-content;
     display: flex;
@@ -127,9 +127,10 @@
     /* border: 1px solid red; */
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     background-color: white;
+    padding-bottom: 20px;
     @media (width < 450px) {
         width: 80%;
-        border-radius: 5px;
+        border-radius: 17px;
         border: none;
         margin-left: 10%;
     }

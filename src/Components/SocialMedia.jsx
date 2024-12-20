@@ -11,7 +11,9 @@ export default function SocialMedia() {
             </div>
             {/* <div className="company-text-container"> */}
                 <p className="company-text">Lomos The G.O.A.T - Est. 2024</p>
+                
             {/* </div> */}
+            
         </div>
     )
 }
