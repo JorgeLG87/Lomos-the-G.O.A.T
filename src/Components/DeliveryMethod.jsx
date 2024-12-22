@@ -109,6 +109,10 @@ export default function DeliveryMethod({subTotal, totalQuantity, orderType, setO
     console.log(distance, "Distance")
    }, [distance]);
 
+   useEffect(() => {
+    console.log(deliveryTime, "Delivery Time")
+   }, [deliveryTime]);
+
     return (
         <div className="orderform-container">
             <div className="ordertype-container">
