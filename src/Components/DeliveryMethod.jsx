@@ -92,6 +92,7 @@ export default function DeliveryMethod({subTotal, totalQuantity, orderType, setO
 
    useEffect(() => {
     setDeliveryTime(deliveryTime + (distance*2));
+    localStorage.setItem("deliveryTime", deliveryTime);
    }, [distance]);
 
    //CHANGE STATE FOR ERROR MESSAGE IF NO ADDRESS IS ENTERED

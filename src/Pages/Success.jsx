@@ -17,7 +17,7 @@ export default function Success() {
     const [ paymentVerified, setPaymentVerified ] = useState(false);
     const [ clientReady, setClientReady ] = useState(false);
     const [ client, setClient ] = useState({});
-    const [ deliveryTime, setDeliveryTime ] = useState(25);
+    const [ deliveryTime, setDeliveryTime ] = useState("");
 
     //MAP THE CART ITEMS TO AN ARRAY OF OBJECTS
     const cartItems = cart.items.map((item) => `- ${item.name} (Quantity: ${item.quantity}) Special Instructions: Beverage: ${item.beverage}, Ketchup: ${item.ketchupInstruction}, Lettuce: ${item.lettuceInstruction}, Tomatoe: ${item.tomatoeInstruction}, Mayo: ${item.mayoInstruction}, Mustard: ${item.mustardInstruction}, Salt: ${item.saltInstruction}`).join("\n");
@@ -49,6 +49,7 @@ export default function Success() {
         setCity(localStorage.getItem("city"));
         setPhone(localStorage.getItem("phone"));
         setOrderType(localStorage.getItem("orderType"));
+        setDeliveryTime(localStorage.getItem("deliveryTime"));
     }, []);
 
 
@@ -109,6 +110,7 @@ export default function Success() {
             <div className="message-container">
                 <p className="title2"><span className="span-text">Payment</span></p><p className="title"> Successful!</p>
                 <p className="confirmation-text">We've received your order and working on it...</p>
+                <p>Please give us {deliveryTime} min. to deliver your order. Thank you</p>
             </div>
         </div>
     )
