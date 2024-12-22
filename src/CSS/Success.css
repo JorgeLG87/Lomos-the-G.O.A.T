@@ -8,3 +8,14 @@
     align-items: center;
     margin-top: 50px;
 }
+
+.confirmation-text {
+    font-family: "Barlow semi condensed";
+    font-size: 20px;
+
+}
+
+.time-text {
+    font-family: "barlow semi condensed";
+    font-size: 20px;
+}
