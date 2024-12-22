@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 
-export default function DeliveryMethod({subTotal, totalQuantity, orderType, setOrderType, deliveryCharge, setDeliveryCharge, firstName, setFirstName, lastName, setLastName, phone, setPhone, street, setStreet, city, setCity}) {
+export default function DeliveryMethod({subTotal, totalQuantity, orderType, setOrderType, deliveryCharge, setDeliveryCharge, firstName, setFirstName, lastName, setLastName, phone, setPhone, street, setStreet, city, setCity, deliveryTime, setDeliveryTime}) {
 
     const navigate = useNavigate();
     const form = useRef();
@@ -90,6 +90,10 @@ export default function DeliveryMethod({subTotal, totalQuantity, orderType, setO
     localStorage.setItem("orderType", orderType);
    }, [orderType]);
 
+   useEffect(() => {
+    setDeliveryTime(deliveryTime + (distance*2));
+   }, [distance]);
+
    //CHANGE STATE FOR ERROR MESSAGE IF NO ADDRESS IS ENTERED
 //    function handleAddressField() {
 //     if (street !== "" && city !== "") {
@@ -101,7 +105,9 @@ export default function DeliveryMethod({subTotal, totalQuantity, orderType, setO
 
 
    //CONSOLE LOGGING FOR TEST PURPOSES
-   
+   useEffect(() => {
+    console.log(distance, "Distance")
+   }, [distance]);
 
     return (
         <div className="orderform-container">

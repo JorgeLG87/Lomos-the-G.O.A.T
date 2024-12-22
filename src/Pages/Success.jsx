@@ -17,28 +17,29 @@ export default function Success() {
     const [ paymentVerified, setPaymentVerified ] = useState(false);
     const [ clientReady, setClientReady ] = useState(false);
     const [ client, setClient ] = useState({});
+    const [ deliveryTime, setDeliveryTime ] = useState(25);
 
     //MAP THE CART ITEMS TO AN ARRAY OF OBJECTS
     const cartItems = cart.items.map((item) => `- ${item.name} (Quantity: ${item.quantity}) Special Instructions: Beverage: ${item.beverage}, Ketchup: ${item.ketchupInstruction}, Lettuce: ${item.lettuceInstruction}, Tomatoe: ${item.tomatoeInstruction}, Mayo: ${item.mayoInstruction}, Mustard: ${item.mustardInstruction}, Salt: ${item.saltInstruction}`).join("\n");
 
     //VERIFY THAT WE HAVE A SESSION ID IN THE URL ELSE REDIRECT TO HOME PAGE
-    useEffect(() => {
-        const sessionId = new URLSearchParams(window.location.search).get("session_id");
-        if (!sessionId) {
-            navigate("/");
-        }
+    // useEffect(() => {
+    //     const sessionId = new URLSearchParams(window.location.search).get("session_id");
+    //     if (!sessionId) {
+    //         navigate("/");
+    //     }
     
         // VERIFY PAYMENT STATUS
-        fetch(`https://lomosthegoat.onrender.com/verify-payment?session_id=${sessionId}`)
-        .then(res => res.json())
-        .then(response => {
-            if (response.success) {
-                setPaymentVerified(true);
-            } else {
-                navigate("/");
-            }
-        })
-    }, [navigate])
+    //     fetch(`https://lomosthegoat.onrender.com/verify-payment?session_id=${sessionId}`)
+    //     .then(res => res.json())
+    //     .then(response => {
+    //         if (response.success) {
+    //             setPaymentVerified(true);
+    //         } else {
+    //             navigate("/");
+    //         }
+    //     })
+    // }, [navigate])
 
 
     useEffect(() => {
@@ -107,6 +108,7 @@ export default function Success() {
         <div className="successpage-container">
             <div className="message-container">
                 <p className="title2"><span className="span-text">Payment</span></p><p className="title"> Successful!</p>
+                <p className="confirmation-text">We've received your order and working on it...</p>
             </div>
         </div>
     )

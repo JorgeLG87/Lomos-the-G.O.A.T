@@ -25,29 +25,12 @@ export default function ShowCart() {
     const [ state, setState ] = useState("New Jersey");
     const [ deliveryCharge, setDeliveryCharge ] = useState(0);
     const [ deliveryChargeCents, setDeliveryChargeCents ] = useState(0);
+    const [ deliveryTime, setDeliveryTime ] = useState(25);
 
     const [ improvedCart, setImprovedCart ] = useState([]);
 
 
     //RETRIEVING DATA FROM LOCALSTORAGE
-    // useEffect(() => {
-    //     setFirstName(localStorage.getItem("firstName"));
-    // }, [])
-    
-    // useEffect(() => {
-    //     setLastName(localStorage.getItem("lastName"));
-    // }, [])
-    
-    // useEffect(() => {
-    //     setPhone(localStorage.getItem("phone"));
-    // }, [])
-    
-    // useEffect(() => {
-    //     setStreet(localStorage.getItem("deliveryAddress"));
-    // }, [])
-    // useEffect(() => {
-    //     setCity(localStorage.getItem("city"));
-    // }, [])
     useEffect(()=> {
         setDeliveryCharge(localStorage.getItem("deliveryCharge"));
     }, []);
@@ -91,9 +74,6 @@ export default function ShowCart() {
                 },
                 body: JSON.stringify({
                     items: cart.items,
-                    // street: street,
-                    // city: city,
-                    // state: "New Jersey",
                     deliveryCharge: deliveryChargeCents,
                 })
             }).then((response) => {
@@ -167,6 +147,8 @@ export default function ShowCart() {
         console.log(isOpen, "IsOpen ShowCart.jsx")
     }, [isOpen])
 
+  
+
     return (
         <div className="showcart-page">
             {isOpen ? <ErrorModal setIsOpen={setIsOpen}/> : null}
@@ -213,7 +195,7 @@ export default function ShowCart() {
                 })}
             </div>
             
-            {totalQuantity > 0 ?  <DeliveryMethod subTotal={getTotalSum().toFixed(2)} totalQuantity={totalQuantity} orderType={orderType} setOrderType={setOrderType} deliveryCharge={deliveryCharge} setDeliveryCharge={setDeliveryCharge} firstName={firstName} setFirstName={setFirstName} lastName={lastName} setLastName={setLastName} phone={phone} setPhone={setPhone} street={street} setStreet={setStreet} city={city} setCity={setCity}/> : null}
+            {totalQuantity > 0 ?  <DeliveryMethod subTotal={getTotalSum().toFixed(2)} totalQuantity={totalQuantity} orderType={orderType} setOrderType={setOrderType} deliveryCharge={deliveryCharge} setDeliveryCharge={setDeliveryCharge} firstName={firstName} setFirstName={setFirstName} lastName={lastName} setLastName={setLastName} phone={phone} setPhone={setPhone} street={street} setStreet={setStreet} city={city} setCity={setCity} deliveryTime={deliveryTime} setDeliveryTime={setDeliveryTime}/> : null}
             
             <div className="sideborder-right-container2">
                 <img src="/sideborder-right.svg" className="side-border-right"/>
