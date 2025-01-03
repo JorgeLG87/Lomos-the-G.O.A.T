@@ -147,8 +147,10 @@
     /* border: 1px solid black; */
     width: 100%;
     padding-left: 1.5%;
+    margin-top: 50px;
     @media (width < 450px) {
         padding-left: 1.5%;
+        padding-right: 1.5%;
     }
 }
 
@@ -200,8 +202,118 @@
     font-size: 20px;
     margin-left: 30px;
     text-align: left;
+    margin-top: 70px;
     @media (width < 450px) {
         font-size: 18px;
         margin-left: 2%;
+        margin-top: 20px;
     }
+}
+
+.rectangle-container {
+    padding-right: 2%;
+    /* border: 1px solid black; */
+    width: 50%;
+    @media (width < 450px) {
+        width: 90%;
+        padding-right: 0%;
+    }
+}
+
+.rectangle-container2 {
+    border: 1px solid red;
+    width: 40%;
+    height: 500px;
+    margin-top: -50px;
+    @media (width < 450px) {
+        width: 93%;
+        height: 500px;
+        margin-top: 30px;
+    }
+}
+
+.ourstory-rectangle-container {
+    display: flex;
+    @media (width < 450px) {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.image1-container {
+    display: flex;
+    width: 100%;
+    height: 33%;
+    border: 1px solid black;
+}
+
+.image2-container {
+    display: flex;
+    width: 100%;
+    height: 33%;
+    border: 1px solid red;
+}
+
+.image3-container {
+    display: flex;
+    width: 100%;
+    height: 33%;
+    border: 1px solid green;
+}
+
+
+.box{
+	width:25%; height: 250px;
+	background-color: white;
+	position: relative;
+	box-shadow: 10px 10px 42px 0 rgba(0,0,0,0.75);
+    margin-left: 10%;
+    /* border: 1px solid black; */
+    @media (width < 450px) {
+        margin-left: 20%;
+        width: 50%;
+        height: 200px;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+}
+.box:after, .box:before{
+	mix-blend-mode:multiply;
+	filter:none;
+	z-index: -1;
+	content:'';
+	width:calc(100% + (50px * 2));
+	height:calc(100% + (50px * 2));
+	position: absolute;
+	display: block;
+	animation: border 10s ease-in-out infinite;
+	transform:translateX(-50px) translateY(-50px);
+}
+@keyframes border {
+  0%, 100% {
+    -webkit-clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+            clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+  }
+  50% {
+    -webkit-clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+            clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+  }
+}
+
+.box:after{
+	animation-delay: -5s;
+	background-color: #E9D134;
+	clip-path: polygon(0 0, calc(100% - (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 100%, calc(0% + (33.3333333333px)) calc(100% - (33.3333333333px)));
+}
+.box:before {
+	background-color: #AD2007;
+	  clip-path: polygon(calc(0% + (33.3333333333px)) calc(0% + (33.3333333333px)), 100% 0, calc(100% - (33.3333333333px)) calc(100% - (33.3333333333px)), 0 100%);
+}
+
+.box:hover:after{
+	animation-delay: -0.1s;
+}
+.box:hover:before, .box:hover:after {
+
+          animation-duration: 0.2s;
 }

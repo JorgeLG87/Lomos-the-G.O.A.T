@@ -70,7 +70,6 @@ export default function Success() {
         setClientReady(true);
     }, [firstName, lastName, address, city, phone]);
 
-  
     
     useEffect(() => {
         console.log(client.name, "Client Name");
@@ -109,7 +108,7 @@ export default function Success() {
         <div className="successpage-container">
             <div className="message-container">
                 <p className="title2"><span className="span-text">Payment</span></p><p className="title"> Successful!</p>
-                <p className="confirmation-text">We've received your order and working on it...</p>
+                <p className="confirmation-text">We've received your order and we're working on it...</p>
                 <p className="time-text">Please allow {deliveryTime} min. to receive it.</p>
                 <img className="clock-icon" src="/on-time.svg"></img>
                 <p className="title2"><span className="span-text">Thank You!!</span></p>

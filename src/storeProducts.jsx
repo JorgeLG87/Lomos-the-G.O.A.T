@@ -33,6 +33,11 @@ const storeProducts = [
         id: "price_1QUA3gAspxlK0TBsDykRfCY4",
         title: "Fries for 4",
         price: 5.99
+    },
+    {
+        id: "pachata",
+        title: "Pachata",
+        price: 9.99
     }
 ]
 
