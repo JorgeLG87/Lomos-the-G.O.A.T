@@ -263,11 +263,14 @@
 
 
 .box{
-	width:25%; height: 250px;
+	width:25%; 
+    height: 250px;
 	background-color: white;
 	position: relative;
 	box-shadow: 10px 10px 42px 0 rgba(0,0,0,0.75);
     margin-left: 10%;
+    background-image: url("/public/lomos-the-goat2.jpeg");
+    background-size: cover;
     /* border: 1px solid black; */
     @media (width < 450px) {
         margin-left: 20%;
@@ -314,6 +317,5 @@
 	animation-delay: -0.1s;
 }
 .box:hover:before, .box:hover:after {
-
-          animation-duration: 0.2s;
+    animation-duration: 0.2s;
 }
