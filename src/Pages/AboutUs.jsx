@@ -11,7 +11,7 @@ export default function AboutUs({ slides, AboutUsCarousel }) {
                     <div className="idealogo-text-container">
                         <div className="text-aboutUs-container">
                             <p style={{fontFamily:"Barlow semi condensed", fontSize: "20px"}}>At Lomos the G.O.A.T we focus on quality and customer satisfaction. We firmly believe that food has the power 
-                            to unite cultures and bring people together. We are commited to providing our customers with the best possible experience in every single bite.
+                            to unite cultures and bring people together. We are commited to providing our customers with the best possible experience.
                             </p>
                         </div>
                     </div>
@@ -24,7 +24,7 @@ export default function AboutUs({ slides, AboutUsCarousel }) {
                 <div className="ourstory-rectangle-container">
                     <div className="rectangle-container">
                         <p className="rectangle-title">Our Story</p>
-                        <p className="rectangle-text">It all began with the simple idea of bringing our popular lomito sandwich to a completely new audience. We knew it was going to be a challenge, but our strong desire overcame every obstacle. From our roots straight to yours we emphasize in quality </p>
+                        <p className="rectangle-text">It all began with the simple idea of bringing our popular lomito sandwich to a completely new audience. From our roots straight to yours we emphasize authentic flavors, high-quality ingredients, and the warmth of Argentinean tradition. Our goal is to create more than just a meal, we aim to deliver an experience that transports you to the heart of Argentina with every bite. </p>
                     </div>
                     {/* <div className="rectangle-container2">
                         <div className="image1-container">
