@@ -1,7 +1,7 @@
 const storeProducts = [
     {
         // id: "price_1QBDqDAspxlK0TBsmuFK3fGa",
-        id: "prod_Rs1aHTVbridxQW",
+        id: "price_1QyHXlAspxlK0TBsBq7lTKF3",
         title: "The G.O.A.T Combo",
         price: 11.99
     },
@@ -21,7 +21,8 @@ const storeProducts = [
         price: 8.99
     },
     {
-        id: "price_1QU9yiAspxlK0TBsWGwULncs",
+        // id: "price_1QU9yiAspxlK0TBsWGwULncs",
+        id: "price_1QyHkQAspxlK0TBss5Zo0B9A",
         title: "Soda",
         price: 1.49
     },
