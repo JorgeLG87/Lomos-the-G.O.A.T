@@ -1,6 +1,7 @@
 const storeProducts = [
     {
-        id: "price_1QBDqDAspxlK0TBsmuFK3fGa",
+        // id: "price_1QBDqDAspxlK0TBsmuFK3fGa",
+        id: "prod_Rs1aHTVbridxQW",
         title: "The G.O.A.T Combo",
         price: 11.99
     },
