@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { storeProducts, getProductData, getProductName } from "./storeProducts";
+import { storeProducts, getProductData, getProductName, getPrice } from "./storeProducts";
 
 export const CartContext = createContext({
     items: [],
@@ -75,6 +75,44 @@ function CartProvider({ children }) {
         } else return "";
     }
 
+
+    // ADD-ONS INSTRUCTIONS
+    function getSteakInstruction(id) {
+        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1QAWMLAspxlK0TBs40YVjWnR" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
+            const steak = document.getElementById(`extrasteak${id}`).checked;
+            return steak;
+        } else return "";
+
+    }
+
+    function getAguacateInstruction(id) {
+        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1QAWMLAspxlK0TBs40YVjWnR" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
+            const aguacate = document.getElementById(`aguacate${id}`).checked;
+            return aguacate;
+        } else return "";
+    }
+
+    function getOnionInstructions(id) {
+        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1QAWMLAspxlK0TBs40YVjWnR" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
+            const onion = document.getElementById(`onion${id}`).checked;
+            return onion;
+        } else return "";
+    }
+
+    function getCheeseInstruction(id) {
+        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1QAWMLAspxlK0TBs40YVjWnR" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
+            const cheese = document.getElementById(`cheese${id}`).checked;
+            return cheese;
+        } else return "";
+    }
+
+    function getMushroomInstruction(id) {
+        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1QAWMLAspxlK0TBs40YVjWnR" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
+            const mushroom = document.getElementById(`mushroom${id}`).checked;
+            return mushroom;
+        } else return "";
+    }
+
     function getProductQuantity(id) {
         const quantity = cartProducts.find(product => product.id === id)?.quantity;
 
@@ -87,6 +125,13 @@ function CartProvider({ children }) {
         const productName = storeProducts.find(product => product.id === id).title;
         return productName;
     }
+
+    // function getOneCartItemPrice(id) {
+    //     total = 0
+    //     const cartItem = cartProducts.filter(product => product.id === id);
+    //     total += 
+
+    // }
 
 
     function addOneToCart(id) {
@@ -107,6 +152,17 @@ function CartProvider({ children }) {
         const ketchup = getKetchupInstruction(id);
 
         const mustard = getMustardInstruction(id);
+
+        const steak = getSteakInstruction(id);
+
+        const aguacate = getAguacateInstruction(id);
+
+        const onions = getOnionInstructions(id);
+
+        const cheese = getCheeseInstruction(id);
+
+        const mushroom = getMushroomInstruction(id);
+        
         
         setCartProducts([
             ...cartProducts, {
@@ -120,6 +176,11 @@ function CartProvider({ children }) {
                 mayoInstruction: mayo ? "No Mayo" : "",
                 ketchupInstruction: ketchup ? "No Ketchup" : "",
                 mustardInstruction: mustard ? "No Mustard" : "",
+                steakInstruction : steak ? "Extra Steak" : "",
+                aguacateInstruction : aguacate ? "Aguacate Mayo" : "",
+                onionInstruction : onions ? "Onions" : "",
+                cheeseInstruction : cheese ? "Cheese" : "",
+                mushroomInstruction : mushroom ? "Mushroom" : "",
                 index: Date.now()
             }
         ])
@@ -142,10 +203,11 @@ function CartProvider({ children }) {
 
     function getTotalCost() {
         let total = 0;
-        
+    
         cartProducts.map(product => {
             const productData = getProductData(product.id);
             total += (productData.price * product.quantity);
+           
         })
 
         return total;

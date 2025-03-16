@@ -2,7 +2,7 @@ import "./ShowCart.css";
 import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../cartContext";
-import { getProductData } from "../storeProducts";
+import { getPrice, getProductData } from "../storeProducts";
 import DeliveryMethod from "./DeliveryMethod";
 import ErrorModal from "./ErrorModal";
 
@@ -26,6 +26,7 @@ export default function ShowCart() {
     const [ deliveryCharge, setDeliveryCharge ] = useState(0);
     const [ deliveryChargeCents, setDeliveryChargeCents ] = useState(0);
     const [ deliveryTime, setDeliveryTime ] = useState(25);
+    const [ addOns, setAddOns ] = useState(0);
 
     const [ improvedCart, setImprovedCart ] = useState([]);
 
@@ -107,6 +108,20 @@ export default function ShowCart() {
         }
     }
 
+    //CHECK THE ADD ONS WHEN PAGE STARTS AND SET THE PRICE FOR THE TOTAL OF THE ADD ONS
+
+    function handleAddOns() {
+        setAddOns(0)
+
+        if (cart.steakInstruction !== "") {
+            setAddOns(addOns+2);
+        }
+    }
+
+    // useEffect(() => {
+    //     handleAddOns()
+    // },[])
+
     //CHECK HOW MANY ITEMS ARE IN THE CART
     const totalQuantity = (cart.items).reduce((accu, product) => accu + product.quantity,0)
     console.log(totalQuantity);
@@ -147,6 +162,9 @@ export default function ShowCart() {
         console.log(isOpen, "IsOpen ShowCart.jsx")
     }, [isOpen])
 
+    // useEffect(() => {
+    //     console.log(addOns, "add ons in ShowCart.jsx")
+    // },[addOns])
   
 
     return (
@@ -175,7 +193,10 @@ export default function ShowCart() {
             <div className="total-price">Sub-Total: ${getTotalSum().toFixed(2)}</div>
             <div className="showcart-main-container2">
                 {(cart.items).map((product, index) => {
-                    const data = getProductData(product.id);
+             
+                    const data = getProductData(product.id)
+                    // const cost = cart.getTotalCost();
+                    {product.steakInstruction !== "" ? data.price = data.price+2 : null}
                     return (
                         <div className="list-products">
                             <p className="showcart-title">{data.title}</p>
@@ -188,7 +209,8 @@ export default function ShowCart() {
                             {product.mayoInstruction ? <p className="cart-titles">{product.mayoInstruction}</p> : null}
                             {product.ketchupInstruction ? <p className="cart-titles">{product.ketchupInstruction}</p> : null}
                             {product.mustardInstruction ? <p className="cart-titles">{product.mustardInstruction}</p> : null}
-                            <p className="showcart-subtotal">Price: ${((data.price)*(product.quantity)).toFixed(2)}</p>
+                            {product.steakInstruction ? <p className="cart-titles">{product.steakInstruction}</p> : null}
+                            {addOns > 0 ? <p className="showcart-subtotal">Price: ${data.price.toFixed(2)} </p> : <p className="showcart-subtotal">Price: ${(data.price).toFixed(2)}</p>}
                             <button className="delete-btn" onClick={() => cart.deleteFromCart(product.index)} type="button">Remove From Cart</button>
                         </div>
                     )

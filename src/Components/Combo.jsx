@@ -105,23 +105,23 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <p className="add-ons-title">Add-Ons</p>
                             <div className="add-ons">
                                 <div>
-                                    <input type="checkbox" value="Extra Steak"/>
+                                    <input type="checkbox" id="extrasteakprice_1QyHXlAspxlK0TBsBq7lTKF3" value="Extra Steak"/>
                                     <label className="checkbox-label" htmlFor="steak">Extra Steak (+2)</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" value="Extra Cheese"/>
+                                    <input type="checkbox"id="cheeseprice_1QyHXlAspxlK0TBsBq7lTKF3" value="Extra Cheese"/>
                                     <label className="checkbox-label" htmlFor="cheese">Extra Cheese (+1)</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" value="Aguacate Mayo"/>
+                                    <input type="checkbox" id="aguacateprice_1QyHXlAspxlK0TBsBq7lTKF3" value="Aguacate Mayo"/>
                                     <label className="checkbox-label" htmlFor="aguacate mayo">Aguacate Mayo (+1)</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" value="Mushroom"/>
+                                    <input type="checkbox" id="mushroomprice_1QyHXlAspxlK0TBsBq7lTKF3" value="Mushroom"/>
                                     <label className="checkbox-label" htmlFor="mushroom">Mushroom (+1.5)</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" value="Onion"/>
+                                    <input type="checkbox" id="onionprice_1QyHXlAspxlK0TBsBq7lTKF3" value="Onion"/>
                                     <label className="checkbox-label" htmlFor="onion">Onions (+1.5)</label>
                                 </div>
                             </div>
@@ -183,7 +183,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <p className="add-ons-title">Add-Ons</p>
                             <div className="add-ons">
                                 <div>
-                                    <input type="checkbox" value="Extra Steak"/>
+                                    <input type="checkbox" id="extra steak" value="Extra Steak"/>
                                     <label className="checkbox-label" htmlFor="steak2">Extra Steak (+2)</label>
                                 </div>
                                 <div>

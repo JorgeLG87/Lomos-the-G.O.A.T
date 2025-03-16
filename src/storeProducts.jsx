@@ -3,7 +3,10 @@ const storeProducts = [
         // id: "price_1QBDqDAspxlK0TBsmuFK3fGa",
         id: "price_1QyHXlAspxlK0TBsBq7lTKF3",
         title: "The G.O.A.T Combo",
-        price: 11.99
+        price: 11.99,
+        addOns: {
+            extraSteak: 2
+        }
     },
     {
         id: "price_1QAWMLAspxlK0TBs40YVjWnR",
@@ -40,6 +43,31 @@ const storeProducts = [
         id: "pachata",
         title: "Pachata",
         price: 9.99
+    },
+    {
+        id: "extra steak",
+        title: "Extra Steak",
+        price: 2
+    },
+    {
+        id: "aguactate mayo",
+        title: "Aguacate Mayo",
+        price: 1,
+    },
+    {
+        id: "onions",
+        title: "Onions",
+        price: 1.5
+    },
+    {
+        id: "extra cheese",
+        title: "Extra Cheese",
+        price: 1
+    },
+    {
+        id: "mushroom",
+        title: "Mushroom",
+        price: 1.5
     }
 ]
 
@@ -70,4 +98,9 @@ function getPriceLarge(id) {
     return productPrice;
 }
 
-export {storeProducts, getPriceSmall, getPriceMedium, getPriceLarge, getProductData, getProductName};
+function getPrice(id) {
+    let productPrice = storeProducts.find((product) => product.id === id).price;
+    return productPrice;
+}
+
+export {storeProducts, getPriceSmall, getPriceMedium, getPriceLarge, getProductData, getProductName, getPrice};

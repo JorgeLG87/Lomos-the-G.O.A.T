@@ -34,7 +34,7 @@ function App() {
   
   const slides = [
     { url: "/Buenos-Aires.jpg", title: "Buenos Aires"},
-    {  url: "/lomos-the-goat3.jpeg", title: "Lomito"},
+    { url: "/lomos-the-goat3.jpeg", title: "Lomito"},
     { url: "/TeatrodelBicentenario.jpg", title: "Teatro del Bicentenario" },
     { url: "/lomos-the-goat4.jpeg", title: "Lomito"}
   ]

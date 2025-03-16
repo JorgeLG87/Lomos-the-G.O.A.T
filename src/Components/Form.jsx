@@ -127,7 +127,7 @@ export default function Form({ shoppingCart, setShoppingCart }) {
 
             <div className="combo-btns-underline">
                 <div className={`underline ${selected === "underline1" ? "underline1" : ""}`}></div>
-                <div className={selected === "underline2" ? "underline2" : ""}></div>
+                <div className={`underline ${selected === "underline2" ? "underline2" : ""}`}></div>
             </div>
 
             <div className="type-container">
