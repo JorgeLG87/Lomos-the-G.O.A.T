@@ -48,6 +48,29 @@ export default function NoCombo() {
                                     <label className="checkbox-label" htmlFor="mustard7">No Mustard</label>
                                 </div>
                             </div>
+                            <p className="add-ons-title">Add-Ons</p>
+                            <div className="add-ons">
+                                <div>
+                                    <input type="checkbox" value="Extra Steak"/>
+                                    <label className="checkbox-label" htmlFor="steak3">Extra Steak (+2)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="Extra Cheese"/>
+                                    <label className="checkbox-label" htmlFor="cheese3">Extra Cheese (+1)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="Aguacate Mayo"/>
+                                    <label className="checkbox-label" htmlFor="aguacate mayo3">Aguacate Mayo (+1)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="Mushroom"/>
+                                    <label className="checkbox-label" htmlFor="mushroom3">Mushroom (+1.5)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="Onion"/>
+                                    <label className="checkbox-label" htmlFor="onion3">Onions (+1.5)</label>
+                                </div>
+                            </div>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="price_1QBE39AspxlK0TBsWQEup4F1").length}</p> : null}
                         <button onClick={() => cart.addOneToCart("price_1QBE39AspxlK0TBsWQEup4F1")} className="nocombo-add" type="button">Add To Cart</button>
                     </div>
@@ -83,6 +106,29 @@ export default function NoCombo() {
                                 <div>
                                     <input type="checkbox" id="mustardprice_1QU9xZAspxlK0TBsdnAwLgx7" value="No Mustard"/>
                                     <label className="checkbox-label" htmlFor="mustard8">No Mustard</label>
+                                </div>
+                            </div>
+                            <p className="add-ons-title">Add-Ons</p>
+                            <div className="add-ons">
+                                <div>
+                                    <input type="checkbox" value="Extra Steak"/>
+                                    <label className="checkbox-label" htmlFor="steak4">Extra Steak (+2)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="Extra Cheese"/>
+                                    <label className="checkbox-label" htmlFor="cheese4">Extra Cheese (+1)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="Aguacate Mayo"/>
+                                    <label className="checkbox-label" htmlFor="aguacate mayo4">Aguacate Mayo (+1)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="Mushroom"/>
+                                    <label className="checkbox-label" htmlFor="mushroom4">Mushroom (+1.5)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="Onion"/>
+                                    <label className="checkbox-label" htmlFor="onion4">Onions (+1.5)</label>
                                 </div>
                             </div>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="price_1QU9xZAspxlK0TBsdnAwLgx7").length}</p> : null}

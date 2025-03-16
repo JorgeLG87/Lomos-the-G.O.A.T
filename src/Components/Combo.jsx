@@ -102,6 +102,29 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                     <label className="checkbox-label" htmlFor="mustard3">No Mustard</label>
                                 </div>
                             </div>
+                            <p className="add-ons-title">Add-Ons</p>
+                            <div className="add-ons">
+                                <div>
+                                    <input type="checkbox" value="Extra Steak"/>
+                                    <label className="checkbox-label" htmlFor="steak">Extra Steak (+2)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="Extra Cheese"/>
+                                    <label className="checkbox-label" htmlFor="cheese">Extra Cheese (+1)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="Aguacate Mayo"/>
+                                    <label className="checkbox-label" htmlFor="aguacate mayo">Aguacate Mayo (+1)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="Mushroom"/>
+                                    <label className="checkbox-label" htmlFor="mushroom">Mushroom (+1.5)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="Onion"/>
+                                    <label className="checkbox-label" htmlFor="onion">Onions (+1.5)</label>
+                                </div>
+                            </div>
                             {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="price_1QyHXlAspxlK0TBsBq7lTKF3").length}</p> : null}
                             {bevValid3 ? <p className="bev-error">Please choose a beverage type</p> : null}
                             <button onClick={() => {
@@ -155,6 +178,29 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                 <div>
                                     <input type="checkbox" id="mustardprice_1QAWMLAspxlK0TBs40YVjWnR" value="No Mustard"/>
                                     <label className="checkbox-label" htmlFor="mustard4">No Mustard</label>
+                                </div>
+                            </div>
+                            <p className="add-ons-title">Add-Ons</p>
+                            <div className="add-ons">
+                                <div>
+                                    <input type="checkbox" value="Extra Steak"/>
+                                    <label className="checkbox-label" htmlFor="steak2">Extra Steak (+2)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="Extra Cheese"/>
+                                    <label className="checkbox-label" htmlFor="cheese2">Extra Cheese (+1)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="Aguacate Mayo"/>
+                                    <label className="checkbox-label" htmlFor="aguacate mayo2">Aguacate Mayo (+1)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="Mushroom"/>
+                                    <label className="checkbox-label" htmlFor="mushroom2">Mushroom (+1.5)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" value="Onion"/>
+                                    <label className="checkbox-label" htmlFor="onion2">Onions (+1.5)</label>
                                 </div>
                             </div>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="price_1QAWMLAspxlK0TBs40YVjWnR").length}</p> : null}
