@@ -118,10 +118,6 @@ export default function ShowCart() {
         }
     }
 
-    // useEffect(() => {
-    //     handleAddOns()
-    // },[])
-
     //CHECK HOW MANY ITEMS ARE IN THE CART
     const totalQuantity = (cart.items).reduce((accu, product) => accu + product.quantity,0)
     console.log(totalQuantity);

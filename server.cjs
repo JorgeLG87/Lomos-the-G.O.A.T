@@ -87,6 +87,18 @@ app.post("/checkout", async (req, res) => {
             price: item.id,
             quantity: 1
         })
+        if (item.steakInstruction !== "") {
+            lineItems.push({
+                price_data: {
+                    currency: "usd",
+                    product_data: {
+                        name: "Extra Steak",
+                    },
+                    unit_amount: 2,
+                },
+                quantity: 1,
+            })
+        }
     });
 
     //ADDING THE DELIVERY COST TO THE LINE ITEMS

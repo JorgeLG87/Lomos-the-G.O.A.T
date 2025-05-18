@@ -126,14 +126,6 @@ function CartProvider({ children }) {
         return productName;
     }
 
-    // function getOneCartItemPrice(id) {
-    //     total = 0
-    //     const cartItem = cartProducts.filter(product => product.id === id);
-    //     total += 
-
-    // }
-
-
     function addOneToCart(id) {
         const name = getProductName(id);
 
