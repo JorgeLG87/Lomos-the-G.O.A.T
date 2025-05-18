@@ -196,7 +196,7 @@ export default function ShowCart() {
              
                     const data = getProductData(product.id)
                     // const cost = cart.getTotalCost();
-                    {product.steakInstruction !== "" ? data.price = data.price+2 : null}
+                    // {product.steakInstruction !== "" ? data.price = data.price+2 : null}
                     return (
                         <div className="list-products">
                             <p className="showcart-title">{data.title}</p>
