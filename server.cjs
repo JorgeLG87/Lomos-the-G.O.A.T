@@ -92,13 +92,62 @@ app.post("/checkout", async (req, res) => {
                 price_data: {
                     currency: "usd",
                     product_data: {
-                        name: "Extra Steak",
+                        name: "  - extra steak",
                     },
-                    unit_amount: 2,
+                    unit_amount: 200,
                 },
                 quantity: 1,
             })
         }
+        if (item.aguacateInstruction !== "") {
+            lineItems.push({
+                price_data: {
+                    currency: "usd",
+                    product_data: {
+                        name: "  - aguacate mayo",
+                    },
+                    unit_amount: 100,
+                },
+                quantity: 1,
+            })
+        }
+        if (item.onionInstruction !== "") {
+            lineItems.push({
+                price_data: {
+                    currency: "usd",
+                    product_data: {
+                        name: "  - onions",
+                    },
+                    unit_amount: 150,
+                },
+                quantity: 1,
+            })
+        }
+        if (item.cheeseInstruction !== "") {
+            lineItems.push({
+                price_data: {
+                    currency: "usd",
+                    product_data: {
+                        name: "  - cheese",
+                    },
+                    unit_amount: 100,
+                },
+                quantity: 1,
+            })
+        }
+        if (item.mushroomInstruction !== "") {
+            lineItems.push({
+                price_data: {
+                    currency: "usd",
+                    product_data: {
+                        name: "  - mushroom",
+                    },
+                    unit_amount: 150,
+                },
+                quantity: 1,
+            })
+        }
+
     });
 
     //ADDING THE DELIVERY COST TO THE LINE ITEMS
