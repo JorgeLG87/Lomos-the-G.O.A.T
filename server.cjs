@@ -18,11 +18,11 @@ app.use(express.static(path.join(__dirname, "build")));
 
 app.use(express.json());
 
-// app.use(function (req, res, next) {
-//     res.header("Access-Control-Allow-Origin", "https://lomosthegoat.netlify.app");
-//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//     next();
-//  })
+app.use(function (req, res, next) {
+    res.header("Access-Control-Allow-Origin", "https://lomosthegoat.netlify.app");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+ })
 
 app.get("/verify-payment", async (req, res) => {
     const sessionId  = req.query.session_id;
