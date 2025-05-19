@@ -145,7 +145,7 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <img className="icon-item" src="/french-fries1.svg"/>
                             <img className="icon-item" src="/cola1.svg"/>
                         </div>
-                        <select id="bev-typeprice_1QAWMLAspxlK0TBs40YVjWnR" className="beverage-type">
+                        <select id="bev-typeprice_1RQJwHAspxlK0TBsIlDDDfja" className="beverage-type">
                             <option value="">-----Choose Beverage-----</option>
                             <option value="Coca Cola">Coca Cola</option>
                             <option value="Pepsi">Pepsi</option>
@@ -156,58 +156,58 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <p style={{fontFamily: "Barlow semi condensed"}}>Special Instructions</p>
                             <div className="special-instructions">
                                 <div>
-                                    <input type="checkbox" id="lettuceprice_1QAWMLAspxlK0TBs40YVjWnR" value="No Lettuce"/>
+                                    <input type="checkbox" id="lettuceprice_1RQJwHAspxlK0TBsIlDDDfja" value="No Lettuce"/>
                                     <label className="checkbox-label" htmlFor="lettuce4">No Lettuce</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="tomatoeprice_1QAWMLAspxlK0TBs40YVjWnR" value="No Tomatoe"/>
+                                    <input type="checkbox" id="tomatoeprice_1RQJwHAspxlK0TBsIlDDDfja" value="No Tomatoe"/>
                                     <label className="checkbox-label" htmlFor="tomatoe4">No Tomatoe</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="saltprice_1QAWMLAspxlK0TBs40YVjWnR" value="No Salt"/>
+                                    <input type="checkbox" id="saltprice_1RQJwHAspxlK0TBsIlDDDfja" value="No Salt"/>
                                     <label className="checkbox-label" htmlFor="salt4">No Salt</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="mayoprice_1QAWMLAspxlK0TBs40YVjWnR" value="No Mayo"/>
+                                    <input type="checkbox" id="mayoprice_1RQJwHAspxlK0TBsIlDDDfja" value="No Mayo"/>
                                     <label className="checkbox-label" htmlFor="mayo4">No Mayo</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="ketchuprice_1QAWMLAspxlK0TBs40YVjWnR" value="No Ketchup"/>
+                                    <input type="checkbox" id="ketchuprice_1RQJwHAspxlK0TBsIlDDDfja" value="No Ketchup"/>
                                     <label className="checkbox-label" htmlFor="ketchup4">No Ketchup</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="mustardprice_1QAWMLAspxlK0TBs40YVjWnR" value="No Mustard"/>
+                                    <input type="checkbox" id="mustardprice_1RQJwHAspxlK0TBsIlDDDfja" value="No Mustard"/>
                                     <label className="checkbox-label" htmlFor="mustard4">No Mustard</label>
                                 </div>
                             </div>
                             <p className="add-ons-title">Add-Ons</p>
                             <div className="add-ons">
                                 <div>
-                                    <input type="checkbox" id="extrasteakprice_1QAWMLAspxlK0TBs40YVjWnR" value="Extra Steak"/>
+                                    <input type="checkbox" id="extrasteakprice_1RQJwHAspxlK0TBsIlDDDfja" value="Extra Steak"/>
                                     <label className="checkbox-label" htmlFor="steak2">Extra Steak (+2)</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="cheeseprice_1QAWMLAspxlK0TBs40YVjWnR" value="Extra Cheese"/>
+                                    <input type="checkbox" id="cheeseprice_1RQJwHAspxlK0TBsIlDDDfja" value="Extra Cheese"/>
                                     <label className="checkbox-label" htmlFor="cheese2">Extra Cheese (+1)</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="aguacateprice_1QAWMLAspxlK0TBs40YVjWnR" value="Aguacate Mayo"/>
+                                    <input type="checkbox" id="aguacateprice_1RQJwHAspxlK0TBsIlDDDfja" value="Aguacate Mayo"/>
                                     <label className="checkbox-label" htmlFor="aguacate mayo2">Aguacate Mayo (+1)</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="mushroomprice_1QAWMLAspxlK0TBs40YVjWnR" value="Mushroom"/>
+                                    <input type="checkbox" id="mushroomprice_1RQJwHAspxlK0TBsIlDDDfja" value="Mushroom"/>
                                     <label className="checkbox-label" htmlFor="mushroom2">Mushroom (+1.5)</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="onionprice_1QAWMLAspxlK0TBs40YVjWnR" value="Onion"/>
+                                    <input type="checkbox" id="onionprice_1RQJwHAspxlK0TBsIlDDDfja" value="Onion"/>
                                     <label className="checkbox-label" htmlFor="onion2">Onions (+1.5)</label>
                                 </div>
                             </div>
-                        {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="price_1QAWMLAspxlK0TBs40YVjWnR").length}</p> : null}
+                        {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="price_1RQJwHAspxlK0TBsIlDDDfja").length}</p> : null}
                         {bevValid4 ? <p className="bev-error">Please choose a beverage type</p> : null}
                         <button onClick={() => {
-                            document.getElementById("bev-typeprice_1QAWMLAspxlK0TBs40YVjWnR").value ? cart.addOneToCart("price_1QAWMLAspxlK0TBs40YVjWnR") : setBevValid4(true);
-                            document.getElementById("bev-typeprice_1QAWMLAspxlK0TBs40YVjWnR").value ? setBevValid4(false) : null
+                            document.getElementById("bev-typeprice_1RQJwHAspxlK0TBsIlDDDfja").value ? cart.addOneToCart("price_1RQJwHAspxlK0TBsIlDDDfja") : setBevValid4(true);
+                            document.getElementById("bev-typeprice_1RQJwHAspxlK0TBsIlDDDfja").value ? setBevValid4(false) : null
                             }} className="add" type="button">Add To Cart</button>
                     </div>
                 </div>

@@ -9,7 +9,7 @@ const storeProducts = [
         }
     },
     {
-        id: "price_1QAWMLAspxlK0TBs40YVjWnR",
+        id: "price_1RQJwHAspxlK0TBsIlDDDfja",
         title: "Classic Combo",
         price: 9.99
     },
