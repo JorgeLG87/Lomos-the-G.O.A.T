@@ -3,7 +3,7 @@ const path = require("path");
 require("dotenv").config();
 const cors = require("cors");
 const { type } = require("os");
-const stripe = require("stripe")(process.env.VITE_STRIPE_KEY);
+const stripe = require("stripe")(process.env.STRIPE_KEY);
 const API_KEY = process.env.VITE_GOOGLE_API_KEY;
 
 const app = express();
