@@ -20,37 +20,37 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
 
     const cart = useContext(CartContext);
     
-    const [ click, setClick ] = useState(false)
-    const [ selectedValue, setSelectedValue ] = useState(null);
+    // const [ click, setClick ] = useState(false)
+    // const [ selectedValue, setSelectedValue ] = useState(null);
    
-    const handleRadioClicks = (value) => {
-        if (selectedValue === value) {
-            setSelectedValue(null);
-        } else {
-            setSelectedValue(value);
-        }
-    }
+    // const handleRadioClicks = (value) => {
+    //     if (selectedValue === value) {
+    //         setSelectedValue(null);
+    //     } else {
+    //         setSelectedValue(value);
+    //     }
+    // }
     
-    function handleAddItems(e) {
-        e.preventDefault();
-        const lomoType = document.getElementById("combolomoselect").value
-        const currQuantity = document.getElementById("combolomo-quantity").value;
-        if (currQuantity < 1) {
-            setError(true);
-        } else {
-            setError(false);
-            setLomo([...lomo, lomoType]);
-            setQuantity([...quantity, currQuantity]);
-            setDateStamp(dateStamp+1);
-            setSecDateStamp(secDateStamp+1)
-        }
-    }
+    // function handleAddItems(e) {
+    //     e.preventDefault();
+    //     const lomoType = document.getElementById("combolomoselect").value
+    //     const currQuantity = document.getElementById("combolomo-quantity").value;
+    //     if (currQuantity < 1) {
+    //         setError(true);
+    //     } else {
+    //         setError(false);
+    //         setLomo([...lomo, lomoType]);
+    //         setQuantity([...quantity, currQuantity]);
+    //         setDateStamp(dateStamp+1);
+    //         setSecDateStamp(secDateStamp+1)
+    //     }
+    // }
 
-    function sameIdQuantity(id) {
-       let test= (cart.items).reduce((accu, item) => item.id === id, 0);
-       console.log(test,"sameIdQuantity");
+    // function sameIdQuantity(id) {
+    //    let test= (cart.items).reduce((accu, item) => item.id === id, 0);
+    //    console.log(test,"sameIdQuantity");
 
-    }
+    // }
 
 
     return (
@@ -183,23 +183,23 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <p className="add-ons-title">Add-Ons</p>
                             <div className="add-ons">
                                 <div>
-                                    <input type="checkbox" id="extra steak" value="Extra Steak"/>
+                                    <input type="checkbox" id="extrasteakprice_1QAWMLAspxlK0TBs40YVjWnR" value="Extra Steak"/>
                                     <label className="checkbox-label" htmlFor="steak2">Extra Steak (+2)</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" value="Extra Cheese"/>
+                                    <input type="checkbox" id="cheeseprice_1QAWMLAspxlK0TBs40YVjWnR" value="Extra Cheese"/>
                                     <label className="checkbox-label" htmlFor="cheese2">Extra Cheese (+1)</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" value="Aguacate Mayo"/>
+                                    <input type="checkbox" id="aguacateprice_1QAWMLAspxlK0TBs40YVjWnR" value="Aguacate Mayo"/>
                                     <label className="checkbox-label" htmlFor="aguacate mayo2">Aguacate Mayo (+1)</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" value="Mushroom"/>
+                                    <input type="checkbox" id="mushroomprice_1QAWMLAspxlK0TBs40YVjWnR" value="Mushroom"/>
                                     <label className="checkbox-label" htmlFor="mushroom2">Mushroom (+1.5)</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" value="Onion"/>
+                                    <input type="checkbox" id="onionprice_1QAWMLAspxlK0TBs40YVjWnR" value="Onion"/>
                                     <label className="checkbox-label" htmlFor="onion2">Onions (+1.5)</label>
                                 </div>
                             </div>

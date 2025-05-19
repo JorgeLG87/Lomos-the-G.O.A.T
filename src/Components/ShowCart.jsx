@@ -158,11 +158,6 @@ export default function ShowCart() {
         console.log(isOpen, "IsOpen ShowCart.jsx")
     }, [isOpen])
 
-    // useEffect(() => {
-    //     console.log(addOns, "add ons in ShowCart.jsx")
-    // },[addOns])
-  
-
     return (
         <div className="showcart-page">
             {isOpen ? <ErrorModal setIsOpen={setIsOpen}/> : null}
@@ -191,8 +186,7 @@ export default function ShowCart() {
                 {(cart.items).map((product, index) => {
              
                     const data = getProductData(product.id)
-                    // const cost = cart.getTotalCost();
-                    // {product.steakInstruction !== "" ? data.price = data.price+2 : null}
+                    
                     return (
                         <div className="list-products">
                             <p className="showcart-title">{data.title}</p>
@@ -206,6 +200,10 @@ export default function ShowCart() {
                             {product.ketchupInstruction ? <p className="cart-titles">{product.ketchupInstruction}</p> : null}
                             {product.mustardInstruction ? <p className="cart-titles">{product.mustardInstruction}</p> : null}
                             {product.steakInstruction ? <p className="cart-titles">{product.steakInstruction}</p> : null}
+                            {product.aguacateInstruction ? <p className="cart-titles">{product.aguacateInstruction}</p> : null}
+                            {product.onionInstruction ? <p className="cart-titles">{product.onionInstruction}</p> : null}
+                            {product.cheeseInstruction ? <p className="cart-titles">{product.cheeseInstruction}</p> : null}
+                            {product.mushroomInstruction ? <p className="cart-titles">{product.mushroomInstruction}</p> : null}
                             {addOns > 0 ? <p className="showcart-subtotal">Price: ${data.price.toFixed(2)} </p> : <p className="showcart-subtotal">Price: ${(data.price).toFixed(2)}</p>}
                             <button className="delete-btn" onClick={() => cart.deleteFromCart(product.index)} type="button">Remove From Cart</button>
                         </div>
