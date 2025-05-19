@@ -12,7 +12,6 @@ app.use(cors({
     origin: "https://lomosthegoat.netlify.app",
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type", "Authorization"],
-    credentials: true,
 }));
 
 app.use(express.static(path.join(__dirname, "build")));
