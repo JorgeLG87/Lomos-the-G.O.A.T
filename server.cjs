@@ -23,6 +23,12 @@ app.options("*", cors(corsOptions))
 //     allowedHeaders: ["Content-Type", "Authorization"],
 // }));
 
+//FOR CORS DEBUGGING
+app.use((req, res, next) => {
+    console.log(`[${req.method}] ${req.path}`)
+    next()
+});
+
 app.use(express.static(path.join(__dirname, "build")));
 
 app.use(express.json());
