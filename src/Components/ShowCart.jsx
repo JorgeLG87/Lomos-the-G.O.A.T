@@ -110,12 +110,13 @@ export default function ShowCart() {
 
     //CHECK THE ADD ONS WHEN PAGE STARTS AND SET THE PRICE FOR THE TOTAL OF THE ADD ONS
 
-    function handleAddOns() {
-        setAddOns(0)
+    function handleAddOns(product) {
+        let totalAddOns = 0
 
-        if (cart.steakInstruction !== "") {
-            setAddOns(addOns+2);
+        if (product.steakInstruction !== "") {
+            totalAddOns += 2;
         }
+        return totalAddOns;
     }
 
     //CHECK HOW MANY ITEMS ARE IN THE CART
@@ -184,9 +185,10 @@ export default function ShowCart() {
             <div className="total-price">Sub-Total: ${getTotalSum().toFixed(2)}</div>
             <div className="showcart-main-container2">
                 {(cart.items).map((product, index) => {
-             
-                    const data = getProductData(product.id)
                     
+                    const addOns = handleAddOns(product)
+                    const data = getProductData(product.id)
+
                     return (
                         <div className="list-products">
                             <p className="showcart-title">{data.title}</p>
@@ -204,7 +206,7 @@ export default function ShowCart() {
                             {product.onionInstruction ? <p className="cart-titles">{product.onionInstruction}</p> : null}
                             {product.cheeseInstruction ? <p className="cart-titles">{product.cheeseInstruction}</p> : null}
                             {product.mushroomInstruction ? <p className="cart-titles">{product.mushroomInstruction}</p> : null}
-                            {addOns > 0 ? <p className="showcart-subtotal">Price: ${data.price.toFixed(2)} </p> : <p className="showcart-subtotal">Price: ${(data.price).toFixed(2)}</p>}
+                            {addOns > 0 ? <p className="showcart-subtotal">Price: ${(data.price+addOns).toFixed(2)} </p> : <p className="showcart-subtotal">Price: ${(data.price).toFixed(2)}</p>}
                             <button className="delete-btn" onClick={() => cart.deleteFromCart(product.index)} type="button">Remove From Cart</button>
                         </div>
                     )
