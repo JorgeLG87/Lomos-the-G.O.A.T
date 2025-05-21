@@ -116,6 +116,22 @@ export default function ShowCart() {
         if (product.steakInstruction !== "") {
             totalAddOns += 2;
         }
+
+        if (product.aguacateInstruction !== "") {
+            totalAddOns += 1.5;
+        }
+
+        if (product.onionInstruction !== "") {
+            totalAddOns += 1;
+        }
+
+        if (product.cheeseInstruction !== "") {
+            totalAddOns += 1;
+        }
+
+        if (product.mushroomInstruction !== "") {
+            totalAddOns += 1.5;
+        }
         return totalAddOns;
     }
 
@@ -188,7 +204,7 @@ export default function ShowCart() {
                     
                     const addOns = handleAddOns(product)
                     const data = getProductData(product.id)
-
+                    
                     return (
                         <div className="list-products">
                             <p className="showcart-title">{data.title}</p>

@@ -14,6 +14,7 @@ export const CartContext = createContext({
 function CartProvider({ children }) {
 
     const [ cartProducts, setCartProducts ] = useState([]);
+    const [ addOns, setAddOns ] = useState(0);
 
     function getCartItemById(id) {
         const item = cartProducts.filter(product => product.id === id ? product : 0);
@@ -80,6 +81,7 @@ function CartProvider({ children }) {
     function getSteakInstruction(id) {
         if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
             const steak = document.getElementById(`extrasteak${id}`).checked;
+            setAddOns(addOns+2);
             return steak;
         } else return "";
 
@@ -88,6 +90,7 @@ function CartProvider({ children }) {
     function getAguacateInstruction(id) {
         if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
             const aguacate = document.getElementById(`aguacate${id}`).checked;
+            setAddOns(addOns+1)
             return aguacate;
         } else return "";
     }
@@ -95,6 +98,7 @@ function CartProvider({ children }) {
     function getOnionInstructions(id) {
         if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
             const onion = document.getElementById(`onion${id}`).checked;
+            setAddOns(addOns+1);
             return onion;
         } else return "";
     }
@@ -102,6 +106,7 @@ function CartProvider({ children }) {
     function getCheeseInstruction(id) {
         if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
             const cheese = document.getElementById(`cheese${id}`).checked;
+            setAddOns(addOns+1);
             return cheese;
         } else return "";
     }
@@ -109,6 +114,7 @@ function CartProvider({ children }) {
     function getMushroomInstruction(id) {
         if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
             const mushroom = document.getElementById(`mushroom${id}`).checked;
+            setAddOns(addOns+1.5);
             return mushroom;
         } else return "";
     }
@@ -124,6 +130,18 @@ function CartProvider({ children }) {
     function getProductName(id) {
         const productName = storeProducts.find(product => product.id === id).title;
         return productName;
+    }
+
+    function priceAddOns(steak, aguacate, onions, cheese, mushroom) {
+        let price = 0;
+
+        if (steak); price += 2;
+        if (aguacate); price += 1;
+        if (onions); price +=  1.5;
+        if (cheese); price += 1;
+        if (mushroom); price += 1.5;
+
+        return price;
     }
 
     function addOneToCart(id) {
@@ -154,13 +172,15 @@ function CartProvider({ children }) {
         const cheese = getCheeseInstruction(id);
 
         const mushroom = getMushroomInstruction(id);
-        
-        
+
+        const addOnsPrice = addOns;
+ 
         setCartProducts([
             ...cartProducts, {
                 id: id,
                 name: name,
                 quantity: 1,
+                price: addOnsPrice,
                 beverage: beverageType || "None",
                 lettuceInstruction: lettuce ? "No Lettuce" : "",
                 tomatoeInstruction: tomatoe ? "No Tomatoes" : "",
@@ -176,6 +196,7 @@ function CartProvider({ children }) {
                 index: Date.now()
             }
         ])
+      
     }
 
     function removeOneFromCart(id) {
@@ -193,14 +214,14 @@ function CartProvider({ children }) {
     }
 
 
-    function getTotalCost() {
+    function getTotalCost(id) {
         let total = 0;
     
-        cartProducts.map(product => {
-            const productData = getProductData(product.id);
-            total += (productData.price * product.quantity);
+        const product = cartProducts.map(product => {
+                            const productData = getProductData(product.id);
+                            total += (productData.price * product.quantity);
            
-        })
+                        })
 
         return total;
     }
