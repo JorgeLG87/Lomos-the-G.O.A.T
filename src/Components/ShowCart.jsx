@@ -61,7 +61,10 @@ export default function ShowCart() {
         for (let i = 0; i < items.length; i++) {
             const data = getProductData(items[i].id);
             const currItemPrice = data.price;
+            let totalAddOns = handleAddOns(items[i])
             total += currItemPrice;
+            total += totalAddOns;
+
         }
         return total;
     }
@@ -113,23 +116,23 @@ export default function ShowCart() {
     function handleAddOns(product) {
         let totalAddOns = 0
 
-        if (product.steakInstruction !== "") {
+        if (product?.steakInstruction !== "") {
             totalAddOns += 2;
         }
 
-        if (product.aguacateInstruction !== "") {
+        if (product?.aguacateInstruction !== "") {
             totalAddOns += 1.5;
         }
 
-        if (product.onionInstruction !== "") {
+        if (product?.onionInstruction !== "") {
             totalAddOns += 1;
         }
 
-        if (product.cheeseInstruction !== "") {
+        if (product?.cheeseInstruction !== "") {
             totalAddOns += 1;
         }
 
-        if (product.mushroomInstruction !== "") {
+        if (product?.mushroomInstruction !== "") {
             totalAddOns += 1.5;
         }
         return totalAddOns;
@@ -217,6 +220,7 @@ export default function ShowCart() {
                             {product.mayoInstruction ? <p className="cart-titles">{product.mayoInstruction}</p> : null}
                             {product.ketchupInstruction ? <p className="cart-titles">{product.ketchupInstruction}</p> : null}
                             {product.mustardInstruction ? <p className="cart-titles">{product.mustardInstruction}</p> : null}
+                            <p style={{fontWeight:"bold", fontFamily: "Barlow semi condensed"}}>Add Ons:</p>
                             {product.steakInstruction ? <p className="cart-titles">{product.steakInstruction}</p> : null}
                             {product.aguacateInstruction ? <p className="cart-titles">{product.aguacateInstruction}</p> : null}
                             {product.onionInstruction ? <p className="cart-titles">{product.onionInstruction}</p> : null}
