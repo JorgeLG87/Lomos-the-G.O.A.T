@@ -9,18 +9,27 @@
     padding-left: 10px;
     padding-right: 10px;
     z-index: 100;
-    background-color: #AD2007;
+    /* background-color: #AD2007; */
+    background-color: black;
+    @media (width > 450px) {
+        width: 20%;
+        margin-top: 10%;
+        margin-left: 40%;
+        height: 20%;
+    }
 }
 
 .modal-text-title {
-    color: white;
+    /* color: white; */
+    color: #AD2007;
     font-family: "Montserrat";
     font-size: 25px;
     font-weight: 500;
 }
 
 .modal-text {
-    color: white;
+    /* color: white; */
+    color: #AD2007;
     font-family: "barlow semi condensed";
 }
 
@@ -35,5 +44,9 @@
     font-size: 18px;
     font-family: "Montserrat";
     font-weight: 500;
+}
+
+.modal-btn:hover {
+    cursor: pointer;
 }
 
