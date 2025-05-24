@@ -26,7 +26,6 @@
     padding-top: 0px;
     text-align: center;
     margin-top: 0px;
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     width: 60%;
@@ -39,9 +38,7 @@
 }
 
 .main-container2 {
-    /* display: flex; */
     position: relative;
-    /* border: 1px solid black; */
     border-radius: 10px;
     width: 60%;
     height:fit-content;
@@ -61,7 +58,6 @@
 
 .title-span-container {
     display:block;
-    /* gap: 20px; */
 }
 
 .title {
@@ -76,13 +72,7 @@
     color: transparent;
     font-family: "Montserrat";
     font-size: 45px;
-    /* width: 100%; */
-    /* margin-top: 0px; */
     margin-bottom: 0px;
-    /* text-align: center; */
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
     @media (width < 450px) {
         margin-left: 0%;
         margin-top: 0px;
@@ -106,16 +96,13 @@
 }
 
 .small, .medium, .large {
-    /* border: 1px solid black; */
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     padding: 10px;
     border-radius: 10px;
     background-color: white;
     @media (width < 450px) {
         border-radius: 5px;
-        /* border: 1px solid black; */
         width: 100%;
-        /* background-color: transparent; */
     }
 }
 
@@ -172,7 +159,6 @@
     height: 50px;
     border-radius: 10px;
     border: none;
-    /* background-color: rgb(253, 230, 21); */
     background-color: #E9D134;
     color: rgb(200, 0, 0);
     font-size: 20px;
@@ -256,7 +242,6 @@
 
   .add-ons-title {
     font-family: "Barlow semi condensed";
-    /* border: 1px solid black; */
     margin-top: 15px;
   }
 
@@ -271,5 +256,4 @@
     margin-left: 10%;
     gap: 10px;
     margin-top: 10px;
-
   }

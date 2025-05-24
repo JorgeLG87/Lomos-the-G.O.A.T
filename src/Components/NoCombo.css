@@ -182,7 +182,6 @@
     }
 }
 .large-fries {
-    /* margin-left: 0%; */
     width: 100%;
     @media (width < 450px) {
         width: 80%;
@@ -227,7 +226,6 @@
     margin-left: 42%;
     margin-bottom: 60px;
     width: 16%;
-    /* margin-top: 30px; */
     height: 50px;
     border-radius: 10px;
     border: none;
@@ -237,7 +235,6 @@
     font-family: "Montserrat";
     font-weight: 500;
     @media (width < 450px) {
-        /* margin-top: 1200px; */
         width: 30%;
         margin-left: 35%;
     }

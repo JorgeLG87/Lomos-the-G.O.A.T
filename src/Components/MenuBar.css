@@ -1,40 +1,24 @@
 .menubar-container {
-    /* display: block; */
-    /* display: none; */
     visibility: hidden;
     opacity: 0;
     position: fixed;
     text-align: center;
     margin-top: 0px;
-    /* border: 1px solid yellow; */
     height: 228px;
     border-radius: 7px;
     z-index: 100;
-    /* width: 120px; */
-    /* margin-left: 250px; */
-    /* right: -120px; */
     top: 0;
     right: 0;
-    /* left: -100%; */
-    /* transition: opacity 3s ease-out, transform 3s ease-out; */
-    /* transition: transform 3s ease-in-out; */
-    /* transform: translateX(100%); */
     @media (width < 450px) {
         display: block;
         height: 100vh;
         width: 60%;
-        /* right: -300px; */
-        /* margin-left: 50%; */
-        /* transform: translateX(-100%); */
-        /* transition: transform 5s ease-in-out; */
-        /* transition: right 100s ease-in-out; */
         transition: right 10s ease-in-out;
     }
 }
 .menubar-container.open {
     visibility: visible;
     opacity: 1;
-    /* transform: translateX(0); */
     right: 0px;
 }
 
@@ -51,6 +35,5 @@
     margin-bottom: 0px;
     font-family: "Montserrat";
     font-size: 20px;
-    /* border-radius: 7px; */
 }
 

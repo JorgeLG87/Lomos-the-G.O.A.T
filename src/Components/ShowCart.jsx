@@ -125,7 +125,7 @@ export default function ShowCart() {
         }
 
         if (product?.onionInstruction !== "") {
-            totalAddOns += 1;
+            totalAddOns += 1.5;
         }
 
         if (product?.cheeseInstruction !== "") {

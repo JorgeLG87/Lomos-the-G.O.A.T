@@ -1,6 +1,5 @@
 .navbar-container {
     background-color: black;
-    /* position: absolute; */
     display: inline-flex;
     width: 100%;
     justify-content: right;
@@ -123,10 +122,3 @@
         cursor: pointer;
     }
 }
-
-/* .menubar-and-items-container {
-    @media (width < 450px) {
-        display: grid;
-        grid-template-rows: repeat(2, 1fr);
-    }
-} */

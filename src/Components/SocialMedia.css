@@ -1,6 +1,5 @@
 .instagram, .facebook, .tiktok {
     width: 30px;
-    /* transform: rotate(345deg); */
     margin-left: 50px;
 }
 
@@ -21,17 +20,13 @@
     position: absolute;
     align-items: center;
     justify-content:center;
-    /* margin-top: 100%; */
     padding-bottom: 20px;
-    /* bottom: 0; */
     height: 200px;
     background-color: black;
     border: 3px solid #E9D134;
-    /* border-radius: 7px; */
     @media (width < 450px) {
         border-radius: 0px;
         width: 98.5%;
-        /* bottom: -225px; */
         margin-top: 0%;
     }    
 }
