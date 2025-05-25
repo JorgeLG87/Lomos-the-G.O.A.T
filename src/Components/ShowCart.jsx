@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../cartContext";
 import { getPrice, getProductData } from "../storeProducts";
+import BeverageLogo from "./BeverageLogo";
 import DeliveryMethod from "./DeliveryMethod";
 import ErrorModal from "./ErrorModal";
 
@@ -212,7 +213,8 @@ export default function ShowCart() {
                         <div className="list-products">
                             <p className="showcart-title">{data.title}</p>
                             <p style={{color:"gray", fontFamily:"Barlow semi condensed"}}>Quantity: {product.quantity}</p>
-                            <p style={{fontFamily:"Barlow semi condensed"}}>Beverage: {product.beverage}</p>
+                            <p style={{fontWeight: "bold", fontFamily:"Barlow semi condensed"}}>Beverage</p>
+                            <BeverageLogo selectedBev={product.beverage} />
                             <p style={{fontWeight:"bold", fontFamily: "Barlow semi condensed"}}>Special Instructions:</p>
                             {product.lettuceInstruction ? <p className="cart-titles">{product.lettuceInstruction}</p> : null}
                             {product.tomatoeInstruction ? <p className="cart-titles">{product.tomatoeInstruction}</p> : null}
