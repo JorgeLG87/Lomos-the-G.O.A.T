@@ -171,10 +171,16 @@ export default function NoCombo() {
                         <div className="icons-fries">          
                             <img className="icon-item-soda" src="/cola1.svg"/>
                         </div>
+                        <select id="bev-typeprice_1QyHXlAspxlK0TBsBq7lTKF3" className="beverage-type">
+                                <option value="">-----Choose Beverage-----</option>
+                                <option value="Coca Cola">Coca Cola</option>
+                                <option value="Pepsi">Pepsi</option>
+                                <option value="Sprite">Sprite</option>
+                                <option value="Fanta">Fanta</option>
+                            </select>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="price_1QU9yiAspxlK0TBsWGwULncs").length}</p> : null}
                         <button onClick={() => cart.addOneToCart("price_1QU9yiAspxlK0TBsWGwULncs")} className="nocombo-add" type="button">Add To Cart</button>
                     </div>
-
                 </div>
             </div>
 
