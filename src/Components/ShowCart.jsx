@@ -212,7 +212,7 @@ export default function ShowCart() {
                     return (
                         <div>
                         <div className="list-products">
-                            {/* <img src="./border.png"/> */}
+                            <img className="border" src="./border.png"/>
                             <p className="showcart-title">{data.title}</p>
                             <p style={{color:"gray", fontFamily:"Barlow semi condensed"}}>Quantity: {product.quantity}</p>
                             <p style={{fontWeight: "bold", fontFamily:"Barlow semi condensed"}}>Beverage</p>
