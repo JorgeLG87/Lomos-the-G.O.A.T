@@ -233,7 +233,7 @@ export default function ShowCart() {
                             {addOns > 0 ? <p className="showcart-subtotal">Price: ${(data.price+addOns).toFixed(2)} </p> : <p className="showcart-subtotal">Price: ${(data.price).toFixed(2)}</p>}
                             {/* <button className="delete-btn" onClick={() => cart.deleteFromCart(product.index)} type="button">Remove From Cart</button> */}
                         </div>
-                            <img className="delete-btn" src="./delete.png" onClick={() => cart.deleteFromCart(product.index)}/>
+                            <img className="delete-btn" src="/delete.png" onClick={() => cart.deleteFromCart(product.index)}/>
                         </div>
                     )
                 })}
