@@ -20,7 +20,7 @@ export default function Success() {
     const [ deliveryTime, setDeliveryTime ] = useState("");
 
     //MAP THE CART ITEMS TO AN ARRAY OF OBJECTS
-    const cartItems = cart.items.map((item) => `- ${item.name} (Quantity: ${item.quantity}) Special Instructions: Beverage: ${item.beverage}, Ketchup: ${item.ketchupInstruction}, Lettuce: ${item.lettuceInstruction}, Tomatoe: ${item.tomatoeInstruction}, Mayo: ${item.mayoInstruction}, Mustard: ${item.mustardInstruction}, Salt: ${item.saltInstruction}`).join("\n");
+    const cartItems = cart.items.map((item) => `- ${item.name} (Quantity: ${item.quantity}) Special Instructions: Beverage: ${item.beverage}, Ketchup: ${item.ketchupInstruction}, Lettuce: ${item.lettuceInstruction}, Tomatoe: ${item.tomatoeInstruction}, Mayo: ${item.mayoInstruction}, Mustard: ${item.mustardInstruction}, Salt: ${item.saltInstruction} - Add Ons: Extra Steak: ${item.steakInstruction}, Aguacate: ${item.aguacateInstruction}, Onions: ${item.onionInstruction}, Cheese: ${item.cheeseInstruction}, Mushroom: ${item.mushroomInstruction}`).join("\n");
 
     //VERIFY THAT WE HAVE A SESSION ID IN THE URL ELSE REDIRECT TO HOME PAGE
     useEffect(() => {

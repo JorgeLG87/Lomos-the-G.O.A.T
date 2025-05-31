@@ -9,7 +9,7 @@ const API_KEY = process.env.VITE_GOOGLE_API_KEY;
 const app = express();
 
 const corsOptions = {
-    origin: "https://lomosthegoat.netlify.app",
+    origin: ["https://lomosthegoat.netlify.app", "http://localhost:5173"],
     methods: ["GET", "POST", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
 }

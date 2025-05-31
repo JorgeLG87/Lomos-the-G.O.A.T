@@ -210,7 +210,9 @@ export default function ShowCart() {
                     const data = getProductData(product.id)
                     
                     return (
+                        <div>
                         <div className="list-products">
+                            {/* <img src="./border.png"/> */}
                             <p className="showcart-title">{data.title}</p>
                             <p style={{color:"gray", fontFamily:"Barlow semi condensed"}}>Quantity: {product.quantity}</p>
                             <p style={{fontWeight: "bold", fontFamily:"Barlow semi condensed"}}>Beverage</p>
@@ -229,7 +231,9 @@ export default function ShowCart() {
                             {product.cheeseInstruction ? <p className="cart-titles">{product.cheeseInstruction}</p> : null}
                             {product.mushroomInstruction ? <p className="cart-titles">{product.mushroomInstruction}</p> : null}
                             {addOns > 0 ? <p className="showcart-subtotal">Price: ${(data.price+addOns).toFixed(2)} </p> : <p className="showcart-subtotal">Price: ${(data.price).toFixed(2)}</p>}
-                            <button className="delete-btn" onClick={() => cart.deleteFromCart(product.index)} type="button">Remove From Cart</button>
+                            {/* <button className="delete-btn" onClick={() => cart.deleteFromCart(product.index)} type="button">Remove From Cart</button> */}
+                        </div>
+                            <img className="delete-btn" src="./delete.png" onClick={() => cart.deleteFromCart(product.index)}/>
                         </div>
                     )
                 })}
