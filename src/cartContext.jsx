@@ -24,7 +24,7 @@ function CartProvider({ children }) {
 
 
     function getProductBeverage(id) {
-        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "3" || id === "4" || id === "5" || id === "6") {
+        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1RUdHwAspxlK0TBsXyLr4QSB" || id === "4" || id === "5" || id === "6") {
             const beverageType = document.getElementById(`bev-type${id}`).value;
             return beverageType;
         } else {
@@ -35,51 +35,57 @@ function CartProvider({ children }) {
 
     // SPECIAL INSTRUCTIONS
     function getLettuceInstruction(id) {
-        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
+        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1RUdHwAspxlK0TBsXyLr4QSB" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
             const lettuce = document.getElementById(`lettuce${id}`).checked;
             return lettuce;
         } else return "";
     }
 
     function getTomatoeInstruction(id) {
-        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
+        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1RUdHwAspxlK0TBsXyLr4QSB" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
             const tomatoe = document.getElementById(`tomatoe${id}`).checked;
             return tomatoe;
         } else return "";
     }
 
     function getSaltInstruction(id) {
-        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
-            const salt = document.getElementById(`salt${id}`).checked;
-            return salt;
-        } else return "";
+        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1RUdHwAspxlK0TBsXyLr4QSB" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
+            const salt = document.getElementById(`salt${id}`)?.checked;
+            if (salt) {
+                return salt;
+            }
+            return "";
+        } 
     }
 
     function getMayoInstruction(id) {
-        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
+        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1RUdHwAspxlK0TBsXyLr4QSB" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
             const mayo = document.getElementById(`mayo${id}`).checked;
             return mayo;
         } else return "";
     }
 
     function getKetchupInstruction(id) {
-        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
+        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1RUdHwAspxlK0TBsXyLr4QSB" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
             const ketchup = document.getElementById(`ketchu${id}`).checked;
             return ketchup;
         } else return "";
     }
 
     function getMustardInstruction(id) {
-        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
-            const mustard = document.getElementById(`mustard${id}`).checked;
-            return mustard;
-        } else return "";
+        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1RUdHwAspxlK0TBsXyLr4QSB" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
+            const mustard = document.getElementById(`mustard${id}`)?.checked;
+            if (mustard) {
+                return mustard;
+            }
+            return "";
+        } 
     }
 
 
     // ADD-ONS INSTRUCTIONS
     function getSteakInstruction(id) {
-        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
+        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1RUdHwAspxlK0TBsXyLr4QSB" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
             const steak = document.getElementById(`extrasteak${id}`).checked;
             setAddOns(addOns+2);
             return steak;
@@ -88,7 +94,7 @@ function CartProvider({ children }) {
     }
 
     function getAguacateInstruction(id) {
-        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
+        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1RUdHwAspxlK0TBsXyLr4QSB" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
             const aguacate = document.getElementById(`aguacate${id}`).checked;
             setAddOns(addOns+1)
             return aguacate;
@@ -96,7 +102,7 @@ function CartProvider({ children }) {
     }
 
     function getOnionInstructions(id) {
-        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
+        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1RUdHwAspxlK0TBsXyLr4QSB" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
             const onion = document.getElementById(`onion${id}`).checked;
             setAddOns(addOns+1);
             return onion;
@@ -104,7 +110,7 @@ function CartProvider({ children }) {
     }
 
     function getCheeseInstruction(id) {
-        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
+        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1RUdHwAspxlK0TBsXyLr4QSB" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
             const cheese = document.getElementById(`cheese${id}`).checked;
             setAddOns(addOns+1);
             return cheese;
@@ -112,7 +118,7 @@ function CartProvider({ children }) {
     }
 
     function getMushroomInstruction(id) {
-        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1QBE39AspxlK0TBsWQEup4F1" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
+        if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1RUdHwAspxlK0TBsXyLr4QSB" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
             const mushroom = document.getElementById(`mushroom${id}`).checked;
             setAddOns(addOns+1.5);
             return mushroom;

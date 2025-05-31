@@ -3,15 +3,17 @@ const storeProducts = [
         // id: "price_1QBDqDAspxlK0TBsmuFK3fGa",
         id: "price_1QyHXlAspxlK0TBsBq7lTKF3",
         title: "The G.O.A.T Combo",
-        price: 11.99,
-        addOns: {
-            extraSteak: 2
-        }
+        price: 11.99
     },
     {
         id: "price_1RQJwHAspxlK0TBsIlDDDfja",
         title: "Classic Combo",
         price: 9.99
+    },
+    {
+        id: "price_1RUdHwAspxlK0TBsXyLr4QSB",
+        title: "Chori Combo",
+        price: 8.99
     },
     {
         id: "price_1QBE39AspxlK0TBsWQEup4F1",
