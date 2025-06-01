@@ -6,8 +6,10 @@ import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 
+// COMPONENTS
 import Combo from "./Combo.jsx";
 import NoCombo from "./NoCombo.jsx";
+import Menu from "./Menu.jsx";
 
 export default function Form({ shoppingCart, setShoppingCart }) {
 
@@ -92,6 +94,7 @@ export default function Form({ shoppingCart, setShoppingCart }) {
     return (
         <div className="form-container" >
             <div className="top-container2">
+                <Menu />
             </div>
             <div className="sideborder-container">
                 <img src="/Lomos-The-GOAT-SideBorder.svg" className="side-border"/>

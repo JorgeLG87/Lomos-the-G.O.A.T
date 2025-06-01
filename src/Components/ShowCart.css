@@ -136,7 +136,7 @@
 .showcart-title {
     margin: 0;
     margin-bottom: 30px;
-    font-size: 30px;
+    font-size: 125%;
     font-family: "Barlow semi condensed";
     font-weight: 400;
     /* color: #E9D134; */
@@ -144,7 +144,8 @@
 }
 
 .showcart-subtotal {
-    font-weight: bold;
+    font-weight: 550;
+    font-size: 100%;
     margin-top: 52px;
     margin-bottom: 5px;
     color: white;
