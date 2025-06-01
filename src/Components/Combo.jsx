@@ -281,6 +281,74 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                     </div>
                 </div>
 
+                <div className="main-container-pachata" >
+                    <div className="title-span-container">
+                        <p className="title2"><span className="span-text">Pachata</span></p><p className="title">Combo</p>
+                    </div>
+                    <div className="sub-container">
+                        <div className="large">
+                            <p className="text">Includes</p>
+                            <div className="icons">
+                                <img className="icon-item" src="/sandwich1.svg"/>
+                                <img className="icon-item" src="/french-fries1.svg"/>
+                                <img className="icon-item" src="/cola1.svg"/>
+                            </div>
+                            <select id="bev-typeprice_1RVHI9AspxlK0TBsoD8SudxG" className="beverage-type">
+                                <option value="">-----Choose Beverage-----</option>
+                                <option value="Coca Cola">Coca Cola</option>
+                                <option value="Pepsi">Pepsi</option>
+                                <option value="Sprite">Sprite</option>
+                                <option value="Fanta">Fanta</option>
+                            </select>
+                            <br></br>
+                            <p style={{fontFamily: "Barlow semi condensed"}}>Special Instructions</p>
+                            <div className="special-instructions">
+                                <div>
+                                    <input type="checkbox" id="lettuceprice_1RVHI9AspxlK0TBsoD8SudxG" value="No Lettuce"/>
+                                    <label className="checkbox-label" htmlFor="lettuce3">No Lettuce</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="tomatoeprice_1RVHI9AspxlK0TBsoD8SudxG" value="No Tomatoe"/>
+                                    <label className="checkbox-label" htmlFor="tomatoe3">No Tomatoe</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="mayoprice_1RVHI9AspxlK0TBsoD8SudxG" value="No Mayo"/>
+                                    <label className="checkbox-label" htmlFor="mayo3">No Mayo</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="ketchuprice_1RVHI9AspxlK0TBsoD8SudxG" value="No Ketchup"/>
+                                    <label className="checkbox-label" htmlFor="ketchup3">No Ketchup</label>
+                                </div>
+                            </div>
+                            <p className="add-ons-title">Add-Ons</p>
+                            <div className="add-ons">
+                                <div>
+                                    <input type="checkbox"id="cheeseprice_1RVHI9AspxlK0TBsoD8SudxG" value="Extra Cheese"/>
+                                    <label className="checkbox-label" htmlFor="cheese">Extra Cheese (+1)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="aguacateprice_1RVHI9AspxlK0TBsoD8SudxG" value="Aguacate Mayo"/>
+                                    <label className="checkbox-label" htmlFor="aguacate mayo">Aguacate Mayo (+1)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="mushroomprice_1RVHI9AspxlK0TBsoD8SudxG" value="Mushroom"/>
+                                    <label className="checkbox-label" htmlFor="mushroom">Mushroom (+1.5)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="onionprice_1RVHI9AspxlK0TBsoD8SudxG" value="Onion"/>
+                                    <label className="checkbox-label" htmlFor="onion">Onions (+1.5)</label>
+                                </div>
+                            </div>
+                            {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="price_1RVHI9AspxlK0TBsoD8SudxG").length}</p> : null}
+                            {bevValid3 ? <p className="bev-error">Please choose a beverage type</p> : null}
+                            <button onClick={() => {
+                                document.getElementById("bev-typeprice_1RVHI9AspxlK0TBsoD8SudxG").value ? cart.addOneToCart("price_1RVHI9AspxlK0TBsoD8SudxG") : setBevValid3(true);
+                                document.getElementById("bev-typeprice_1RVHI9AspxlK0TBsoD8SudxG").value ? setBevValid3(false) : null
+                                }} className="add" type="button">Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+
                 <button className="checkout-btn" type="button" onClick={() => navigate("/showcart")}>Checkout</button>
         </div>
     )

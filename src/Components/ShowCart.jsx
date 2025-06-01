@@ -215,7 +215,7 @@ export default function ShowCart() {
                             <img className="border" src="./border.png"/>
                             <p className="showcart-title">{data.title}</p>
                             <p style={{color:"gray", fontFamily:"Barlow semi condensed"}}>Quantity: {product.quantity}</p>
-                            <p style={{fontWeight: "bold", fontFamily:"Barlow semi condensed"}}>Beverage</p>
+                            <p style={{fontWeight: "bold", fontFamily:"Barlow semi condensed", marginTop: "-8px"}}>Beverage</p>
                             <BeverageLogo selectedBev={product.beverage} />
                             <p style={{fontWeight:"bold", fontFamily: "Barlow semi condensed"}}>Special Instructions:</p>
                             {product.lettuceInstruction ? <p className="cart-titles">{product.lettuceInstruction}</p> : null}

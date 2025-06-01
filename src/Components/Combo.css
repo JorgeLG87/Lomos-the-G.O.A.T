@@ -72,6 +72,24 @@
     }
 }
 
+.main-container-pachata {
+    position: relative;
+    border-radius: 10px;
+    width: 60%;
+    height:fit-content;
+    padding: 0px;
+    padding-bottom: 30px;
+    padding-top: 0px;
+    text-align: center;
+    margin-top: 0px;
+    margin-left: 70%;
+    @media (width < 450px) {
+        width: 100%;
+        margin-top: 0px;
+        margin-left: 0%;
+    }
+}
+
 
 .title-span-container {
     display:block;

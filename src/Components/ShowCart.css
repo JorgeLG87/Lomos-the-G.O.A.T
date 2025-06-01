@@ -144,8 +144,10 @@
 }
 
 .showcart-subtotal {
-    font-weight: 550;
+    /* font-weight: 550; */
     font-size: 100%;
+    font-family: "Barlow semi condensed";
+    font-weight: 400;
     margin-top: 52px;
     margin-bottom: 5px;
     color: white;

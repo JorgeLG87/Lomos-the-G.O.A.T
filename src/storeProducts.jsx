@@ -16,6 +16,11 @@ const storeProducts = [
         price: 8.99
     },
     {
+        id: "price_1RVHI9AspxlK0TBsoD8SudxG",
+        title: "Pachata Combo",
+        price: 9.99
+    },
+    {
         id: "price_1QBE39AspxlK0TBsWQEup4F1",
         title: "The G.O.A.T",
         price: 9.99
@@ -40,11 +45,6 @@ const storeProducts = [
         id: "price_1QUA3gAspxlK0TBsDykRfCY4",
         title: "Fries for 4",
         price: 5.99
-    },
-    {
-        id: "pachata",
-        title: "Pachata",
-        price: 9.99
     },
     {
         id: "extra steak",
