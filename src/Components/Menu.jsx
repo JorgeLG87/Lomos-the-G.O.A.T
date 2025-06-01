@@ -28,10 +28,10 @@ export default function Menu() {
 
     return (
         <div className="menu-main-container">
-            <img className="left-menu-arrow" src="back.png" alt="left arrow" onClick={() => slideLeft(currSlide)} />
+            <img className="left-menu-arrow" src="left.png" alt="left arrow" onClick={() => slideLeft(currSlide)} />
             <img className="first-foodmenu" src={imgs[currSlide].url} alt="food menu" />
             {/* <img className="choripan" src="/choripan.png" alt="choripan sandwich" /> */}
-            <img className="right-menu-arrow" src="next.png" alt="right arrow" onClick={() => slideRight(currSlide)}/>
+            <img className="right-menu-arrow" src="right.png" alt="right arrow" onClick={() => slideRight(currSlide)}/>
         </div>
     )
 }
