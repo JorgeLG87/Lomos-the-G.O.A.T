@@ -86,7 +86,7 @@ function CartProvider({ children }) {
     // ADD-ONS INSTRUCTIONS
     function getSteakInstruction(id) {
         if (id === "price_1QyHXlAspxlK0TBsBq7lTKF3" || id === "price_1RQJwHAspxlK0TBsIlDDDfja" || id === "price_1RUdHwAspxlK0TBsXyLr4QSB" || id === "price_1QU9xZAspxlK0TBsdnAwLgx7" || id === "5" || id === "6" || id === "7" || id === "8") {
-            const steak = document.getElementById(`extrasteak${id}`).checked;
+            const steak = document.getElementById(`extrasteak${id}`)?.checked;
             setAddOns(addOns+2);
             return steak;
         } else return "";

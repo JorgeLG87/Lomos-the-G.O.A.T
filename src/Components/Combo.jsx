@@ -255,10 +255,6 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <p className="add-ons-title">Add-Ons</p>
                             <div className="add-ons">
                                 <div>
-                                    <input type="checkbox" id="extrasteakprice_1RUdHwAspxlK0TBsXyLr4QSB" value="Extra Steak"/>
-                                    <label className="checkbox-label" htmlFor="steak">Extra Steak (+2)</label>
-                                </div>
-                                <div>
                                     <input type="checkbox"id="cheeseprice_1RUdHwAspxlK0TBsXyLr4QSB" value="Extra Cheese"/>
                                     <label className="checkbox-label" htmlFor="cheese">Extra Cheese (+1)</label>
                                 </div>

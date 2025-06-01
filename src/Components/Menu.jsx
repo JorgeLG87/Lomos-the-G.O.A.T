@@ -6,8 +6,8 @@ export default function Menu() {
     const [ currSlide, setCurrSlide ] = useState(0);
 
     const imgs = [
-        { url:"/food-menu.png", title:"first-foodmenu"},
-        {url:"/choripan.png", title:"first-foodmenu"},
+        { url:"/foodmenu1.png", title:"first-foodmenu"},
+        {url:"/foodmenu2.png", title:"first-foodmenu"},
     ]
 
     function slideRight(currSlide) {
@@ -30,7 +30,6 @@ export default function Menu() {
         <div className="menu-main-container">
             <img className="left-menu-arrow" src="left.png" alt="left arrow" onClick={() => slideLeft(currSlide)} />
             <img className="first-foodmenu" src={imgs[currSlide].url} alt="food menu" />
-            {/* <img className="choripan" src="/choripan.png" alt="choripan sandwich" /> */}
             <img className="right-menu-arrow" src="right.png" alt="right arrow" onClick={() => slideRight(currSlide)}/>
         </div>
     )
