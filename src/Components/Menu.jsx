@@ -1,6 +1,7 @@
 import "./Menu.css"
 
 import { useState } from "react"
+import { useSwipeable } from "react-swipeable";
 
 export default function Menu() {
     const [ currSlide, setCurrSlide ] = useState(0);
@@ -27,8 +28,21 @@ export default function Menu() {
         }
     }
 
+    const swipeHandlers = useSwipeable({
+        onSwipedLeft: (e) => {
+            slideRight(currSlide);
+        },
+        onSwipedRight: (e) => {
+            slideLeft(currSlide);
+        },
+        preventDefaultTouchmoveEvent: true,
+        trackMouse: true,
+        trackTouch: true,
+        delta: 10
+    });
+
     return (
-        <div className="menu-main-container">
+        <div {...swipeHandlers} className="menu-main-container">
             <img className="left-menu-arrow" src="left.png" alt="left arrow" onClick={() => slideLeft(currSlide)} />
             <img className="first-foodmenu" src={imgs[currSlide].url} alt="food menu" />
             <img className="right-menu-arrow" src="right.png" alt="right arrow" onClick={() => slideRight(currSlide)}/>
