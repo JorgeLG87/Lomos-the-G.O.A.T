@@ -5,7 +5,7 @@ export default function AboutUs({ slides, AboutUsCarousel }) {
     return (
         <div className="aboutus-page">
             <div className="title-span-container-aboutus">
-                <p className="title2"><span className="span-text"># Meet Our</span></p><p className="title">Team</p>
+                <p className="title2"><span className="span-text">Meet Our</span></p><p className="title">Team</p>
                 <div className="container-body-aboutUs">
                     <AboutUsMUICarousel/>
                     <div className="idealogo-text-container">

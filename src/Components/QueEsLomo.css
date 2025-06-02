@@ -52,6 +52,7 @@
     font-family: "Barlow Semi Condensed";
     font-size: 45px;
     font-weight: 400;
+    color: #Ad2007;
     @media (width < 450px) {
         font-size: 40px;
         margin-top: -20px;
@@ -87,6 +88,7 @@
 
 .san-juan {
     font-weight: bold;
+    color:#Ad2007;
 }
 
 .mapa-arg {
