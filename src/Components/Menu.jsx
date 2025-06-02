@@ -9,7 +9,7 @@ export default function Menu() {
     const imgs = [
         { url:"/foodmenu1.png", title:"first-foodmenu"},
         { url:"/foodmenu2.png", title:"second-foodmenu" },
-        { url:"/foodmenu3.png", title:"third-foodmenu" },
+        // { url:"/foodmenu3.png", title:"third-foodmenu" },
     ]
 
     function slideRight(currSlide) {

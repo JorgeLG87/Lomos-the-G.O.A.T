@@ -166,17 +166,18 @@ export default function Home({ slides }) {
     return (
         <div className="entire-home-container">
         <div className="marco-video-container">
-          <img className="marco-video" src="/Background-image.png"/>
-          <div className="video-container">
-            <video className="video" autoPlay={true} loop={true} playsInline>
+          {/* <img className="marco-video" src="/Background-image.png"/> */}
+          {/* <div className="video-container"> */}
+            {/* <video className="video" autoPlay={true} loop={true} playsInline>
               <source src="/publicidad-lomo.MP4" type="video/mp4"/>
-            </video>
-          </div>
+            </video> */}
+          {/* </div> */}
+          <img className="first-foodmenu" src="/foodmenu3.png" alt="food menu" />
         </div>
-        <div className="icon-container">
+        {/* <div className="icon-container"> */}
           {/* <img className="face" src="/facebook.png"/> */}
           {/* <img className="location" src="/location.png"/> */}
-        </div>
+        {/* </div> */}
         <QueEsLomo/>
           <Link className="link" to="/order-now" style={{textDecoration:"none", marginTop:"80px", display:"contents"}}>
             <button className="order-now-home">Order Now!</button>
