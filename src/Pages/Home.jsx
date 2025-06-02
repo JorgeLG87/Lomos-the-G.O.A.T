@@ -4,12 +4,13 @@ import anime from "animejs";
 
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from 'react';
+import { useNavigate } from "react-router-dom";
 
 import HomeSlidingImg from "../Components/HomeSlidingImg.jsx";
 
 
 export default function Home({ slides }) {
-
+    const navigate = useNavigate();
     const textFollowUs = useRef();
     const [ followUsIsVisible, setFollowUsIsVisible ] = useState(false);
 
@@ -210,6 +211,9 @@ export default function Home({ slides }) {
         </div>
         <div className="our-location">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6034.410203527583!2d-74.1095739239315!3d40.86737292808924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2f93948c9765b%3A0x6be954f76eaa0b56!2s96%20Palisade%20Ave%2C%20Garfield%2C%20NJ%2007026!5e0!3m2!1sen!2sus!4v1718864999544!5m2!1sen!2sus" width="100%" height="450" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div className="prueba">
+          <img className="prueba" src="homero.png" alt="homero simpson" onClick={() => navigate("/order-now")} />
         </div>
         </div>
     )
