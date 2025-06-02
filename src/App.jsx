@@ -21,6 +21,7 @@ import AboutUsCarousel from './Components/AboutUsCarousel.jsx';
 import AboutUsMUICarousel from './Components/AboutUsMUICarousel.jsx';
 import DeliveryMethod from './Components/DeliveryMethod.jsx';
 import ErrorModal from './Components/ErrorModal.jsx';
+import ScrollToTop from './Components/scrollToTop.jsx';
 
 // Import Store Products and Functions to obtain specific prices
 import { storeProducts, getPriceSmall, getPriceMedium, getPriceLarge, getProductData } from './storeProducts.jsx'; 
@@ -67,11 +68,12 @@ function App() {
     <div className="dropdown" onClick={closeMenuBar}>
       <div className={`overlay ${ toggle ? "active" : ""}`}>
       <CartProvider>
-      <Router>
+      {/* <Router> */}
         <Link to="/">
           <img className="logo" src="/thegoat.JPG"/>
         </Link>
         <Navbar handleToggle={handleToggle} toggle={toggle}/>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home slides={slides} toggle={toggle}/>}/>
           <Route path="/*" element={<Home/>}/>
@@ -81,17 +83,10 @@ function App() {
           <Route path="/success" element={<Success/>}/>
           <Route path="/cancel" element={<Cancel/>}/>
         </Routes>
-        {/* <footer style={{bottom:"0px", position:"relative"}}>
-          <SocialMedia/>
-        </footer> */}
-      </Router>
-      {/* <div className="mother-container-socialmedia"> */}
-      {/* </div> */}
+      {/* </Router> */}
       </CartProvider>
       <SocialMedia/>
       </div>
-      {/* <footer style={{bottom:"0px", position:"absolute"}}> */}
-      {/* </footer> */}
     </div>
   )
 }

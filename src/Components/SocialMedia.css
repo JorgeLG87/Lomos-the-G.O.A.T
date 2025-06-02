@@ -24,6 +24,7 @@
     height: 200px;
     background-color: black;
     border: 3px solid #E9D134;
+    z-index: 1002;
     @media (width < 450px) {
         border-radius: 0px;
         width: 98.5%;

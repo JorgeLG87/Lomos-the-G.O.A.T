@@ -321,3 +321,7 @@
 .box:hover:before, .box:hover:after {
     animation-duration: 0.2s;
 }
+
+.aboutus-page {
+    overflow: hidden;
+}

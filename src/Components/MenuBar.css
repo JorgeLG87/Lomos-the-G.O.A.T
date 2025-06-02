@@ -6,7 +6,7 @@
     margin-top: 0px;
     height: 228px;
     border-radius: 7px;
-    z-index: 100;
+    z-index: 10002;
     top: 0;
     right: 0;
     @media (width < 450px) {

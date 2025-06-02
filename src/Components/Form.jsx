@@ -12,9 +12,14 @@ import NoCombo from "./NoCombo.jsx";
 import Menu from "./Menu.jsx";
 
 export default function Form({ shoppingCart, setShoppingCart }) {
-
     // const form = useRef();
     const navigate = useNavigate();
+
+    useEffect(() => {
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        // console.log(window.screenY);
+       }, []);
 
     const [ selected, setSelected ] = useState("");
     const [ screenHight, setScreenHight ] = useState("");
@@ -119,12 +124,12 @@ export default function Form({ shoppingCart, setShoppingCart }) {
                 <p className="combo-btn" onClick={() => {
                     handleCombo();
                     setSelected("underline1");
-                    setScreenHight("combo");
+                    // setScreenHight("combo");
                 }} >Combo</p>
                 <p className="combo-btn2" onClick={() => {
                     handleNotCombo();
                     setSelected("underline2");
-                    setScreenHight("individual items")
+                    // setScreenHight("individual items")
                 }} >Individual Items</p>
             </div>
 
