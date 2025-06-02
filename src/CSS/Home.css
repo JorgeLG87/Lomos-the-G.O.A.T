@@ -5,7 +5,8 @@ body {
 .entire-home-container {
   position: relative;
   width: 100%;
-  background-image: url("watermark-background.jpg");
+  /* background-image: url("watermark-background.jpg"); */
+  overflow: hidden;
 }
 
 .aboutus-section-container {
