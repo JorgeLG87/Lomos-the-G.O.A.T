@@ -7,11 +7,12 @@ export default function Menu() {
 
     const imgs = [
         { url:"/foodmenu1.png", title:"first-foodmenu"},
-        {url:"/foodmenu2.png", title:"first-foodmenu"},
+        { url:"/foodmenu2.png", title:"second-foodmenu" },
+        { url:"/foodmenu3.png", title:"third-foodmenu" },
     ]
 
     function slideRight(currSlide) {
-        if (currSlide === 1) {
+        if (currSlide === (imgs.length - 1)) {
             setCurrSlide(0);
         } else {
             setCurrSlide(currSlide+1);
