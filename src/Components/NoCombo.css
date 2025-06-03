@@ -61,7 +61,7 @@
 .nocombo-sub-container-bev {
     display: flex;
     width: 32%;
-    margin-left: 33%;
+    margin-left: 34%;
     align-content: center;
     justify-content: center;
     @media (width < 450px) {

@@ -134,13 +134,14 @@
 }
 
 .showcart-title {
-    margin: 0;
+    margin-top: 10px;
     margin-bottom: 30px;
-    font-size: 125%;
+    font-size: 150%;
     font-family: "Barlow semi condensed";
     font-weight: 400;
     /* color: #E9D134; */
     color: white;
+    z-index: 10;
 }
 
 .showcart-subtotal {
@@ -149,8 +150,9 @@
     font-family: "Barlow semi condensed";
     font-weight: 400;
     margin-top: 52px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     color: white;
+    z-index: 10;
 }
 
 .delete-btn {
@@ -196,8 +198,10 @@
 
 .cart-titles {
     font-family: "Barlow semi condensed";
-    color: #AF2007;
+    /* color: #AF2007; */
+    color: #E9D134;
     margin-top: -10px;
+    z-index: 10;
 }
 
 .sideborder-container2 {
@@ -265,4 +269,53 @@
     height: 100%;
     z-index: -1;
     position: absolute;
+}
+
+
+/* ---------------- TRY OUT -------------------*/
+
+/* body {
+	margin: 0;
+	padding: 0;
+	background-color: #000;
+} */
+
+.block {
+	position: absolute;
+	margin: 0px auto 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(0deg, #000, #272727);
+    border-radius: 10px;
+}
+
+.block:before, .block:after {
+	content: '';
+	position: absolute;
+	left: -2px;
+	top: -2px;
+	background: linear-gradient(45deg, #AD2007, #E9D134, #AD2007,#E9D134, #AD2007, #E9D134, 
+		#AD2007, #E9D134,#AD2007, #E9D134);
+	background-size: 400%;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	z-index: -1;
+	animation: steam 20s linear infinite;
+    border-radius: 10px;
+}
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.block:after {
+	filter: blur(50px);
 }

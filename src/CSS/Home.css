@@ -271,7 +271,7 @@ body {
   margin-top: 0px;
   padding-top: 0%;
   width: 100%;
-  height: 200vH;
+  height: 220vH;
   overflow: hidden;
   @media (width < 450px) {
     width:100%;
@@ -406,10 +406,18 @@ body {
   position:fixed;
   bottom: 100px;
   right: -25px;
-  width: 45%;
+  width: 20%;
   z-index: 1001;
+  @media (width < 450px) {
+    width: 45%;
+  }
 }
 
 .prueba:hover {
   cursor: pointer;
+}
+
+.home-foodmenu {
+  width: 100%;
+  height: 100%;
 }

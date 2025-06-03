@@ -37,7 +37,7 @@ export default function AboutUsMUICarousel() {
         // py: 1,
         overflow: 'auto',
         width: "100%",
-        height: "300px",
+        height: "115%",
         justifyContent: 'center',
         padding: 0,
         scrollSnapType: 'x mandatory',
@@ -49,7 +49,7 @@ export default function AboutUsMUICarousel() {
     >
       {aboutUsSlides.map((item) => (
         <Card orientation="horizontal" size="lg" key={item.title} variant="none" sx={{boder: "none", outline: "none", backgroundColor: "#F8F8F8", padding: 0}}>
-          <AspectRatio ratio="1" sx={{ minWidth: 300, padding: 0 }}>
+          <AspectRatio ratio="1" sx={{ minWidth: 300, padding: 2 }}>
             <img
               srcSet={`${item.url}?h=120&fit=crop&auto=format&dpr=2 2x`} 
               src={`${item.url}?h=120&fit=crop&auto=format`}

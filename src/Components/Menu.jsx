@@ -1,6 +1,6 @@
 import "./Menu.css"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useSwipeable } from "react-swipeable";
 
 export default function Menu() {
@@ -41,11 +41,30 @@ export default function Menu() {
         delta: 10
     });
 
+    const breakpoint = 768; 
+
+    const [ isMobile, setIsMobile ] = useState(window.innerWidth <= breakpoint);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= breakpoint);
+        };
+
+        window.addEventListener("resize", handleResize);
+
+        return () => window.removeEventListener("resize", handleResize);
+
+    }, [breakpoint]);
+
     return (
+        <>
+        {isMobile ? 
         <div {...swipeHandlers} className="menu-main-container">
             <img className="left-menu-arrow" src="left.png" alt="left arrow" onClick={() => slideLeft(currSlide)} />
             <img className="first-foodmenu" src={imgs[currSlide].url} alt="food menu" />
             <img className="right-menu-arrow" src="right.png" alt="right arrow" onClick={() => slideRight(currSlide)}/>
-        </div>
+        </div> : <img className="desktop-foodmenu" src="desktopfoodmenu.png" alt="food menu"/>
+        }
+        </>
     )
 }

@@ -212,19 +212,20 @@ export default function ShowCart() {
                     return (
                         <div>
                         <div className="list-products">
-                            <img className="border" src="./border.png"/>
+                            {/* <img className="border" src="./border.png"/> */}
+                            <div className="block"></div>
                             <p className="showcart-title">{data.title}</p>
-                            <p style={{color:"gray", fontFamily:"Barlow semi condensed"}}>Quantity: {product.quantity}</p>
-                            <p style={{fontWeight: "bold", fontFamily:"Barlow semi condensed", marginTop: "-8px"}}>Beverage</p>
+                            <p style={{color:"gray", fontFamily:"Barlow semi condensed", zIndex:"10", marginTop:"0"}}>Quantity: {product.quantity}</p>
+                            <p style={{fontWeight: "bold", fontFamily:"Barlow semi condensed", marginTop: "-8px", zIndex:"10", color:"white"}}>Beverage</p>
                             <BeverageLogo selectedBev={product.beverage} />
-                            <p style={{fontWeight:"bold", fontFamily: "Barlow semi condensed"}}>Special Instructions:</p>
+                            <p style={{fontWeight:"bold", fontFamily: "Barlow semi condensed", zIndex:"10", color:"white"}}>Special Instructions:</p>
                             {product.lettuceInstruction ? <p className="cart-titles">{product.lettuceInstruction}</p> : null}
                             {product.tomatoeInstruction ? <p className="cart-titles">{product.tomatoeInstruction}</p> : null}
                             {product.saltInstruction ? <p className="cart-titles">{product.saltInstruction}</p> : null}
                             {product.mayoInstruction ? <p className="cart-titles">{product.mayoInstruction}</p> : null}
                             {product.ketchupInstruction ? <p className="cart-titles">{product.ketchupInstruction}</p> : null}
                             {product.mustardInstruction ? <p className="cart-titles">{product.mustardInstruction}</p> : null}
-                            <p style={{fontWeight:"bold", fontFamily: "Barlow semi condensed"}}>Add Ons:</p>
+                            <p style={{fontWeight:"bold", fontFamily: "Barlow semi condensed", zIndex:"10", color:"white"}}>Add Ons:</p>
                             {product.steakInstruction ? <p className="cart-titles">{product.steakInstruction}</p> : null}
                             {product.aguacateInstruction ? <p className="cart-titles">{product.aguacateInstruction}</p> : null}
                             {product.onionInstruction ? <p className="cart-titles">{product.onionInstruction}</p> : null}
