@@ -263,10 +263,6 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                     <label className="checkbox-label" htmlFor="aguacate mayo">Aguacate Mayo (+1)</label>
                                 </div>
                                 <div>
-                                    <input type="checkbox" id="mushroomprice_1RUdHwAspxlK0TBsXyLr4QSB" value="Mushroom"/>
-                                    <label className="checkbox-label" htmlFor="mushroom">Mushroom (+1.5)</label>
-                                </div>
-                                <div>
                                     <input type="checkbox" id="onionprice_1RUdHwAspxlK0TBsXyLr4QSB" value="Onion"/>
                                     <label className="checkbox-label" htmlFor="onion">Onions (+1.5)</label>
                                 </div>

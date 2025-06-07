@@ -1,6 +1,7 @@
 const storeProducts = [
+
+    //DURING DEVELOPMENT THE ID ARE THE ONES THAT COME FROM THE PRODUCTS IN THE CATALOG OF STRIPE TEST MODE
     {
-        // id: "price_1QBDqDAspxlK0TBsmuFK3fGa",
         id: "price_1QyHXlAspxlK0TBsBq7lTKF3",
         title: "The G.O.A.T Combo",
         price: 11.99
@@ -21,28 +22,37 @@ const storeProducts = [
         price: 9.99
     },
     {
-        id: "price_1QBE39AspxlK0TBsWQEup4F1",
+        id: "price_1RXCyjAspxlK0TBs1BNLOJuz",
         title: "The G.O.A.T",
         price: 9.99
     },
     {
-        id: "price_1QU9xZAspxlK0TBsdnAwLgx7",
-        title: "Plain",
+        id: "price_1RXCzBAspxlK0TBsouBU9kdQ",
+        title: "Classic",
         price: 8.99
     },
     {
-        // id: "price_1QU9yiAspxlK0TBsWGwULncs",
-        id: "price_1QyHkQAspxlK0TBss5Zo0B9A",
-        title: "Soda",
-        price: 1.49
+        id: "price_1RXCzXAspxlK0TBserjYTfeP",
+        title: "Chori",
+        price: 6.49,
     },
     {
-        id: "price_1QUA2qAspxlK0TBsgjhdvagh",
+        id: "price_1RXCzpAspxlK0TBskOryjmKH",
+        title: "Pachata",
+        price: 7.99
+    },
+    {
+        id: "price_1QyHkQAspxlK0TBss5Zo0B9A",
+        title: "Soda",
+        price: 1.50
+    },
+    {
+        id: "price_1RXD0pAspxlK0TBsrbFwpGMR",
         title: "Fries for 2",
         price: 3.99
     },
     {
-        id: "price_1QUA3gAspxlK0TBsDykRfCY4",
+        id: "price_1RXD1EAspxlK0TBsCPLLGama",
         title: "Fries for 4",
         price: 5.99
     },
