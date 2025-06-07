@@ -165,7 +165,7 @@ export default function Home({ slides }) {
     return (
         <div className="entire-home-container">
           <div className="marco-video-container">
-            <img className="home-foodmenu" src="/foodmenu3.png" alt="food menu" />
+            <img className="home-foodmenu" src="/homepageimage.png" alt="food menu" />
           </div>
       
           <QueEsLomo/>

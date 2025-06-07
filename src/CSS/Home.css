@@ -270,12 +270,14 @@ body {
   position: relative;
   margin-top: 0px;
   padding-top: 0%;
-  width: 100%;
+  width: 100vW;
   height: 220vH;
   overflow: hidden;
+  /* background-image: url("/homepageimage.svg"); */
+  /* background-size: cover; */
   @media (width < 450px) {
     width:100%;
-    height: 60vh;
+    height: 73vH;
     margin-top: 0px;
   }
 }
@@ -420,4 +422,5 @@ body {
 .home-foodmenu {
   width: 100%;
   height: 100%;
+  
 }

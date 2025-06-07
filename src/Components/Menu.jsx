@@ -7,7 +7,7 @@ export default function Menu() {
     const [ currSlide, setCurrSlide ] = useState(0);
 
     const imgs = [
-        { url:"/foodmenu1.png", title:"first-foodmenu"},
+        { url:"/firstfoodmenu.png", title:"first-foodmenu"},
         { url:"/foodmenu2.png", title:"second-foodmenu" },
         // { url:"/foodmenu3.png", title:"third-foodmenu" },
     ]
