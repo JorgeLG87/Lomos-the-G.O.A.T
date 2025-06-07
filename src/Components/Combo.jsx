@@ -69,10 +69,21 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             </div>
                             <select id="bev-typeprice_1QyHXlAspxlK0TBsBq7lTKF3" className="beverage-type">
                                 <option value="">-----Choose Beverage-----</option>
+                                <option value="Ginger Ale">Canady Dry Ginger Ale</option>
                                 <option value="Coca Cola">Coca Cola</option>
+                                <option value="Coke Zero">Coke Zero</option>
+                                <option value="Diet Coke">Diet Coke</option>
+                                <option value="Fanta">Fanta</option>
                                 <option value="Pepsi">Pepsi</option>
                                 <option value="Sprite">Sprite</option>
-                                <option value="Fanta">Fanta</option>
+                                <option value="Gatorade Cool Blue">Gatorade Cool Blue</option>
+                                <option value="Gatorade Fruit Punch">Gatorade Fruit Punch</option>
+                                <option value="Gatorade Lemon Lime">Gatorade Lemon Lime</option>
+                                <option value="Snapple Strawberry">Snapple Strawberry Kiwi</option>
+                                <option value="Snapple Lemon Tea">Snapple Lemon Tea</option>
+                                <option value="Snapple Peach Tea">Snapple Peach Tea</option>
+                                <option value="Snapple Apple">Snapple Apple</option>
+                                <option value="Water">Water</option>
                             </select>
                             <br></br>
                             <p style={{fontFamily: "Barlow semi condensed"}}>Special Instructions</p>
@@ -146,11 +157,22 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                             <img className="icon-item" src="/cola1.svg"/>
                         </div>
                         <select id="bev-typeprice_1RQJwHAspxlK0TBsIlDDDfja" className="beverage-type">
-                            <option value="">-----Choose Beverage-----</option>
-                            <option value="Coca Cola">Coca Cola</option>
-                            <option value="Pepsi">Pepsi</option>
-                            <option value="Sprite">Sprite</option>
-                            <option value="Fanta">Fanta</option>
+                        <option value="">-----Choose Beverage-----</option>
+                                <option value="Ginger Ale">Canady Dry Ginger Ale</option>
+                                <option value="Coca Cola">Coca Cola</option>
+                                <option value="Coke Zero">Coke Zero</option>
+                                <option value="Diet Coke">Diet Coke</option>
+                                <option value="Fanta">Fanta</option>
+                                <option value="Pepsi">Pepsi</option>
+                                <option value="Sprite">Sprite</option>
+                                <option value="Gatorade Cool Blue">Gatorade Cool Blue</option>
+                                <option value="Gatorade Fruit Punch">Gatorade Fruit Punch</option>
+                                <option value="Gatorade Lemon Lime">Gatorade Lemon Lime</option>
+                                <option value="Snapple Strawberry">Snapple Strawberry Kiwi</option>
+                                <option value="Snapple Lemon Tea">Snapple Lemon Tea</option>
+                                <option value="Snapple Peach Tea">Snapple Peach Tea</option>
+                                <option value="Snapple Apple">Snapple Apple</option>
+                                <option value="Water">Water</option>
                         </select>
                         <br></br>
                             <p style={{fontFamily: "Barlow semi condensed"}}>Special Instructions</p>
@@ -226,11 +248,22 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                 <img className="icon-item" src="/cola1.svg"/>
                             </div>
                             <select id="bev-typeprice_1RUdHwAspxlK0TBsXyLr4QSB" className="beverage-type">
-                                <option value="">-----Choose Beverage-----</option>
+                            <option value="">-----Choose Beverage-----</option>
+                                <option value="Ginger Ale">Canady Dry Ginger Ale</option>
                                 <option value="Coca Cola">Coca Cola</option>
+                                <option value="Coke Zero">Coke Zero</option>
+                                <option value="Diet Coke">Diet Coke</option>
+                                <option value="Fanta">Fanta</option>
                                 <option value="Pepsi">Pepsi</option>
                                 <option value="Sprite">Sprite</option>
-                                <option value="Fanta">Fanta</option>
+                                <option value="Gatorade Cool Blue">Gatorade Cool Blue</option>
+                                <option value="Gatorade Fruit Punch">Gatorade Fruit Punch</option>
+                                <option value="Gatorade Lemon Lime">Gatorade Lemon Lime</option>
+                                <option value="Snapple Strawberry">Snapple Strawberry Kiwi</option>
+                                <option value="Snapple Lemon Tea">Snapple Lemon Tea</option>
+                                <option value="Snapple Peach Tea">Snapple Peach Tea</option>
+                                <option value="Snapple Apple">Snapple Apple</option>
+                                <option value="Water">Water</option>
                             </select>
                             <br></br>
                             <p style={{fontFamily: "Barlow semi condensed"}}>Special Instructions</p>
@@ -290,11 +323,22 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                 <img className="icon-item" src="/cola1.svg"/>
                             </div>
                             <select id="bev-typeprice_1RVHI9AspxlK0TBsoD8SudxG" className="beverage-type">
-                                <option value="">-----Choose Beverage-----</option>
+                            <option value="">-----Choose Beverage-----</option>
+                                <option value="Ginger Ale">Canady Dry Ginger Ale</option>
                                 <option value="Coca Cola">Coca Cola</option>
+                                <option value="Coke Zero">Coke Zero</option>
+                                <option value="Diet Coke">Diet Coke</option>
+                                <option value="Fanta">Fanta</option>
                                 <option value="Pepsi">Pepsi</option>
                                 <option value="Sprite">Sprite</option>
-                                <option value="Fanta">Fanta</option>
+                                <option value="Gatorade Cool Blue">Gatorade Cool Blue</option>
+                                <option value="Gatorade Fruit Punch">Gatorade Fruit Punch</option>
+                                <option value="Gatorade Lemon Lime">Gatorade Lemon Lime</option>
+                                <option value="Snapple Strawberry">Snapple Strawberry Kiwi</option>
+                                <option value="Snapple Lemon Tea">Snapple Lemon Tea</option>
+                                <option value="Snapple Peach Tea">Snapple Peach Tea</option>
+                                <option value="Snapple Apple">Snapple Apple</option>
+                                <option value="Water">Water</option>
                             </select>
                             <br></br>
                             <p style={{fontFamily: "Barlow semi condensed"}}>Special Instructions</p>
@@ -308,6 +352,10 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                     <label className="checkbox-label" htmlFor="tomatoe3">No Tomatoe</label>
                                 </div>
                                 <div>
+                                    <input type="checkbox" id="saltprice_1RVHI9AspxlK0TBsoD8SudxG" value="No Salt"/>
+                                    <label className="checkbox-label" htmlFor="salt3">No Salt</label>
+                                </div>
+                                <div>
                                     <input type="checkbox" id="mayoprice_1RVHI9AspxlK0TBsoD8SudxG" value="No Mayo"/>
                                     <label className="checkbox-label" htmlFor="mayo3">No Mayo</label>
                                 </div>
@@ -315,9 +363,17 @@ export default function Combo({ lomo, setLomo, quantity, setQuantity, dateStamp,
                                     <input type="checkbox" id="ketchuprice_1RVHI9AspxlK0TBsoD8SudxG" value="No Ketchup"/>
                                     <label className="checkbox-label" htmlFor="ketchup3">No Ketchup</label>
                                 </div>
+                                <div>
+                                    <input type="checkbox" id="mustardprice_1RVHI9AspxlK0TBsoD8SudxG" value="No Mustard"/>
+                                    <label className="checkbox-label" htmlFor="mustard3">No Mustard</label>
+                                </div>
                             </div>
                             <p className="add-ons-title">Add-Ons</p>
                             <div className="add-ons">
+                                <div>
+                                    <input type="checkbox" id="extrasteakprice_1RVHI9AspxlK0TBsoD8SudxG" value="Extra Steak"/>
+                                    <label className="checkbox-label" htmlFor="steak3">Extra Steak (+2)</label>
+                                </div>
                                 <div>
                                     <input type="checkbox"id="cheeseprice_1RVHI9AspxlK0TBsoD8SudxG" value="Extra Cheese"/>
                                     <label className="checkbox-label" htmlFor="cheese">Extra Cheese (+1)</label>

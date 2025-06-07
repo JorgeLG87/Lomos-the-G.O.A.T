@@ -138,20 +138,22 @@ export default function NoCombo() {
                 </div>
             </div>
 
-            <div className="nocombo-main-container">
-                <div className="nocombo-title-span-container2">
-                    <p className="title2"><span className="span-text">Chori</span></p>
-                </div>
+            <div className="nocombo-main-container3">
+                <div className="nocombo-main-container2">
+                    <div className="nocombo-title-span-container2">
+                        <p className="title2"><span className="span-text">Chori</span></p><p className="title">Sub</p>
+                    </div>
 
-                <div className="nocombo-sub-container-lomo">
-                    <div className="small2">
-                        <p className="text">Chori</p>
+                    <div className="nocombo-sub-container-choripachata">
+                        <div className="medium3">
+                            <p className="text">Chori</p>
 
-                        <div className="icons-lomo">
-                            <img className="icon-item-lomo" src="/sandwich1.svg"/>
-                        </div>
+                            <div className="icons-lomo">
+                                <img className="icon-item-lomo" src="/sandwich1.svg"/>
+                            </div>
 
-                        <br></br>
+                            <br></br>
+
                             <p style={{fontFamily: "Barlow semi condensed"}}>Special Instructions</p>
                             <div className="special-instructions">
                                 <div>
@@ -186,12 +188,82 @@ export default function NoCombo() {
                                     <label className="checkbox-label" htmlFor="onion3">Onions (+1.5)</label>
                                 </div>
                             </div>
-                        {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="price_1RXCzXAspxlK0TBserjYTfeP").length}</p> : null}
-                        <button onClick={() => cart.addOneToCart("price_1RXCzXAspxlK0TBserjYTfeP")} className="nocombo-add" type="button">Add To Cart</button>
+                            {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="price_1RXCzXAspxlK0TBserjYTfeP").length}</p> : null}
+                            <button onClick={() => cart.addOneToCart("price_1RXCzXAspxlK0TBserjYTfeP")} className="nocombo-add" type="button">Add To Cart</button>
+                        </div>
+                    </div>   
+                </div>
 
+                <div className="nocombo-main-container2">
+                    <div className="nocombo-title-span-container2">
+                        <p className="title2"><span className="span-text">Pachata</span></p><p className="title">Sub</p>
+                    </div>
+
+                    <div className="nocombo-sub-container-choripachata">
+                        <div className="medium3">
+                            <p className="text">Pachata</p>
+
+                            <div className="icons-lomo">
+                                <img className="icon-item-lomo" src="/sandwich1.svg"/>
+                            </div>
+
+                            <br></br>
+
+                            <p style={{fontFamily: "Barlow semi condensed"}}>Special Instructions</p>
+                            <div className="special-instructions">
+                                <div>
+                                    <input type="checkbox" id="lettuceprice_1RXCzpAspxlK0TBskOryjmKH" value="No Lettuce"/>
+                                    <label className="checkbox-label" htmlFor="lettuce7">No Lettuce</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="tomatoeprice_1RXCzpAspxlK0TBskOryjmKH" value="No Tomatoe"/>
+                                    <label className="checkbox-label" htmlFor="tomatoe7">No Tomatoe</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="saltprice_1RXCzpAspxlK0TBskOryjmKH" value="No Salt"/>
+                                    <label className="checkbox-label" htmlFor="salt7">No Salt</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="mayoprice_1RXCzpAspxlK0TBskOryjmKH" value="No Mayo"/>
+                                    <label className="checkbox-label" htmlFor="mayo7">No Mayo</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="ketchuprice_1RXCzpAspxlK0TBskOryjmKH" value="No Ketchup"/>
+                                    <label className="checkbox-label" htmlFor="ketchup7">No Ketchup</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="mustardprice_1RXCzpAspxlK0TBskOryjmKH" value="No Mustard"/>
+                                    <label className="checkbox-label" htmlFor="mustard7">No Mustard</label>
+                                </div>
+                            </div>
+                            <p className="add-ons-title">Add-Ons</p>
+                            <div className="add-ons">
+                                <div>
+                                    <input type="checkbox" id="extrasteakprice_1RXCzpAspxlK0TBskOryjmKH" value="Extra Steak"/>
+                                    <label className="checkbox-label" htmlFor="steak3">Extra Steak (+2)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="cheeseprice_1RXCzpAspxlK0TBskOryjmKH" value="Extra Cheese"/>
+                                    <label className="checkbox-label" htmlFor="cheese3">Extra Cheese (+1)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="aguacateprice_1RXCzpAspxlK0TBskOryjmKH" value="Aguacate Mayo"/>
+                                    <label className="checkbox-label" htmlFor="aguacate mayo3">Aguacate Mayo (+1)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="mushroomprice_1RXCzpAspxlK0TBskOryjmKH" value="Mushroom"/>
+                                    <label className="checkbox-label" htmlFor="mushroom3">Mushroom (+1.5)</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="onionprice_1RXCzpAspxlK0TBskOryjmKH" value="Onion"/>
+                                <   label className="checkbox-label" htmlFor="onion3">Onions (+1.5)</label>
+                                </div>
+                            </div>
+                            {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="price_1RXCzpAspxlK0TBskOryjmKH").length}</p> : null}
+                            <button onClick={() => cart.addOneToCart("price_1RXCzpAspxlK0TBskOryjmKH")} className="nocombo-add" type="button">Add To Cart</button>
+                        </div>
                     </div>
                 </div>
-                
             </div>
 
             <div className="nocombo-main-container">
@@ -229,11 +301,22 @@ export default function NoCombo() {
                             <img className="icon-item-soda" src="/cola1.svg"/>
                         </div>
                         <select id="bev-typeprice_1QyHkQAspxlK0TBss5Zo0B9A" className="beverage-type">
-                                <option value="">-----Choose Beverage-----</option>
+                        <option value="">-----Choose Beverage-----</option>
+                                <option value="Ginger Ale">Canady Dry Ginger Ale</option>
                                 <option value="Coca Cola">Coca Cola</option>
+                                <option value="Coke Zero">Coke Zero</option>
+                                <option value="Diet Coke">Diet Coke</option>
+                                <option value="Fanta">Fanta</option>
                                 <option value="Pepsi">Pepsi</option>
                                 <option value="Sprite">Sprite</option>
-                                <option value="Fanta">Fanta</option>
+                                <option value="Gatorade Cool Blue">Gatorade Cool Blue</option>
+                                <option value="Gatorade Fruit Punch">Gatorade Fruit Punch</option>
+                                <option value="Gatorade Lemon Lime">Gatorade Lemon Lime</option>
+                                <option value="Snapple Strawberry">Snapple Strawberry Kiwi</option>
+                                <option value="Snapple Lemon Tea">Snapple Lemon Tea</option>
+                                <option value="Snapple Peach Tea">Snapple Peach Tea</option>
+                                <option value="Snapple Apple">Snapple Apple</option>
+                                <option value="Water">Water</option>
                             </select>
                         {(cart.items) ? <p className="quantity-text">Added Quantity: {(cart.items).filter(item=>item.id==="price_1QyHkQAspxlK0TBss5Zo0B9A").length}</p> : null}
                         <button onClick={() => cart.addOneToCart("price_1QyHkQAspxlK0TBss5Zo0B9A")} className="nocombo-add" type="button">Add To Cart</button>

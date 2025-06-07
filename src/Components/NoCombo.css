@@ -42,6 +42,39 @@
     }
 }
 
+.nocombo-main-container2 {
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height:fit-content;
+    padding: 0px;
+    padding-bottom: 30px;
+    padding-top: 0px;
+    text-align: center;
+    margin-top: 0px;
+    @media (width < 450px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 0%;
+    }
+}
+
+.nocombo-main-container3 {
+    position: relative;
+    display: flex;
+    /* flex-direction: row; */
+    width: 100%;
+    margin:0;
+    padding: 0;
+    @media (width < 450px) {
+        flex-direction: column;
+    }
+}
+
 .nocombo-main-container-bev {
     border-radius: 10px;
     width: 100%;
@@ -80,6 +113,7 @@
 
 .nocombo-sub-container-lomo {
      margin-top: 0px;
+     margin-left: 10%;
      border-radius: 10px;
      width: 80%;
      height:fit-content;
@@ -93,7 +127,29 @@
         justify-content: center;
         gap: 10%;
         margin-bottom: 0px;
+        margin-left: 0;
      }
+}
+
+.nocombo-sub-container-choripachata {
+    margin-top: 0px;
+    margin-left: 20%;
+    border-radius: 10px;
+    width: 100%;
+    height:fit-content;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0%;
+    @media (width < 450px) {
+       width: 80%;
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: center;
+       gap: 10%;
+       margin-bottom: 0px;
+       margin-left: 0%;
+    }
 }
 
 .icon-item-lomo {
@@ -117,7 +173,6 @@
 .nocombo-add {
     width: 100%;
     margin-top: 10px;
-    margin-bottom: 20px;
     height: 50px;
     border-radius: 10px;
     border: none;
@@ -206,8 +261,23 @@
     padding: 10px;
     border-radius: 10px;
     background-color: white;
-    margin-left: 20%;
+    /* margin-left: 20%; */
     width: 100%;
+    @media (width < 450px) {
+        border-radius: 5px;
+        width: 100%;
+        margin-top: 30px;
+        margin-left: 0%;
+    }
+}
+
+.medium3 {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    /* margin-left: 20%; */
+    width: 125%;
     @media (width < 450px) {
         border-radius: 5px;
         width: 100%;
