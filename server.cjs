@@ -17,12 +17,6 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.options("*", cors(corsOptions))
 
-// app.use(cors({
-//     origin: "https://lomosthegoat.netlify.app",
-//     methods: ["GET", "POST"],
-//     allowedHeaders: ["Content-Type", "Authorization"],
-// }));
-
 //FOR CORS DEBUGGING
 app.use((req, res, next) => {
     console.log(`[${req.method}] ${req.path}`)
@@ -32,12 +26,6 @@ app.use((req, res, next) => {
 app.use(express.static(path.join(__dirname, "build")));
 
 app.use(express.json());
-
-// app.use(function (req, res, next) {
-//     res.header("Access-Control-Allow-Origin", "https://lomosthegoat.netlify.app");
-//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//     next();
-//  })
 
 app.get("/verify-payment", async (req, res) => {
     const sessionId  = req.query.session_id;
@@ -188,8 +176,8 @@ app.post("/checkout", async (req, res) => {
     const session = await stripe.checkout.sessions.create({
         line_items: lineItems,
         mode: 'payment',
-        success_url: 'https://lomosthegoat.netlify.app/success?session_id={CHECKOUT_SESSION_ID}',
-        cancel_url: 'https://lomosthegoat.netlify.app/cancel',
+        success_url: 'https://lomosthegoat.com/success?session_id={CHECKOUT_SESSION_ID}',
+        cancel_url: 'https://lomosthegoat.com/cancel',
         customer_creation: "always",
     })
 
