@@ -555,3 +555,18 @@
     font-size: 20px;
     font-weight: 500;
   }
+
+  .homero-menu {
+    position:fixed;
+    bottom: 100px;
+    right: -25px;
+    width: 30%;
+    z-index: 1001;
+    @media (width < 450px) {
+      width: 60%;
+    }
+  }
+  
+  .homero-menu:hover {
+    cursor: pointer;
+  }

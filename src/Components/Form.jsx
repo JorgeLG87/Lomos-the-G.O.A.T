@@ -164,6 +164,13 @@ export default function Form({ shoppingCart, setShoppingCart }) {
                 <img src="/sideborder-right.svg" className="side-border-right"/>
                 <img src="/sideborder-right.svg" className="side-border-right"/>
             </div>
+
+            <img className="homero-menu" src="/homeromenu.png" alt="homero simpson" onClick={() => {
+              navigate("/showcart");
+              setTimeout(() => {
+                window.scrollTo({ top: 0, behavior: "auto"});
+              }, 100);
+            }} />
         </div>
     )
 }
