@@ -1,7 +1,81 @@
 import "../CSS/AboutUs.css";
+import { useEffect, useState, useRef } from "react";
+import anime from "animejs";
 import AboutUsMUICarousel from "../Components/AboutUsMUICarousel";
 
 export default function AboutUs({ slides, AboutUsCarousel }) {
+    const [ followUsIsVisible, setFollowUsIsVisible ] = useState(false);
+    const textFollowUs = useRef();
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+          const entry = entries[0];
+          setFollowUsIsVisible(entry.isIntersecting);
+        });
+        observer.observe(textFollowUs.current);
+      },[]);
+    
+    useEffect(() => {
+        if (followUsIsVisible) {
+            anime({
+              targets: ".ourmission-title",
+              keyframes: [
+                {translateX: "0px"}
+              ],
+              opacity: 1,
+              duration: 1000,
+              easing: "easeOutExpo",
+              delay: 500,
+            });
+        } else {
+            anime({
+              targets: ".ourmission-title",
+              keyframes: [
+                {translateX: "-100px"}
+              ],
+              opacity: 0,
+              duration: 1000,
+              easing: "easeOutExpo",
+              // delay: 1000,
+            });
+        }
+    },[followUsIsVisible])
+
+    useEffect(() => {
+        if (followUsIsVisible) {
+            anime({
+              targets: ".ourmission-text",
+              keyframes: [
+                {translateX: "0px"}
+              ],
+              opacity: 1,
+              duration: 1000,
+              easing: "easeOutExpo",
+              delay: 1200,
+            });
+        } else {
+            anime({
+              targets: ".ourmission-text",
+              keyframes: [
+                {translateX: "100%"}
+              ],
+              opacity: 0,
+              duration: 1000,
+              easing: "easeOutExpo",
+              // delay: 1000,
+            });
+        }
+    },[followUsIsVisible])
+
+    // FOR TESTING PURPOSES - DELETE AFTER DONE
+    useEffect(() => {
+        if (followUsIsVisible) {
+            console.log("True")
+        } else {
+            console.log("False")
+        }
+    }, [followUsIsVisible])
+
     return (
         <div className="aboutus-page">
             <div className="title-span-container-aboutus">
@@ -36,9 +110,13 @@ export default function AboutUs({ slides, AboutUsCarousel }) {
             </div>
 
             <div className="ourmission-part">
-                <div className="ourmission-rectangle-container">
+                <div className="ourmission-rectangle-container" ref={textFollowUs}>
 
-                    <img className="ourmission-image" src="/prueba2.png" alt="our mission"/>
+                    <img className="ourmission-image" src="/papercuteffect.png" alt="our mission"/>
+
+                    <p className="ourmission-title">OUR MISSION</p>
+
+                    <p className="ourmission-text">We all have a busy life, a lot of things going on, we understand. At Lomos the G.O.A.T we envision a world consistently moving at a fast pace, but with high quality meal options. And we are here to deliver on that.</p>
 
                     {/* <video controls utoplay muted loop>
                         <source src="/ourmission.mp4" type="video/mp4"/>

@@ -311,12 +311,44 @@
 }
 
 .ourmission-rectangle-container {
+    position: relative;
     display: flex;
-    width: 100%;
+    width: 100vW;
+    /* height: 100vH; */
     /* justify-content: flex-end; */
     @media (width < 450px) {
         display: flex;
         flex-direction: column;
+    }
+}
+
+.ourmission-title {
+    position: absolute;
+    color: #E9D134;
+    font-family: "Montserrat";
+    font-weight: 500;
+    font-size: 500%;
+    margin-left: 8%;
+    @media (width < 450px) {
+        font-size: 200%;
+        margin-top: 5%;
+    }
+}
+
+.ourmission-text {
+    position: absolute;
+    color: white;
+    font-family: "Barlow semi condensed";
+    margin-top: 20%;
+    font-size: 250%;
+    width: 70%;
+    height: 100%;
+    margin-left: 20%;
+    @media (width < 450px) {
+        font-size: 100%;
+        width: 80vW;
+        height: 100%;
+        margin-left: 15%;
     }
 }
 
