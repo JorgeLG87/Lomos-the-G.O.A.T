@@ -38,7 +38,7 @@ export default function AboutUs({ slides, AboutUsCarousel }) {
             <div className="ourmission-part">
                 <div className="ourmission-rectangle-container">
 
-                    <img className="ourmission-image" src="/ourmission.svg" alt="our mission"/>
+                    <img className="ourmission-image" src="/prueba2.png" alt="our mission"/>
 
                     {/* <video controls utoplay muted loop>
                         <source src="/ourmission.mp4" type="video/mp4"/>
