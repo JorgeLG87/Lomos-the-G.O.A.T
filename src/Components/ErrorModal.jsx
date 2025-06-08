@@ -19,7 +19,8 @@ export default function ErrorModal({ setIsOpen }) {
     } else {
         return (
             <div className="modal-main-container-open">
-                <p className="modal-text-title">Oopss..</p>
+                <img className="homero-ouch" src="/homeroouch.png" alt="homero"/>
+                {/* <p className="modal-text-title">Oopss..</p> */}
                 <p className="modal-text">Please add customer's information in order to proceed with checkout.</p>
                 <button className="modal-btn" type="button" onClick={() => setIsOpen(false)}>Ok</button>
             </div>
