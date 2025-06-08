@@ -10,7 +10,8 @@ export default function ErrorModal({ setIsOpen }) {
     if (cart.items.length === 0) {
         return (
             <div className="modal-main-container-open">
-                <p className="modal-text-title">Oopss..</p>
+                <img className="homero-ouch" src="/homeroouch.png" alt="homero"/>
+                {/* <p className="modal-text-title">Oopss..</p> */}
                 <p className="modal-text">Your cart is empty. Please add items in order to proceed with checkout.</p>
                 <button className="modal-btn" type="button" onClick={() => setIsOpen(false)}>Ok</button>
             </div>

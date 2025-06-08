@@ -1,21 +1,22 @@
 .modal-main-container-open {
     position: absolute;
-    width: 60%;
-    height: 220px;
+    width: 25%;
+    height: 35%;
     /* border: 1px solid black; */
     border-radius: 17px;
-    margin-top: 40%;
-    margin-left: 20%;
+    margin-top: 10%;
+    margin-left: 37.5%;
     padding-left: 10px;
     padding-right: 10px;
     z-index: 100;
     /* background-color: #AD2007; */
     background-color: black;
-    @media (width > 450px) {
-        width: 20%;
-        margin-top: 10%;
-        margin-left: 40%;
-        height: 20%;
+    @media (width < 450px) {
+        width: 60%;
+        height: 30%;
+        margin-top: 50%;
+        margin-left: 20%;
+        height: 25%;
     }
 }
 
@@ -28,15 +29,16 @@
 }
 
 .modal-text {
-    /* color: white; */
-    color: #AD2007;
+    color: white;
+    /* color: #AD2007; */
     font-family: "barlow semi condensed";
+    margin-top: 7%;
 }
 
 .modal-btn {
     width: 60%;
     height: 17%;
-    margin-top: 15px;
+    margin-top: 3%;
     border: none;
     border-radius: 7px;
     background-color: #E9D134;
@@ -48,5 +50,10 @@
 
 .modal-btn:hover {
     cursor: pointer;
+}
+
+.homero-ouch {
+    width: 100%;
+    margin-top: -30%;
 }
 
