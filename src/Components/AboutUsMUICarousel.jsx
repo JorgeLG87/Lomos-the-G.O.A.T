@@ -49,7 +49,7 @@ export default function AboutUsMUICarousel() {
     >
       {aboutUsSlides.map((item) => (
         <Card orientation="horizontal" size="lg" key={item.title} variant="none" sx={{boder: "none", outline: "none", backgroundColor: "white", padding: 0}}>
-          <AspectRatio ratio="1" sx={{ minWidth: 300, padding: 2 }}>
+          <AspectRatio ratio="1" sx={{ minWidth: 300, padding: 1 }}>
             <img
               srcSet={`${item.url}?h=120&fit=crop&auto=format&dpr=2 2x`} 
               src={`${item.url}?h=120&fit=crop&auto=format`}
