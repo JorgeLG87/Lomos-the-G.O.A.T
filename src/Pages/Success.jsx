@@ -23,23 +23,23 @@ export default function Success() {
     const cartItems = cart.items.map((item) => `- ${item.name} (Quantity: ${item.quantity}) Special Instructions: Beverage: ${item.beverage}, Ketchup: ${item.ketchupInstruction}, Lettuce: ${item.lettuceInstruction}, Tomatoe: ${item.tomatoeInstruction}, Mayo: ${item.mayoInstruction}, Mustard: ${item.mustardInstruction}, Salt: ${item.saltInstruction} - Add Ons: Extra Steak: ${item.steakInstruction}, Aguacate: ${item.aguacateInstruction}, Onions: ${item.onionInstruction}, Cheese: ${item.cheeseInstruction}, Mushroom: ${item.mushroomInstruction}`).join("\n");
 
     //VERIFY THAT WE HAVE A SESSION ID IN THE URL ELSE REDIRECT TO HOME PAGE
-    useEffect(() => {
-        const sessionId = new URLSearchParams(window.location.search).get("session_id");
-        if (!sessionId) {
-            navigate("/");
-        }
+    // useEffect(() => {
+    //     const sessionId = new URLSearchParams(window.location.search).get("session_id");
+    //     if (!sessionId) {
+    //         navigate("/");
+    //     }
     
-        // VERIFY PAYMENT STATUS
-        fetch(`https://lomosthegoat.onrender.com/verify-payment?session_id=${sessionId}`)
-        .then(res => res.json())
-        .then(response => {
-            if (response.success) {
-                setPaymentVerified(true);
-            } else {
-                navigate("/");
-            }
-        })
-    }, [navigate])
+    //     // VERIFY PAYMENT STATUS
+    //     fetch(`https://lomosthegoat.com/verify-payment?session_id=${sessionId}`)
+    //     .then(res => res.json())
+    //     .then(response => {
+    //         if (response.success) {
+    //             setPaymentVerified(true);
+    //         } else {
+    //             navigate("/");
+    //         }
+    //     })
+    // }, [navigate])
 
 
     useEffect(() => {
@@ -109,9 +109,10 @@ export default function Success() {
             <div className="message-container">
                 <p className="title2"><span className="span-text">Payment</span></p><p className="title"> Successful!</p>
                 <p className="confirmation-text">We've received your order and we're working on it...</p>
-                <p className="time-text">Please allow {deliveryTime} min. to receive it.</p>
+                <p className="time-text">Please allow 30 - 45 min. to receive it.</p>
                 <img className="clock-icon" src="/on-time.svg"></img>
                 <p className="title2"><span className="span-text">Thank You!!</span></p>
+                <img className="homerosuccess" src="/homerosuccess.png" alt="homero simpson" /> 
             </div>
         </div>
     )

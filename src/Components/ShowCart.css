@@ -319,3 +319,13 @@
 .block:after {
 	filter: blur(50px);
 }
+
+.specialinstructions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* align-items: left; */
+    gap: 8px;
+    margin-top: 10px;
+    border: 1px solid white;
+    height: 50px;
+}

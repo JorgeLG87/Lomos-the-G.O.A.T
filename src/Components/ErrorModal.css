@@ -13,10 +13,9 @@
     background-color: black;
     @media (width < 450px) {
         width: 60%;
-        height: 30%;
+        height: 250px;
         margin-top: 50%;
         margin-left: 20%;
-        height: 25%;
     }
 }
 
@@ -46,6 +45,9 @@
     font-size: 18px;
     font-family: "Montserrat";
     font-weight: 500;
+    @media (width < 450px) {
+        margin-top: 8%;
+    }
 }
 
 .modal-btn:hover {

@@ -15,6 +15,7 @@ export default function Cancel() {
             <div className="message-container">
                 <p className="title2"><span className="span-text">Your order was</span></p><p className="title"> canceled.</p>
             </div>
+            <img className="homero-cancel" src="/homerocrying.png" alt="homero simpson" />
             <p className="cancel-text">Go to the <span className="cancel-text-link" onClick={() => navigate("/order-now")}>order menu</span>.</p>
         </div>
     )

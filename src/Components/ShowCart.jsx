@@ -219,18 +219,22 @@ export default function ShowCart() {
                             {product.beverage !== "None" ? <p style={{fontWeight: "bold", fontFamily:"Barlow semi condensed", marginTop: "-8px", zIndex:"10", color:"white"}}>Beverage</p> : null}
                             <BeverageLogo selectedBev={product.beverage} />
                             {data.title !== "Soda" ? <p style={{fontWeight:"bold", fontFamily: "Barlow semi condensed", zIndex:"10", color:"white"}}>Special Instructions:</p> : null}
-                            {product.lettuceInstruction ? <p className="cart-titles">{product.lettuceInstruction}</p> : null}
-                            {product.tomatoeInstruction ? <p className="cart-titles">{product.tomatoeInstruction}</p> : null}
-                            {product.saltInstruction ? <p className="cart-titles">{product.saltInstruction}</p> : null}
-                            {product.mayoInstruction ? <p className="cart-titles">{product.mayoInstruction}</p> : null}
-                            {product.ketchupInstruction ? <p className="cart-titles">{product.ketchupInstruction}</p> : null}
-                            {product.mustardInstruction ? <p className="cart-titles">{product.mustardInstruction}</p> : null}
+                            <div className="specialinstructions">
+                                {product.lettuceInstruction ? <p className="cart-titles">{product.lettuceInstruction}</p> : null}
+                                {product.tomatoeInstruction ? <p className="cart-titles">{product.tomatoeInstruction}</p> : null}
+                                {product.saltInstruction ? <p className="cart-titles">{product.saltInstruction}</p> : null}
+                                {product.mayoInstruction ? <p className="cart-titles">{product.mayoInstruction}</p> : null}
+                                {product.ketchupInstruction ? <p className="cart-titles">{product.ketchupInstruction}</p> : null}
+                                {product.mustardInstruction ? <p className="cart-titles">{product.mustardInstruction}</p> : null}
+                            </div>
                             {data.title !== "Soda" ? <p style={{fontWeight:"bold", fontFamily: "Barlow semi condensed", zIndex:"10", color:"white"}}>Add Ons:</p> : null}
-                            {product.steakInstruction ? <p className="cart-titles">{product.steakInstruction}</p> : null}
-                            {product.aguacateInstruction ? <p className="cart-titles">{product.aguacateInstruction}</p> : null}
-                            {product.onionInstruction ? <p className="cart-titles">{product.onionInstruction}</p> : null}
-                            {product.cheeseInstruction ? <p className="cart-titles">{product.cheeseInstruction}</p> : null}
-                            {product.mushroomInstruction ? <p className="cart-titles">{product.mushroomInstruction}</p> : null}
+                            <div className="specialinstructions">
+                                {product.steakInstruction ? <p className="cart-titles">{product.steakInstruction}</p> : null}
+                                {product.aguacateInstruction ? <p className="cart-titles">{product.aguacateInstruction}</p> : null}
+                                {product.onionInstruction ? <p className="cart-titles">{product.onionInstruction}</p> : null}
+                                {product.cheeseInstruction ? <p className="cart-titles">{product.cheeseInstruction}</p> : null}
+                                {product.mushroomInstruction ? <p className="cart-titles">{product.mushroomInstruction}</p> : null}
+                            </div>
                             {addOns > 0 ? <p className="showcart-subtotal">Price: ${(data.price+addOns).toFixed(2)} </p> : <p className="showcart-subtotal">Price: ${(data.price).toFixed(2)}</p>}
                             {/* <button className="delete-btn" onClick={() => cart.deleteFromCart(product.index)} type="button">Remove From Cart</button> */}
                         </div>
